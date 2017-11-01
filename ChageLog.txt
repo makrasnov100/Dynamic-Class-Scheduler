@@ -1,0 +1,19 @@
+v.2
+- added singleSection class within singleCourse class (simplified variable names accordingly)
+- added unformatted instructor names and days of the week
+- added separation of sections by term (JAN, SPRING, FALL)
+- debug text file now more readable + opens automatically after analysis
+
+v.3
+- added "courseID" variable in Course class (eg. CO-150-)
+- added support for unique term section addition (if the section and course IDs are the same)
+- added support for unique instructor section addition (if the term, section and course IDs are the same)
+- added available course terms in debug file
+- added removal of irrelevant sections (independent sections without time info)
+- added sorting of classes by their ID within "courses" class
+- rearranged term display order to fit school year
+
+v.4
+- added proper separation of instructor names, section start/stop times, meetDays (if more than one)
+- removed "Avaliable terms: " text in debug text (not needed anymore)
+- simplified unique section detection with the addition of function "DetermineSectionNeed()"
