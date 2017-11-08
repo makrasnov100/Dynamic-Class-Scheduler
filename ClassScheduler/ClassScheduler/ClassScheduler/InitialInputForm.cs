@@ -63,7 +63,6 @@ namespace ClassScheduler
         //Performs actions designated for "InputToMainButton" button click
         private void InputToMainButton_Click(object sender, EventArgs e)
         {
-
             if (checkImputCompletion())
             {
                 //Removes all imput error labels
@@ -80,6 +79,7 @@ namespace ClassScheduler
                     userData.termInterest = "SP";
                 else
                     userData.termInterest = "JA";
+
                 ReadExcelData();
 
                 //Shows course selection form

@@ -52,11 +52,11 @@
             // CourseSelectionLabel
             // 
             this.CourseSelectionLabel.AutoSize = true;
-            this.CourseSelectionLabel.Font = new System.Drawing.Font("Minion Pro", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseSelectionLabel.Font = new System.Drawing.Font("Sitka Heading", 20.25F, System.Drawing.FontStyle.Italic);
             this.CourseSelectionLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.CourseSelectionLabel.Location = new System.Drawing.Point(64, 40);
+            this.CourseSelectionLabel.Location = new System.Drawing.Point(67, 38);
             this.CourseSelectionLabel.Name = "CourseSelectionLabel";
-            this.CourseSelectionLabel.Size = new System.Drawing.Size(312, 37);
+            this.CourseSelectionLabel.Size = new System.Drawing.Size(327, 39);
             this.CourseSelectionLabel.TabIndex = 8;
             this.CourseSelectionLabel.Text = "Please Select Your Courses...";
             this.CourseSelectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

@@ -15,7 +15,6 @@ E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ClassSchedule
 E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.dll
 E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.xml
 E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.csprojResolveAssemblyReference.cache
-E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.MainWindow.resources
 E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.Properties.Resources.resources
 E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.csproj.GenerateResource.Cache
 E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.exe
@@ -34,3 +33,7 @@ D:\Current Projects\CS-172 Final\ClassScheduler\ClassScheduler\ClassScheduler\ob
 D:\Current Projects\CS-172 Final\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.ResultForm.resources
 D:\Current Projects\CS-172 Final\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.csprojResolveAssemblyReference.cache
 D:\Current Projects\CS-172 Final\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.InitialInputForm.resources
+E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.AddCourseForm.resources
+E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.CourseSelectionForm.resources
+E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.ResultForm.resources
+E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.InitialInputForm.resources

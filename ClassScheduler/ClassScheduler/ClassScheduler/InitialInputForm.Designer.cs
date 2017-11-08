@@ -54,13 +54,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Minion Pro", 16F);
+            this.label1.Font = new System.Drawing.Font("Sitka Heading", 16F);
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label1.Location = new System.Drawing.Point(319, 255);
+            this.label1.Location = new System.Drawing.Point(322, 251);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 30);
+            this.label1.Size = new System.Drawing.Size(123, 32);
             this.label1.TabIndex = 1;
-            this.label1.Text = "First Name: ";
+            this.label1.Text = "First Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnFind
@@ -87,45 +87,45 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Minion Pro", 16F);
+            this.label2.Font = new System.Drawing.Font("Sitka Heading", 16F);
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(323, 297);
+            this.label2.Location = new System.Drawing.Point(327, 291);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 30);
+            this.label2.Size = new System.Drawing.Size(118, 32);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Last Name: ";
+            this.label2.Text = "Last Name:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Minion Pro", 16F);
+            this.label3.Font = new System.Drawing.Font("Sitka Heading", 16F);
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(369, 335);
+            this.label3.Location = new System.Drawing.Point(374, 332);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 30);
+            this.label3.Size = new System.Drawing.Size(71, 32);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Term: ";
+            this.label3.Text = "Term:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Minion Pro", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Sitka Heading", 48F, System.Drawing.FontStyle.Italic);
             this.label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label4.Location = new System.Drawing.Point(359, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(540, 86);
+            this.label4.Size = new System.Drawing.Size(543, 92);
             this.label4.TabIndex = 6;
             this.label4.Text = "Dynamic Scheduler";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Minion Pro", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Sitka Heading", 20.25F, System.Drawing.FontStyle.Italic);
             this.label5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.label5.Location = new System.Drawing.Point(316, 194);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(312, 37);
+            this.label5.Size = new System.Drawing.Size(327, 39);
             this.label5.TabIndex = 7;
             this.label5.Text = "Please Enter the Following...";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -133,13 +133,13 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Minion Pro", 16F);
+            this.label6.Font = new System.Drawing.Font("Sitka Heading", 16F);
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(260, 375);
+            this.label6.Location = new System.Drawing.Point(265, 374);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(180, 30);
+            this.label6.Size = new System.Drawing.Size(180, 32);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Course Data Path: ";
+            this.label6.Text = "Course Data Path:";
             // 
             // InputToMainButton
             // 
@@ -166,7 +166,7 @@
             // TermComboBox
             // 
             this.TermComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TermComboBox.Font = new System.Drawing.Font("Minion Pro", 12F);
+            this.TermComboBox.Font = new System.Drawing.Font("Sitka Heading", 12F);
             this.TermComboBox.FormattingEnabled = true;
             this.TermComboBox.Items.AddRange(new object[] {
             "Fall",
@@ -174,25 +174,25 @@
             "Spring"});
             this.TermComboBox.Location = new System.Drawing.Point(446, 336);
             this.TermComboBox.Name = "TermComboBox";
-            this.TermComboBox.Size = new System.Drawing.Size(158, 30);
+            this.TermComboBox.Size = new System.Drawing.Size(158, 31);
             this.TermComboBox.TabIndex = 11;
             // 
             // FirstNameTextBox
             // 
             this.FirstNameTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.FirstNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.FirstNameTextBox.Font = new System.Drawing.Font("Minion Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameTextBox.Font = new System.Drawing.Font("Sitka Heading", 12F);
             this.FirstNameTextBox.Location = new System.Drawing.Point(446, 257);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(158, 27);
+            this.FirstNameTextBox.Size = new System.Drawing.Size(158, 28);
             this.FirstNameTextBox.TabIndex = 12;
             // 
             // LastNameTextBox
             // 
-            this.LastNameTextBox.Font = new System.Drawing.Font("Minion Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameTextBox.Font = new System.Drawing.Font("Sitka Heading", 12F);
             this.LastNameTextBox.Location = new System.Drawing.Point(446, 297);
             this.LastNameTextBox.Name = "LastNameTextBox";
-            this.LastNameTextBox.Size = new System.Drawing.Size(158, 27);
+            this.LastNameTextBox.Size = new System.Drawing.Size(158, 28);
             this.LastNameTextBox.TabIndex = 13;
             // 
             // FirstNameNeedLabel

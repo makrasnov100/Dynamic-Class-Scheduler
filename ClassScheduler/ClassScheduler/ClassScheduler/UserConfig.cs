@@ -11,6 +11,5 @@ namespace ClassScheduler
         public string firstName;
         public string lastName;
         public string termInterest;
-
     }
 }
