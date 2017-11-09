@@ -12,6 +12,7 @@ namespace ClassScheduler
     {
         public string courseName;
         public string abrvCourseName;
+        public string courseLevel;
         public List<string> termsAvaliable = new List<string>();
         public List<string> instructAvaliable = new List<string>();
         public List<SingleSection> sections = new List<SingleSection>();

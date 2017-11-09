@@ -32,8 +32,8 @@
             this.CourseSelectionLabel = new System.Windows.Forms.Label();
             this.RemoveCourseButton = new System.Windows.Forms.Button();
             this.MainToResultButton = new System.Windows.Forms.Button();
-            this.selectedCoursesTable = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.selectedCoursesTable)).BeginInit();
+            this.selectedCoursesGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.selectedCoursesGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // AddCourseButton
@@ -72,6 +72,7 @@
             this.RemoveCourseButton.TabIndex = 9;
             this.RemoveCourseButton.Text = "Remove Course";
             this.RemoveCourseButton.UseVisualStyleBackColor = false;
+            this.RemoveCourseButton.Click += new System.EventHandler(this.RemoveCourseButton_Click);
             // 
             // MainToResultButton
             // 
@@ -86,13 +87,22 @@
             this.MainToResultButton.UseVisualStyleBackColor = false;
             this.MainToResultButton.Click += new System.EventHandler(this.MainToResultButton_Click);
             // 
-            // selectedCoursesTable
+            // selectedCoursesGridView
             // 
-            this.selectedCoursesTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.selectedCoursesTable.Location = new System.Drawing.Point(250, 90);
-            this.selectedCoursesTable.Name = "selectedCoursesTable";
-            this.selectedCoursesTable.Size = new System.Drawing.Size(695, 452);
-            this.selectedCoursesTable.TabIndex = 12;
+            this.selectedCoursesGridView.AllowUserToAddRows = false;
+            this.selectedCoursesGridView.AllowUserToDeleteRows = false;
+            this.selectedCoursesGridView.AllowUserToResizeRows = false;
+            this.selectedCoursesGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.selectedCoursesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.selectedCoursesGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.selectedCoursesGridView.Location = new System.Drawing.Point(250, 90);
+            this.selectedCoursesGridView.MultiSelect = false;
+            this.selectedCoursesGridView.Name = "selectedCoursesGridView";
+            this.selectedCoursesGridView.ReadOnly = true;
+            this.selectedCoursesGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.selectedCoursesGridView.Size = new System.Drawing.Size(695, 452);
+            this.selectedCoursesGridView.TabIndex = 12;
+            this.selectedCoursesGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.selectedCoursesTable_CellClick);
             // 
             // CourseSelectionForm
             // 
@@ -100,7 +110,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.selectedCoursesTable);
+            this.Controls.Add(this.selectedCoursesGridView);
             this.Controls.Add(this.MainToResultButton);
             this.Controls.Add(this.RemoveCourseButton);
             this.Controls.Add(this.CourseSelectionLabel);
@@ -111,7 +121,7 @@
             this.Text = "Course Selection";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CourseSelectionForm_FormClosed);
             this.Load += new System.EventHandler(this.CourseSelectionForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.selectedCoursesTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectedCoursesGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,6 +133,6 @@
         private System.Windows.Forms.Label CourseSelectionLabel;
         private System.Windows.Forms.Button RemoveCourseButton;
         private System.Windows.Forms.Button MainToResultButton;
-        private System.Windows.Forms.DataGridView selectedCoursesTable;
+        private System.Windows.Forms.DataGridView selectedCoursesGridView;
     }
 }

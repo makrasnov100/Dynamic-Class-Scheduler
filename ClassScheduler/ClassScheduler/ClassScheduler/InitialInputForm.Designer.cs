@@ -65,9 +65,9 @@
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(446, 379);
+            this.btnFind.Location = new System.Drawing.Point(446, 374);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(158, 27);
+            this.btnFind.Size = new System.Drawing.Size(158, 33);
             this.btnFind.TabIndex = 2;
             this.btnFind.Text = "Find File";
             this.btnFind.UseVisualStyleBackColor = true;
@@ -156,9 +156,9 @@
             // 
             // PreviewExcelSheetButton
             // 
-            this.PreviewExcelSheetButton.Location = new System.Drawing.Point(605, 379);
+            this.PreviewExcelSheetButton.Location = new System.Drawing.Point(605, 374);
             this.PreviewExcelSheetButton.Name = "PreviewExcelSheetButton";
-            this.PreviewExcelSheetButton.Size = new System.Drawing.Size(108, 27);
+            this.PreviewExcelSheetButton.Size = new System.Drawing.Size(108, 33);
             this.PreviewExcelSheetButton.TabIndex = 10;
             this.PreviewExcelSheetButton.Text = "Preview";
             this.PreviewExcelSheetButton.UseVisualStyleBackColor = true;

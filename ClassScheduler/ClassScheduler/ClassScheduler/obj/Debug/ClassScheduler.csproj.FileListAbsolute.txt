@@ -8,7 +8,6 @@ L:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassSchedule
 L:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.csproj.GenerateResource.Cache
 L:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.exe
 L:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.pdb
-L:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.MainWindow.resources
 E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ClassScheduler.exe.config
 E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ClassScheduler.exe
 E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ClassScheduler.pdb
@@ -37,3 +36,7 @@ E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassSchedule
 E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.CourseSelectionForm.resources
 E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.ResultForm.resources
 E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.InitialInputForm.resources
+L:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.AddCourseForm.resources
+L:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.CourseSelectionForm.resources
+L:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.ResultForm.resources
+L:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.InitialInputForm.resources

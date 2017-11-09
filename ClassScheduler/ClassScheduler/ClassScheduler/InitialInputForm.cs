@@ -14,8 +14,15 @@ using System.Windows.Forms;
 namespace ClassScheduler
 {
 
+    /// <summary>
+    /// This is a window in which the user is expected to enter initial data to be used for the rest of the proccess.
+    /// </summary>
+    /// Author: Kostiantyn Makrasnov (Excel Reader Part & Form User Input)
+    /// Author: Yuriy Fedas (Preview of Selected Excel Data File)
+
     public partial class InitialInputForm : Form
     {
+
         public UserConfig userData = new UserConfig { };                    // *may need permision adjustment*
         public List<SingleCourse> courses = new List<SingleCourse>();
         public List<SingleCourse> unneededCourses = new List<SingleCourse>();
@@ -153,6 +160,7 @@ namespace ClassScheduler
                     {
                         courseName = excelReader.GetString(6),
                         abrvCourseName = TruncatedCourseID(),
+                        courseLevel = GetCourseLevel(),
                         termsAvaliable = new List<string> { (excelReader.GetString(2)) },
                         instructAvaliable = new List<string> { (excelReader.GetString(9)) },
                         sections = new List<SingleSection> { (new SingleSection { }) }
@@ -382,6 +390,22 @@ namespace ClassScheduler
                     sw.WriteLine("-------------------------------------------------------------------------------------");
                 }
             }
+        }
+
+        //[FUNCTION - ConvertToInt]
+        //Returns an int version of the string if can otherwise null
+        int ConvertToInt(double data)
+        {
+            return (int) data;
+        }
+
+        //[FUNCTION - GetCourseLevel]
+        //Returns the level of course based on excel reader position
+        string GetCourseLevel()
+        {
+            object value = excelReader.GetValue(8);
+            string stringValue = value.ToString();
+            return (stringValue != "NA") ? stringValue : "000";
         }
     }
 }

@@ -10,6 +10,13 @@ using System.Windows.Forms;
 
 namespace ClassScheduler
 {
+
+    /// <summary>
+    /// This is a window in which the user is given the final layout of his courses.
+    /// </summary>
+    /// Author:
+
+
     public partial class ResultForm : Form
     {
         public CourseSelectionForm MainPageForm;

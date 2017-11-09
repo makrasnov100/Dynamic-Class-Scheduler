@@ -39,6 +39,8 @@
             this.addButton = new System.Windows.Forms.Button();
             this.cancelAddButton = new System.Windows.Forms.Button();
             this.addCoursesDataTable = new System.Windows.Forms.DataGridView();
+            this.addCourseStateLabel = new System.Windows.Forms.Label();
+            this.showingCoursesCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.addCoursesDataTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,30 +70,31 @@
             // 
             // DepartmentFilter
             // 
-            this.DepartmentFilter.Font = new System.Drawing.Font("Sitka Heading", 12F);
+            this.DepartmentFilter.Font = new System.Drawing.Font("Sitka Heading", 10F);
             this.DepartmentFilter.FormattingEnabled = true;
             this.DepartmentFilter.Location = new System.Drawing.Point(120, 111);
             this.DepartmentFilter.Name = "DepartmentFilter";
-            this.DepartmentFilter.Size = new System.Drawing.Size(129, 31);
+            this.DepartmentFilter.Size = new System.Drawing.Size(129, 27);
             this.DepartmentFilter.TabIndex = 11;
             // 
             // CourseLevelFilter
             // 
-            this.CourseLevelFilter.Font = new System.Drawing.Font("Sitka Heading", 12F);
+            this.CourseLevelFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CourseLevelFilter.Font = new System.Drawing.Font("Sitka Heading", 10F);
             this.CourseLevelFilter.FormattingEnabled = true;
             this.CourseLevelFilter.Location = new System.Drawing.Point(255, 111);
             this.CourseLevelFilter.Name = "CourseLevelFilter";
-            this.CourseLevelFilter.Size = new System.Drawing.Size(93, 31);
+            this.CourseLevelFilter.Size = new System.Drawing.Size(93, 27);
             this.CourseLevelFilter.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic);
             this.label2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label2.Location = new System.Drawing.Point(116, 89);
+            this.label2.Location = new System.Drawing.Point(117, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 17);
+            this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Department:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -99,11 +102,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic);
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label3.Location = new System.Drawing.Point(251, 89);
+            this.label3.Location = new System.Drawing.Point(252, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 17);
+            this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 14;
             this.label3.Text = "Course Level:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -111,22 +114,22 @@
             // InstructorFilter
             // 
             this.InstructorFilter.AutoSize = true;
-            this.InstructorFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic);
+            this.InstructorFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic);
             this.InstructorFilter.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.InstructorFilter.Location = new System.Drawing.Point(350, 89);
+            this.InstructorFilter.Location = new System.Drawing.Point(351, 95);
             this.InstructorFilter.Name = "InstructorFilter";
-            this.InstructorFilter.Size = new System.Drawing.Size(75, 17);
+            this.InstructorFilter.Size = new System.Drawing.Size(57, 13);
             this.InstructorFilter.TabIndex = 15;
             this.InstructorFilter.Text = "Instructor: ";
             this.InstructorFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Sitka Heading", 12F);
+            this.comboBox1.Font = new System.Drawing.Font("Sitka Heading", 10F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(354, 111);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(207, 31);
+            this.comboBox1.Size = new System.Drawing.Size(207, 27);
             this.comboBox1.TabIndex = 16;
             // 
             // addButton
@@ -134,7 +137,7 @@
             this.addButton.BackColor = System.Drawing.Color.Black;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.addButton.ForeColor = System.Drawing.Color.White;
-            this.addButton.Location = new System.Drawing.Point(567, 105);
+            this.addButton.Location = new System.Drawing.Point(567, 103);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(71, 41);
             this.addButton.TabIndex = 18;
@@ -147,11 +150,11 @@
             this.cancelAddButton.BackColor = System.Drawing.Color.Black;
             this.cancelAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cancelAddButton.ForeColor = System.Drawing.Color.White;
-            this.cancelAddButton.Location = new System.Drawing.Point(644, 105);
+            this.cancelAddButton.Location = new System.Drawing.Point(644, 103);
             this.cancelAddButton.Name = "cancelAddButton";
             this.cancelAddButton.Size = new System.Drawing.Size(91, 41);
             this.cancelAddButton.TabIndex = 19;
-            this.cancelAddButton.Text = "Cancel";
+            this.cancelAddButton.Text = "Close";
             this.cancelAddButton.UseVisualStyleBackColor = false;
             this.cancelAddButton.Click += new System.EventHandler(this.cancelAddButton_Click);
             // 
@@ -163,12 +166,37 @@
             this.addCoursesDataTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.addCoursesDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.addCoursesDataTable.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.addCoursesDataTable.Location = new System.Drawing.Point(53, 169);
+            this.addCoursesDataTable.Location = new System.Drawing.Point(53, 157);
+            this.addCoursesDataTable.MultiSelect = false;
             this.addCoursesDataTable.Name = "addCoursesDataTable";
             this.addCoursesDataTable.ReadOnly = true;
             this.addCoursesDataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.addCoursesDataTable.Size = new System.Drawing.Size(682, 411);
+            this.addCoursesDataTable.Size = new System.Drawing.Size(682, 423);
             this.addCoursesDataTable.TabIndex = 20;
+            this.addCoursesDataTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.addCoursesDataTable_CellClick);
+            // 
+            // addCourseStateLabel
+            // 
+            this.addCourseStateLabel.AutoSize = true;
+            this.addCourseStateLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.addCourseStateLabel.ForeColor = System.Drawing.Color.Green;
+            this.addCourseStateLabel.Location = new System.Drawing.Point(50, 141);
+            this.addCourseStateLabel.Name = "addCourseStateLabel";
+            this.addCourseStateLabel.Size = new System.Drawing.Size(83, 13);
+            this.addCourseStateLabel.TabIndex = 21;
+            this.addCourseStateLabel.Text = "Ready to Begin!";
+            // 
+            // showingCoursesCount
+            // 
+            this.showingCoursesCount.AutoSize = true;
+            this.showingCoursesCount.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.showingCoursesCount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.showingCoursesCount.Location = new System.Drawing.Point(659, 583);
+            this.showingCoursesCount.Name = "showingCoursesCount";
+            this.showingCoursesCount.Size = new System.Drawing.Size(76, 13);
+            this.showingCoursesCount.TabIndex = 22;
+            this.showingCoursesCount.Text = "___ out of ___";
+            this.showingCoursesCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // AddCourseForm
             // 
@@ -176,6 +204,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 611);
+            this.Controls.Add(this.showingCoursesCount);
+            this.Controls.Add(this.addCourseStateLabel);
             this.Controls.Add(this.addCoursesDataTable);
             this.Controls.Add(this.cancelAddButton);
             this.Controls.Add(this.addButton);
@@ -210,5 +240,7 @@
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button cancelAddButton;
         private System.Windows.Forms.DataGridView addCoursesDataTable;
+        private System.Windows.Forms.Label addCourseStateLabel;
+        private System.Windows.Forms.Label showingCoursesCount;
     }
 }
