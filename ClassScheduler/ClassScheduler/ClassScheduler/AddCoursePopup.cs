@@ -52,8 +52,9 @@ namespace ClassScheduler
             courseTable.Columns.Add("ID", typeof(string));
             courseTable.Columns.Add("Title", typeof(string));
 
-            foreach (var course in allCourses)
-                courseTable.Rows.Add(course.abrvCourseName, course.courseName);
+            foreach (SingleCourse course in allCourses)
+                courseTable.Rows.Add(course.getAbrvCourseName(), course.getCourseName());
+            
 
             addCoursesDataTable.DataSource = courseTable;
             addCoursesDataTable.Columns["ID"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -71,8 +72,8 @@ namespace ClassScheduler
             if(courseAccepted == true)
             {
                 selectedRow = addCoursesDataTable.Rows[selectedTableIndex];     
-                SingleCourse selectedCourseClass = allCourses[allCourses.IndexOf(allCourses.Find(s => (s.courseName == (string)selectedRow.Cells[1].Value)
-                                                                                                   && (s.abrvCourseName == (string)selectedRow.Cells[0].Value)))];
+                SingleCourse selectedCourseClass = allCourses[allCourses.IndexOf(allCourses.Find(s => (s.getCourseName() == (string)selectedRow.Cells[1].Value)
+                                                                                                   && (s.getAbrvCourseName() == (string)selectedRow.Cells[0].Value)))];
                 MainCourseForm.selectedCourses.Add(selectedCourseClass);
                 addCourseStateLabel.ForeColor = Color.Green;
                 addCourseStateLabel.Text = "Added " + (string)selectedRow.Cells[1].Value + " to course list!";
@@ -112,8 +113,8 @@ namespace ClassScheduler
                 addCourseStateLabel.Text = "Cannot have more that 10 courses!";
                 courseAccepted = false;
             }
-            else if (MainCourseForm.selectedCourses.IndexOf(allCourses.Find(s => (s.courseName == (string)selectedRow.Cells[1].Value) 
-                                                                        && (s.abrvCourseName == (string)selectedRow.Cells[0].Value))) != -1)
+            else if (MainCourseForm.selectedCourses.IndexOf(allCourses.Find(s => (s.getCourseName() == (string)selectedRow.Cells[1].Value) 
+                                                                        && (s.getAbrvCourseName() == (string)selectedRow.Cells[0].Value))) != -1)
             {
                 addCourseStateLabel.ForeColor = Color.Red;
                 addCourseStateLabel.Text = "You already added this course!";
@@ -140,8 +141,8 @@ namespace ClassScheduler
         {
             foreach(var course in allCourses)
             {
-                if (!courseLevelFilterValues.Exists(s => s == course.courseLevel)) //**May just switch to manual input in future**
-                    courseLevelFilterValues.Add(course.courseLevel);
+                if (!courseLevelFilterValues.Exists(s => s == course.getCourseLevel())) //**May just switch to manual input in future**
+                    courseLevelFilterValues.Add(course.getCourseLevel());
             }
 
             foreach (var choise in courseLevelFilterValues)

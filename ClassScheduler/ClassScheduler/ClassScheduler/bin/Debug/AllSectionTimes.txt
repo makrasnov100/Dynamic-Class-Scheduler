@@ -1,308 +1,1593 @@
-****************************[JANUARY Term]****************************
-[JANUARY COURSE #1] - [AR-101] - Drawing I: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Gordon, Wilson | M-T-W-TH-F |
+****************************[SPRING Term]****************************
+[SPRING COURSE #1] - [AB-196] - Elementary Arabic I: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Lobna, Abdelhameed | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #2] - [AR-116] - Theatre in Community: 
-  [SECTION #1] - 12:30 PM - 3:30 PM | Brooke, Kiener | M-T-W-TH-F |
+[SPRING COURSE #2] - [AB-196] - Elementary Arabic II: 
+  [SECTION #1] - 10:25 AM - 11:35 AM | Lobna, Abdelhameed | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #3] - [AR-120] - Design I: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Stephen, Rue | M-T-W-TH-F |
+[SPRING COURSE #3] - [AR-101] - Drawing I: 
+  [SECTION #1] - 8:00 AM - 10:15 AM | Gordon, Wilson | W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #4] - [AR-131] - Digital Photography I: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Erin, Wenz | M-T-W-TH-F |
+[SPRING COURSE #4] - [AR-120] - 2-D Design: 
+  [SECTION #1] - 8:30 AM - 10:45 AM | Lance, Sinnema | T-TH |
+  [SECTION #2] - 11:45 AM - 2:10 PM | Robert, Fifield | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #5] - [AR-140] - Ceramics (Wheelwork): 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Lance, Sinnema | M-T-W-TH-F |
+[SPRING COURSE #5] - [AR-124] - Intro to Photoshop: 
+  [SECTION #1] - 8:30 AM - 10:45 AM | David, Overstreet | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #6] - [AR-211] - Watercolor I: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Melissa, Lang | M-T-W-TH-F |
+[SPRING COURSE #6] - [AR-143] - Glass I: 
+  [SECTION #1] - 12:50 PM - 3:05 PM | Katie, Creyts | M-W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #7] - [AR-227] - Intro to Time-Based Art Making: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Scott, Kolbo | M-T-W-TH-F |
+[SPRING COURSE #7] - [AR-201] - Drawing II: 
+  [SECTION #1] - 12:50 PM - 3:05 PM | Robert, Fifield | M-W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #8] - [AR-251] - Mixed Media I: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Katie, Creyts | M-T-W-TH-F |
+[SPRING COURSE #8] - [AR-210] - Painting I: 
+  [SECTION #1] - 10:25 AM - 12:40 PM | Gordon, Wilson | M-W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #9] - [AR-268] - History of Photography: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Meredith, Tegrotenhuis Shimizu | M-T-W-TH-F |
+[SPRING COURSE #9] - [AR-222] - Printmaking II: Lith/Scrnprnt: 
+  [SECTION #1] - 8:00 AM - 10:15 AM | Robert, Fifield | M-W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #10] - [AR-351] - Mixed Media II: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Katie, Creyts | M-T-W-TH-F |
+[SPRING COURSE #10] - [AR-227] - Intro to Time-Based Art Making: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Jeffrey, Huston | TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #11] - [AR-427] - Advanced Time-Based Art Making: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Scott, Kolbo | M-T-W-TH-F |
+[SPRING COURSE #11] - [AR-241] - Ceramics (Hand Building) I: 
+  [SECTION #1] - 10:25 AM - 12:40 PM | Lance, Sinnema | M-W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #12] - [AT-396] - Figure Skating Injuries: 
-  [SECTION #1] - 6:00 PM - 8:00 PM | Russell, Richardson | M-W |
+[SPRING COURSE #12] - [AR-243] - Glass II: 
+  [SECTION #1] - 12:50 PM - 3:05 PM | Katie, Creyts | M-W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #13] - [BI-108] - Biology of Sex & Gender: 
-  [SECTION #1] - 8:45 AM - 11:45 AM | Finn, Pond | Lee Anne, Chaney | M-T-W-TH-F |
+[SPRING COURSE #13] - [AR-259] - Seminar I: 
+  [SECTION #1] - 3:50 PM - 5:10 PM | Meredith, Tegrotenhuis Shimizu | TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #14] - [BI-196] - Conservation & Human Rights: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Bertie, Weddell | Craig, Tsuchida | M-T-W-TH-F |
+[SPRING COURSE #14] - [AR-263] - History of Modern Art: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Meredith, Tegrotenhuis Shimizu | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #15] - [BI-308] - Biology of HIV/AIDS: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Frank, Caccavo | M-T-W-TH-F |
+[SPRING COURSE #15] - [AR-268] - History of Photography: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Meredith, Tegrotenhuis Shimizu | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #16] - [BU-320] - Occupational Fraud & Abuse: 
-  [SECTION #1] - 9:30 AM - 12:30 PM | Heather, Rogers | M-T-W-TH-F |
+[SPRING COURSE #16] - [AR-301] - Drawing III: 
+  [SECTION #1] - 12:50 PM - 3:05 PM | Robert, Fifield | M-W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #17] - [BU-363W] - Small Business Management: 
-  [SECTION #1] - 9:30 AM - 12:30 PM | Margie, LaShaw | M-T-W-TH-F |
+[SPRING COURSE #17] - [AR-302] - Figure Drawing I: 
+  [SECTION #1] - 8:30 AM - 10:45 AM | Gordon, Wilson | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #18] - [BU-396] - Fundamentals of Investing: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Brian, Bergquist | M-T-W-TH-F |
+[SPRING COURSE #18] - [AR-310] - Painting II: 
+  [SECTION #1] - 10:25 AM - 12:40 PM |  NA | M-W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #19] - [BU-402] - International Management: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Todd, Friends | M-T-W-TH-F |
+[SPRING COURSE #19] - [AR-321] - Intermediate Printmaking: 
+  [SECTION #1] - 8:00 AM - 10:15 AM | Robert, Fifield | M-W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #20] - [BU-455] - Chaos Theory, Leadrshp, Mgmnt: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | John, Burns | M-T-W-TH-F |
+[SPRING COURSE #20] - [AR-323] - Typography I: 
+  [SECTION #1] - 10:25 AM - 12:40 PM | David, Overstreet | W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #21] - [BU-496] - Marketing Consulting: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Dane, Sago | M-T-W-TH-F |
+[SPRING COURSE #21] - [AR-324] - Graphic Design 1: 
+  [SECTION #1] - 11:45 AM - 2:10 PM | David, Overstreet | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #22] - [CH-122] - Chemistry in Modern Living: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Karen, Stevens | M-T-W-TH-F |
+[SPRING COURSE #22] - [AR-327] - Interm Time-Based Art Making: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Jeffrey, Huston | TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #23] - [CH-225] - Community Chemistry Outreach: 
-  [SECTION #1] - 12:30 PM - 2:30 PM | Deanna, Ojennus | T-W-TH-F |
+[SPRING COURSE #23] - [AR-341] - Ceramics (Handbuilding) II: 
+  [SECTION #1] - 10:25 AM - 12:40 PM | Lance, Sinnema | M-W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #24] - [CH-396] - Chemistry in the Marketplace: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Janice, Gard | M-T-W-TH-F |
+[SPRING COURSE #24] - [AR-344] - Elem Art: Curric & Methods: 
+  [SECTION #1] - 4:00 PM - 6:30 PM | James, Winkle | W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #25] - [CS-371] - Windows Applications Dev: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Susan, Mabry | M-T-W-TH-F |
+[SPRING COURSE #25] - [AR-355] - Sculpture I: 
+  [SECTION #1] - 11:45 AM - 2:10 PM | Katie, Creyts | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #26] - [CS-396] - Introduction to Bioinformatics: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Keith, Knapp | M-T-W-TH-F |
+[SPRING COURSE #26] - [AR-363] - History of Modern Art: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Meredith, Tegrotenhuis Shimizu | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #27] - [CS-396] - Mathmatica Programming: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Lyle, Cochran | M-T-W-TH-F |
+[SPRING COURSE #27] - [AR-365W] - Contemporary Art Seminar: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Katie, Creyts | M |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #28] - [EC-196] - Women, Sports, & Economics: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Richard, Schatz | M-T-W-TH-F |
+[SPRING COURSE #28] - [AR-399] - Junior Exhibition Project: 
+  [SECTION #1] - 2:20 PM - 5:10 PM | Lance, Sinnema | T |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #29] - [EC-396] - Women, Sports, & Economics: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Richard, Schatz | M-T-W-TH-F |
+[SPRING COURSE #29] - [AR-402] - Figure Drawing II: 
+  [SECTION #1] - 8:30 AM - 10:45 AM | Gordon, Wilson | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #30] - [EDU-150] - Exceptionality Acr Life Span: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Betty, Williams | M-T-W-TH-F |
+[SPRING COURSE #30] - [AR-410] - Painting III: 
+  [SECTION #1] - 10:25 AM - 12:40 PM | Gordon, Wilson | M-W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #31] - [EIS-109] - Americn Stdies for Intl Stdnts: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Gregg, Brekke | M-T-W-TH-F |
+[SPRING COURSE #31] - [AR-423] - Typography II: 
+  [SECTION #1] - 10:25 AM - 12:40 PM | David, Overstreet | W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #32] - [EL-136] - Asian-American Literature: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Doug, Sugano | M-T-W-TH-F |
+[SPRING COURSE #32] - [AR-424] - Graphic Design II: 
+  [SECTION #1] - 11:45 AM - 2:10 PM | David, Overstreet | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #33] - [EL-273] - Poe: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Earl, Bobb | M-T-W-TH-F |
+[SPRING COURSE #33] - [AR-455] - Sculpture II: 
+  [SECTION #1] - 11:45 AM - 2:10 PM | Katie, Creyts | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #34] - [EL-314] - Church Drama: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Charles, Andrews | M-T-W-TH-F |
+[SPRING COURSE #34] - [AR-499] - Senior Exhibition Project: 
+  [SECTION #1] - 2:20 PM - 5:10 PM | Lance, Sinnema | T |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #35] - [EL-339] - Digital Storytelling: 
-  [SECTION #1] - 9:00 AM - 12:00 PM and 6:30 PM - 9:30 PM | Alfred, Johnson | M,T,W,TH,F-T |
+[SPRING COURSE #35] - [ASL-102] - Sign Language & the Deaf II: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | Sharon, Mitchell | T-TH |
+  [SECTION #2] - 4:00 PM - 6:00 PM | Sharon, Mitchell | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #36] - [EL-344] - Journal-Writng & Autobiography: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Angela, Gonzalez | M-T-W-TH-F |
+[SPRING COURSE #36] - [AT-270] - Emergency Response: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Cheree, Sauer | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #37] - [EL-373] - Poe: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Earl, Bobb | M-T-W-TH-F |
+[SPRING COURSE #37] - [AT-271] - Intro to Athletic Training: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Cynthia, Wright | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #38] - [EL-378] - Jane Austen: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Laura, Bloxham | M-T-W-TH-F |
+[SPRING COURSE #38] - [AT-284] - Clinical Exp II: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Shane, Wibel | T |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #39] - [FR-130] - Everyday French: 
-  [SECTION #1] - 9:15 AM - 12:15 PM | Jennifer, Brown | M-T-W-TH-F |
+[SPRING COURSE #39] - [AT-332] - Pathophy & Modalities/Training: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Stacey, Nauman | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #40] - [FR-230] - Everyday French: 
-  [SECTION #1] - 9:15 AM - 12:15 PM | Jennifer, Brown | M-T-W-TH-F |
+[SPRING COURSE #40] - [AT-333] - Org & Admin of Ath Training: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Cynthia, Wright | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #41] - [FW-132] - Fitness Programs: 
-  [SECTION #1] - 9:00 AM - 10:00 AM | Craig, Fortier | M-T-W-TH-F |
+[SPRING COURSE #41] - [AT-335] - Upper Extrem in Ath Training: 
+  [SECTION #1] - 10:25 AM - 11:35 AM and 11:45 AM - 12:40 PM | Stacey, Nauman | M,W,F-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #42] - [FW-141] - Water Aerobics: 
-  [SECTION #1] - 1:00 PM - 2:00 PM | Patty, Murphy | M-T-W-TH-F |
-  [SECTION #2] - 11:00 AM - 12:00 PM | Patty, Murphy | M-T-W-TH-F |
-  [SECTION #3] - 2:00 PM - 3:00 PM | Patty, Murphy | M-T-W-TH-F |
+[SPRING COURSE #42] - [AT-336] - Medical Issues in Ath Training: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Stacey, Nauman | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #43] - [FW-149] - Swimming for Fitness: 
-  [SECTION #1] - 10:00 AM - 11:00 AM | Steven, Schadt | M-T-W-TH-F |
-  [SECTION #2] - 7:30 AM - 8:30 AM | Gary, Kessie | M-T-W-TH-F |
+[SPRING COURSE #43] - [AT-384] - Clinical Experience IV: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Stacey, Nauman | T |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #44] - [FW-166] - Aerobics: 
-  [SECTION #1] - 3:00 PM - 3:55 PM | Tammi, Boyer | M-T-W-TH-F |
+[SPRING COURSE #44] - [AT-484] - Clinical Experience VI: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Cheree, Sauer | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #45] - [GL-131] - Understanding Earth: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Charles, Hillman | M-T-W-TH-F |
+[SPRING COURSE #45] - [BI-102] - Introductory Biology: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Finn, Pond | Lee Anne, Chaney | M-W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #46] - [HI-196] - History of Buddhism: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Anthony, Clark | M-T-W-TH-F |
+[SPRING COURSE #46] - [BI-120] - Intro to Environmental Science: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Grant, Casady | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #47] - [HS-279] - Foundations of Health Sciences: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Michael, Ediger | M-T-W-TH-F |
+[SPRING COURSE #47] - [BI-141] - Gen Biol II: Organismal Biol: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 11:45 AM - 2:35 PM | Craig, Tsuchida | Jack, Dunbar | Lee Anne, Chaney | M,W,F-TH |
+  [SECTION #2] - 12:50 PM - 1:45 PM and 11:45 AM - 2:35 PM | Lee Anne, Chaney | Tamar, Schiller | M,W,F-TH |
+  [SECTION #3] - 11:45 AM - 12:40 PM and 3:15 PM - 6:05 PM | Craig, Tsuchida | Jack, Dunbar | Lee Anne, Chaney | M,W,F-TH |
+  [SECTION #4] - 11:45 AM - 12:40 PM and 8:00 AM - 10:50 AM | Craig, Tsuchida | Jack, Dunbar | Lee Anne, Chaney | M,W,F-TH |
+  [SECTION #5] - 12:50 PM - 1:45 PM and 8:00 AM - 10:50 AM | Lee Anne, Chaney | Debra, Harris | M,W,F-TH |
+  [SECTION #6] - 12:50 PM - 1:45 PM and 3:15 PM - 6:05 PM | Lee Anne, Chaney | Tamar, Schiller | M,W,F-W |
+  [SECTION #7] - 12:50 PM - 1:45 PM and 3:15 PM - 6:05 PM | Lee Anne, Chaney | Tamar, Schiller | M,W,F-TH |
+  [SECTION #8] - 11:45 AM - 12:40 PM and 3:15 PM - 6:05 PM | Craig, Tsuchida | Jack, Dunbar | Lee Anne, Chaney | M,W,F-W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #48] - [HS-315] - Nutrition: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Ann, Atkins | Michael, Ediger | M-T-W-TH-F |
+[SPRING COURSE #48] - [BI-204] - Medical Microbiology: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Frank, Caccavo | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #49] - [JMC-339] - Digital Storytelling: 
-  [SECTION #1] - 9:00 AM - 12:00 PM and 6:30 PM - 9:30 PM | Alfred, Johnson | M,T,W,TH,F-T |
+[SPRING COURSE #49] - [BI-204L] - Lab: Medical Micro: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Debra, Harris | Lee Anne, Chaney | T |
+  [SECTION #2] - 9:30 AM - 11:00 AM | Debra, Harris | Lee Anne, Chaney | T |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #50] - [JMC-362W] - Article and Feature Writing: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Gordon, Jackson | M-T-W-TH-F |
+[SPRING COURSE #50] - [BI-296] - Topics in Diversity: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Grant, Casady | Lee Anne, Chaney | T |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #51] - [KIN-330] - Adaptive PE & Recreation: 
-  [SECTION #1] - 6:30 PM - 9:00 PM | Michael, Cunningham | Susan, Meyer | M-T-W |
+[SPRING COURSE #51] - [BI-303] - Plant Taxonomy: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #52] - [KIN-344] - Health/Fitness Curric Elem: 
-  [SECTION #1] - 6:30 PM - 9:00 PM | Craig, Fortier | M-W |
+[SPRING COURSE #52] - [BI-305] - Landscape Ecology: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Grant, Casady | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #53] - [KIN-370] - Sports Psychology: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Toby, Schwarz | M-T-W-TH-F |
+[SPRING COURSE #53] - [BI-305W] - Landscape Ecology: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Grant, Casady | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #54] - [LS-455] - Chaos Theory, Leadrshp, Mgmnt: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | John, Burns | M-T-W-TH-F |
+[SPRING COURSE #54] - [BI-345] - Ecology: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Craig, Tsuchida | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #55] - [MA-256] - Elem Probability & Statistics: 
-  [SECTION #1] - 1:15 PM - 4:15 PM | Shawna, Cosner | Kathleen, Fechter | M-T-W-TH-F |
-  [SECTION #2] - 9:00 AM - 12:00 PM | Nathan, Moyer | Kathleen, Fechter | M-T-W-TH-F |
-  [SECTION #3] - 9:00 AM - 12:00 PM | Michael, Rempe | Kathleen, Fechter | M-T-W-TH-F |
+[SPRING COURSE #55] - [BI-345W] - Ecology: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Craig, Tsuchida | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #56] - [MA-396] - Mathmatica Programming: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Lyle, Cochran | M-T-W-TH-F |
+[SPRING COURSE #56] - [BI-347] - Microbial Physiology: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Frank, Caccavo | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #57] - [MU-104] - Music of the Christian Church: 
-  [SECTION #1] - 9:15 AM - 12:15 PM | Benjamin, Brody | M-T-W-TH-F |
+[SPRING COURSE #57] - [BI-350] - Comp Vertebrate Anatomy: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Michael, Sardinia | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #58] - [MU-344] - Elem Music: Music and Movement: 
-  [SECTION #1] - 5:00 PM - 7:30 PM | Karen, Baldwin Kuntz | M-W-F |
+[SPRING COURSE #58] - [BI-350W] - Comp Vertebrate Anatomy: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Michael, Sardinia | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #59] - [PE-113] - Beginning Basketball: 
-  [SECTION #1] - 8:00 AM - 9:00 AM | Heidi, Goicoechea | M-T-W-TH-F |
+[SPRING COURSE #59] - [BI-354] - Developmental Biology: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Finn, Pond | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #60] - [PE-115] - Bowling: 
-  [SECTION #1] - 3:15 PM - 4:30 PM | Daniel, Ramsay | M-T-W-TH-F |
+[SPRING COURSE #60] - [BI-354W] - Developmental Biology: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Finn, Pond | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #61] - [PE-119] - Ice Skating: 
-  [SECTION #1] - 2:00 PM - 3:00 PM | Daman, Hagerott | M-T-W-TH-F |
-  [SECTION #2] - 1:00 PM - 2:00 PM | Daman, Hagerott | M-T-W-TH-F |
+[SPRING COURSE #61] - [BI-412] - Advanced Cell Biology: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Michael, Sardinia | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #62] - [PE-120] - Pilates: 
-  [SECTION #1] - 1:00 PM - 1:55 PM | Tammi, Boyer | M-T-W-TH-F |
+[SPRING COURSE #62] - [BI-412W] - Advanced Cell Biology: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Michael, Sardinia | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #63] - [PE-121] - Yoga: 
-  [SECTION #1] - 2:00 PM - 2:55 PM | Tammi, Boyer | M-T-W-TH-F |
+[SPRING COURSE #63] - [BU-110] - Intro to Business and Mgmt: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Eric, Sartell | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #64] - [PE-124] - Weight Training: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | Daniel, Ramsay | M-T-W-TH-F |
-  [SECTION #2] - 1:00 PM - 1:55 PM | Matthew, Stueckle | M-T-W-TH-F |
-  [SECTION #3] - 11:00 AM - 11:55 AM | Craig, Fortier | M-T-W-TH-F |
-  [SECTION #4] - 12:00 PM - 12:55 PM | Daniel, Ramsay | M-T-W-TH-F |
-  [SECTION #5] - 2:00 PM - 2:55 PM | Matthew, Stueckle | M-T-W-TH-F |
+[SPRING COURSE #64] - [BU-218] - Marketing: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | David, Sloan | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #65] - [PE-129] - Badminton: 
-  [SECTION #1] - 12:00 PM - 1:00 PM | James, Hayford | M-T-W-TH-F |
+[SPRING COURSE #65] - [BU-230] - Financial Accounting: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Candy, Correia | M-W-F |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Candy, Correia | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #66] - [PE-133] - Beginning Volleyball: 
-  [SECTION #1] - 12:00 PM - 1:00 PM | Heidi, Goicoechea | M-T-W-TH-F |
+[SPRING COURSE #66] - [BU-231] - Managerial Accounting: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Tara, Lambert | T-TH |
+  [SECTION #2] - 2:20 PM - 3:40 PM | Tara, Lambert | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #67] - [PE-148] - Cross-Country Skiing: 
-  [SECTION #1] - 12:30 PM - 6:00 PM | Russell, Richardson | W-F |
+[SPRING COURSE #67] - [BU-240] - Business Law: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Jeffrey, Miller | M-W-F |
+  [SECTION #2] - 9:05 AM - 10:00 AM | Jeffrey, Miller | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #68] - [PE-153] - American Ballroom Dance: 
-  [SECTION #1] - 4:00 PM - 5:30 PM | Mary, Edwards | M-T-W-TH-F |
-  [SECTION #2] - 4:00 PM - 5:30 PM | Mary, Edwards | M-T-W-TH-F |
+[SPRING COURSE #68] - [BU-311] - Prin International Business: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Todd, Friends | T-TH |
+  [SECTION #2] - 12:50 PM - 2:10 PM | Todd, Friends | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #69] - [PE-159] - Snow Skiing and Boarding: 
-  [SECTION #1] - 12:30 PM - 6:00 PM | Russell, Richardson | W-F |
+[SPRING COURSE #69] - [BU-332] - Cost Accounting: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Rick, Street | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #70] - [PE-164] - Pickleball: 
-  [SECTION #1] - 10:00 AM - 11:00 AM | Sean, Bushey | M-T-W-TH-F |
-  [SECTION #2] - 11:00 AM - 12:00 PM | Sean, Bushey | M-T-W-TH-F |
+[SPRING COURSE #70] - [BU-333] - Accounting Systems and Theory: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Allan, Snodgrass | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #71] - [PE-184] - Postures of Soul: Sacred Dance: 
-  [SECTION #1] - 9:00 AM - 11:00 AM and 9:00 AM - 10:00 AM | Judy, Mandeville | M,W-T,TH |
+[SPRING COURSE #71] - [BU-335] - Intermediate Accounting II: 
+  [SECTION #1] - 10:25 AM - 11:35 AM | Margie, LaShaw | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #72] - [PE-213] - Intermed Basketball: 
-  [SECTION #1] - 1:00 PM - 2:00 PM | Craig, Fortier | M-T-W-TH-F |
+[SPRING COURSE #72] - [BU-341] - Customer Rel/Channel Mgmt: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | David, Sloan | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #73] - [PH-211] - The Philosophy of Forgiveness: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Joshue, Orozco | M-T-W-TH-F |
+[SPRING COURSE #73] - [BU-357] - Financial Management: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Brian, Bergquist | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #74] - [PO-140] - African Life and Culture: 
-  [SECTION #1] - 9:15 AM - 12:15 PM | Amowi, Phillips | M-T-W-TH-F |
+[SPRING COURSE #74] - [BU-367] - Fundamentals of Investing: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Brian, Bergquist | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #75] - [PO-196] - Contemporary Korea: 
-  [SECTION #1] - 8:45 AM - 11:45 AM | Norman, Thorpe | M-T-W-TH-F |
+[SPRING COURSE #75] - [BU-373] - Human Resource Management: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Robert, Buckham | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #76] - [PO-196] - Conflict Mediation: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Karen, Vache | M-T-W-TH-F |
+[SPRING COURSE #76] - [BU-376] - Glob. Operat/Supply Chain Mgmt: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Robert, Buckham | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #77] - [PO-205] - U.S. Foreign Policy in Film: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Patrick, Van Inwegen | M-T-W-TH-F |
+[SPRING COURSE #77] - [BU-396] - Dean's Executive Speaker Serie: 
+  [SECTION #1] - 6:30 PM - 8:00 PM | Timothy, Wilkinson | T |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #78] - [PO-396] - Politics, Media & Pop Culture: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Andrew, Hogue | M-T-W-TH-F |
+[SPRING COURSE #78] - [BU-396] - Whitworth in China Prep: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Todd, Friends | W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #79] - [PS-121] - Concepts of Physics: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Anders, Gardestig | M-T-W-TH-F |
+[SPRING COURSE #79] - [BU-406] - Business Plan Competition: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | David, Sloan | TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #80] - [PY-205] - Belief in Weird Things: 
-  [SECTION #1] - 9:30 AM - 12:30 PM | Melissa, Rogers | M-T-W-TH-F |
+[SPRING COURSE #80] - [BU-410] - Business Policy: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Brian, Bergquist | T-TH |
+  [SECTION #2] - 2:20 PM - 3:40 PM | John, Hengesh | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #81] - [PY-206] - Sleep & Dreams: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Noel, Wescombe | M-T-W-TH-F |
+[SPRING COURSE #81] - [BU-425] - Organizational Behavior: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Nancy, Isaacson | T |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #82] - [PY-232] - Faith, Marriage and Parenting: 
-  [SECTION #1] - 9:30 AM - 12:30 PM | Adrian, Teo | M-T-W-TH-F |
+[SPRING COURSE #82] - [BU-436] - Advanced Taxation: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Michael, Patrick | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #83] - [PY-251] - Psychology of Resilience: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Philip, Mathew | M-T-W-TH-F |
+[SPRING COURSE #83] - [BU-443] - Product and Pricing Management: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Richard, George | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #84] - [PY-370] - Sports Psychology: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Toby, Schwarz | M-T-W-TH-F |
+[SPRING COURSE #84] - [BU-450W] - Soc & Ethical Iss in Bus & Ec: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Robert, Hinnenkamp | M-W-F |
+  [SECTION #2] - 6:30 PM - 9:30 PM | Robert, Buckham | W |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #85] - [SN-230] - Everyday Spanish: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Carmen, Felice | M-T-W-TH-F |
+[SPRING COURSE #85] - [BU-453W] - Organizational Theory: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Robert, Hinnenkamp | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #86] - [SN-330] - Intensive Oral Spanish: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Jose, Rojas | M-T-W-TH-F |
-  [SECTION #2] - 9:00 AM - 12:00 PM | Angeles, Aller | M-T-W-TH-F |
+[SPRING COURSE #86] - [BU-466W] - Principles of Auditing: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Margie, LaShaw | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #87] - [SO-243] - Marriage, Sex and Gender: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Robert, Clark | M-T-W-TH-F |
+[SPRING COURSE #87] - [BU-489] - Marktng Planning/Implementatn: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Richard, George | T-TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #88] - [SO-244] - I Corinthians: 
-  [SECTION #1] - 8:45 AM - 11:45 AM | Donald, Liebert | M-T-W-TH-F |
+[SPRING COURSE #88] - [CH-102] - Bioorganic Chemistry: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Janice, Gard | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #89] - [SP-113] - Interpersonal Communication: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Alan, Mikkelson | M-T-W-TH-F |
+[SPRING COURSE #89] - [CH-102L] - Bioorganic Chemistry Lab: 
+  [SECTION #1] - 12:50 PM - 3:40 PM | Janice, Gard | TH |
+  [SECTION #2] - 3:15 PM - 6:15 PM | Janice, Gard | M |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #90] - [SP-398] - Intercultural Communication: 
-  [SECTION #1] - 12:30 PM - 3:30 PM | Joseph, Vigil | M-T-W-TH-F |
+[SPRING COURSE #90] - [CH-161] - General Chemistry I: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Lori, Keeling | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #91] - [TA-116] - Theatre in Community: 
-  [SECTION #1] - 12:30 PM - 3:30 PM | Brooke, Kiener | M-T-W-TH-F |
+[SPRING COURSE #91] - [CH-161L] - General Chemistry I Lab: 
+  [SECTION #1] - 8:00 AM - 10:50 AM | Lori, Keeling | T |
+  [SECTION #2] - 11:45 AM - 2:35 PM | Lori, Keeling | T |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #92] - [TA-184] - Postures of Soul: Sacred Dance: 
-  [SECTION #1] - 9:00 AM - 11:00 AM and 9:00 AM - 10:00 AM | Judy, Mandeville | M,W-T,TH |
+[SPRING COURSE #92] - [CH-181] - General Chemistry II: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | James, Elliston | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:20 AM | Karen, Stevens | M-W-F |
+  [SECTION #3] - 1:55 PM - 2:50 PM | Lori, Keeling | M-W-F |
+  [SECTION #4] - 12:50 PM - 1:45 PM | Karen, Stevens | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #93] - [TA-217] - Mask-Making: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Jennifer, Read | M-T-W-TH-F |
+[SPRING COURSE #93] - [CH-181L] - General Chemistry II Lab: 
+  [SECTION #1] - 8:00 AM - 10:50 AM | James, Elliston | T |
+  [SECTION #2] - 3:15 PM - 6:05 PM | James, Elliston | M |
+  [SECTION #3] - 3:15 PM - 6:05 PM | James, Elliston | TH |
+  [SECTION #4] - 11:45 AM - 2:35 PM | Karen, Stevens | T |
+  [SECTION #5] - 8:00 AM - 10:50 AM | Karen, Stevens | TH |
+  [SECTION #6] - 11:45 AM - 2:35 PM | James, Elliston | TH |
+  [SECTION #7] - 3:15 PM - 6:05 PM | Janice, Gard | T |
+  [SECTION #8] - 3:15 PM - 6:05 PM | James, Elliston | W |
+  [SECTION #9] - 9:30 AM - 12:20 PM | Janice, Gard | TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #94] - [TA-296] - Stories & Speeches: 
-  [SECTION #1] - 9:30 AM - 12:30 PM | Diana, Trotter | M-T-W-TH-F |
+[SPRING COURSE #94] - [CH-278] - Organic Chemistry II: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Kerry, Breno | M-W-F |
+  [SECTION #2] - 11:45 AM - 12:40 PM | William, Samuels | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #95] - [TA-314] - Church Drama: 
-  [SECTION #1] - 1:00 PM - 4:00 PM | Charles, Andrews | M-T-W-TH-F |
+[SPRING COURSE #95] - [CH-278L] - Organic Chemistry II Lab: 
+  [SECTION #1] - 3:15 PM - 6:05 PM | William, Samuels | W |
+  [SECTION #2] - 3:15 PM - 6:05 PM | William, Samuels | M |
+  [SECTION #3] - 3:15 PM - 6:05 PM | Kerry, Breno | T |
+  [SECTION #4] - 8:00 AM - 10:50 AM | William, Samuels | T |
+  [SECTION #5] - 11:45 AM - 2:35 PM | William, Samuels | T |
+  [SECTION #6] - 3:15 PM - 6:05 PM | Lori, Keeling | TH |
+  [SECTION #7] - 8:00 AM - 10:50 AM | Kerry, Breno | TH |
+  [SECTION #8] - 11:45 AM - 2:35 PM | William, Samuels | TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #96] - [TH-241] - New Testament: 
-  [SECTION #1] - 8:45 AM - 11:45 AM | Roger, Mohrlang | M-T-W-TH-F |
+[SPRING COURSE #96] - [CH-336] - Spectroscopic Analysis: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Trisha, Russell | M-W-F |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #97] - [TH-244] - 1 Corinthians: 
-  [SECTION #1] - 8:45 AM - 11:45 AM | Donald, Liebert | M-T-W-TH-F |
+[SPRING COURSE #97] - [CH-336L] - Spectroscopic Analysis Lab: 
+  [SECTION #1] - 9:30 AM - 12:20 PM | Trisha, Russell | TH |
+  [SECTION #2] - 9:30 AM - 12:20 PM | Trisha, Russell | T |
+  [SECTION #3] - 12:50 PM - 3:40 PM | Trisha, Russell | TH |
 -------------------------------------------------------------------------------------
-[JANUARY COURSE #98] - [TH-279] - Theology & Film: 
-  [SECTION #1] - 9:00 AM - 12:00 PM | Adam, Neder | M-T-W-TH-F |
+[SPRING COURSE #98] - [CH-336W] - Spectroscopic Analysis: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Trisha, Russell | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #99] - [CH-383] - Chemistry Seminar: 
+  [SECTION #1] - 3:15 PM - 4:05 PM | Trisha, Russell | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #100] - [CH-401L] - Biochemistry I Lab: 
+  [SECTION #1] - 3:15 PM - 6:05 PM | Deanna, Ojennus | W |
+  [SECTION #2] - 8:00 AM - 10:50 AM | Deanna, Ojennus | T |
+  [SECTION #3] - 8:00 AM - 10:50 AM | Deanna, Ojennus | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #101] - [CH-403] - Biochemistry II: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Deanna, Ojennus | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #102] - [CH-403W] - Biochemistry II: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Deanna, Ojennus | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #103] - [CH-483] - Chemistry Seminar: 
+  [SECTION #1] - 3:15 PM - 4:05 PM | Trisha, Russell | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #104] - [CH-497] - Dissemination of Chem Research: 
+  [SECTION #1] - 2:20 PM - 3:15 PM | Trisha, Russell | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #105] - [CN-102] - Elementary Chinese II: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Lily, Liu | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #106] - [CN-202] - Intermediate Chinese II: 
+  [SECTION #1] - 10:25 AM - 11:35 AM | Lily, Liu | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #107] - [CO-150] - Western Civ I: 
+  [SECTION #1] - 10:00 AM - 10:55 AM and 9:05 AM - 10:15 AM | Karen, Finch | Keith, Beebe | Nicole, Boymook | TH-M,W,F |
+  [SECTION #2] - 2:20 PM - 3:15 PM and 9:05 AM - 10:15 AM | Landon, Crecelius | Keith, Beebe | Nicole, Boymook | TH-M,W,F |
+  [SECTION #3] - 1:55 PM - 2:50 PM and 9:05 AM - 10:15 AM | Angela, Allen | Keith, Beebe | Nicole, Boymook | W-M,W,F |
+  [SECTION #4] - 10:00 AM - 10:55 AM and 9:05 AM - 10:15 AM | Angela, Allen | Keith, Beebe | Nicole, Boymook | TH-M,W,F |
+  [SECTION #5] - 11:45 AM - 12:40 PM and 9:05 AM - 10:15 AM | Meredith, Devey | Keith, Beebe | Nicole, Boymook | TH-M,W,F |
+  [SECTION #6] - 11:45 AM - 12:40 PM and 9:05 AM - 10:15 AM | Angela, Allen | Keith, Beebe | Nicole, Boymook | TH-M,W,F |
+  [SECTION #7] - 12:50 PM - 1:45 PM and 9:05 AM - 10:15 AM | Janet, Hauck | Keith, Beebe | Nicole, Boymook | TH-M,W,F |
+  [SECTION #8] - 9:00 AM - 9:55 AM and 9:05 AM - 10:15 AM | Karen, Finch | Keith, Beebe | Nicole, Boymook | TH-M,W,F |
+  [SECTION #9] - 12:50 PM - 1:45 PM and 9:05 AM - 10:15 AM | Nicole, Boymook | Keith, Beebe | W-M,W,F |
+  [SECTION #10] - 4:00 PM - 4:55 PM and 9:05 AM - 10:15 AM | John, Burns | Keith, Beebe | Nicole, Boymook | W-M,W,F |
+  [SECTION #11] - 12:50 PM - 1:45 PM and 9:05 AM - 10:15 AM | Meredith, Devey | Keith, Beebe | Nicole, Boymook | TH-M,W,F |
+  [SECTION #12] - 1:55 PM - 2:50 PM and 9:05 AM - 10:15 AM | Janet, Hauck | Keith, Beebe | Nicole, Boymook | TH-M,W,F |
+  [SECTION #13] - 1:55 PM - 2:50 PM and 9:05 AM - 10:15 AM | Nicole, Boymook | Keith, Beebe | W-M,W,F |
+  [SECTION #14] - 12:50 PM - 1:45 PM and 9:05 AM - 10:15 AM | Angela, Allen | Keith, Beebe | Nicole, Boymook | W-M,W,F |
+  [SECTION #15] - 9:05 AM - 10:00 AM and 9:05 AM - 10:15 AM | Gregg, Brekke | Keith, Beebe | Nicole, Boymook | TH-M,W,F |
+  [SECTION #16] - 3:00 PM - 3:55 PM and 9:05 AM - 10:15 AM | John, Burns | Keith, Beebe | Nicole, Boymook | W-M,W,F |
+  [SECTION #17] - 3:25 PM - 4:20 PM and 9:05 AM - 10:15 AM | Landon, Crecelius | Keith, Beebe | Nicole, Boymook | TH-M,W,F |
+  [SECTION #18] - 10:05 AM - 11:00 AM and 9:05 AM - 10:15 AM | Gregg, Brekke | Keith, Beebe | Nicole, Boymook | TH-M,W,F |
+  [SECTION #19] - 3:00 PM - 3:55 PM and 9:05 AM - 10:15 AM | Gregg, Brekke | W-M,W,F |
+  [SECTION #20] - 10:00 AM - 10:55 AM and 9:05 AM - 10:15 AM | Rafaela, Acevedo-Field | TH-M,W,F |
+  [SECTION #21] - 9:00 AM - 9:55 AM and 9:05 AM - 10:15 AM | Rafaela, Acevedo-Field | TH-M,W,F |
+  [SECTION #22] - 4:00 PM - 4:55 PM and 9:05 AM - 10:15 AM | Gregg, Brekke | W-M,W,F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #108] - [CO-150H] - Western Civ. I: (Honors): 
+  [SECTION #1] - 3:10 PM - 4:05 PM and 9:05 AM - 10:15 AM | Arlin, Migliazzo | Keith, Beebe | Nicole, Boymook | W-M,W,F |
+  [SECTION #2] - 4:10 PM - 5:05 PM and 9:05 AM - 10:15 AM | Arlin, Migliazzo | Keith, Beebe | Nicole, Boymook | W-M,W,F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #109] - [CO-250] - Western Civ II: 
+  [SECTION #1] - 9:30 AM - 10:10 AM and 10:25 AM - 11:35 AM | Christopher, Dahlvig | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | Brooke, Watts | Meredith, Tegrotenhuis Shimizu | Andrew, Pyrc | Kyle, Lantz | T-M,W,F |
+  [SECTION #2] - 12:50 PM - 1:30 PM and 10:25 AM - 11:35 AM | Forrest, Baird | Kathleen, Storm | Leonard, Oakland | T-M,W,F |
+  [SECTION #3] - 1:30 PM - 2:10 PM and 10:25 AM - 11:35 AM | Forrest, Baird | Kathleen, Storm | Leonard, Oakland | T-M,W,F |
+  [SECTION #4] - 3:00 PM - 3:40 PM and 10:25 AM - 11:35 AM | Meredith, Tegrotenhuis Shimizu | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | T-M,W,F |
+  [SECTION #5] - 12:50 PM - 1:30 PM and 10:25 AM - 11:35 AM | Brooke, Watts | Kathleen, Storm | Forrest, Baird | T-M,W,F |
+  [SECTION #6] - 10:10 AM - 10:50 AM and 10:25 AM - 11:35 AM | Christopher, Dahlvig | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | T-M,W,F |
+  [SECTION #7] - 2:20 PM - 3:00 PM and 10:25 AM - 11:35 AM | Meredith, Tegrotenhuis Shimizu | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | April, McGonigal | T-M,W,F |
+  [SECTION #8] - 9:30 AM - 10:10 AM and 10:25 AM - 11:35 AM | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | T-M,W,F |
+  [SECTION #9] - 1:30 PM - 2:10 PM and 10:25 AM - 11:35 AM | Brooke, Watts | Kathleen, Storm | Forrest, Baird | T-M,W,F |
+  [SECTION #10] - 3:50 PM - 4:30 PM and 10:25 AM - 11:35 AM | Andrew, Pyrc | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | T-M,W,F |
+  [SECTION #11] - 10:10 AM - 10:50 AM and 10:25 AM - 11:35 AM | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | T-M,W,F |
+  [SECTION #12] - 4:30 PM - 5:10 PM and 10:25 AM - 11:35 AM | Andrew, Pyrc | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | T-M,W,F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #110] - [CO-250H] - Western Civ II: (Honors) Film: 
+  [SECTION #1] - 4:00 PM - 6:00 PM and 10:25 AM - 11:35 AM | Leonard, Oakland | T-M,W,F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #111] - [CO-350] - Western Civ III: Immigration: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Keith, Wyma | Kameshwaran, Sankaran | W-T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #112] - [CO-350] - Western Civ III: NASA & Space: 
+  [SECTION #1] - 1:55 PM - 2:50 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Kameshwaran, Sankaran | W-T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #113] - [CO-350] - Western Civ III:Lang/Society: 
+  [SECTION #1] - 1:55 PM - 2:50 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Gregg, Brekke | Kameshwaran, Sankaran | W-T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #114] - [CO-350] - Western Civ III:Health Policy: 
+  [SECTION #1] - 12:50 PM - 1:45 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Elizabeth, Abbey | Kameshwaran, Sankaran | W-T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #115] - [CO-350] - Western Civ III: MentalHealth: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Elizabeth, Campbell | Kameshwaran, Sankaran | W-T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #116] - [CO-350] - Western Civ III:Tech & Privac: 
+  [SECTION #1] - 12:50 PM - 1:45 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Donna, Pierce | Kameshwaran, Sankaran | W-T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #117] - [CO-350] - Western Civ III:BiblLaw/Legis: 
+  [SECTION #1] - 12:50 PM - 1:45 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | William, Kynes | Kameshwaran, Sankaran | W-T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #118] - [CO-350] - Western Civ III: Water: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Kerry, Breno | Kameshwaran, Sankaran | W-T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #119] - [CO-350] - Western Civ III: Capitalism: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | David, Sloan | Kameshwaran, Sankaran | W-T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #120] - [CO-350] - Western Civ III:US Pol Lat Am: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Rafaela, Acevedo-Field | Kameshwaran, Sankaran | W-T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #121] - [CS-125] - Business Info Systems: 
+  [SECTION #1] - 6:30 PM - 7:50 PM | Mark, Ellis | T-TH |
+  [SECTION #2] - 12:50 PM - 2:10 PM | Kent, Jones | T-TH |
+  [SECTION #3] - 9:30 AM - 10:50 AM | Judy, Dehle | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #122] - [CS-171] - Computer Science I: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Peter, Tucker | M-W-F |
+  [SECTION #2] - 1:55 PM - 2:50 PM | Kent, Jones | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #123] - [CS-172] - Computer Science II: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Edward, Walker | T-TH |
+  [SECTION #2] - 9:30 AM - 10:50 AM | Edward, Walker | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #124] - [CS-273] - Data Structures: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Edward, Walker | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #125] - [CS-274] - Ethic, Soc & Leg Issues in CS: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Susan, Mabry | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #126] - [CS-294] - Career and Vocation Seminar: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Edward, Walker | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #127] - [CS-314] - Microsoft Networks: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Terry, Norton | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #128] - [CS-396] - Mobile Application Development: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Peter, Tucker | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #129] - [CS-401] - Computer Architecture: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Kent, Jones | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #130] - [CS-457] - Artificial Intelligence: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Susan, Mabry | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #131] - [CS-472] - Software Engineering: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Peter, Tucker | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #132] - [CS-475W] - Operating Systems: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Susan, Mabry | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #133] - [EC-210] - Principles of Microeconomics: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Eugene, Bempong Nyantakyi | M-W-F |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Eric, Sartell | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #134] - [EC-211] - Prin of Macroeconomics: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Vange, Ocasio Hochheimer | T-TH |
+  [SECTION #2] - 12:50 PM - 2:10 PM | Vange, Ocasio Hochheimer | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #135] - [EC-321] - Intermed Macroeconomic Analy: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Vange, Ocasio Hochheimer | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #136] - [EC-402] - Econometrics: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Eugene, Bempong Nyantakyi | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #137] - [EC-425] - Economic Development: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Eugene, Bempong Nyantakyi | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #138] - [EDU-201] - Educational Psychology: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | James, Uhlenkott | Patsy, Marshall | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #139] - [EDU-201H] - Honors Educational Psychology: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | James, Uhlenkott | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #140] - [EDU-202] - Exploring Teaching: 
+  [SECTION #1] - 8:30 AM - 10:00 AM | Linda, Buff | Patsy, Marshall | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #141] - [EDU-320] - Excptnl Learners & Inclusion: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Megan, Cozza | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #142] - [EDU-321] - Intrvtn for Behavior/Motvation: 
+  [SECTION #1] - 4:00 PM - 5:30 PM | Betty, Williams | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #143] - [EDU-323] - Interv for Acad Learning Prob: 
+  [SECTION #1] - 4:00 PM - 5:30 PM |  Staff | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #144] - [EDU-326] - Cultural Competence & Society: 
+  [SECTION #1] - 6:00 PM - 9:00 PM | Roberta, Wilburn | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #145] - [EDU-329] - Adolesc Psyc for Mid/High Schl: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Flint, Simonsen | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #146] - [EDU-340] - K-8:General/Lang Art Methods: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Ann, Teberg | Patsy, Marshall | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #147] - [EDU-341] - Math: Elementary Methods: 
+  [SECTION #1] - 2:30 PM - 3:30 PM |  Staff | Patsy, Marshall | Kaye, Kamp | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #148] - [EDU-342] - Elem Curriculum Field Exper: 
+  [SECTION #1] - 12:50 PM - 3:40 PM | Ann, Teberg | Patsy, Marshall | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #149] - [EDU-343] - Science: K-8 Methd & Assessmen: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Jami, Ostby-Marsh | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #150] - [EDU-344] - Children's Literature & Soc St: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Janelle, Stolp | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #151] - [EDU-350] - Meth of Teaching: Mid/Hi Sch: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Dennis, Sterner | Patsy, Marshall | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #152] - [EDU-361] - Second-Language Acquisition: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Natasha, Gerasimchuk | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #153] - [EDU-363] - ELL Methods in Lang Art/Read: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Anne, Wilcox | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #154] - [EDU-401W] - Democracy, Leadrshp & Schoolng: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | James, Uhlenkott | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #155] - [EDU-424] - Early Interv for Spec Educ.: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Michelle, McKenzie | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #156] - [EDU-430] - Int. for Autism Spectrum Dis.: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Flint, Simonsen | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #157] - [EDU-434] - Early Speech, Lang & Literacy: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Betty, Williams | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #158] - [EDU-440] - Methods for Teaching Reading: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Lisa, Laurier | Patsy, Marshall | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #159] - [EDU-441] - Diagnosis/Interventn Rdg Diff: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Lisa, Laurier | Patsy, Marshall | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #160] - [EDU-458] - Content Area Read & Writ: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Ann, Teberg | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #161] - [EDU-461] - Assess, Manage, Differ Elem: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Jann, Leppien | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #162] - [EL-110] - Writing I: Peace & Justice: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Charles, Andrews | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #163] - [EL-110] - Writing I: Project Runway: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Nicole, Sheets | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #164] - [EL-110] - Writing I: Travel: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | LuElla, D'Amico | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #165] - [EL-110] - Writing I: Pop Culture: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Thomas, Caraway | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #166] - [EL-110] - Writing I: Sustainable Living: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Marguerite, Wolcott | M-W-F |
+  [SECTION #2] - 9:05 AM - 10:00 AM | Marguerite, Wolcott | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #167] - [EL-110] - Writing I:Cowboys & Stereotyp: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Angela, Allen | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #168] - [EL-110] - Writing I: Scandals & Lies: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Angela, Gonzalez | M-W-F |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Angela, Gonzalez | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #169] - [EL-110] - Writing I: Social Media: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Jessica, Williams | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #170] - [EL-110] - Writing I:Writ AboutPubApolog: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Angela, Gonzalez | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #171] - [EL-110H] - Honors Writing I:Human Rights: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | John, Pell | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #172] - [EL-124] - African American Literature: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Alfred, Johnson | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #173] - [EL-126] - Women Writers: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Earl, Bobb | T-TH |
+  [SECTION #2] - 9:30 AM - 10:50 AM | Marguerite, Wolcott | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #174] - [EL-128] - Multicultural American Lit: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Marguerite, Wolcott | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #175] - [EL-131] - Native American Literature: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | LuElla, D'Amico | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #176] - [EL-202] - Classic American Films: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Leonard, Oakland | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #177] - [EL-206] - American Literature After 1865: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Alfred, Johnson | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #178] - [EL-208] - British Literature Since 1800: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Charles, Andrews | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #179] - [EL-210] - Writing II: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Jessica, Williams | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #180] - [EL-233] - The Epic: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Leonard, Oakland | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #181] - [EL-245] - Creative Writing: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Laurie, Lamon | M-W-F |
+  [SECTION #2] - 3:15 PM - 4:40 PM | Laurie, Lamon | W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #182] - [EL-250] - Introduction to Film Studies: 
+  [SECTION #1] - 12:50 PM - 1:45 PM and 6:30 PM - 9:30 PM | Alfred, Johnson | M,W,F-T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #183] - [EL-251] - Modern Global Literature: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Laura, Bloxham | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #184] - [EL-267] - Intro to Critical Strategies: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | John, Pell | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #185] - [EL-304] - Fiction Writing: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Thomas, Caraway | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #186] - [EL-310] - Northwest Writers: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Earl, Bobb | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #187] - [EL-345] - Poetry Writing: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Laurie, Lamon | W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #188] - [EL-347W] - Creative Nonfiction Writing: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Nicole, Sheets | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #189] - [EL-358] - Composition Theory: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | John, Pell | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #190] - [EL-387] - Teaching Writ/Adolescent Lit: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Lisa, Laurier | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #191] - [EL-388] - Struc & Dev of the Eng Lang: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Erin, Davis | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #192] - [EL-396] - 19th Century Amer Womn Writers: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | LuElla, D'Amico | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #193] - [EL-401W] - Moby Dick: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Earl, Bobb | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #194] - [EL-444] - Advanced Writing Workshop: 
+  [SECTION #1] - 3:15 PM - 4:40 PM | Thomas, Caraway | W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #195] - [EL-447] - Shakespeare Seminar: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Doug, Sugano | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #196] - [EL-460] - Irish Literature: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Charles, Andrews | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #197] - [EL-465W] - English Novel: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Pamela, Parker | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #198] - [EN-171] - Engineering Graphics & CAD: 
+  [SECTION #1] - 6:00 PM - 9:00 PM |  NA | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #199] - [EN-211] - Statics: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Andrew, Law | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #200] - [EN-356] - Mathematical Methods I: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Kameshwaran, Sankaran | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #201] - [FR-102] - Elementary French II: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Frederic, Dugenet | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:35 AM | Frederic, Dugenet | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #202] - [FR-111] - Intensive Elementary French: 
+  [SECTION #1] - 10:25 AM - 11:35 AM | Bendi, Schrambach | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #203] - [FR-202] - Intermediate French II: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Jennifer, Brown | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #204] - [FR-302W] - French Writing and Stylistics: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Bendi, Schrambach | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #205] - [FR-415] - Business French: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Bendi, Schrambach | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #206] - [FW-132] - Fitness Programs: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Heather, Bowman | M-W-F |
+  [SECTION #2] - 12:50 PM - 1:45 PM | Heather, Bowman | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #207] - [FW-134] - Jogging: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | David, Pomante | M-W-F |
+  [SECTION #2] - 8:00 AM - 8:55 AM | Clinton, Perry | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #208] - [FW-141] - Water Aerobics: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Patty, Murphy | M-W-F |
+  [SECTION #2] - 8:00 AM - 8:55 AM | Patty, Murphy | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #209] - [FW-149] - Swimming for Fitness: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Gary, Kessie | M-W-F |
+  [SECTION #2] - 8:00 AM - 8:55 AM | Gary, Kessie | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #210] - [FW-156] - Aquatic Training for Sports: 
+  [SECTION #1] - 7:30 AM - 9:00 AM | Whitney, Kessie | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #211] - [FW-166] - Aerobics: 
+  [SECTION #1] - 3:00 PM - 3:55 PM | Tammi, Boyer | M-W-F |
+  [SECTION #2] - 3:00 PM - 3:55 PM | Tammi, Boyer | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #212] - [FW-219] - Ice Skating for Fitness: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Jael, Hagerott | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #213] - [GE-325] - Transfer Seminar: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Nicole, Boymook | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #214] - [GE-330] - Community Leadership Training: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Nicole, Boymook | Richard, Mandeville | Jolyn, Dahlvig | Matthew, Baker | T |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Kristiana, Holmes | Linda, Torretta | Richard, Mandeville | T |
+  [SECTION #3] - 11:45 AM - 12:40 PM | Esther, Louie | Richard, Mandeville | T |
+  [SECTION #4] - 11:45 AM - 12:40 PM | Dayna, Jones | Richard, Mandeville | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #215] - [GR-102] - Elementary German II: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Ingrid, LaVoie | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:35 AM | Ingrid, LaVoie | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #216] - [GR-202] - Intermediate German II: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Ingrid, LaVoie | M-W-TH-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #217] - [HI-101] - The Mediterranean World: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Corliss, Slack | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #218] - [HI-102] - The Pacific World: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Anthony, Clark | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #219] - [HI-181] - The Atlantic World: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Rafaela, Acevedo-Field | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #220] - [HI-209] - History of Vietnam War: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Dale, Soden | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #221] - [HI-210] - Becoming a Historian: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Arlin, Migliazzo | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #222] - [HI-212] - American Popular Culture: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Dale, Soden | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #223] - [HI-241] - Africn Amer Hist Since 1865: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Lawrence, Burnley | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #224] - [HI-300W] - Christianity in Asia: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Anthony, Clark | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #225] - [HI-309] - History of Vietnam War: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Dale, Soden | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #226] - [HI-345] - Cultural Histry of China/Japan: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Anthony, Clark | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #227] - [HI-354] - Colonialism and Globalization: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Corliss, Slack | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #228] - [HI-426] - Slavery in Latin America: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Rafaela, Acevedo-Field | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #229] - [HI-496] - Women in Early Modern Europe: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Jennifer, Binczewski | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #230] - [HS-221] - Anatomy and Physiology II: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Justin, Ulbright | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #231] - [HS-315] - Nutrition: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Elizabeth, Abbey | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #232] - [HS-320] - Structural & Mechanical Kin: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Daman, Hagerott | M-W-F |
+  [SECTION #2] - 9:05 AM - 10:15 AM | Daman, Hagerott | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #233] - [HS-361] - Community Health: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Robin, Pickering | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #234] - [HS-362] - Personal Health: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Elizabeth, Abbey | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #235] - [HS-365W] - Evidence Based Health Science: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | William, Silvers | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:20 AM | William, Silvers | M-W-F |
+  [SECTION #3] - 11:45 AM - 12:40 PM | William, Silvers | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #236] - [HS-410] - Chronic Disease Epidemiology: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Robin, Pickering | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #237] - [HS-420] - Health Promotion and Education: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Robin, Pickering | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #238] - [HS-433] - Prin Conditioning & Nutrition: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Daman, Hagerott | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #239] - [HS-498] - Senior Seminar: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Michael, Ediger | T-TH |
+  [SECTION #2] - 2:20 PM - 3:40 PM | Michael, Ediger | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #240] - [IDS-115] - Preparing for a STEM Career: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Peter, Tucker | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #241] - [IDS-151] - Seminar for Health Professions: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Karen, Stevens | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #242] - [IDS-196] - Interdisciplinary Intro Stats: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Noel, Wescombe | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #243] - [IDS-230] - Asian American Film: 
+  [SECTION #1] - 3:50 PM - 5:20 PM | Esther, Louie | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #244] - [IDS-231] - US Latino/a Film: 
+  [SECTION #1] - 3:15 PM - 6:15 PM | Joseph, Vigil | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #245] - [IDS-296H] - Honors Domestic US Colonialsm: 
+  [SECTION #1] - 3:00 PM - 4:20 PM | Doug, Sugano | Barry, Moses | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #246] - [JA-102] - Elementary Japanese II: 
+  [SECTION #1] - 10:25 AM - 11:35 AM | Harumi, Norasakkunkit | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #247] - [JMC-125] - Writing for Mass Media: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Gordon, Jackson | M-W-F |
+  [SECTION #2] - 12:50 PM - 1:45 PM | Erica, Salkin | M-W-F |
+  [SECTION #3] - 8:00 AM - 9:20 AM | Sarah, Bain | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #248] - [JMC-209] - Introduction to Comm Research: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Joy, York | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #249] - [JMC-212] - Theories Human Communication: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Ronald, Pyle | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #250] - [JMC-231] - Photojournalism: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Kirk, Hirota | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #251] - [JMC-245] - Applied Journalism: Newspaper: 
+  [SECTION #1] - 5:40 PM - 6:20 PM | James, McPherson | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #252] - [JMC-246] - Applied Journalism: Radio: 
+  [SECTION #1] - 5:00 PM - 5:40 PM | Robert, Schloss | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #253] - [JMC-247] - Applied Journalism: Yearbook: 
+  [SECTION #1] - 5:00 PM - 5:40 PM | Tad, Wisenor | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #254] - [JMC-315] - Media Criticism: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | James, McPherson | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #255] - [JMC-335] - Interactive Journalism: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Erica, Salkin | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #256] - [JMC-343] - Editing, Layout and Design: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | James, McPherson | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #257] - [JMC-347] - Mass Media History: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | James, McPherson | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #258] - [JMC-362W] - Article and Feature Writing: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Gordon, Jackson | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #259] - [JMC-493] - Communication Ethics: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Gordon, Jackson | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #260] - [KIN-351] - Curriculum/Methods Sec Phys Ed: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Kirk, Westre | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #261] - [KIN-430] - Sports and Society: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Kirk, Westre | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #262] - [KIN-430W] - Sports and Society: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Kirk, Westre | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #263] - [KIN-465] - Motor Devel/Control/Learning: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Daniel, Ramsay | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #264] - [KIN-498] - Senior Seminar: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Steven, Schadt | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #265] - [LS-250] - Prin of Service & Leadership: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | John, Burns | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #266] - [LS-350] - Transforming Leadership: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | John, Burns | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #267] - [LS-401] - Leadership Seminar: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | John, Burns | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #268] - [MA-107] - Basic Concepts in Modern Math: 
+  [SECTION #1] - 9:05 AM - 10:15 AM |  Staff | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #269] - [MA-108] - Finite Math for Social Science: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Marcia, Hopkins-Marker | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #270] - [MA-150] - Pre-Calculus: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Robert, DeLorto | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #271] - [MA-158] - Calculus for Social Sciences: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Marcia, Hopkins-Marker | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:35 AM | Marcia, Hopkins-Marker | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #272] - [MA-171] - Calculus I: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Robert, DeLorto | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:35 AM | Anne, Trefry | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #273] - [MA-172] - Calculus II: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Lyle, Cochran | M-T-W-F |
+  [SECTION #2] - 8:00 AM - 8:55 AM | Anne, Trefry | M-T-W-F |
+  [SECTION #3] - 11:45 AM - 12:40 PM | Donna, Pierce | M-W-TH-F |
+  [SECTION #4] - 8:00 AM - 8:55 AM | Lyle, Cochran | M-T-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #274] - [MA-221] - Math for Elem School Teacher I: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Martha, Gady | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #275] - [MA-222] - Math Elem School Teachers II: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Martha, Gady | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #276] - [MA-256] - Elem Probability & Statistics: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Timothy, Martin | TH |
+  [SECTION #2] - 10:25 AM - 11:20 AM | Richard, Bishop | M-W-F |
+  [SECTION #3] - 9:05 AM - 10:00 AM | Richard, Bishop | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #277] - [MA-273] - Calculus III: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Lyle, Cochran | M-T-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #278] - [MA-278] - Discrete Mathematics: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Nathan, Moyer | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #279] - [MA-281] - Differential Equations: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Michael, Rempe | M-W-F |
+  [SECTION #2] - 8:00 AM - 8:55 AM | Michael, Rempe | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #280] - [MA-294] - Career and Vocation Seminar: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Nathan, Moyer | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #281] - [MA-330] - Linear Algebra: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Lyle, Cochran | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #282] - [MA-350] - Numerical Analysis: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Michael, Rempe | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #283] - [MA-358W] - Mathematical Statistics II: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Walter, Seidel | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #284] - [MA-365] - Modern Geometry: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Martha, Gady | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #285] - [MA-430W] - Graph Theory & Combinatorics: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Nathan, Moyer | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #286] - [MI-102] - Intro to Tactical Leadership: 
+  [SECTION #1] - 1:00 PM - 4:00 PM |  NA | W |
+  [SECTION #2] - 8:00 AM - 11:00 AM |  NA | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #287] - [MI-102L] - Leadership Lab: 
+  [SECTION #1] - 3:30 PM - 6:30 PM |  NA | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #288] - [MI-104] - Military Physical-Fitness: 
+  [SECTION #1] - 6:00 AM - 7:00 AM |  NA | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #289] - [MI-202] - Found of Tactical Leadership: 
+  [SECTION #1] - 3:10 PM - 6:00 PM |  NA | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #290] - [MI-202L] - Leadership Lab: 
+  [SECTION #1] - 3:30 PM - 6:30 PM |  NA | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #291] - [MI-204] - Military Physical-Fitness: 
+  [SECTION #1] - 6:00 AM - 7:00 AM |  NA | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #292] - [MU-112] - Music Theory II: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Thomas, Shook | M-W-F |
+  [SECTION #2] - 12:50 PM - 1:45 PM | Thomas, Shook | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #293] - [MU-113] - Ear Training II: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Brent, Edstrom | T-TH |
+  [SECTION #2] - 9:30 AM - 10:25 AM | Brent, Edstrom | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #294] - [MU-139] - Beginning Class Piano: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Ivana, Cojbasic | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #295] - [MU-140] - Beginning Class Guitar: 
+  [SECTION #1] - 3:10 PM - 4:05 PM | Paul, Grove | T |
+  [SECTION #2] - 4:10 PM - 5:05 PM | Paul, Grove | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #296] - [MU-141] - Class Piano I: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Ivana, Cojbasic | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #297] - [MU-142] - Class Voice: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Ann, Fennessy | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #298] - [MU-167] - Concert Band: 
+  [SECTION #1] - 6:30 PM - 9:00 PM | Kyla, Fague | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #299] - [MU-171] - Whitworth Choir: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 11:45 AM - 12:40 PM | Marc, Hafso | M,T,W,TH,F-M,T,W,TH,F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #300] - [MU-172] - Women's Choir: 
+  [SECTION #1] - 4:00 PM - 5:30 PM and 4:00 PM - 5:30 PM | Deborah, Hansen | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #301] - [MU-173] - Wind Symphony: 
+  [SECTION #1] - 4:00 PM - 5:30 PM | Richard, Strauch | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #302] - [MU-174] - Jazz Ensemble II: 
+  [SECTION #1] - 6:30 PM - 8:00 PM | Christopher, Parkin | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #303] - [MU-174] - Jazz Ensemble I: 
+  [SECTION #1] - 3:30 PM - 4:45 PM and 6:30 PM - 8:00 PM | Daniel, Keberle | T,TH-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #304] - [MU-175] - Chamber Singers: 
+  [SECTION #1] - 4:40 PM - 6:00 PM and 4:40 PM - 6:00 PM | Marc, Hafso | T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #305] - [MU-177] - Men's Chorus: 
+  [SECTION #1] - 4:40 PM - 6:00 PM | Scott, Miller | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #306] - [MU-178] - Whitworth Orchestra: 
+  [SECTION #1] - 4:00 PM - 5:30 PM and 5:00 PM - 6:15 PM |  Staff | M-T,TH |
+  [SECTION #2] - 5:00 PM - 6:15 PM |  Staff | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #307] - [MU-206] - Jazz in America: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Thomas, Shook | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #308] - [MU-212] - Music Theory IV: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Brent, Edstrom | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #309] - [MU-213] - Ear Training IV: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Brent, Edstrom | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #310] - [MU-225] - General Conducting: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Deborah, Hansen | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #311] - [MU-241] - Class Piano II: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Judith, Schoepflin | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #312] - [MU-267] - Concert Band: 
+  [SECTION #1] - 6:30 PM - 9:00 PM | Kyla, Fague | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #313] - [MU-271] - Whitworth Choir: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 11:45 AM - 12:40 PM | Marc, Hafso | M,T,W,TH,F-M,T,W,TH,F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #314] - [MU-272] - Women's Choir: 
+  [SECTION #1] - 4:00 PM - 5:30 PM and 4:00 PM - 5:30 PM | Deborah, Hansen | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #315] - [MU-273] - Wind Symphony: 
+  [SECTION #1] - 4:00 PM - 5:30 PM | Richard, Strauch | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #316] - [MU-274] - Jazz Ensemble I: 
+  [SECTION #1] - 3:30 PM - 4:45 PM and 6:30 PM - 8:00 PM | Daniel, Keberle | T,TH-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #317] - [MU-274] - Jazz Ensemble II: 
+  [SECTION #1] - 6:30 PM - 8:00 PM | Christopher, Parkin | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #318] - [MU-275] - Chamber Singers: 
+  [SECTION #1] - 4:40 PM - 6:00 PM and 4:40 PM - 6:00 PM | Marc, Hafso | T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #319] - [MU-277] - Men's Chorus: 
+  [SECTION #1] - 4:40 PM - 6:00 PM | Scott, Miller | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #320] - [MU-278] - Whitworth Orchestra: 
+  [SECTION #1] - 4:00 PM - 5:30 PM and 5:00 PM - 6:15 PM |  Staff | M-T,TH |
+  [SECTION #2] - 5:00 PM - 6:15 PM |  Staff | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #321] - [MU-301] - Music History I: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Benjamin, Brody | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #322] - [MU-303] - Music History III: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Richard, Strauch | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #323] - [MU-334] - Brass Techniques: 
+  [SECTION #1] - 6:30 PM - 8:30 PM |  Staff | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #324] - [MU-344] - Elem Music: Music and Movement: 
+  [SECTION #1] - 6:30 PM - 9:00 PM | Karen, Baldwin Kuntz | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #325] - [MU-367] - Concert Band: 
+  [SECTION #1] - 6:30 PM - 9:00 PM | Kyla, Fague | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #326] - [MU-371] - Whitworth Choir: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 11:45 AM - 12:40 PM | Marc, Hafso | M,T,W,TH,F-M,T,W,TH,F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #327] - [MU-372] - Women's Choir: 
+  [SECTION #1] - 4:00 PM - 5:30 PM and 4:00 PM - 5:30 PM | Deborah, Hansen | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #328] - [MU-373] - Wind Symphony: 
+  [SECTION #1] - 4:00 PM - 5:30 PM | Richard, Strauch | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #329] - [MU-374] - Jazz Ensemble II: 
+  [SECTION #1] - 6:30 PM - 8:00 PM | Christopher, Parkin | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #330] - [MU-374] - Jazz Ensemble I: 
+  [SECTION #1] - 3:30 PM - 4:45 PM and 6:30 PM - 8:00 PM | Daniel, Keberle | T,TH-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #331] - [MU-375] - Chamber Singers: 
+  [SECTION #1] - 4:40 PM - 6:00 PM and 4:40 PM - 6:00 PM | Marc, Hafso | T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #332] - [MU-377] - Men's Chorus: 
+  [SECTION #1] - 4:40 PM - 6:00 PM | Scott, Miller | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #333] - [MU-378] - Whitworth Orchestra: 
+  [SECTION #1] - 4:00 PM - 5:30 PM and 5:00 PM - 6:15 PM |  Staff | M-T,TH |
+  [SECTION #2] - 5:00 PM - 6:15 PM |  Staff | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #334] - [MU-427] - Advanced Conducting: 
+  [SECTION #1] - 2:20 PM - 3:15 PM | Marc, Hafso | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #335] - [MU-432] - Instrumental and Choral Arrang: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | Bryan, Bogue | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #336] - [MU-438] - Song Literature: 
+  [SECTION #1] - 9:30 AM - 10:25 AM | Amy, Porter | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #337] - [MU-440] - Music Methods in the Elem Sch: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | Karen, Baldwin Kuntz | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #338] - [MU-449] - Jazz Combo: 
+  [SECTION #1] - 2:15 PM - 3:15 PM | Daniel, Keberle | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #339] - [MU-467] - Concert Band: 
+  [SECTION #1] - 6:30 PM - 9:00 PM | Kyla, Fague | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #340] - [MU-471] - Whitworth Choir: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 11:45 AM - 12:40 PM | Marc, Hafso | M,T,W,TH,F-M,T,W,TH,F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #341] - [MU-472] - Women's Choir: 
+  [SECTION #1] - 4:00 PM - 5:30 PM and 4:00 PM - 5:30 PM | Deborah, Hansen | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #342] - [MU-473] - Wind Symphony: 
+  [SECTION #1] - 4:00 PM - 5:30 PM | Richard, Strauch | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #343] - [MU-474] - Jazz Ensemble I: 
+  [SECTION #1] - 3:30 PM - 4:45 PM and 6:30 PM - 8:00 PM | Daniel, Keberle | T,TH-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #344] - [MU-474] - Jazz Ensemble II: 
+  [SECTION #1] - 6:30 PM - 8:00 PM | Christopher, Parkin | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #345] - [MU-475] - Chamber Singers: 
+  [SECTION #1] - 4:40 PM - 6:00 PM and 4:40 PM - 6:00 PM | Marc, Hafso | T,TH-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #346] - [MU-478] - Whitworth Orchestra: 
+  [SECTION #1] - 5:00 PM - 6:15 PM |  Staff | T-TH |
+  [SECTION #2] - 4:00 PM - 5:30 PM and 5:00 PM - 6:15 PM |  Staff | M-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #347] - [NS-101] - Earth and Sky: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Robert, Hager | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #348] - [PE-120] - Pilates: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Tammi, Boyer | M-W-F |
+  [SECTION #2] - 12:50 PM - 1:45 PM | Tammi, Boyer | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #349] - [PE-121] - Yoga: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Tammi, Boyer | M-W-F |
+  [SECTION #2] - 1:55 PM - 2:50 PM | Tammi, Boyer | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #350] - [PE-122] - Tennis: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Michael, Shanks | T-TH |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Jo, Wagstaff | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #351] - [PE-124] - Weight Training: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | David, Pomante | M-W-F |
+  [SECTION #2] - 9:30 AM - 10:50 AM | David, Pomante | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #352] - [PE-125] - Golf: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Warren, Friedrichs | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #353] - [PE-128] - Sports Conditioning: 
+  [SECTION #1] - 3:30 PM - 4:30 PM | Morgan, Cathey | M-W-F |
+  [SECTION #2] - 3:15 PM - 4:45 PM | Steven, Schadt | M-T-TH-F |
+  [SECTION #3] - 6:15 AM - 7:35 AM | Jason, Tobeck | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #354] - [PE-129] - Badminton: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Damion, Jablonski | T-TH |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Damion, Jablonski | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #355] - [PE-138] - Karate: 
+  [SECTION #1] - 7:30 PM - 8:25 PM | Matthew, Thomas | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #356] - [PE-154] - International Ballroom Dance: 
+  [SECTION #1] - 5:45 PM - 7:15 PM | Mary, Edwards | M-W |
+  [SECTION #2] - 5:45 PM - 7:15 PM | Mary, Edwards | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #357] - [PE-164] - Pickleball: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Jason, Tobeck | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #358] - [PE-221] - Yoga II: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Tammi, Boyer | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #359] - [PE-233] - Intermediate Volleyball: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Jonathan, Bosh | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #360] - [PH-110] - Intro to Philosophy: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Joshue, Orozco | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #361] - [PH-199H] - Philosophy in the Real World: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Joshue, Orozco | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #362] - [PH-201] - Logic: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Forrest, Baird | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #363] - [PH-221] - Ethics: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Keith, Wyma | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #364] - [PH-256] - Asian Philosophy: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | David, Wang | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #365] - [PH-320] - Philosophy of Religion: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Joshue, Orozco | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #366] - [PH-421] - Philosophy of Science: 
+  [SECTION #1] - 2:20 PM - 3:50 PM | Nathan, King | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #367] - [PO-102] - American National Politics: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Kathryn, Lee | M-W-F |
+  [SECTION #2] - 2:20 PM - 3:40 PM | Anthony, Rodin | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #368] - [PO-151] - International Relations: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Patrick, Van Inwegen | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #369] - [PO-209] - History of Vietnam War: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Dale, Soden | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #370] - [PO-223] - Law and Society: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Kathryn, Lee | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #371] - [PO-293] - Great Decisions: 
+  [SECTION #1] - 7:30 PM - 9:30 PM | Patrick, Van Inwegen | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #372] - [PO-297] - Nonviolnt Defnse & Conflct Res: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Patrick, Van Inwegen | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #373] - [PO-309] - History of Vietnam War: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Dale, Soden | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #374] - [PO-316] - Ireland Preparation: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Patrick, Van Inwegen | F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #375] - [PO-353] - Internationl Political Economy: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Anthony, Rodin | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #376] - [PO-364W] - American Constitutional Law: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Julia, Stronks | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #377] - [PO-396] - Justice and Difference: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Kathryn, Lee | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #378] - [PO-445] - Revolution in History: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Patrick, Van Inwegen | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #379] - [PO-498W] - Senior Seminar: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Anthony, Rodin | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #380] - [PS-123] - Origins: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | John, Larkin | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #381] - [PS-153] - General Physics II: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Markus, Ong | M-W-F |
+  [SECTION #2] - 8:00 AM - 8:55 AM | Andrew, Law | M-W-F |
+  [SECTION #3] - 1:55 PM - 2:50 PM | Markus, Ong | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #382] - [PS-153L] - General Physics II Lab: 
+  [SECTION #1] - 8:00 AM - 10:50 AM | Andrew, Law | T |
+  [SECTION #2] - 6:00 PM - 9:00 PM |  NA | TH |
+  [SECTION #3] - 2:45 PM - 5:35 PM | Markus, Ong | T |
+  [SECTION #4] - 2:45 PM - 5:35 PM | Markus, Ong | TH |
+  [SECTION #5] - 11:45 AM - 2:35 PM | Andrew, Law | T |
+  [SECTION #6] - 8:00 AM - 10:50 AM | Andrew, Law | TH |
+  [SECTION #7] - 6:00 PM - 9:00 PM |  NA | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #383] - [PS-200] - Physics Outreach: 
+  [SECTION #1] - 12:50 PM - 2:50 PM | John, Larkin | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #384] - [PS-353] - Advanced Dynamics: 
+  [SECTION #1] - 9:05 AM - 10:00 AM and 8:00 AM - 10:50 AM | Kameshwaran, Sankaran | M,W,F-T |
+  [SECTION #2] - 9:05 AM - 10:00 AM and 11:45 AM - 2:35 PM | Kameshwaran, Sankaran | M,W,F-T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #385] - [PS-371] - Optics: 
+  [SECTION #1] - 1:55 PM - 2:50 PM and 6:00 PM - 9:00 PM | Richard, Stevens | M,W,F-T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #386] - [PS-373] - Electronics: 
+  [SECTION #1] - 12:50 PM - 1:45 PM and 2:45 PM - 5:35 PM | Richard, Stevens | M,W-T,TH |
+  [SECTION #2] - 12:50 PM - 1:45 PM and 6:30 PM - 9:30 PM | Richard, Stevens | M,W,F-M,W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #387] - [PY-101] - Intro to Psychology: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Cara, Bellwood | M-W-F |
+  [SECTION #2] - 9:30 AM - 10:50 AM | Adrian, Teo | T-TH |
+  [SECTION #3] - 10:25 AM - 11:20 AM | Melissa, Rogers | M-W-F |
+  [SECTION #4] - 12:50 PM - 2:10 PM | Patricia, Bruininks | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #388] - [PY-210] - Developmental Psychology: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Noel, Wescombe | M-W-F |
+  [SECTION #2] - 9:05 AM - 10:00 AM | Cara, Bellwood | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #389] - [PY-225] - Cognitive Psychology: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Melissa, Rogers | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #390] - [PY-227] - Personality & Individual Diffr: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Joelle, Czirr | T-TH |
+  [SECTION #2] - 9:30 AM - 10:50 AM | Elizabeth, Campbell | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #391] - [PY-236] - Biological Psychology: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Cara, Bellwood | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #392] - [PY-241] - Social Psychology: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Patricia, Bruininks | T-TH |
+  [SECTION #2] - 12:50 PM - 2:10 PM | Mark, Baird | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #393] - [PY-301] - Research in Psychology: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Noel, Wescombe | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #394] - [PY-345] - Forensic Psychology: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Melissa, Rogers | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #395] - [PY-350] - Psychology & Christian Faith: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Adrian, Teo | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #396] - [PY-352] - Research Methods & Stats II: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Adrian, Teo | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #397] - [PY-353] - Psychological Assessment: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Mark, Baird | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #398] - [PY-358] - Psychopathology: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Joelle, Czirr | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #399] - [PY-359] - Theories of Counseling: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Joelle, Czirr | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #400] - [PY-402W] - Senior Practicum: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Elizabeth, Campbell | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #401] - [SN-102] - Elementary Spanish II: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Donna, Sampson | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:35 AM | Carmen, Felice | M-W-F |
+  [SECTION #3] - 10:25 AM - 11:35 AM | Donna, Sampson | M-W-F |
+  [SECTION #4] - 1:55 PM - 3:05 PM | Carmen, Felice | M-W-F |
+  [SECTION #5] - 9:05 AM - 10:15 AM | Abigail, Carretero-Hernandez | M-W-F |
+  [SECTION #6] - 1:55 PM - 3:05 PM | Donna, Sampson | M-W-F |
+  [SECTION #7] - 9:05 AM - 10:15 AM | Carmen, Felice | M-W-F |
+  [SECTION #8] - 3:15 PM - 4:25 PM | Abigail, Carretero-Hernandez | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #402] - [SN-111] - Intensive Elementary Spanish: 
+  [SECTION #1] - 10:25 AM - 11:35 AM | Abigail, Carretero-Hernandez | M-W-F |
+  [SECTION #2] - 9:05 AM - 10:15 AM | Katherine, Karr-Cornejo | M-W-F |
+  [SECTION #3] - 1:55 PM - 3:05 PM | Abigail, Carretero-Hernandez | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #403] - [SN-202] - Intermediate Spanish II: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Kim, Hernandez | M-W-F |
+  [SECTION #2] - 1:55 PM - 3:05 PM | Jose, Rojas | M-W-F |
+  [SECTION #3] - 10:25 AM - 11:35 AM | Jose, Rojas | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #404] - [SN-302] - Adv Span Gram & Comp Thru Lit: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Angeles, Aller | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:20 AM | Angeles, Aller | M-W-F |
+  [SECTION #3] - 8:00 AM - 8:55 AM | Jose, Rojas | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #405] - [SN-407W] - Latin American Short Story II: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Angeles, Aller | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #406] - [SN-412] - Performance in Hispanic World: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Katherine, Karr-Cornejo | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #407] - [SN-435] - Spanish for Christian Ministry: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Kim, Hernandez | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #408] - [SO-120] - Intro to Sociology: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Mark, Killian | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:20 AM | Stacy, Keogh | M-W-F |
+  [SECTION #3] - 12:50 PM - 2:10 PM | Raja, Tanas | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #409] - [SO-230] - Sociology of Education: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Jason, Wollschleger | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #410] - [SO-252] - Sociology of Gender: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Stacy, Keogh | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #411] - [SO-272H] - Honors Soc of Rel: Rel Ecology: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Jason, Wollschleger | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #412] - [SO-305] - Soc Stratifctn: Power & Wealth: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Mark, Killian | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #413] - [SO-338] - Statistical Analysis in Soc: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Raja, Tanas | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #414] - [SO-365] - Cities and Urban Life: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Mark, Killian | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #415] - [SO-368] - Helping Process/Soc Services: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Christine, Clark | W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #416] - [SO-370] - Delinquency & Juvenile Justice: 
+  [SECTION #1] - 2:20 PM - 5:20 PM | Charles, Davis | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #417] - [SO-386] - Readings in Criminal Justice: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Robert, Clark | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #418] - [SO-425] - Making Change: Intervent Strat: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Jason, Wollschleger | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #419] - [SO-475] - Sociology Practicum: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Carol, Fullmer | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #420] - [SO-478] - Contemp Soc: Perspectv & Pract: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Robert, Clark | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #421] - [SP-113] - Interpersonal Communication: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Ronald, Pyle | M-W-F |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Alan, Mikkelson | M-W-F |
+  [SECTION #3] - 10:25 AM - 11:20 AM | Alan, Mikkelson | M-W-F |
+  [SECTION #4] - 9:30 AM - 10:50 AM | CyBelle, Barthelmess | T-TH |
+  [SECTION #5] - 9:30 AM - 10:50 AM | Joy, York | T-TH |
+  [SECTION #6] - 12:50 PM - 2:10 PM | CyBelle, Barthelmess | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #422] - [SP-209] - Intro to Comm Research: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Joy, York | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #423] - [SP-210] - Intro to Public Speaking: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Joseph, Vigil | T-TH |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Joy, York | M-W-F |
+  [SECTION #3] - 2:20 PM - 3:40 PM | Joseph, Vigil | T-TH |
+  [SECTION #4] - 6:30 PM - 9:30 PM | Giovanni, Caputo | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #424] - [SP-212] - Theories Human Communication: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Ronald, Pyle | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #425] - [SP-245] - Applied Speech: Forensics: 
+  [SECTION #1] - 3:50 PM - 5:30 PM | Michael, Ingram | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #426] - [SP-323] - Organizational Communication: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Joseph, Vigil | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #427] - [SP-347W] - History & Theory of Rhetoric: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Ronald, Pyle | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #428] - [SP-362] - Argumentation and Debate: 
+  [SECTION #1] - 12:50 PM - 2:50 PM | Michael, Ingram | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #429] - [SP-402] - Freedom & Respnblty of Speech: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Erica, Salkin | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #430] - [SP-445] - Applied Speech: Forensics: 
+  [SECTION #1] - 3:50 PM - 5:30 PM | Michael, Ingram | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #431] - [SW-102] - Elementary Swahili II: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Steven, Egland | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #432] - [TA-236] - Hip Hop: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Karla, Parbon | Diana, Trotter | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #433] - [TA-270] - Stage Makeup & Costume Constr.: 
+  [SECTION #1] - 3:15 PM - 5:15 PM | Aaron, Dyszelski | Diana, Trotter | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #434] - [TA-273] - Acting I: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Brooke, Kiener | Diana, Trotter | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #435] - [TA-275] - Stagecraft I: 
+  [SECTION #1] - 8:00 AM - 8:55 AM and 2:20 PM - 3:40 PM | Jennifer, Boehmer | Diana, Trotter | M-T,TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #436] - [TA-276] - Improvisational Acting: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Kevin, Benson | Diana, Trotter | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #437] - [TA-279] - Voice for the Performer: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Diana, Trotter | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #438] - [TA-337] - Modern Dance II: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Pamela, Erickson | Diana, Trotter | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #439] - [TA-344] - Theatre Across the Curriculum: 
+  [SECTION #1] - 4:00 PM - 6:00 PM | Miranda, Hein | Diana, Trotter | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #440] - [TA-373] - Character Study: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Brooke, Kiener | Diana, Trotter | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #441] - [TA-375] - Stagecraft II: 
+  [SECTION #1] - 3:50 PM - 5:10 PM | Aaron, Dyszelski | Diana, Trotter | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #442] - [TA-379] - Adv Voice for the Performer: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Diana, Trotter | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #443] - [TA-381] - Dance History & Choreography: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Pamela, Erickson | Diana, Trotter | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #444] - [TA-383] - Jazz Dance II: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Miranda, Hein | Diana, Trotter | M-W |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #445] - [TA-477W] - History of Theatre II: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Diana, Trotter | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #446] - [TA-483] - Jazz III: 
+  [SECTION #1] - 10:25 AM - 11:35 AM | Karla, Parbon | Diana, Trotter | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #447] - [TH-131H] - Encountering Covenantal God: 
+  [SECTION #1] - 3:15 PM - 4:35 PM | Karin, Heller | W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #448] - [TH-135] - A Biblical Introduction to God: 
+  [SECTION #1] - 3:50 PM - 5:10 PM | Jeremy, Wynne | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #449] - [TH-141] - Great Themes in Paul's Letters: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Jeremy, Wynne | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #450] - [TH-154] - Intro to the Christian Faith: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Gerald, Sittser | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #451] - [TH-173] - Found for Christn Leaders II: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | Kent, McDonald | Terry, McGonigal | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #452] - [TH-196] - The Bible for Doubters: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Karen, Finch | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #453] - [TH-213] - The Book of Revelation: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Jonathan, Moo | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #454] - [TH-221] - Ethics: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Keith, Wyma | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #455] - [TH-241] - New Testament: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Roger, Mohrlang | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #456] - [TH-265] - The Book of Genesis: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | James, Edwards | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #457] - [TH-281] - Gospel of Luke: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Karin, Heller | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #458] - [TH-311] - New Testament Greek II: 
+  [SECTION #1] - 8:00 AM - 8:50 AM | Jonathan, Moo | M-T-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #459] - [TH-314W] - Hist Chrstnty II:World Chrstn: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Gerald, Sittser | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #460] - [TH-315W] - Hist Chrstnty II:Chrstn Renew: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Keith, Beebe | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #461] - [TH-322] - Arguing with Calvin: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Karen, Finch | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #462] - [TH-324] - Missional Church: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Robert, Fairbanks | T |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #463] - [TH-331] - Old Testament: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | William, Kynes | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #464] - [TH-334] - Youth Ministry: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Kent, McDonald | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #465] - [TH-335] - Theology of Ministry: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | Gerald, Sittser | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #466] - [TH-344] - Hebrew Reading & Exegesis II: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | William, Kynes | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #467] - [TH-361] - Christian Theology: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Adam, Neder | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #468] - [TH-362] - Man & Woman in Image of God: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Karin, Heller | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #469] - [TH-370] - World Religions: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Adam, Neder | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #470] - [TH-382] - Campus Ministry: 
+  [SECTION #1] - 6:30 PM - 7:30 PM | Melinda, Smith | M |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #471] - [TH-393] - Christian Spirituality: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Karin, Heller | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #472] - [TH-435] - Internship in Ministry: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | Dorothy, Mohrlang | TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #473] - [TH-449] - Paul's Letters: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Roger, Mohrlang | M-W-F |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #474] - [WGS-126] - Women Writers: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Marguerite, Wolcott | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #475] - [WGS-201] - Intro Women's/Gender Studies: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Nichole, Bogarosh | T-TH |
+-------------------------------------------------------------------------------------
+[SPRING COURSE #476] - [WGS-296H] - Women's Artists' Books: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Amanda, Clark | M-W-F |
 -------------------------------------------------------------------------------------

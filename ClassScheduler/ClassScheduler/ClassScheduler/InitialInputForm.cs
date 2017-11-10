@@ -23,7 +23,7 @@ namespace ClassScheduler
     public partial class InitialInputForm : Form
     {
 
-        public UserConfig userData = new UserConfig { };                    // *may need permision adjustment*
+        private UserConfig userData = new UserConfig(){ };                    // *may need permision adjustment*
         public List<SingleCourse> courses = new List<SingleCourse>();
         public List<SingleCourse> unneededCourses = new List<SingleCourse>();
         List<string> sectionIDs = new List<string>();
@@ -33,6 +33,12 @@ namespace ClassScheduler
         public InitialInputForm()
         {
             InitializeComponent();
+        }
+
+        //Accessor for userData UserConfig object
+        public UserConfig getUserData()
+        {
+            return userData;
         }
 
         //[FUNCTION - InputWindow_Load]
@@ -78,14 +84,14 @@ namespace ClassScheduler
                 TermNeedLabel.Visible = false;
 
                 //Gathers all input into userData object
-                userData.firstName = FirstNameTextBox.Text;
-                userData.lastName = LastNameTextBox.Text;
+                userData.setFirstName(FirstNameTextBox.Text);
+                userData.setLastName(LastNameTextBox.Text);
                 if (TermComboBox.Text == "Fall")
-                    userData.termInterest = "FA";
+                    userData.setTermInterest("FA");
                 else if (TermComboBox.Text == "Spring")
-                    userData.termInterest = "SP";
+                    userData.setTermInterest("SP");
                 else
-                    userData.termInterest = "JA";
+                    userData.setTermInterest("JA");
 
                 ReadExcelData();
 
@@ -154,26 +160,27 @@ namespace ClassScheduler
         {
             while (excelReader.Read())
             {
-                if (!courses.Exists(s => s.courseName == excelReader.GetString(6) && s.abrvCourseName == TruncatedCourseID()))
+                if (!courses.Exists(s => s.getCourseName() == excelReader.GetString(6) && s.getAbrvCourseName() == TruncatedCourseID()))
                 {
+                    // Made SingleCourse constructor to input initial data 
                     courses.Add(new SingleCourse
-                    {
-                        courseName = excelReader.GetString(6),
-                        abrvCourseName = TruncatedCourseID(),
-                        courseLevel = GetCourseLevel(),
-                        termsAvaliable = new List<string> { (excelReader.GetString(2)) },
-                        instructAvaliable = new List<string> { (excelReader.GetString(9)) },
-                        sections = new List<SingleSection> { (new SingleSection { }) }
-                    });
+                    (
+                        excelReader.GetString(6),
+                        TruncatedCourseID(),
+                        GetCourseLevel(),
+                        new List<string> { (excelReader.GetString(2)) },
+                        new List<string> { (excelReader.GetString(9)) },
+                        new List<SingleSection> { (new SingleSection { }) }
+                    ));
 
                     int courseIndex = courses.Count() - 1;
-                    courses[courseIndex].sections[0].term = excelReader.GetString(2);
-                    courses[courseIndex].sections[0].ID = excelReader.GetString(5);
-                    courses[courseIndex].sections[0].startTimes = SplitCellIntoList(17, ", ", " NA");
-                    courses[courseIndex].sections[0].stopTimes = SplitCellIntoList(18, ", ", " NA");
-                    courses[courseIndex].sections[0].meetDays = SplitCellIntoList(19, ", ", "NA");
-                    courses[courseIndex].sections[0].instructFirstN = SplitCellIntoList(10, ", ", "");
-                    courses[courseIndex].sections[0].instructLastN = SplitCellIntoList(9, ", ", "NA");
+                    courses[courseIndex].sections[0].setTerm(excelReader.GetString(2));
+                    courses[courseIndex].sections[0].setID(excelReader.GetString(5));
+                    courses[courseIndex].sections[0].setStartTimes(SplitCellIntoList(17, ", ", " NA"));
+                    courses[courseIndex].sections[0].setStopTimes(SplitCellIntoList(18, ", ", " NA"));
+                    courses[courseIndex].sections[0].setMeetDays(SplitCellIntoList(19, ", ", "NA"));
+                    courses[courseIndex].sections[0].setInstructFirstN(SplitCellIntoList(10, ", ", ""));
+                    courses[courseIndex].sections[0].setInstructLastN(SplitCellIntoList(9, ", ", "NA"));
                     sectionIDs.Add(excelReader.GetString(5));
                     courseIDs.Add(TruncatedCourseID() + "|" + excelReader.GetString(6)); //length parameter: (7) - some courses are honors (eg. CO-150H vs CO-150-)
                 }
@@ -184,31 +191,31 @@ namespace ClassScheduler
                     bool termRecorded = false;
                     bool instructRecorded = false;
 
-                    foreach (var availTerm in courses[courseIndex].termsAvaliable)
+                    foreach (var availTerm in courses[courseIndex].getTermsAvailable())
                     {
                         if (availTerm == excelReader.GetString(2))
                             termRecorded = true;
                     }
                     if (termRecorded == false)
-                        courses[courseIndex].termsAvaliable.Add(excelReader.GetString(2));
+                        courses[courseIndex].getTermsAvailable().Add(excelReader.GetString(2));
 
-                    foreach (var availInstruct in courses[courseIndex].instructAvaliable)
+                    foreach (var availInstruct in courses[courseIndex].getInstructAvailable())
                     {
                         if (availInstruct == excelReader.GetString(9))
                             instructRecorded = true;
                     }
                     if (instructRecorded == false)
-                        courses[courseIndex].instructAvaliable.Add(excelReader.GetString(9));
+                        courses[courseIndex].getInstructAvailable().Add(excelReader.GetString(9));
 
                     courses[courseIndex].sections.Add(new SingleSection { });
 
-                    courses[courseIndex].sections[sectionIndex].term = excelReader.GetString(2);
-                    courses[courseIndex].sections[sectionIndex].ID = excelReader.GetString(5);
-                    courses[courseIndex].sections[sectionIndex].startTimes = SplitCellIntoList(17, ", ", " NA");
-                    courses[courseIndex].sections[sectionIndex].stopTimes = SplitCellIntoList(18, ", ", " NA");
-                    courses[courseIndex].sections[sectionIndex].meetDays = SplitCellIntoList(19, ", ", "NA");
-                    courses[courseIndex].sections[sectionIndex].instructFirstN = SplitCellIntoList(10, ", ", "");
-                    courses[courseIndex].sections[sectionIndex].instructLastN = SplitCellIntoList(9, ", ", "NA");
+                    courses[courseIndex].sections[sectionIndex].setTerm(excelReader.GetString(2));
+                    courses[courseIndex].sections[sectionIndex].setID(excelReader.GetString(5));
+                    courses[courseIndex].sections[sectionIndex].setStartTimes(SplitCellIntoList(17, ", ", " NA"));
+                    courses[courseIndex].sections[sectionIndex].setStopTimes(SplitCellIntoList(18, ", ", " NA"));
+                    courses[courseIndex].sections[sectionIndex].setMeetDays(SplitCellIntoList(19, ", ", "NA"));
+                    courses[courseIndex].sections[sectionIndex].setInstructFirstN(SplitCellIntoList(10, ", ", ""));
+                    courses[courseIndex].sections[sectionIndex].setInstructLastN(SplitCellIntoList(9, ", ", "NA"));
                     //courses[index].seatingCap.Add(excelReader.GetInt32(16));
 
                     sectionIDs.Add(excelReader.GetString(5));
@@ -231,11 +238,11 @@ namespace ClassScheduler
 
             foreach (var section in courses[checkIndex].sections)
             {
-                if (section.ID == excelReader.GetString(5) &&
-                    section.startTimes.SequenceEqual(SplitCellIntoList(17, ", ", " NA")) &&
-                    section.term == excelReader.GetString(2) &&
-                    section.instructFirstN.SequenceEqual(SplitCellIntoList(10, ", ", "")) &&
-                    section.meetDays.SequenceEqual(SplitCellIntoList(19, ", ", "")))// &&
+                if (section.getID() == excelReader.GetString(5) &&
+                    section.getStartTimes().SequenceEqual(SplitCellIntoList(17, ", ", " NA")) &&
+                    section.getTerm() == excelReader.GetString(2) &&
+                    section.getInstructFirstN().SequenceEqual(SplitCellIntoList(10, ", ", "")) &&
+                    section.getMeetDays().SequenceEqual(SplitCellIntoList(19, ", ", "")))// &&
                     //section.stopTimes.SequenceEqual(SplitCellIntoList(18, ", ", " NA")) &&
                     //section.instructLastN.SequenceEqual(SplitCellIntoList(9, ", ", "")))
                 {
@@ -266,7 +273,8 @@ namespace ClassScheduler
             //DETEMNINE section need
             foreach (SingleCourse course in courses)
                 foreach (SingleSection section in course.sections)
-                    if (section.meetDays.Exists(s => s.Contains("NA")) || section.startTimes.Exists(s => s.Contains("NA")) || !section.term.Contains(userData.termInterest))
+                    if (section.getMeetDays().Exists(s => s.Contains("NA")) || section.getStartTimes().Exists(s => s.Contains("NA")) 
+                        || !section.getTerm().Contains(userData.getTermInterest()))
                     {
                         removeCourseIndexes.Add(courses.IndexOf(course));
                         removeSectionIndexes.Add(course.sections.IndexOf(section));
@@ -286,7 +294,7 @@ namespace ClassScheduler
                     indexOffset = 0;
                     currentCourseIndex = removeCourseIndexes[i];
                 }
-                Debug.WriteLine("Removing - Course: " + courses[removeCourseIndexes[i]].courseName + " | Section: " + removeSectionIndexes[i]);
+                Debug.WriteLine("Removing - Course: " + courses[removeCourseIndexes[i]].getCourseName() + " | Section: " + removeSectionIndexes[i]);
                 courses[removeCourseIndexes[i]].sections.RemoveAt(removeSectionIndexes[i] - indexOffset);
                 indexOffset++;
             }
@@ -316,7 +324,7 @@ namespace ClassScheduler
         //Sorts all leftover courses into alphabetical oder (by Course ID - CO-150)
         void SortCourses()
         {
-            courses = courses.OrderBy(f => f.abrvCourseName).ToList<SingleCourse>();
+            courses = courses.OrderBy(f => f.getAbrvCourseName()).ToList<SingleCourse>();
         }
 
         //[FUNCTION - WriteDebugFile]
@@ -326,7 +334,7 @@ namespace ClassScheduler
             FileStream fs = new FileStream(@"AllSectionTimes.txt", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite); //last parameter needed to open file at end
             StreamWriter file = new StreamWriter(fs);
 
-            WriteTermSections(userData.termInterest, TermComboBox.Text, file);
+            WriteTermSections(userData.getTermInterest(), TermComboBox.Text, file);
             file.Flush();
 
             Process.Start(@"AllSectionTimes.txt");
@@ -342,33 +350,34 @@ namespace ClassScheduler
             foreach (var course in courses)
             {
                 sw.Flush();
-                if (course.termsAvaliable.Any(s => s.EndsWith(abrvTerm)))
+                if (course.getTermsAvailable().Any(s => s.EndsWith(abrvTerm)))
                 {
                     courseNum++;
-                    sw.WriteLine("[" + Term.ToUpper() + " COURSE #" + courseNum + "] - [" + course.abrvCourseName + "] - " + course.courseName + ": ");
+                    sw.WriteLine("[" + Term.ToUpper() + " COURSE #" + courseNum + "] - [" + course.getAbrvCourseName() + "] - " 
+                        + course.getCourseName() + ": ");
 
                     int indexCount = 0;
                     foreach (var section in course.sections)
                     {
-                        if (section.term.Contains(abrvTerm))
+                        if (section.getTerm().Contains(abrvTerm))
                         {
                             int secTimeIndex = 0;
 
                             sw.Write("  [SECTION #" + (indexCount + 1) + "] -");
-                            foreach (var startTime in section.startTimes)
+                            foreach (var startTime in section.getStartTimes())
                             {
-                                sw.Write(startTime + " -" + section.stopTimes[secTimeIndex]);
-                                if (secTimeIndex == 0 && section.startTimes.Count() != 1)
+                                sw.Write(startTime + " -" + section.getStopTimes()[secTimeIndex]);
+                                if (secTimeIndex == 0 && section.getStartTimes().Count() != 1)
                                     sw.Write(" and");
                                 secTimeIndex++;
                             }
                             sw.Write(" | ");
 
                             int secFacIndex = 0;
-                            foreach (var lastName in section.instructLastN)
+                            foreach (var lastName in section.getInstructLastN())
                             {
-                                if (section.instructFirstN[secFacIndex] != "")
-                                    sw.Write(section.instructFirstN[secFacIndex] + ", ");
+                                if (section.getInstructFirstN()[secFacIndex] != "")
+                                    sw.Write(section.getInstructFirstN()[secFacIndex] + ", ");
                                 else
                                     sw.Write(" ");
                                 sw.Write(lastName + " | ");
@@ -376,7 +385,7 @@ namespace ClassScheduler
                             }
 
                             int secDayIndex = 0;
-                            foreach (var day in section.meetDays)
+                            foreach (var day in section.getMeetDays())
                             {
                                 if (secDayIndex != 0)
                                     sw.Write("-");

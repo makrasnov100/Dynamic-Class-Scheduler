@@ -32,7 +32,7 @@ namespace ClassScheduler
 
         public CourseSelectionForm(InitialInputForm userDataForm)
         {
-            userInfo = userDataForm.userData;
+            userInfo = userDataForm.getUserData();
             availableCourses = new List<SingleCourse>(userDataForm.courses);
             InitializeComponent();
         }
@@ -76,13 +76,13 @@ namespace ClassScheduler
         {
             //Intro label
             string fullTermName;
-            if (userInfo.termInterest == "FA")
+            if (userInfo.getTermInterest() == "FA")
                 fullTermName = "fall";
-            else if (userInfo.termInterest == "SP")
+            else if (userInfo.getTermInterest() == "SP")
                 fullTermName = "spring";
             else
                 fullTermName = "January";
-            CourseSelectionLabel.Text = "Welcome " + userInfo.firstName + ", please add your " + fullTermName + " course(s)... ";
+            CourseSelectionLabel.Text = "Welcome " + userInfo.getFirstName() + ", please add your " + fullTermName + " course(s)... ";
 
             //Table labels
             selectedCourseTable = new DataTable();
@@ -117,8 +117,8 @@ namespace ClassScheduler
         {
             if (selectedCourses.Count() >= 1)
             {
-                selectedCourses.Remove(selectedCourses.Find(s => (s.courseName == (string)selectedRow.Cells[1].Value)
-                                                              && (s.abrvCourseName == (string)selectedRow.Cells[0].Value)));
+                selectedCourses.Remove(selectedCourses.Find(s => (s.getCourseName() == (string)selectedRow.Cells[1].Value)
+                                                              && (s.getAbrvCourseName() == (string)selectedRow.Cells[0].Value)));
                 RefreshTable();
             }
         }
@@ -153,7 +153,7 @@ namespace ClassScheduler
                 selectedCourseTable.Rows.Clear();
                 foreach (SingleCourse course in selectedCourses)
                 {
-                    selectedCourseTable.Rows.Add(course.abrvCourseName, course.courseName);
+                    selectedCourseTable.Rows.Add(course.getAbrvCourseName(), course.getCourseName());
                 }
 
                 if (selectedTableRowIndex >= selectedCourses.Count())
