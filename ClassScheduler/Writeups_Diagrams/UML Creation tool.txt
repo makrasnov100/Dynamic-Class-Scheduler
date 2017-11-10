@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/51786/how-to-generate-uml-diagrams-especially-sequence-diagrams-from-java-code
