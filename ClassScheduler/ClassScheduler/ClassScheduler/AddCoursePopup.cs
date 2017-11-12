@@ -24,10 +24,11 @@ namespace ClassScheduler
         //EXTRA FEATURES TO ADD
         //- Searchbar
         //- Preloading of this form
+        //- dynamic update of filters
 
-        private List<string> courseLevelFilterValues = new List<string> { "Any" };
-        private List<string> departmentFilterValues = new List<string> { "Any" };
-        private List<string> instructorFilterValues = new List<string> { "Any" };
+        private List<string> courseLevelFilterValues = new List<string>();
+        private List<string> departmentFilterValues = new List<string>();
+        private List<string> instructorFilterValues = new List<string>();
 
         private CourseSelectionForm MainCourseForm = null;
 
@@ -151,15 +152,37 @@ namespace ClassScheduler
 
                 if (!departmentFilterValues.Exists(s => s == course.getDepartmentName()))
                     departmentFilterValues.Add(course.getDepartmentName());
+
+                foreach (string instruct in course.getInstructAvailable())
+                    if (!instructorFilterValues.Exists(s => s == instruct))
+                    {
+                        instructorFilterValues.Add(instruct);
+                        Debug.WriteLine("Added instruct:" + instruct);
+                    }
             }
 
-            foreach (var levelChoise in courseLevelFilterValues)
+            courseLevelFilterValues = courseLevelFilterValues.OrderBy(s => s.Substring(0)).ToList();
+            departmentFilterValues = departmentFilterValues.OrderBy(s => s.Substring(0)).ToList();
+            instructorFilterValues = instructorFilterValues.OrderBy(s => s.Substring(0)).ToList();
+
+            courseLevelFilterValues.Insert(0, "Any");
+            departmentFilterValues.Insert(0, "Any");
+            instructorFilterValues.Insert(0, "Any");
+
+            //courseLevelFilterValues.Sort();
+            //departmentFilterValues.Sort();
+            //instructorFilterValues.Sort();
+
+            foreach (string levelChoise in courseLevelFilterValues)
                 CourseLevelFilter.Items.Add(levelChoise);
-            foreach (var departmentChoise in departmentFilterValues)
+            foreach (string departmentChoise in departmentFilterValues)
                 DepartmentFilter.Items.Add(departmentChoise);
+            foreach (string instructChoise in instructorFilterValues)
+                InstructorNameFilter.Items.Add(instructChoise);   
 
             CourseLevelFilter.SelectedIndex = 0;
             DepartmentFilter.SelectedIndex = 0;
+            InstructorNameFilter.SelectedIndex = 0;
 
 
             //labelComboBox.Items.Refresh();
@@ -173,11 +196,19 @@ namespace ClassScheduler
            FilterCourses();
         }
 
-        //[FUNCTION - DepartmentFilter_SelectedIndexChanged]
-        //Removes all courses not fitting to department criteria
+        //[FUNCTION - CourseLevelFilter_SelectedIndexChanged]
+        //Removes all courses not fitting to course level criteria
         private void CourseLevelFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
            FilterCourses(); 
+        }
+
+
+        //[FUNCTION - InstructorNameFilter_SelectedIndexChanged]
+        //Removes all courses not fitting to instructor name criteria
+        private void InstructorNameFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FilterCourses();
         }
 
         //[FUNCTION - FilterCourses]
@@ -187,18 +218,24 @@ namespace ClassScheduler
             filteredCourses.Clear();
             filteredCourses = new List<SingleCourse>(allCourses);
 
-            bool departFilterEnabled = (DepartmentFilter.Text == "Any") ? false : true;
-            bool levelFilterStateEnabled = (CourseLevelFilter.Text == "Any") ? false : true;
+            Debug.WriteLine("Department filter text:" + DepartmentFilter.Text + " | Course Level text: " + CourseLevelFilter.Text + " | Instructor Filter Text: " + InstructorFilter.Text);
 
-            if (departFilterEnabled && levelFilterStateEnabled)
-            Debug.WriteLine("Initiated Removing by Filter...");
-            foreach (SingleCourse course in allCourses)
-                    if (departFilterEnabled ? course.getDepartmentName() != DepartmentFilter.Text : false ||
-                        levelFilterStateEnabled ? course.getCourseLevel() != CourseLevelFilter.Text : false)
+            bool departFilterEnabled = (DepartmentFilter.Text == "Any") ? false : true;
+            bool levelFilterEnabled = (CourseLevelFilter.Text == "Any") ? false : true;
+            bool instructFilterEnabled = (InstructorNameFilter.Text == "Any") ? false : true;
+
+            Debug.WriteLine("Department filter enabled? " + departFilterEnabled + " | Course Level enabled? " + levelFilterEnabled + " | Instructor Filter Enabled? " + instructFilterEnabled);
+
+            if (departFilterEnabled || levelFilterEnabled || instructFilterEnabled)
+            {
+                foreach (SingleCourse course in allCourses)
+                    if ((departFilterEnabled ? course.getDepartmentName() != DepartmentFilter.Text : false) ||
+                        (levelFilterEnabled ? course.getCourseLevel() != CourseLevelFilter.Text : false) ||
+                        (instructFilterEnabled ? FindIfMatchingInstructs(course) : false))
                     {
-                        Debug.WriteLine("Removing by Filter...");
                         filteredCourses.Remove(course);
                     }
+            }
 
             courseTable.Rows.Clear();
             foreach (SingleCourse course in filteredCourses)
@@ -207,6 +244,19 @@ namespace ClassScheduler
             addCoursesDataTable.DataSource = courseTable;
 
             UpdateSearchTotalLabel();
+        }
+
+        //[FUNCTION - FindIfMatchingInstructs]
+        //Returns false if course doesnt have a matching instructor
+        bool FindIfMatchingInstructs(SingleCourse course)
+        {
+            foreach (string instructor in course.getInstructAvailable())
+            {
+                if (instructor == InstructorNameFilter.Text)
+                    return false;
+            }
+
+            return true;
         }
     }
 }

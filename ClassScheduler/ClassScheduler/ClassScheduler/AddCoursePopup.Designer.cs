@@ -135,6 +135,7 @@
             this.InstructorNameFilter.Name = "InstructorNameFilter";
             this.InstructorNameFilter.Size = new System.Drawing.Size(207, 27);
             this.InstructorNameFilter.TabIndex = 16;
+            this.InstructorNameFilter.SelectedIndexChanged += new System.EventHandler(this.InstructorNameFilter_SelectedIndexChanged);
             // 
             // addButton
             // 

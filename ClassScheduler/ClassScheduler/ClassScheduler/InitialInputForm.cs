@@ -163,7 +163,7 @@ namespace ClassScheduler
             {
                 if (!courses.Exists(s => s.getCourseName() == excelReader.GetString(6) && s.getAbrvCourseName() == TruncatedCourseID()))
                 {
-                    // Made SingleCourse constructor to input initial data 
+                    // SingleCourse constructor to inputs initial data 
                     courses.Add(new SingleCourse
                     (
                         excelReader.GetString(6),
@@ -171,7 +171,7 @@ namespace ClassScheduler
                         GetCourseLevel(),
                         excelReader.GetString(3),
                         new List<string> { (excelReader.GetString(2)) },
-                        new List<string> { (excelReader.GetString(9)) },
+                        new List<string> (SplitCellIntoList(9, ", ", "NA")),
                         new List<SingleSection> { (new SingleSection { }) }
                     ));
 
@@ -198,16 +198,45 @@ namespace ClassScheduler
                         if (availTerm == excelReader.GetString(2))
                             termRecorded = true;
                     }
-                    if (termRecorded == false)
+                    if (!termRecorded)
                         courses[courseIndex].getTermsAvailable().Add(excelReader.GetString(2));
 
-                    //foreach (var availInstruct in courses[courseIndex].getInstructAvailable())
-                    //{
-                    //   if (availInstruct == excelReader.GetString(9))
-                    //        instructRecorded = true;
-                    //}
-                    //if (instructRecorded == false)
-                    //    courses[courseIndex].getInstructAvailable().Add(excelReader.GetString(9));
+                    //Check for a unique course instructor
+                    List<string> currentInstructs = SplitCellIntoList(9, ",", "NA");
+                    foreach (var course in courses)
+                    {
+                        foreach(var section in course.getSections())
+                            foreach(var instruct in section.getInstructLastN())
+                                foreach(var currentInstruct in currentInstructs)
+                                    if(currentInstruct == instruct)
+                                        instructRecorded = true;
+                    }
+                    if (!instructRecorded)
+                    {
+                        List<string> lastNames = SplitCellIntoList(9, ", ", "NA");
+                        List<string> firstNames = SplitCellIntoList(10, ", ", "NA");
+                        int indexCounter = 0;
+                        foreach(string lastName in lastNames)
+                        {
+                            if (firstNames.Count() == 1 && firstNames[0] == "NA")
+                            {
+                                Debug.Write(1);
+                                courses[courseIndex].getInstructAvailable().Add(lastName);
+                            }
+                            else if (firstNames.Count() == 1)
+                            {
+                                Debug.Write(2);
+                                courses[courseIndex].getInstructAvailable().Add(firstNames[0] + " " + lastName);
+                            }
+                            else
+                            {
+                                Debug.Write(3);
+                                courses[courseIndex].getInstructAvailable().Add(firstNames[indexCounter] + " " + lastName);
+                            }
+                            indexCounter++;
+                        }
+                        indexCounter = 0;
+                    }
 
                     courses[courseIndex].sections.Add(new SingleSection { });
 
@@ -218,7 +247,6 @@ namespace ClassScheduler
                     courses[courseIndex].sections[sectionIndex].setMeetDays(SplitCellIntoList(19, ", ", "NA"));
                     courses[courseIndex].sections[sectionIndex].setInstructFirstN(SplitCellIntoList(10, ", ", ""));
                     courses[courseIndex].sections[sectionIndex].setInstructLastN(SplitCellIntoList(9, ", ", "NA"));
-                    //courses[index].seatingCap.Add(excelReader.GetInt32(16));
 
                     sectionIDs.Add(excelReader.GetString(5));
                 }
@@ -262,6 +290,16 @@ namespace ClassScheduler
         List<string> SplitCellIntoList(int columnIndex, string delim, string nullReplace)
         {
             List<string> result = new List<string>(((excelReader.GetString(columnIndex)) != null ? excelReader.GetString(columnIndex) : nullReplace).Split(new string[] { delim }, StringSplitOptions.None));
+
+            //if(columnIndex == 10)
+            //{
+            //    foreach (var value in result)
+            //    {
+            //        Debug.WriteLine("Instructor Found: " + value);
+            //    }
+            //    Debug.WriteLine("---------------------------------------------------");
+            //}
+
             return result;
         }
 
@@ -401,13 +439,6 @@ namespace ClassScheduler
                     sw.WriteLine("-------------------------------------------------------------------------------------");
                 }
             }
-        }
-
-        //[FUNCTION - ConvertToInt]
-        //Returns an int version of the string if can otherwise null
-        int ConvertToInt(double data)
-        {
-            return (int) data;
         }
 
         //[FUNCTION - GetCourseLevel]
