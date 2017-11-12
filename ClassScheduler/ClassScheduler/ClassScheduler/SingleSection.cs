@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace ClassScheduler
 {
+
+    /// <summary>
+    /// This class defines a section object that has the properties 
+    /// of a single class section including its start/end time, meet days and instructor name
+    /// </summary>
+    /// Author: Kostiantyn Makrasnov (variables)
+    /// Author: Yuri Fedas (accessor/mutator functions & constructors)
+
     public class SingleSection
     {
         private string term = "";

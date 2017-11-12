@@ -11,7 +11,7 @@ namespace ClassScheduler
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        /// Author: Konstiantyn Makrasnov
+        /// Authors: Kostiantyn Makrasnov & Yuriy Fedas
         [STAThread]
         static void Main()
         {

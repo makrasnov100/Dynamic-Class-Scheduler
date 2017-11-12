@@ -15,15 +15,16 @@ namespace ClassScheduler
 {
 
     /// <summary>
-    /// This is a window in which the user is expected to enter initial data to be used for the rest of the proccess.
+    /// This is a window in which the user is expected to enter initial data 
+    /// to be used for the rest of the program proccess.
     /// </summary>
-    /// Author: Kostiantyn Makrasnov (Excel Reader Part & Form User Input)
-    /// Author: Yuriy Fedas (Preview of Selected Excel Data File)
+    /// Author: Kostiantyn Makrasnov (Excel Reader Part & Form's Layout/User Input Validation)
+    /// Author: Yuriy Fedas (Preview of Selected Excel Data File & Proper control through access/mutator functions)
 
     public partial class InitialInputForm : Form
     {
 
-        private UserConfig userData = new UserConfig(){ };                    // *may need permision adjustment*
+        private UserConfig userData = new UserConfig(){ };
         public List<SingleCourse> courses = new List<SingleCourse>();
         public List<SingleCourse> unneededCourses = new List<SingleCourse>();
         List<string> sectionIDs = new List<string>();
@@ -168,6 +169,7 @@ namespace ClassScheduler
                         excelReader.GetString(6),
                         TruncatedCourseID(),
                         GetCourseLevel(),
+                        excelReader.GetString(3),
                         new List<string> { (excelReader.GetString(2)) },
                         new List<string> { (excelReader.GetString(9)) },
                         new List<SingleSection> { (new SingleSection { }) }
@@ -182,7 +184,7 @@ namespace ClassScheduler
                     courses[courseIndex].sections[0].setInstructFirstN(SplitCellIntoList(10, ", ", ""));
                     courses[courseIndex].sections[0].setInstructLastN(SplitCellIntoList(9, ", ", "NA"));
                     sectionIDs.Add(excelReader.GetString(5));
-                    courseIDs.Add(TruncatedCourseID() + "|" + excelReader.GetString(6)); //length parameter: (7) - some courses are honors (eg. CO-150H vs CO-150-)
+                    courseIDs.Add(TruncatedCourseID() + "|" + excelReader.GetString(6));
                 }
                 else if (DetermineSectionNeed(courseIDs.IndexOf(TruncatedCourseID() + "|" + excelReader.GetString(6))))
                 {
@@ -199,13 +201,13 @@ namespace ClassScheduler
                     if (termRecorded == false)
                         courses[courseIndex].getTermsAvailable().Add(excelReader.GetString(2));
 
-                    foreach (var availInstruct in courses[courseIndex].getInstructAvailable())
-                    {
-                        if (availInstruct == excelReader.GetString(9))
-                            instructRecorded = true;
-                    }
-                    if (instructRecorded == false)
-                        courses[courseIndex].getInstructAvailable().Add(excelReader.GetString(9));
+                    //foreach (var availInstruct in courses[courseIndex].getInstructAvailable())
+                    //{
+                    //   if (availInstruct == excelReader.GetString(9))
+                    //        instructRecorded = true;
+                    //}
+                    //if (instructRecorded == false)
+                    //    courses[courseIndex].getInstructAvailable().Add(excelReader.GetString(9));
 
                     courses[courseIndex].sections.Add(new SingleSection { });
 

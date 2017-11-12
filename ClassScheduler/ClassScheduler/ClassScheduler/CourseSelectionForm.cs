@@ -12,13 +12,15 @@ using System.Diagnostics;
 
 namespace ClassScheduler
 {
+
+    /// <summary>
+    /// This is a window in which the user is expected to enter his courses for the term he/she selected in the input window beforehand.
+    /// This is the last location before the C++ algorithm is used to create the student's schedule.
+    /// </summary>
+    /// Author: Kostiantyn Makrasnov
+
     public partial class CourseSelectionForm : Form
     {
-        /// <summary>
-        /// This is a window in which the user is expected to enter his courses for the term he/she selected in the input window beforehand.
-        /// This is the last location before the C++ algorithm is used to create the student's schedule.
-        /// </summary>
-        /// Author: Kostiantyn Makrasnov
 
         AddCourseForm CourseAddPopup;
 

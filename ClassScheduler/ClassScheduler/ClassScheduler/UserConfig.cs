@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace ClassScheduler
 {
+
+    /// <summary>
+    /// This class defines a UserConfig object that has the properties 
+    /// of the users name and their term of interest.
+    /// </summary>
+    /// Author: Kostiantyn Makrasnov (variables)
+    /// Author: Yuri Fedas (accessor/mutator functions & constructors)
+
     public class UserConfig
     {
         private string firstName;

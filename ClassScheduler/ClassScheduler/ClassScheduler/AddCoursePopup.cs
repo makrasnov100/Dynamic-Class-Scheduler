@@ -21,15 +21,20 @@ namespace ClassScheduler
     public partial class AddCourseForm : Form
     {
 
-        //FEATURES TO ADD
+        //EXTRA FEATURES TO ADD
         //- Searchbar
+        //- Preloading of this form
 
         private List<string> courseLevelFilterValues = new List<string> { "Any" };
-        private List<string> departmentFilterrValues = new List<string> { "Any" };
-        private List<string> instructorFilterrValues = new List<string> { "Any" };
+        private List<string> departmentFilterValues = new List<string> { "Any" };
+        private List<string> instructorFilterValues = new List<string> { "Any" };
 
         private CourseSelectionForm MainCourseForm = null;
+
         private List<SingleCourse> allCourses;
+        private List<SingleCourse> filteredCourses;
+
+        private DataTable courseTable = new DataTable();
         private DataGridViewRow selectedRow;
         private int selectedTableIndex = 0;
         private bool courseAccepted = false;
@@ -38,6 +43,7 @@ namespace ClassScheduler
         public AddCourseForm(CourseSelectionForm MainForm)
         {
             this.allCourses = MainForm.availableCourses;
+            this.filteredCourses = new List<SingleCourse>(allCourses);
             MainCourseForm = MainForm as CourseSelectionForm;
             InitializeComponent();
         }
@@ -47,14 +53,11 @@ namespace ClassScheduler
         //Populates courseDataTable upon initial load of popup
         private void AddCourseForm_Load(object sender, EventArgs e)
         {
-            DataTable courseTable = new DataTable();
-
             courseTable.Columns.Add("ID", typeof(string));
             courseTable.Columns.Add("Title", typeof(string));
 
             foreach (SingleCourse course in allCourses)
                 courseTable.Rows.Add(course.getAbrvCourseName(), course.getCourseName());
-            
 
             addCoursesDataTable.DataSource = courseTable;
             addCoursesDataTable.Columns["ID"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -69,8 +72,10 @@ namespace ClassScheduler
         //Adds selected course to user's courses when button is clicked
         private void addButton_Click(object sender, EventArgs e)
         {
-            if(courseAccepted == true)
+            if(courseAccepted)
             {
+                Debug.WriteLine("Comparing: " + (string)selectedRow.Cells[1].Value + " and " + (string)selectedRow.Cells[0].Value);
+                Debug.WriteLine("with" + allCourses[1].getCourseName() + " and " + allCourses[1].getAbrvCourseName());
                 selectedRow = addCoursesDataTable.Rows[selectedTableIndex];     
                 SingleCourse selectedCourseClass = allCourses[allCourses.IndexOf(allCourses.Find(s => (s.getCourseName() == (string)selectedRow.Cells[1].Value)
                                                                                                    && (s.getAbrvCourseName() == (string)selectedRow.Cells[0].Value)))];
@@ -132,7 +137,7 @@ namespace ClassScheduler
         //Updates label indicating howw much courses are displayed
         private void UpdateSearchTotalLabel()
         {
-            showingCoursesCount.Text = allCourses.Count() + " out of " + allCourses.Count();
+            showingCoursesCount.Text = filteredCourses.Count() + " out of " + allCourses.Count();
         }
 
         //[FUNCTION - UpdateFilters]
@@ -143,13 +148,65 @@ namespace ClassScheduler
             {
                 if (!courseLevelFilterValues.Exists(s => s == course.getCourseLevel())) //**May just switch to manual input in future**
                     courseLevelFilterValues.Add(course.getCourseLevel());
+
+                if (!departmentFilterValues.Exists(s => s == course.getDepartmentName()))
+                    departmentFilterValues.Add(course.getDepartmentName());
             }
 
-            foreach (var choise in courseLevelFilterValues)
-                CourseLevelFilter.Items.Add(choise);
+            foreach (var levelChoise in courseLevelFilterValues)
+                CourseLevelFilter.Items.Add(levelChoise);
+            foreach (var departmentChoise in departmentFilterValues)
+                DepartmentFilter.Items.Add(departmentChoise);
 
             CourseLevelFilter.SelectedIndex = 0;
+            DepartmentFilter.SelectedIndex = 0;
+
+
             //labelComboBox.Items.Refresh();
+        }
+
+
+        //[FUNCTION - DepartmentFilter_SelectedIndexChanged]
+        //Removes all courses not fitting to department criteria
+        private void DepartmentFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           FilterCourses();
+        }
+
+        //[FUNCTION - DepartmentFilter_SelectedIndexChanged]
+        //Removes all courses not fitting to department criteria
+        private void CourseLevelFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           FilterCourses(); 
+        }
+
+        //[FUNCTION - FilterCourses]
+        //Changes visible courses in table based on filters selected
+        private void FilterCourses()
+        {
+            filteredCourses.Clear();
+            filteredCourses = new List<SingleCourse>(allCourses);
+
+            bool departFilterEnabled = (DepartmentFilter.Text == "Any") ? false : true;
+            bool levelFilterStateEnabled = (CourseLevelFilter.Text == "Any") ? false : true;
+
+            if (departFilterEnabled && levelFilterStateEnabled)
+            Debug.WriteLine("Initiated Removing by Filter...");
+            foreach (SingleCourse course in allCourses)
+                    if (departFilterEnabled ? course.getDepartmentName() != DepartmentFilter.Text : false ||
+                        levelFilterStateEnabled ? course.getCourseLevel() != CourseLevelFilter.Text : false)
+                    {
+                        Debug.WriteLine("Removing by Filter...");
+                        filteredCourses.Remove(course);
+                    }
+
+            courseTable.Rows.Clear();
+            foreach (SingleCourse course in filteredCourses)
+                courseTable.Rows.Add(course.getAbrvCourseName(), course.getCourseName());
+
+            addCoursesDataTable.DataSource = courseTable;
+
+            UpdateSearchTotalLabel();
         }
     }
 }

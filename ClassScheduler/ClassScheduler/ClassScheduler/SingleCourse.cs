@@ -9,32 +9,36 @@ using System.Collections.Generic;
 namespace ClassScheduler
 {
 
-    /*
-     *  This class defines a course object that has the properties 
-     *  courseName, abrvCourseName, and courseLevel.
-     */
+    /// <summary>
+    /// This class defines a course object that has the properties 
+    /// courseName, abrvCourseName, and courseLevel.
+    /// </summary>
+    /// Author: Kostiantyn Makrasnov (variables)
+    /// Author: Yuri Fedas (accessor/mutator functions & constructors)
+
     public class SingleCourse
     {
         private string courseName;
         private string abrvCourseName;
         private string courseLevel;
+        private string departmentName;
         private List<string> termsAvaliable = new List<string>();
         private List<string> instructAvaliable = new List<string>();
         public List<SingleSection> sections = new List<SingleSection>();
 
-        public SingleCourse(string courseName, string abrvCourseName, string courseLevel,
+        public SingleCourse(string courseName, string abrvCourseName, string courseLevel, string departmentName,
             List<string> termsAvailable, List<string> instructAvailable, List<SingleSection> sections)
         {
             this.courseName = courseName;
             this.abrvCourseName = abrvCourseName;
             this.courseLevel = courseLevel;
+            this.departmentName = departmentName;
             this.termsAvaliable = termsAvailable;
             this.instructAvaliable = instructAvailable;
             this.sections = sections;
         }
 
         // Accessor and Mutator functions for the SingleCourse class
-
         public string getCourseName()
         {
             return courseName;
@@ -63,6 +67,16 @@ namespace ClassScheduler
         public void setCourseLevel(string courseLevel)
         {
             this.courseLevel = courseLevel;
+        }
+
+        public string getDepartmentName()
+        {
+            return departmentName;
+        }
+
+        public void setDepartmentName(string departmentName)
+        {
+            this.departmentName = departmentName;
         }
 
         public List<string> getTermsAvailable()

@@ -35,7 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.InstructorFilter = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.InstructorNameFilter = new System.Windows.Forms.ComboBox();
             this.addButton = new System.Windows.Forms.Button();
             this.cancelAddButton = new System.Windows.Forms.Button();
             this.addCoursesDataTable = new System.Windows.Forms.DataGridView();
@@ -70,12 +70,14 @@
             // 
             // DepartmentFilter
             // 
+            this.DepartmentFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DepartmentFilter.Font = new System.Drawing.Font("Sitka Heading", 10F);
             this.DepartmentFilter.FormattingEnabled = true;
             this.DepartmentFilter.Location = new System.Drawing.Point(120, 111);
             this.DepartmentFilter.Name = "DepartmentFilter";
             this.DepartmentFilter.Size = new System.Drawing.Size(129, 27);
             this.DepartmentFilter.TabIndex = 11;
+            this.DepartmentFilter.SelectedIndexChanged += new System.EventHandler(this.DepartmentFilter_SelectedIndexChanged);
             // 
             // CourseLevelFilter
             // 
@@ -86,6 +88,7 @@
             this.CourseLevelFilter.Name = "CourseLevelFilter";
             this.CourseLevelFilter.Size = new System.Drawing.Size(93, 27);
             this.CourseLevelFilter.TabIndex = 12;
+            this.CourseLevelFilter.SelectedIndexChanged += new System.EventHandler(this.CourseLevelFilter_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -123,14 +126,15 @@
             this.InstructorFilter.Text = "Instructor: ";
             this.InstructorFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // comboBox1
+            // InstructorNameFilter
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Sitka Heading", 10F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(354, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(207, 27);
-            this.comboBox1.TabIndex = 16;
+            this.InstructorNameFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.InstructorNameFilter.Font = new System.Drawing.Font("Sitka Heading", 10F);
+            this.InstructorNameFilter.FormattingEnabled = true;
+            this.InstructorNameFilter.Location = new System.Drawing.Point(354, 111);
+            this.InstructorNameFilter.Name = "InstructorNameFilter";
+            this.InstructorNameFilter.Size = new System.Drawing.Size(207, 27);
+            this.InstructorNameFilter.TabIndex = 16;
             // 
             // addButton
             // 
@@ -209,7 +213,7 @@
             this.Controls.Add(this.addCoursesDataTable);
             this.Controls.Add(this.cancelAddButton);
             this.Controls.Add(this.addButton);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.InstructorNameFilter);
             this.Controls.Add(this.InstructorFilter);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -236,7 +240,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label InstructorFilter;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox InstructorNameFilter;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button cancelAddButton;
         private System.Windows.Forms.DataGridView addCoursesDataTable;
