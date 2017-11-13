@@ -57,7 +57,7 @@ namespace ClassScheduler
             courseTable.Columns.Add("ID", typeof(string));
             courseTable.Columns.Add("Title", typeof(string));
 
-            foreach (SingleCourse course in allCourses)
+            foreach (SingleCourse course in filteredCourses)
                 courseTable.Rows.Add(course.getAbrvCourseName(), course.getCourseName());
 
             addCoursesDataTable.DataSource = courseTable;
@@ -65,7 +65,7 @@ namespace ClassScheduler
             addCoursesDataTable.Columns["ID"].Width = 72;
 
             TryAddingCourse();
-            UpdateSearchTotalLabel();
+            UpdateSearchTotalLabels();
             UpdateFilters();
         }
 
@@ -75,8 +75,6 @@ namespace ClassScheduler
         {
             if(courseAccepted)
             {
-                Debug.WriteLine("Comparing: " + (string)selectedRow.Cells[1].Value + " and " + (string)selectedRow.Cells[0].Value);
-                Debug.WriteLine("with" + allCourses[1].getCourseName() + " and " + allCourses[1].getAbrvCourseName());
                 selectedRow = addCoursesDataTable.Rows[selectedTableIndex];     
                 SingleCourse selectedCourseClass = allCourses[allCourses.IndexOf(allCourses.Find(s => (s.getCourseName() == (string)selectedRow.Cells[1].Value)
                                                                                                    && (s.getAbrvCourseName() == (string)selectedRow.Cells[0].Value)))];
@@ -111,7 +109,10 @@ namespace ClassScheduler
         //Attepts to add selected course
         public void TryAddingCourse()
         {
-            selectedRow = addCoursesDataTable.Rows[selectedTableIndex];
+            if (filteredCourses.Count != 0)
+            {
+                selectedRow = addCoursesDataTable.Rows[selectedTableIndex];
+            }
 
             if (MainCourseForm.selectedCourses.Count() >= 10)
             {
@@ -135,17 +136,29 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - UpdateSearchTotalLabel]
-        //Updates label indicating howw much courses are displayed
-        private void UpdateSearchTotalLabel()
+        //Updates labels indicating how much courses are displayed and warnings at 0 courses
+        private void UpdateSearchTotalLabels()
         {
             showingCoursesCount.Text = filteredCourses.Count() + " out of " + allCourses.Count();
+            if (filteredCourses.Count() == 0)
+            {
+                showingCoursesCount.ForeColor = Color.Red;
+                addCourseStateLabel.ForeColor = Color.Red;
+                addCourseStateLabel.Text = "No courses match your filters!";
+                courseAccepted = false;
+            }
+            else
+            {
+                TryAddingCourse();
+                showingCoursesCount.ForeColor = Color.Gray;
+            }
         }
 
         //[FUNCTION - UpdateFilters]
         //Populates filters by which classes can be sorted
         void UpdateFilters()
         {
-            foreach(var course in allCourses)
+            foreach(SingleCourse course in allCourses)
             {
                 if (!courseLevelFilterValues.Exists(s => s == course.getCourseLevel())) //**May just switch to manual input in future**
                     courseLevelFilterValues.Add(course.getCourseLevel());
@@ -155,10 +168,7 @@ namespace ClassScheduler
 
                 foreach (string instruct in course.getInstructAvailable())
                     if (!instructorFilterValues.Exists(s => s == instruct))
-                    {
                         instructorFilterValues.Add(instruct);
-                        Debug.WriteLine("Added instruct:" + instruct);
-                    }
             }
 
             courseLevelFilterValues = courseLevelFilterValues.OrderBy(s => s.Substring(0)).ToList();
@@ -183,9 +193,6 @@ namespace ClassScheduler
             CourseLevelFilter.SelectedIndex = 0;
             DepartmentFilter.SelectedIndex = 0;
             InstructorNameFilter.SelectedIndex = 0;
-
-
-            //labelComboBox.Items.Refresh();
         }
 
 
@@ -218,13 +225,9 @@ namespace ClassScheduler
             filteredCourses.Clear();
             filteredCourses = new List<SingleCourse>(allCourses);
 
-            Debug.WriteLine("Department filter text:" + DepartmentFilter.Text + " | Course Level text: " + CourseLevelFilter.Text + " | Instructor Filter Text: " + InstructorFilter.Text);
-
             bool departFilterEnabled = (DepartmentFilter.Text == "Any") ? false : true;
             bool levelFilterEnabled = (CourseLevelFilter.Text == "Any") ? false : true;
             bool instructFilterEnabled = (InstructorNameFilter.Text == "Any") ? false : true;
-
-            Debug.WriteLine("Department filter enabled? " + departFilterEnabled + " | Course Level enabled? " + levelFilterEnabled + " | Instructor Filter Enabled? " + instructFilterEnabled);
 
             if (departFilterEnabled || levelFilterEnabled || instructFilterEnabled)
             {
@@ -243,7 +246,7 @@ namespace ClassScheduler
 
             addCoursesDataTable.DataSource = courseTable;
 
-            UpdateSearchTotalLabel();
+            UpdateSearchTotalLabels();
         }
 
         //[FUNCTION - FindIfMatchingInstructs]

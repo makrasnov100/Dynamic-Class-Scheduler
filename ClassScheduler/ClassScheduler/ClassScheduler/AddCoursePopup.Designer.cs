@@ -32,9 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.DepartmentFilter = new System.Windows.Forms.ComboBox();
             this.CourseLevelFilter = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.InstructorFilter = new System.Windows.Forms.Label();
+            this.DepartmentFilterLabel = new System.Windows.Forms.Label();
+            this.CourseLevelFilterLabel = new System.Windows.Forms.Label();
+            this.InstructorFilterLabel = new System.Windows.Forms.Label();
             this.InstructorNameFilter = new System.Windows.Forms.ComboBox();
             this.addButton = new System.Windows.Forms.Button();
             this.cancelAddButton = new System.Windows.Forms.Button();
@@ -70,6 +70,7 @@
             // 
             // DepartmentFilter
             // 
+            this.DepartmentFilter.BackColor = System.Drawing.SystemColors.Window;
             this.DepartmentFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DepartmentFilter.Font = new System.Drawing.Font("Sitka Heading", 10F);
             this.DepartmentFilter.FormattingEnabled = true;
@@ -90,41 +91,41 @@
             this.CourseLevelFilter.TabIndex = 12;
             this.CourseLevelFilter.SelectedIndexChanged += new System.EventHandler(this.CourseLevelFilter_SelectedIndexChanged);
             // 
-            // label2
+            // DepartmentFilterLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic);
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label2.Location = new System.Drawing.Point(117, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Department:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DepartmentFilterLabel.AutoSize = true;
+            this.DepartmentFilterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic);
+            this.DepartmentFilterLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.DepartmentFilterLabel.Location = new System.Drawing.Point(117, 95);
+            this.DepartmentFilterLabel.Name = "DepartmentFilterLabel";
+            this.DepartmentFilterLabel.Size = new System.Drawing.Size(65, 13);
+            this.DepartmentFilterLabel.TabIndex = 13;
+            this.DepartmentFilterLabel.Text = "Department:";
+            this.DepartmentFilterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // CourseLevelFilterLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic);
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label3.Location = new System.Drawing.Point(252, 95);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Course Level:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CourseLevelFilterLabel.AutoSize = true;
+            this.CourseLevelFilterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic);
+            this.CourseLevelFilterLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.CourseLevelFilterLabel.Location = new System.Drawing.Point(252, 95);
+            this.CourseLevelFilterLabel.Name = "CourseLevelFilterLabel";
+            this.CourseLevelFilterLabel.Size = new System.Drawing.Size(72, 13);
+            this.CourseLevelFilterLabel.TabIndex = 14;
+            this.CourseLevelFilterLabel.Text = "Course Level:";
+            this.CourseLevelFilterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // InstructorFilter
+            // InstructorFilterLabel
             // 
-            this.InstructorFilter.AutoSize = true;
-            this.InstructorFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic);
-            this.InstructorFilter.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.InstructorFilter.Location = new System.Drawing.Point(351, 95);
-            this.InstructorFilter.Name = "InstructorFilter";
-            this.InstructorFilter.Size = new System.Drawing.Size(57, 13);
-            this.InstructorFilter.TabIndex = 15;
-            this.InstructorFilter.Text = "Instructor: ";
-            this.InstructorFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.InstructorFilterLabel.AutoSize = true;
+            this.InstructorFilterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic);
+            this.InstructorFilterLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.InstructorFilterLabel.Location = new System.Drawing.Point(351, 95);
+            this.InstructorFilterLabel.Name = "InstructorFilterLabel";
+            this.InstructorFilterLabel.Size = new System.Drawing.Size(57, 13);
+            this.InstructorFilterLabel.TabIndex = 15;
+            this.InstructorFilterLabel.Text = "Instructor: ";
+            this.InstructorFilterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // InstructorNameFilter
             // 
@@ -195,7 +196,7 @@
             // 
             this.showingCoursesCount.AutoSize = true;
             this.showingCoursesCount.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.showingCoursesCount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.showingCoursesCount.ForeColor = System.Drawing.Color.Gray;
             this.showingCoursesCount.Location = new System.Drawing.Point(659, 583);
             this.showingCoursesCount.Name = "showingCoursesCount";
             this.showingCoursesCount.Size = new System.Drawing.Size(76, 13);
@@ -215,9 +216,9 @@
             this.Controls.Add(this.cancelAddButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.InstructorNameFilter);
-            this.Controls.Add(this.InstructorFilter);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.InstructorFilterLabel);
+            this.Controls.Add(this.CourseLevelFilterLabel);
+            this.Controls.Add(this.DepartmentFilterLabel);
             this.Controls.Add(this.CourseLevelFilter);
             this.Controls.Add(this.DepartmentFilter);
             this.Controls.Add(this.label1);
@@ -238,9 +239,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox DepartmentFilter;
         private System.Windows.Forms.ComboBox CourseLevelFilter;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label InstructorFilter;
+        private System.Windows.Forms.Label DepartmentFilterLabel;
+        private System.Windows.Forms.Label CourseLevelFilterLabel;
+        private System.Windows.Forms.Label InstructorFilterLabel;
         private System.Windows.Forms.ComboBox InstructorNameFilter;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button cancelAddButton;

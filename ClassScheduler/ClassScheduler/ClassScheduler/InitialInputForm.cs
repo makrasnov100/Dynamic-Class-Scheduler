@@ -115,7 +115,7 @@ namespace ClassScheduler
             ProcessCourseData();
             RemoveIrevSections();
             SortCourses();
-            WriteDebugFile();
+            //WriteDebugFile();
         }
 
         //[FUNCTION - checkImputCompletion)
@@ -171,7 +171,7 @@ namespace ClassScheduler
                         GetCourseLevel(),
                         excelReader.GetString(3),
                         new List<string> { (excelReader.GetString(2)) },
-                        new List<string> (SplitCellIntoList(9, ", ", "NA")),
+                        new List<string> ( GetRowInstructNames()),
                         new List<SingleSection> { (new SingleSection { }) }
                     ));
 
@@ -193,21 +193,20 @@ namespace ClassScheduler
                     bool termRecorded = false;
                     bool instructRecorded = false;
 
-                    foreach (var availTerm in courses[courseIndex].getTermsAvailable())
-                    {
+                    //Check for a unique term avaliability
+                    foreach (string availTerm in courses[courseIndex].getTermsAvailable())
                         if (availTerm == excelReader.GetString(2))
                             termRecorded = true;
-                    }
                     if (!termRecorded)
                         courses[courseIndex].getTermsAvailable().Add(excelReader.GetString(2));
 
                     //Check for a unique course instructor
                     List<string> currentInstructs = SplitCellIntoList(9, ",", "NA");
-                    foreach (var course in courses)
+                    foreach (SingleCourse course in courses)
                     {
-                        foreach(var section in course.getSections())
-                            foreach(var instruct in section.getInstructLastN())
-                                foreach(var currentInstruct in currentInstructs)
+                        foreach(SingleSection section in course.getSections())
+                            foreach(string instruct in section.getInstructLastN())
+                                foreach(string currentInstruct in currentInstructs)
                                     if(currentInstruct == instruct)
                                         instructRecorded = true;
                     }
@@ -219,20 +218,11 @@ namespace ClassScheduler
                         foreach(string lastName in lastNames)
                         {
                             if (firstNames.Count() == 1 && firstNames[0] == "NA")
-                            {
-                                Debug.Write(1);
                                 courses[courseIndex].getInstructAvailable().Add(lastName);
-                            }
                             else if (firstNames.Count() == 1)
-                            {
-                                Debug.Write(2);
                                 courses[courseIndex].getInstructAvailable().Add(firstNames[0] + " " + lastName);
-                            }
                             else
-                            {
-                                Debug.Write(3);
                                 courses[courseIndex].getInstructAvailable().Add(firstNames[indexCounter] + " " + lastName);
-                            }
                             indexCounter++;
                         }
                         indexCounter = 0;
@@ -266,7 +256,7 @@ namespace ClassScheduler
         {
             bool needSection = true;
 
-            foreach (var section in courses[checkIndex].sections)
+            foreach (SingleSection section in courses[checkIndex].sections)
             {
                 if (section.getID() == excelReader.GetString(5) &&
                     section.getStartTimes().SequenceEqual(SplitCellIntoList(17, ", ", " NA")) &&
@@ -291,15 +281,6 @@ namespace ClassScheduler
         {
             List<string> result = new List<string>(((excelReader.GetString(columnIndex)) != null ? excelReader.GetString(columnIndex) : nullReplace).Split(new string[] { delim }, StringSplitOptions.None));
 
-            //if(columnIndex == 10)
-            //{
-            //    foreach (var value in result)
-            //    {
-            //        Debug.WriteLine("Instructor Found: " + value);
-            //    }
-            //    Debug.WriteLine("---------------------------------------------------");
-            //}
-
             return result;
         }
 
@@ -321,7 +302,7 @@ namespace ClassScheduler
                     }
 
             //ADD unneeded courses to secondary list (some may have partial valid data)
-            foreach (var index in removeCourseIndexes)
+            foreach (int index in removeCourseIndexes)
                 unneededCourses.Add(courses[index]);
 
             //REMOVE course entry from primary list
@@ -349,11 +330,11 @@ namespace ClassScheduler
             int indexOffset = 0;
             List<int> courseRemoveIndexes = new List<int> { };
 
-            foreach (var course in courses)
+            foreach (SingleCourse course in courses)
                 if (course.sections.Count() == 0)
                     courseRemoveIndexes.Add(courses.IndexOf(course));
 
-            foreach (var index in courseRemoveIndexes)
+            foreach (int index in courseRemoveIndexes)
             {
                 courses.RemoveAt(index - indexOffset);
                 indexOffset++;
@@ -387,7 +368,7 @@ namespace ClassScheduler
         {
             sw.WriteLine("****************************[" + Term.ToUpper() + " Term]****************************");
             int courseNum = 0;
-            foreach (var course in courses)
+            foreach (SingleCourse course in courses)
             {
                 sw.Flush();
                 if (course.getTermsAvailable().Any(s => s.EndsWith(abrvTerm)))
@@ -397,14 +378,14 @@ namespace ClassScheduler
                         + course.getCourseName() + ": ");
 
                     int indexCount = 0;
-                    foreach (var section in course.sections)
+                    foreach (SingleSection section in course.sections)
                     {
                         if (section.getTerm().Contains(abrvTerm))
                         {
                             int secTimeIndex = 0;
 
                             sw.Write("  [SECTION #" + (indexCount + 1) + "] -");
-                            foreach (var startTime in section.getStartTimes())
+                            foreach (string startTime in section.getStartTimes())
                             {
                                 sw.Write(startTime + " -" + section.getStopTimes()[secTimeIndex]);
                                 if (secTimeIndex == 0 && section.getStartTimes().Count() != 1)
@@ -414,7 +395,7 @@ namespace ClassScheduler
                             sw.Write(" | ");
 
                             int secFacIndex = 0;
-                            foreach (var lastName in section.getInstructLastN())
+                            foreach (string lastName in section.getInstructLastN())
                             {
                                 if (section.getInstructFirstN()[secFacIndex] != "")
                                     sw.Write(section.getInstructFirstN()[secFacIndex] + ", ");
@@ -425,7 +406,7 @@ namespace ClassScheduler
                             }
 
                             int secDayIndex = 0;
-                            foreach (var day in section.getMeetDays())
+                            foreach (string day in section.getMeetDays())
                             {
                                 if (secDayIndex != 0)
                                     sw.Write("-");
@@ -448,6 +429,29 @@ namespace ClassScheduler
             object value = excelReader.GetValue(8);
             string stringValue = value.ToString();
             return (stringValue != "NA") ? stringValue : "000";
+        }
+
+        //[FUNCTION - GetRowInstructNames]
+        //Formats and returns instructor names
+        List<string> GetRowInstructNames()
+        {
+            List<string> resultNames = new List<string>();
+            List<string> lastNames = SplitCellIntoList(9, ", ", "NA");
+            List<string> firstNames = SplitCellIntoList(10, ", ", "NA");
+            int indexCounter = 0;
+            foreach (string lastName in lastNames)
+            {
+                if (firstNames.Count() == 1 && firstNames[0] == "NA")
+                    resultNames.Add(lastName);
+                else if (firstNames.Count() == 1)
+                    resultNames.Add(firstNames[0] + " " + lastName);
+                else
+                    resultNames.Add(firstNames[indexCounter] + " " + lastName);
+                indexCounter++;
+            }
+            indexCounter = 0;
+
+            return resultNames;
         }
     }
 }
