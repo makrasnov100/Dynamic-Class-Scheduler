@@ -58,7 +58,10 @@ namespace ClassScheduler
             }
             else
             {
-                CourseAddPopup.TryAddingCourse();
+                if (CourseAddPopup.getFilteredCourses().Count() != 0)
+                {
+                    CourseAddPopup.TryAddingCourse();
+                } 
                 CourseAddPopup.Show();
             }
         }

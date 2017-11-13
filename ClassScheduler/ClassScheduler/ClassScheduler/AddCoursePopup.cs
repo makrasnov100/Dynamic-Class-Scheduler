@@ -25,6 +25,8 @@ namespace ClassScheduler
         //- Searchbar
         //- Preloading of this form
         //- dynamic update of filters
+        //- cell double click to add/remove course
+        //- cell background change upon added st
 
         private List<string> courseLevelFilterValues = new List<string>();
         private List<string> departmentFilterValues = new List<string>();
@@ -70,7 +72,7 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - addButton_Click]
-        //Adds selected course to user's courses when button is clicked
+        //Adds selected course to user's courses when "add" button is clicked
         private void addButton_Click(object sender, EventArgs e)
         {
             if(courseAccepted)
@@ -109,8 +111,9 @@ namespace ClassScheduler
         //Attepts to add selected course
         public void TryAddingCourse()
         {
-            if (filteredCourses.Count != 0)
+            if (filteredCourses.Count() != 0)
             {
+                selectedTableIndex = addCoursesDataTable.CurrentCell.RowIndex;
                 selectedRow = addCoursesDataTable.Rows[selectedTableIndex];
             }
 
@@ -158,7 +161,7 @@ namespace ClassScheduler
         //Populates filters by which classes can be sorted
         void UpdateFilters()
         {
-            foreach(SingleCourse course in allCourses)
+            foreach(var course in allCourses)
             {
                 if (!courseLevelFilterValues.Exists(s => s == course.getCourseLevel())) //**May just switch to manual input in future**
                     courseLevelFilterValues.Add(course.getCourseLevel());
@@ -166,7 +169,7 @@ namespace ClassScheduler
                 if (!departmentFilterValues.Exists(s => s == course.getDepartmentName()))
                     departmentFilterValues.Add(course.getDepartmentName());
 
-                foreach (string instruct in course.getInstructAvailable())
+                foreach (var instruct in course.getInstructAvailable())
                     if (!instructorFilterValues.Exists(s => s == instruct))
                         instructorFilterValues.Add(instruct);
             }
@@ -183,18 +186,17 @@ namespace ClassScheduler
             //departmentFilterValues.Sort();
             //instructorFilterValues.Sort();
 
-            foreach (string levelChoise in courseLevelFilterValues)
+            foreach (var levelChoise in courseLevelFilterValues)
                 CourseLevelFilter.Items.Add(levelChoise);
-            foreach (string departmentChoise in departmentFilterValues)
+            foreach (var departmentChoise in departmentFilterValues)
                 DepartmentFilter.Items.Add(departmentChoise);
-            foreach (string instructChoise in instructorFilterValues)
+            foreach (var instructChoise in instructorFilterValues)
                 InstructorNameFilter.Items.Add(instructChoise);   
 
             CourseLevelFilter.SelectedIndex = 0;
             DepartmentFilter.SelectedIndex = 0;
             InstructorNameFilter.SelectedIndex = 0;
         }
-
 
         //[FUNCTION - DepartmentFilter_SelectedIndexChanged]
         //Removes all courses not fitting to department criteria
@@ -209,7 +211,6 @@ namespace ClassScheduler
         {
            FilterCourses(); 
         }
-
 
         //[FUNCTION - InstructorNameFilter_SelectedIndexChanged]
         //Removes all courses not fitting to instructor name criteria
@@ -231,7 +232,7 @@ namespace ClassScheduler
 
             if (departFilterEnabled || levelFilterEnabled || instructFilterEnabled)
             {
-                foreach (SingleCourse course in allCourses)
+                foreach (var course in allCourses)
                     if ((departFilterEnabled ? course.getDepartmentName() != DepartmentFilter.Text : false) ||
                         (levelFilterEnabled ? course.getCourseLevel() != CourseLevelFilter.Text : false) ||
                         (instructFilterEnabled ? FindIfMatchingInstructs(course) : false))
@@ -241,7 +242,7 @@ namespace ClassScheduler
             }
 
             courseTable.Rows.Clear();
-            foreach (SingleCourse course in filteredCourses)
+            foreach (var course in filteredCourses)
                 courseTable.Rows.Add(course.getAbrvCourseName(), course.getCourseName());
 
             addCoursesDataTable.DataSource = courseTable;
@@ -253,13 +254,19 @@ namespace ClassScheduler
         //Returns false if course doesnt have a matching instructor
         bool FindIfMatchingInstructs(SingleCourse course)
         {
-            foreach (string instructor in course.getInstructAvailable())
+            foreach (var instructor in course.getInstructAvailable())
             {
                 if (instructor == InstructorNameFilter.Text)
                     return false;
             }
 
             return true;
+        }
+
+        //Needed Accessor/Muttator Functions
+        public List<SingleCourse> getFilteredCourses()
+        {
+            return filteredCourses;
         }
     }
 }
