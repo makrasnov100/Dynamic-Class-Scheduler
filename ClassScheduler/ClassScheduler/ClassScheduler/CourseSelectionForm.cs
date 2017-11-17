@@ -73,6 +73,7 @@ namespace ClassScheduler
             this.Hide();
             ResultForm Result = new ResultForm(this);
             Result.ShowDialog();
+            //manipulateSelectedCourses();
         }
 
         //[FUNCTION - CourseSelectionForm_Load]

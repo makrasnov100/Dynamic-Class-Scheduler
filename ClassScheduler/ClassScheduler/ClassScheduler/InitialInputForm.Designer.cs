@@ -56,19 +56,21 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Heading", 16F);
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label1.Location = new System.Drawing.Point(322, 251);
+            this.label1.Location = new System.Drawing.Point(429, 309);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 32);
+            this.label1.Size = new System.Drawing.Size(148, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "First Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(446, 374);
+            this.btnFind.Location = new System.Drawing.Point(595, 460);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(158, 33);
-            this.btnFind.TabIndex = 2;
+            this.btnFind.Size = new System.Drawing.Size(211, 41);
+            this.btnFind.TabIndex = 15;
             this.btnFind.Text = "Find File";
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
@@ -78,9 +80,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(52, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(252, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(336, 185);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -89,9 +92,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sitka Heading", 16F);
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(327, 291);
+            this.label2.Location = new System.Drawing.Point(436, 358);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 32);
+            this.label2.Size = new System.Drawing.Size(143, 39);
             this.label2.TabIndex = 4;
             this.label2.Text = "Last Name:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -101,9 +105,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Heading", 16F);
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(374, 332);
+            this.label3.Location = new System.Drawing.Point(499, 409);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 32);
+            this.label3.Size = new System.Drawing.Size(84, 39);
             this.label3.TabIndex = 5;
             this.label3.Text = "Term:";
             // 
@@ -112,9 +117,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sitka Heading", 48F, System.Drawing.FontStyle.Italic);
             this.label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label4.Location = new System.Drawing.Point(359, 48);
+            this.label4.Location = new System.Drawing.Point(479, 59);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(543, 92);
+            this.label4.Size = new System.Drawing.Size(680, 116);
             this.label4.TabIndex = 6;
             this.label4.Text = "Dynamic Scheduler";
             // 
@@ -123,9 +129,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Heading", 20.25F, System.Drawing.FontStyle.Italic);
             this.label5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label5.Location = new System.Drawing.Point(316, 194);
+            this.label5.Location = new System.Drawing.Point(421, 239);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(327, 39);
+            this.label5.Size = new System.Drawing.Size(419, 49);
             this.label5.TabIndex = 7;
             this.label5.Text = "Please Enter the Following...";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -135,9 +142,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Sitka Heading", 16F);
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(265, 374);
+            this.label6.Location = new System.Drawing.Point(353, 460);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(180, 32);
+            this.label6.Size = new System.Drawing.Size(218, 39);
             this.label6.TabIndex = 8;
             this.label6.Text = "Course Data Path:";
             // 
@@ -146,20 +154,22 @@
             this.InputToMainButton.BackColor = System.Drawing.Color.Black;
             this.InputToMainButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputToMainButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.InputToMainButton.Location = new System.Drawing.Point(395, 456);
+            this.InputToMainButton.Location = new System.Drawing.Point(527, 561);
+            this.InputToMainButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.InputToMainButton.Name = "InputToMainButton";
-            this.InputToMainButton.Size = new System.Drawing.Size(209, 47);
-            this.InputToMainButton.TabIndex = 9;
+            this.InputToMainButton.Size = new System.Drawing.Size(279, 58);
+            this.InputToMainButton.TabIndex = 17;
             this.InputToMainButton.Text = "Begin Course Selection";
             this.InputToMainButton.UseVisualStyleBackColor = false;
             this.InputToMainButton.Click += new System.EventHandler(this.InputToMainButton_Click);
             // 
             // PreviewExcelSheetButton
             // 
-            this.PreviewExcelSheetButton.Location = new System.Drawing.Point(605, 374);
+            this.PreviewExcelSheetButton.Location = new System.Drawing.Point(807, 460);
+            this.PreviewExcelSheetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PreviewExcelSheetButton.Name = "PreviewExcelSheetButton";
-            this.PreviewExcelSheetButton.Size = new System.Drawing.Size(108, 33);
-            this.PreviewExcelSheetButton.TabIndex = 10;
+            this.PreviewExcelSheetButton.Size = new System.Drawing.Size(144, 41);
+            this.PreviewExcelSheetButton.TabIndex = 16;
             this.PreviewExcelSheetButton.Text = "Preview";
             this.PreviewExcelSheetButton.UseVisualStyleBackColor = true;
             // 
@@ -172,36 +182,40 @@
             "Fall",
             "January",
             "Spring"});
-            this.TermComboBox.Location = new System.Drawing.Point(446, 336);
+            this.TermComboBox.Location = new System.Drawing.Point(595, 414);
+            this.TermComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TermComboBox.Name = "TermComboBox";
-            this.TermComboBox.Size = new System.Drawing.Size(158, 31);
-            this.TermComboBox.TabIndex = 11;
+            this.TermComboBox.Size = new System.Drawing.Size(209, 37);
+            this.TermComboBox.TabIndex = 14;
             // 
             // FirstNameTextBox
             // 
             this.FirstNameTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.FirstNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.FirstNameTextBox.Font = new System.Drawing.Font("Sitka Heading", 12F);
-            this.FirstNameTextBox.Location = new System.Drawing.Point(446, 257);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(595, 316);
+            this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(158, 28);
+            this.FirstNameTextBox.Size = new System.Drawing.Size(209, 33);
             this.FirstNameTextBox.TabIndex = 12;
             // 
             // LastNameTextBox
             // 
             this.LastNameTextBox.Font = new System.Drawing.Font("Sitka Heading", 12F);
-            this.LastNameTextBox.Location = new System.Drawing.Point(446, 297);
+            this.LastNameTextBox.Location = new System.Drawing.Point(595, 366);
+            this.LastNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LastNameTextBox.Name = "LastNameTextBox";
-            this.LastNameTextBox.Size = new System.Drawing.Size(158, 28);
+            this.LastNameTextBox.Size = new System.Drawing.Size(209, 33);
             this.LastNameTextBox.TabIndex = 13;
             // 
             // FirstNameNeedLabel
             // 
             this.FirstNameNeedLabel.AutoSize = true;
             this.FirstNameNeedLabel.ForeColor = System.Drawing.Color.Red;
-            this.FirstNameNeedLabel.Location = new System.Drawing.Point(610, 265);
+            this.FirstNameNeedLabel.Location = new System.Drawing.Point(813, 326);
+            this.FirstNameNeedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FirstNameNeedLabel.Name = "FirstNameNeedLabel";
-            this.FirstNameNeedLabel.Size = new System.Drawing.Size(103, 13);
+            this.FirstNameNeedLabel.Size = new System.Drawing.Size(140, 17);
             this.FirstNameNeedLabel.TabIndex = 14;
             this.FirstNameNeedLabel.Text = "This field is required.";
             // 
@@ -209,9 +223,10 @@
             // 
             this.LastNameNeedLabel.AutoSize = true;
             this.LastNameNeedLabel.ForeColor = System.Drawing.Color.Red;
-            this.LastNameNeedLabel.Location = new System.Drawing.Point(610, 305);
+            this.LastNameNeedLabel.Location = new System.Drawing.Point(813, 375);
+            this.LastNameNeedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LastNameNeedLabel.Name = "LastNameNeedLabel";
-            this.LastNameNeedLabel.Size = new System.Drawing.Size(103, 13);
+            this.LastNameNeedLabel.Size = new System.Drawing.Size(140, 17);
             this.LastNameNeedLabel.TabIndex = 15;
             this.LastNameNeedLabel.Text = "This field is required.";
             // 
@@ -219,9 +234,10 @@
             // 
             this.TermNeedLabel.AutoSize = true;
             this.TermNeedLabel.ForeColor = System.Drawing.Color.Red;
-            this.TermNeedLabel.Location = new System.Drawing.Point(610, 344);
+            this.TermNeedLabel.Location = new System.Drawing.Point(813, 423);
+            this.TermNeedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TermNeedLabel.Name = "TermNeedLabel";
-            this.TermNeedLabel.Size = new System.Drawing.Size(103, 13);
+            this.TermNeedLabel.Size = new System.Drawing.Size(140, 17);
             this.TermNeedLabel.TabIndex = 16;
             this.TermNeedLabel.Text = "This field is required.";
             // 
@@ -229,9 +245,10 @@
             // 
             this.PreviewStatusLabel.AutoSize = true;
             this.PreviewStatusLabel.ForeColor = System.Drawing.Color.Red;
-            this.PreviewStatusLabel.Location = new System.Drawing.Point(719, 386);
+            this.PreviewStatusLabel.Location = new System.Drawing.Point(959, 475);
+            this.PreviewStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PreviewStatusLabel.Name = "PreviewStatusLabel";
-            this.PreviewStatusLabel.Size = new System.Drawing.Size(87, 13);
+            this.PreviewStatusLabel.Size = new System.Drawing.Size(115, 17);
             this.PreviewStatusLabel.TabIndex = 17;
             this.PreviewStatusLabel.Text = "File not selected.";
             // 
@@ -255,18 +272,20 @@
             this.InitialInputPanel.Controls.Add(this.btnFind);
             this.InitialInputPanel.Controls.Add(this.label1);
             this.InitialInputPanel.Location = new System.Drawing.Point(-1, 0);
+            this.InitialInputPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.InitialInputPanel.Name = "InitialInputPanel";
-            this.InitialInputPanel.Size = new System.Drawing.Size(985, 562);
+            this.InitialInputPanel.Size = new System.Drawing.Size(1313, 692);
             this.InitialInputPanel.TabIndex = 18;
             // 
             // InitialInputForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1312, 690);
             this.Controls.Add(this.InitialInputPanel);
-            this.MinimumSize = new System.Drawing.Size(1000, 600);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1327, 728);
             this.Name = "InitialInputForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Input";
