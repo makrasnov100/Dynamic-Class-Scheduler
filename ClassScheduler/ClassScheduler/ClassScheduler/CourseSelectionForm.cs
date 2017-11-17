@@ -72,6 +72,9 @@ namespace ClassScheduler
         {
             this.Hide();
             ResultForm Result = new ResultForm(this);
+            //Manipulate the Result form before it is displayed...
+            //manipulateSelectedCourses();
+
             Result.ShowDialog();
             //manipulateSelectedCourses();
         }
@@ -168,6 +171,46 @@ namespace ClassScheduler
                 selectedCoursesGridView.CurrentCell = selectedCoursesGridView.Rows[selectedTableRowIndex].Cells[0];
                 selectedCoursesGridView.Rows[selectedTableRowIndex].Selected = true;
                 selectedRow = selectedCoursesGridView.Rows[selectedTableRowIndex];
+            }
+        }
+
+        public void manipulateSelectedCourses(ResultForm form)
+        {
+            Debug.WriteLine("The manipulateSelectedCourse method is invoked.");
+            form.timesDataGridView.Columns.Add("courseName", "Course Name");
+            form.timesDataGridView.Columns.Add("sectionName", "Section Name");
+            form.timesDataGridView.Columns.Add("sectionTime", "Section Time");
+
+            //Get all sections and section start times
+            for (int i = 0; i < selectedCourses.Count; i++)
+            {
+                for (int j = 0; j < selectedCourses[i].getSections().Count; j++ )
+                {
+                    for (int k = 0; k < selectedCourses[i].getSections()[j].getStartTimes().Count; k++)
+                    {
+                        form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), selectedCourses[i].getSections()[j].getID(),
+                            selectedCourses[i].getSections()[j].getStartTimes()[k]);
+                    }
+                }
+            }
+            form.timesDataGridView.AutoResizeColumns();
+            form.timesDataGridView.AutoResizeRows();
+        }
+
+        public void computeOptimalTimes(ResultForm form)
+        {
+            Debug.WriteLine("The computeOptimalTimes method is invoked.");
+            List<string> times = new List<string>();
+            Debug.WriteLine("The times List<string> is created.");
+            Debug.WriteLine("The number of rows is " + form.timesDataGridView.Rows.Count);
+            for (int i = 0; i < form.timesDataGridView.Rows.Count; i++)
+            {
+                times.Add(form.timesDataGridView.Rows[i].Cells[2].ToString());
+            }
+            
+            for (int i = 0; i < form.timesDataGridView.Rows.Count; i++)
+            {
+                Debug.WriteLine("Time " + i + ": " + times[i]);
             }
         }
     }

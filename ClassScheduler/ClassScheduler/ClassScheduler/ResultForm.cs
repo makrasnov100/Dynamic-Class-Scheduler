@@ -40,5 +40,11 @@ namespace ClassScheduler
             if(!isRevision)
                 Application.Exit();
         }
+
+        private void ResultForm_Load(object sender, EventArgs e)
+        {
+            MainPageForm.manipulateSelectedCourses(this);
+            MainPageForm.computeOptimalTimes(this);
+        }
     }
 }
