@@ -55,6 +55,7 @@
     <Compile Include="AddCoursePopup.Designer.cs">
       <DependentUpon>AddCoursePopup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Calculation.cs" />
     <Compile Include="CourseSelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +68,7 @@
     <Compile Include="ResultForm.Designer.cs">
       <DependentUpon>ResultForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SingleSchedule.cs" />
     <Compile Include="SingleSection.cs" />
     <Compile Include="SingleCourse.cs" />
     <Compile Include="InitialInputForm.cs">
