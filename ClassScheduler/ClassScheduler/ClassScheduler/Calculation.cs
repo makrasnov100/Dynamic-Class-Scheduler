@@ -23,7 +23,7 @@ namespace ClassScheduler
 
         private Random random;
 
-        Calculation(int populationSize, int courseAmount, Random random, List<SingleCourse> selectedCourses, double mutationRate = .01)
+        Calculation(int populationSize, int courseAmount, int creditAmount, Random random, List<SingleCourse> selectedCourses, double mutationRate = .01)
         {
             genNumber = 1;
             this.mutationRate = mutationRate;
@@ -33,7 +33,7 @@ namespace ClassScheduler
             newSchedulePopulation = new List<SingleSchedule>(populationSize);
 
             for (int i = 0; i < populationSize; i++)
-                schedulePopulation.Add(new SingleSchedule(courseAmount, random, GetRandomSection, GetRandomSection, firstGen: true));
+                schedulePopulation.Add(new SingleSchedule(courseAmount, creditAmount, random, GetRandomSection, GetRandomSection, firstGen: true));
         }
 
         //[FUNCTION - CreateNewGenneration]
