@@ -176,10 +176,10 @@ namespace ClassScheduler
 
         public void manipulateSelectedCourses(ResultForm form)
         {
-            Debug.WriteLine("The manipulateSelectedCourse method is invoked.");
             form.timesDataGridView.Columns.Add("courseName", "Course Name");
             form.timesDataGridView.Columns.Add("sectionName", "Section Name");
             form.timesDataGridView.Columns.Add("sectionTime", "Section Time");
+            form.timesDataGridView.Columns.Add("sectionDay", "Section Day");
 
             //Get all sections and section start times
             for (int i = 0; i < selectedCourses.Count; i++)
@@ -188,8 +188,22 @@ namespace ClassScheduler
                 {
                     for (int k = 0; k < selectedCourses[i].getSections()[j].getStartTimes().Count; k++)
                     {
-                        form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), selectedCourses[i].getSections()[j].getID(),
-                            selectedCourses[i].getSections()[j].getStartTimes()[k]);
+                        //Check if the section meets more than one day a week (which it most likely will)
+                        if (selectedCourses[i].getSections()[j].getMeetDays().Count() > 1)
+                        {
+                            int count = selectedCourses[i].getSections()[j].getMeetDays().Count();
+
+                            for (int l = 0; l < count; l++)
+                            {
+                                form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), selectedCourses[i].getSections()[j].getID(),
+                                selectedCourses[i].getSections()[j].getStartTimes()[k], selectedCourses[i].getSections()[j].getMeetDays()[l]);
+                            }
+                        }
+                        else //This else clause will only execute if the section meets once a week
+                        {
+                            form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), selectedCourses[i].getSections()[j].getID(),
+                            selectedCourses[i].getSections()[j].getStartTimes()[k], selectedCourses[i].getSections()[j].getMeetDays()[k]);
+                        }
                     }
                 }
             }
@@ -199,10 +213,8 @@ namespace ClassScheduler
 
         public void computeOptimalTimes(ResultForm form)
         {
-            Debug.WriteLine("The computeOptimalTimes method is invoked.");
             List<string> times = new List<string>();
-            Debug.WriteLine("The times List<string> is created.");
-            Debug.WriteLine("The number of rows is " + form.timesDataGridView.Rows.Count);
+
             for (int i = 0; i < form.timesDataGridView.Rows.Count; i++)
             {
                 times.Add(form.timesDataGridView.Rows[i].Cells[2].ToString());
