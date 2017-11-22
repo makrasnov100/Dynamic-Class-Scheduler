@@ -73,9 +73,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.timesDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.timesDataGridView.Location = new System.Drawing.Point(32, 41);
+            this.timesDataGridView.MultiSelect = false;
             this.timesDataGridView.Name = "timesDataGridView";
             this.timesDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.timesDataGridView.RowTemplate.Height = 24;
+            this.timesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.timesDataGridView.Size = new System.Drawing.Size(786, 448);
             this.timesDataGridView.TabIndex = 0;
             // 
