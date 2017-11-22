@@ -180,6 +180,7 @@ namespace ClassScheduler
             form.timesDataGridView.Columns.Add("sectionName", "Section Name");
             form.timesDataGridView.Columns.Add("sectionTime", "Section Time");
             form.timesDataGridView.Columns.Add("sectionDay", "Section Day");
+            form.timesDataGridView.Columns.Add("startTimeMinutes", "Start Minutes since midnight");
 
             //Get all sections and section start times
             for (int i = 0; i < selectedCourses.Count; i++)
@@ -194,38 +195,41 @@ namespace ClassScheduler
                             int count = selectedCourses[i].getSections()[j].getMeetDays().Count();
 
                             //A very inefficient way of displaying a row based on the number of days of the week it meets. 
-                            //I'm sure there is a simple for loop to display this information, I will look into it. 
+                            //I'm sure there is a simple for loop to display this information, I will look into it...
                             switch (count) {
                                 case 2:
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), 
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k], 
-                                    selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k+1]);
+                                    selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k+1], 
+                                    selectedCourses[i].getSections()[j].getStartTimeMinutes());
                                     break;
                                 case 3:
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), 
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k], 
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k+1] 
-                                    + selectedCourses[i].getSections()[j].getMeetDays()[k + 2]);
+                                    + selectedCourses[i].getSections()[j].getMeetDays()[k + 2], selectedCourses[i].getSections()[j].getStartTimeMinutes());
                                     break;
                                 case 4:
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(),
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k],
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k + 1]
-                                    + selectedCourses[i].getSections()[j].getMeetDays()[k + 2] + selectedCourses[i].getSections()[j].getMeetDays()[k + 3]);
+                                    + selectedCourses[i].getSections()[j].getMeetDays()[k + 2] + selectedCourses[i].getSections()[j].getMeetDays()[k + 3], 
+                                    selectedCourses[i].getSections()[j].getStartTimeMinutes());
                                     break;
                                 case 5:
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(),
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k],
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k + 1]
                                     + selectedCourses[i].getSections()[j].getMeetDays()[k + 2] + selectedCourses[i].getSections()[j].getMeetDays()[k + 3] +
-                                    selectedCourses[i].getSections()[j].getMeetDays()[k + 4]);
+                                    selectedCourses[i].getSections()[j].getMeetDays()[k + 4], selectedCourses[i].getSections()[j].getStartTimeMinutes());
                                     break;
                             }
                         }
                         else //This else clause will only execute if the section meets once a week
                         {
                             form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), selectedCourses[i].getSections()[j].getID(),
-                            selectedCourses[i].getSections()[j].getStartTimes()[k], selectedCourses[i].getSections()[j].getMeetDays()[k]);
+                            selectedCourses[i].getSections()[j].getStartTimes()[k], selectedCourses[i].getSections()[j].getMeetDays()[k],
+                            selectedCourses[i].getSections()[j].getStartTimeMinutes());
                         }
                     }
                 }

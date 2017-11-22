@@ -69,3 +69,18 @@ D:\Current Projects\CS-172 Final\GitFiles\ClassScheduler\ClassScheduler\ClassSch
 D:\Current Projects\CS-172 Final\GitFiles\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ClassScheduler.pdb
 D:\Current Projects\CS-172 Final\GitFiles\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.dll
 D:\Current Projects\CS-172 Final\GitFiles\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.xml
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ClassScheduler.exe.config
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ClassScheduler.exe
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ClassScheduler.pdb
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.dll
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.xml
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.csprojResolveAssemblyReference.cache
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.AddCourseForm.resources
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.CourseSelectionForm.resources
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.ResultForm.resources
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.InitialInputForm.resources
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.Properties.Resources.resources
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.csproj.GenerateResource.Cache
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.csproj.CoreCompileInputs.cache
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.exe
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.pdb

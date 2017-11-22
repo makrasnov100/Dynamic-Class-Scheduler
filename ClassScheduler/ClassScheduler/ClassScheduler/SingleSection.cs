@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ClassScheduler
 {
@@ -117,6 +118,96 @@ namespace ClassScheduler
         public void setSeatingCapacity(int seatingCap)
         {
             this.seatingCap = seatingCap;
+        }
+
+        //Return start time as an integer - the number of minutes since midnight
+        public int getStartTimeMinutes()
+        {
+            string startTime = startTimes[0]; //Most sections only have one start time
+            startTime.Trim(); //Removes leading and trailing whitespace 
+
+            //Convert start time string to char array for easier manipulation
+            char[] stringArr = startTime.ToCharArray();
+
+            string stringHour = "";
+            //Extract the hour from the startTimes[0] string
+            for (int i = 0; i < stringArr.Count(); i++)
+            {
+                if (stringArr[i] != ':')
+                {
+                    stringHour += stringArr[i];
+                }
+                else
+                {
+                    break; //Exit the loop once it tests the colon
+                }
+            }
+
+            //Extract the minutes from the startTimes[0] string
+            string stringMin = "";
+
+            string temp = startTime.Trim();
+            var charsToRemove = new string[] { " ", ":", "A", "a", "P", "p", "M", "m"};
+            for (int i = 0; i < temp.Count(); i++)
+            {
+                foreach (var c in charsToRemove)
+                {
+                    temp = temp.Replace(c, string.Empty);
+                }
+            }
+
+            int tempLen = temp.Count();
+
+            if(tempLen == 3)
+            {
+                stringMin = temp[1].ToString() + temp[2].ToString();
+            }
+            else if (tempLen == 4)
+            {
+                stringMin = temp[2].ToString() + temp[3].ToString();
+            }
+
+            //Extract whether the time is AM or PM 
+            string stringAmPm = "NA";
+            for (int i = 0; i < stringArr.Count(); i++)
+            {
+                if (stringArr[i] == 'P' || stringArr[i] == 'p') {
+                    stringAmPm = "PM";
+                    break;
+                }
+                else
+                {
+                    stringAmPm = "AM";
+                }
+            }
+
+            //Calculate the number of minutes since midnight, given the number of hours, 
+            //the number of minutes, and whether it is in the morning or afternoon
+            int hours = 0;
+            Int32.TryParse(stringHour, out hours);
+            int minutes = 0;
+            Int32.TryParse(stringMin, out minutes);
+
+            //Test whether the time is morning or afternoon
+            if (stringAmPm == "AM")
+            {
+                return (hours * 60) + minutes;
+            }
+            else if (stringAmPm == "PM")
+            {
+                if (hours == 12)
+                {
+                    return (12 * 60) + minutes;
+                }
+                else
+                {
+                    return ((hours + 12) * 60) + minutes;
+                }
+            }
+            else
+            {
+                return -1;
+            }
         }
     }
 }
