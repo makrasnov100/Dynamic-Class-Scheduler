@@ -154,7 +154,7 @@ namespace ClassScheduler
         public void FormatTimeToMinutes()
         {
             //[Don't create time info if no section times provided]
-            if (startTimes[0] == " NA" || stopTimes[0] == " NA")
+            if (startTimes[0] == "NA " || stopTimes[0] == " NA" || startTimes[0] == "" || stopTimes[0] == "")
                 return;
 
             string unformTime; //unformated time (e.g. 9:00 PM)
@@ -176,8 +176,8 @@ namespace ClassScheduler
                 //[Remove leading and trailing whitespace]
                 unformTime.Trim();
 
-                //[Extract hours]
-                stringHour = unformTime.Substring(0, unformTime.IndexOf(":"));
+                //[Extract hours] (weird bug with not recognizing colons)
+                stringHour = unformTime.Substring(0, unformTime.IndexOf(':'));
 
                 //[Extract minutes]
                 string tempI = unformTime.Trim();
