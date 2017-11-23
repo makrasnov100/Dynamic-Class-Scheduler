@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,12 +21,14 @@ namespace ClassScheduler
     {
         private string term = "";
         private string ID = "";
-        private List<string> startTimes;
-        private List<string> stopTimes;
         private List<string> meetDays;
         private List<string> instructFirstN;
         private List<string> instructLastN;
         private int seatingCap = 0;
+
+        private List<string> startTimes;
+        private List<string> stopTimes;
+        private List<TimeInfo> formattedTimes = new List<TimeInfo>();
 
         public SingleSection()
         {
@@ -120,94 +124,95 @@ namespace ClassScheduler
             this.seatingCap = seatingCap;
         }
 
-        //Return start time as an integer - the number of minutes since midnight
-        public int getStartTimeMinutes()
+        public void addTimeInfo(string day, int start, int end)
         {
-            string startTime = startTimes[0]; //Most sections only have one start time
-            startTime.Trim(); //Removes leading and trailing whitespace 
+            formattedTimes.Add(new TimeInfo(day, start, end));
+        }
 
-            //Convert start time string to char array for easier manipulation
-            char[] stringArr = startTime.ToCharArray();
+        public int getFormatedTimeStart(int index)
+        {
+            return formattedTimes[index].getStart();
+        }
 
-            string stringHour = "";
-            //Extract the hour from the startTimes[0] string
-            for (int i = 0; i < stringArr.Count(); i++)
+        public int getFormatedTimeStop(int index)
+        {
+            return formattedTimes[index].getEnd();
+        }
+
+        public int getFormatedTimeRange(int index)
+        {
+            return formattedTimes[index].getRange();
+        }
+
+        public string getFormatedTimeDayOfWeek(int index)
+        {
+            return formattedTimes[index].getDayOfWeek();
+        }
+
+        //[FUNCTION - FormatTimeToMinutes]
+        //Converts start/stop times to integers - the number of minutes since midnight
+        public void FormatTimeToMinutes()
+        {
+            //[Don't create time info if no section times provided]
+            if (startTimes[0] == " NA" || stopTimes[0] == " NA")
+                return;
+
+            string unformTime; //unformated time (e.g. 9:00 PM)
+            int start = 0;
+            int stop = 0;
+            for (int b = 0; b < 2; b++)
             {
-                if (stringArr[i] != ':')
-                {
-                    stringHour += stringArr[i];
-                }
+                //[Define needed variables at start of loop]
+                string stringMin = "";
+                string stringHour = "";
+                int pmOffset = 0;
+
+                //[Grab first meet time start/stop of day]
+                if (b == 0)
+                    unformTime = startTimes[0];
                 else
-                {
-                    break; //Exit the loop once it tests the colon
-                }
-            }
+                    unformTime = stopTimes[0];
 
-            //Extract the minutes from the startTimes[0] string
-            string stringMin = "";
+                //[Remove leading and trailing whitespace]
+                unformTime.Trim();
 
-            string temp = startTime.Trim();
-            var charsToRemove = new string[] { " ", ":", "A", "a", "P", "p", "M", "m"};
-            for (int i = 0; i < temp.Count(); i++)
-            {
-                foreach (var c in charsToRemove)
-                {
-                    temp = temp.Replace(c, string.Empty);
-                }
-            }
+                //[Extract hours]
+                stringHour = unformTime.Substring(0, unformTime.IndexOf(":"));
 
-            int tempLen = temp.Count();
+                //[Extract minutes]
+                string tempI = unformTime.Trim();
+                string tempF = Regex.Replace(tempI, "[^0-9]", "");
 
-            if(tempLen == 3)
-            {
-                stringMin = temp[1].ToString() + temp[2].ToString();
-            }
-            else if (tempLen == 4)
-            {
-                stringMin = temp[2].ToString() + temp[3].ToString();
-            }
+                int tempLen = tempF.Count();
+                if (tempLen == 3)
+                    stringMin = tempF.Substring(1, 2);
+                else if (tempLen == 4)
+                    stringMin = tempF.Substring(2, 2);
 
-            //Extract whether the time is AM or PM 
-            string stringAmPm = "NA";
-            for (int i = 0; i < stringArr.Count(); i++)
-            {
-                if (stringArr[i] == 'P' || stringArr[i] == 'p') {
-                    stringAmPm = "PM";
-                    break;
-                }
+                //[Parse collected times]
+                int hours = 0;
+                Int32.TryParse(stringHour, out hours);
+                int minutes = 0;
+                Int32.TryParse(stringMin, out minutes);
+
+                //[Add offset minutes if string contains "PM"]
+                if (unformTime.Contains("PM") && hours != 12)
+                    pmOffset = 720;
+                else if (unformTime.Contains("AM") && hours == 12)
+                    pmOffset = -720;
+
+                //[Write totals]
+                if (b == 0)
+                    start = (hours * 60) + minutes + pmOffset;
                 else
-                {
-                    stringAmPm = "AM";
-                }
+                    stop = (hours * 60) + minutes + pmOffset;
             }
 
-            //Calculate the number of minutes since midnight, given the number of hours, 
-            //the number of minutes, and whether it is in the morning or afternoon
-            int hours = 0;
-            Int32.TryParse(stringHour, out hours);
-            int minutes = 0;
-            Int32.TryParse(stringMin, out minutes);
+            //[Add a TimeInfo Class for each unique day]
+            foreach (var day in meetDays)
+                addTimeInfo(day, start, stop);
 
-            //Test whether the time is morning or afternoon
-            if (stringAmPm == "AM")
-            {
-                return (hours * 60) + minutes;
-            }
-            else if (stringAmPm == "PM")
-            {
-                if (hours == 12)
-                {
-                    return (12 * 60) + minutes;
-                }
-                else
-                {
-                    return ((hours + 12) * 60) + minutes;
-                }
-            }
-            else
-            {
-                return -1;
-            }
+            //(ADD MULTIPLE TIME SLOTS PER DAY FUNCTIONALITY HERE)
         }
     }
 }

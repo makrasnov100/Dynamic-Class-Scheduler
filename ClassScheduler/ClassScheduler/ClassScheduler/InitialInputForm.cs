@@ -181,6 +181,7 @@ namespace ClassScheduler
                     courses[courseIndex].sections[0].setStartTimes(SplitCellIntoList(17, ", ", " NA"));
                     courses[courseIndex].sections[0].setStopTimes(SplitCellIntoList(18, ", ", " NA"));
                     courses[courseIndex].sections[0].setMeetDays(SplitCellIntoList(19, ", ", "NA"));
+                    courses[courseIndex].sections[0].FormatTimeToMinutes();
                     courses[courseIndex].sections[0].setInstructFirstN(SplitCellIntoList(10, ", ", ""));
                     courses[courseIndex].sections[0].setInstructLastN(SplitCellIntoList(9, ", ", "NA"));
                     sectionIDs.Add(excelReader.GetString(5));
@@ -235,6 +236,7 @@ namespace ClassScheduler
                     courses[courseIndex].sections[sectionIndex].setStartTimes(SplitCellIntoList(17, ", ", " NA"));
                     courses[courseIndex].sections[sectionIndex].setStopTimes(SplitCellIntoList(18, ", ", " NA"));
                     courses[courseIndex].sections[sectionIndex].setMeetDays(SplitCellIntoList(19, ", ", "NA"));
+                    courses[courseIndex].sections[sectionIndex].FormatTimeToMinutes();
                     courses[courseIndex].sections[sectionIndex].setInstructFirstN(SplitCellIntoList(10, ", ", ""));
                     courses[courseIndex].sections[sectionIndex].setInstructLastN(SplitCellIntoList(9, ", ", "NA"));
 

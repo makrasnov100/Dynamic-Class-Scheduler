@@ -8,12 +8,14 @@ namespace ClassScheduler
 {
     class TimeInfo
     {
+        private string dayOfWeek;
         private int start;
         private int end;
         private int range;
 
-        TimeInfo (int startTime, int endTime)
+        public TimeInfo (string day, int startTime, int endTime)
         {
+            dayOfWeek = day;
             start = startTime;
             end = endTime;
             range = end - start;
@@ -32,6 +34,11 @@ namespace ClassScheduler
         public int getRange()
         {
             return range;
+        }
+
+        public string getDayOfWeek()
+        {
+            return dayOfWeek;
         }
     }
 }

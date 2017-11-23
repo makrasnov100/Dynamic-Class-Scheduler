@@ -201,27 +201,28 @@ namespace ClassScheduler
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), 
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k], 
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k+1], 
-                                    selectedCourses[i].getSections()[j].getStartTimeMinutes());
+                                    selectedCourses[i].getSections()[j].getFormatedTimeStart(0));
                                     break;
                                 case 3:
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), 
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k], 
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k+1] 
-                                    + selectedCourses[i].getSections()[j].getMeetDays()[k + 2], selectedCourses[i].getSections()[j].getStartTimeMinutes());
+                                    + selectedCourses[i].getSections()[j].getMeetDays()[k + 2],
+                                    selectedCourses[i].getSections()[j].getFormatedTimeStart(0));
                                     break;
                                 case 4:
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(),
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k],
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k + 1]
                                     + selectedCourses[i].getSections()[j].getMeetDays()[k + 2] + selectedCourses[i].getSections()[j].getMeetDays()[k + 3], 
-                                    selectedCourses[i].getSections()[j].getStartTimeMinutes());
+                                    selectedCourses[i].getSections()[j].getFormatedTimeStart(0));
                                     break;
                                 case 5:
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(),
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k],
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k + 1]
                                     + selectedCourses[i].getSections()[j].getMeetDays()[k + 2] + selectedCourses[i].getSections()[j].getMeetDays()[k + 3] +
-                                    selectedCourses[i].getSections()[j].getMeetDays()[k + 4], selectedCourses[i].getSections()[j].getStartTimeMinutes());
+                                    selectedCourses[i].getSections()[j].getMeetDays()[k + 4], selectedCourses[i].getSections()[j].getFormatedTimeStart(0));
                                     break;
                             }
                         }
@@ -229,7 +230,7 @@ namespace ClassScheduler
                         {
                             form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), selectedCourses[i].getSections()[j].getID(),
                             selectedCourses[i].getSections()[j].getStartTimes()[k], selectedCourses[i].getSections()[j].getMeetDays()[k],
-                            selectedCourses[i].getSections()[j].getStartTimeMinutes());
+                            selectedCourses[i].getSections()[j].getFormatedTimeStart(0));
                         }
                     }
                 }

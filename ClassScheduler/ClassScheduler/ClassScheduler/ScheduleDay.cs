@@ -8,7 +8,7 @@ namespace ClassScheduler
 {
     class ScheduleDay
     {
-        private string dayID;
+        private string dayID; //M-T-W-TH-F
         private List<TimeInfo> dayTimes = new List<TimeInfo>();
 
         public string getDayID()
