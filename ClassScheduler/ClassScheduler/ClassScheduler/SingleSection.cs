@@ -129,6 +129,36 @@ namespace ClassScheduler
             //Convert start time string to char array for easier manipulation
             char[] stringArr = startTime.ToCharArray();
 
+            //Functions extracting hours, minutes, and AM/PM
+            int numHour = getStartTimeHour(stringArr);
+            int numMin = getStartTimeMinute(startTime);
+            string amPm = getAmPm(stringArr);
+
+            //Test whether the time is morning or afternoon
+            if (amPm == "AM")
+            {
+                return (numHour * 60) + numMin;
+            }
+            else if (amPm == "PM")
+            {
+                if (numHour == 12)
+                {
+                    return (12 * 60) + numMin;
+                }
+                else
+                {
+                    return ((numHour + 12) * 60) + numMin;
+                }
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
+        public int getStartTimeHour(char[] stringArr)
+        {
+            int hours = -1;
             string stringHour = "";
             //Extract the hour from the startTimes[0] string
             for (int i = 0; i < stringArr.Count(); i++)
@@ -142,36 +172,36 @@ namespace ClassScheduler
                     break; //Exit the loop once it tests the colon
                 }
             }
+            //Parse the string into an integer
+            Int32.TryParse(stringHour, out hours);
 
-            //Extract the minutes from the startTimes[0] string
-            string stringMin = "";
+            return hours;
+        }
 
-            string temp = startTime.Trim();
-            var charsToRemove = new string[] { " ", ":", "A", "a", "P", "p", "M", "m"};
-            for (int i = 0; i < temp.Count(); i++)
-            {
-                foreach (var c in charsToRemove)
-                {
-                    temp = temp.Replace(c, string.Empty);
-                }
-            }
+        public int getStartTimeMinute(string startTime)
+        {
+            int minutes = -1;
+            string timeString = startTime.Trim();
 
-            int tempLen = temp.Count();
+            char delimiter = ' ';
+            string[] substrings = timeString.Split(delimiter);
 
-            if(tempLen == 3)
-            {
-                stringMin = temp[1].ToString() + temp[2].ToString();
-            }
-            else if (tempLen == 4)
-            {
-                stringMin = temp[2].ToString() + temp[3].ToString();
-            }
+            delimiter = ':';
+            string[] hourMin = substrings[0].Split(delimiter);
 
+            Int32.TryParse(hourMin[1], out minutes);
+
+            return minutes; 
+        }
+
+        public string getAmPm(char[] stringArr)
+        {
             //Extract whether the time is AM or PM 
             string stringAmPm = "NA";
             for (int i = 0; i < stringArr.Count(); i++)
             {
-                if (stringArr[i] == 'P' || stringArr[i] == 'p') {
+                if (stringArr[i] == 'P' || stringArr[i] == 'p')
+                {
                     stringAmPm = "PM";
                     break;
                 }
@@ -181,33 +211,7 @@ namespace ClassScheduler
                 }
             }
 
-            //Calculate the number of minutes since midnight, given the number of hours, 
-            //the number of minutes, and whether it is in the morning or afternoon
-            int hours = 0;
-            Int32.TryParse(stringHour, out hours);
-            int minutes = 0;
-            Int32.TryParse(stringMin, out minutes);
-
-            //Test whether the time is morning or afternoon
-            if (stringAmPm == "AM")
-            {
-                return (hours * 60) + minutes;
-            }
-            else if (stringAmPm == "PM")
-            {
-                if (hours == 12)
-                {
-                    return (12 * 60) + minutes;
-                }
-                else
-                {
-                    return ((hours + 12) * 60) + minutes;
-                }
-            }
-            else
-            {
-                return -1;
-            }
+            return stringAmPm;
         }
     }
 }
