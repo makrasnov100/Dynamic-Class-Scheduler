@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +10,9 @@ namespace ClassScheduler
     class SingleSchedule
     {
         private SingleSection[] allSections;
-        private List<ScheduleDay> allDays;
+        private List<ScheduleDay> allDays = new List<ScheduleDay>();
         private int courseAmount;
-        private int hoursAtSchool;
+        private int minutesAtSchool;
         private double fitness = 0;
 
         private double effeciencyWeight = .20;
@@ -19,25 +20,55 @@ namespace ClassScheduler
 
         bool acceptableLayout = false;
 
+        private List<string> templateWeek;
         private Random random;
         private Func<string, SingleSection> GetRandomSectionByID;
         private Func<int, SingleSection> GetRandomSectionByIndex;
 
-        public SingleSchedule(int courseAmount, int creditAmount, Random random, Func<string, SingleSection> GetRandomSectionByID, Func<int, SingleSection> GetRandomSectionByIndex,  bool firstGen = true)
+        public SingleSchedule(int courseAmount, int creditAmount, Random random, List<string> templateWeek, Func<string, SingleSection> GetRandomSectionByID, Func<int, SingleSection> GetRandomSectionByIndex,  bool firstGen = true)
         {
             allSections = new SingleSection[courseAmount];
             this.random = random;
             this.courseAmount = courseAmount;
-            hoursAtSchool = creditAmount*60;
+            minutesAtSchool = creditAmount*60;
             this.GetRandomSectionByID = GetRandomSectionByID;
             this.GetRandomSectionByIndex = GetRandomSectionByIndex;
+            this.templateWeek = templateWeek;
 
-            //generates random sections only upon first set of schedule populations
+            //generates random sections only for the first set of schedule populations
             if (firstGen)
                 for (int i = 0; i < allSections.Length; i++)
                     allSections[i] = GetRandomSectionByIndex(i);
 
-            // NEED TO POPULATE allDays List!***********************************************************************
+            string allSec = "* ";
+            foreach (var section in allSections)
+                allSec += section.getID() + " * ";
+            Debug.WriteLine(allSec);
+
+
+            //populate allDays list with time information
+            for (int g = 0; g < templateWeek.Count(); g++)
+                allDays.Add(new ScheduleDay(templateWeek[g]));
+
+            int sectionIndexCounter = 0;
+            foreach(var section in allSections)
+            {
+                for (int i = 0; i < templateWeek.Count(); i++)
+                    if (section.getFormatedTime()[i].getDayOfWeek() != "NA")
+                        allDays[i].addTimetoDay(new SingleAssignedTimeSlot(section.getFormatedTime()[i], sectionIndexCounter));
+
+                sectionIndexCounter++;
+            }
+
+            if(firstGen)
+                EvaluateFitness();
+        }
+
+        public SingleSchedule (SingleSchedule oldCopy)
+        {
+            this.allSections = oldCopy.getAllSections();
+            this.allDays = oldCopy.getAllDays();
+            this.fitness = getFitness();
         }
 
         //[FUNCTION - EvaluateFitness]
@@ -45,8 +76,12 @@ namespace ClassScheduler
         public void EvaluateFitness()
         {
             double finalCalcFitness = 0;
-            finalCalcFitness += CalcEffeciency() * effeciencyWeight;
-            finalCalcFitness += CalcOverlap() * overlapWeight;
+            double effecFitness = CalcEffeciency();
+            double overlapFitness = CalcOverlap();
+            finalCalcFitness += effecFitness * effeciencyWeight;
+            finalCalcFitness += overlapFitness * overlapWeight;
+            //Debug.WriteLine("Effeciency Fitness: " + effecFitness + " | Overlap Fitness: " + overlapFitness + " | TOTAL: " + finalCalcFitness);
+
             fitness = finalCalcFitness;
         }
 
@@ -57,36 +92,34 @@ namespace ClassScheduler
             double effecFitness = 0;
 
             int lowestTime = 2400;
-            int highestTime = 2400;
+            int highestTime = 0;
             int totalTime = 0;
             int dayCount = 0;
-
-            //*****************************************************************************************
-            // Make sure DAYS ARE in M-T-W-TH-F list sequence & non meet days marked with "NA" ********
-            //*****************************************************************************************
 
             //find time range of sections
             for (int i = 0; i < 5; i++)
             {
                 lowestTime = 2400;
                 highestTime = 0;
-                //foreach (SingleSection section in allSections)
-                //{
-                //    if (section.getTimeInfo()[i].getMeetDay != "NA")
-                //    {
-                //        if (section.getTimeInfo()[i].getStart() < lowestTime)
-                //            lowestTime = section.getTimeInfo()[i].getStart();
-                //        if (section.getTimeInfo()[i].getEnd() > highestTime)
-                //            highestTime = section.getTimeInfo()[i].getEnd();
-                //    }
-                //}
-                totalTime += highestTime - lowestTime;
+                foreach (SingleSection section in allSections)
+                {
+                    if (section.getFormatedTime()[i].getDayOfWeek() != "NA")
+                    {
+                        if (section.getFormatedTime()[i].getStart() < lowestTime)
+                            lowestTime = section.getFormatedTime()[i].getStart();
+                        if (section.getFormatedTime()[i].getEnd() > highestTime)
+                            highestTime = section.getFormatedTime()[i].getEnd();
+                    }
+                }
+                if(lowestTime != 2400 && highestTime != 0)
+                    totalTime += highestTime - lowestTime;
             }
 
-            //get effieciency fitness
-            effecFitness = 1 - ((totalTime - hoursAtSchool)/hoursAtSchool); // **********adjust as needed************
+            //get effieciency fitness (200 min added for lunchtime on all days)
+            effecFitness = 1.00000 - (((double) totalTime - ((double)minutesAtSchool + 200.0)) / ((double)minutesAtSchool + 200.0)); // **********adjust as needed************
+            //Debug.WriteLine("This > [1 - ((" + totalTime + " - " + (minutesAtSchool + 200) + ") / " + (minutesAtSchool + 200) + ") = " + effecFitness);
 
-            return effecFitness;
+            return effecFitness <= 0 ? 0 : effecFitness;
         }
 
         //[FUNCTION - CalcOverlap]
@@ -127,10 +160,12 @@ namespace ClassScheduler
         //Returns a crossed over schedule
         public SingleSchedule CrossoverSchedule(SingleSchedule anotherSchedule)
         {
-            SingleSchedule crossoverSchedule = new SingleSchedule(allSections.Length, (hoursAtSchool/60) , random, GetRandomSectionByID, GetRandomSectionByIndex, false);
+            SingleSchedule crossoverSchedule = new SingleSchedule(allSections.Length, (minutesAtSchool / 60), random, templateWeek, GetRandomSectionByID, GetRandomSectionByIndex, false);
 
             for (int i = 0; i < allSections.Length; i++)
                 crossoverSchedule.allSections[i] = random.NextDouble() > 0.5 ? allSections[i] : anotherSchedule.allSections[i];
+
+            crossoverSchedule.EvaluateFitness();
 
             return crossoverSchedule;
         }
@@ -152,6 +187,10 @@ namespace ClassScheduler
         public SingleSection[] getAllSections()
         {
             return allSections;
+        }
+        public List<ScheduleDay> getAllDays()
+        {
+            return allDays;
         }
     }
 }

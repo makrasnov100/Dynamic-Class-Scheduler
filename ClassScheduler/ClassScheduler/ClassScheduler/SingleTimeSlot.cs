@@ -6,14 +6,19 @@ using System.Threading.Tasks;
 
 namespace ClassScheduler
 {
-    class TimeInfo
+    public class SingleTimeSlot
     {
         private string dayOfWeek;
         private int start;
         private int end;
         private int range;
 
-        public TimeInfo (string day, int startTime, int endTime)
+        public SingleTimeSlot()
+        {
+            dayOfWeek = "NA";
+        }
+
+        public SingleTimeSlot (string day, int startTime, int endTime)
         {
             dayOfWeek = day;
             start = startTime;
@@ -39,6 +44,26 @@ namespace ClassScheduler
         public string getDayOfWeek()
         {
             return dayOfWeek;
+        }
+
+        public void setDayOfWeek(string dayOfWeek)
+        {
+            this.dayOfWeek = dayOfWeek;
+        }
+
+        public void setStart(int start)
+        {
+            this.start = start;
+        }
+
+        public void setEnd(int end)
+        {
+            this.end = end;
+        }
+
+        public void setRange(int range)
+        {
+            this.range = range;
         }
     }
 }

@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ClassScheduler
 {
-    class Calculation
+    class GeneticCalculation
     {
+        private LoadingResultsForm CalculationForm;
         private List<SingleCourse>selectedCourses;
 
         private List<SingleSchedule> schedulePopulation;
@@ -16,25 +18,41 @@ namespace ClassScheduler
         private double fitnessSum;
 
         private double bestFitness;
-        private SingleSection[] bestSchedule;
+        private SingleSchedule bestSchedule;
 
         private double mutationRate;
         private int populationSize;
-
+        private List<string> templateWeek = new List<string> { "M", "T", "W", "TH", "F" };
         private Random random;
 
-        Calculation(int populationSize, int courseAmount, int creditAmount, Random random, List<SingleCourse> selectedCourses, double mutationRate = .01)
+        public GeneticCalculation(int populationSize, int courseAmount, int creditAmount, Random random, List<SingleCourse> selectedCourses, LoadingResultsForm CalculationsForm, double mutationRate = .01)
         {
             genNumber = 1;
             this.mutationRate = mutationRate;
             this.selectedCourses = new List<SingleCourse>(selectedCourses);
             this.populationSize = populationSize;
+            this.random = random;
             schedulePopulation = new List<SingleSchedule>(populationSize);
             newSchedulePopulation = new List<SingleSchedule>(populationSize);
+            this.CalculationForm = CalculationsForm;
 
             for (int i = 0; i < populationSize; i++)
-                schedulePopulation.Add(new SingleSchedule(courseAmount, creditAmount, random, GetRandomSection, GetRandomSection, firstGen: true));
+                schedulePopulation.Add(new SingleSchedule(courseAmount, creditAmount, random, templateWeek, GetRandomSection, GetRandomSection, firstGen: true));
+
+            BeginCalculation();
         }
+
+        //[FUNCTION - BeginCalculation]
+        //Handles the amount of generations the algorithm needs to reach result
+        public void BeginCalculation()
+        {
+            Debug.WriteLine("*******************************************");
+            Debug.WriteLine("Generation " + genNumber + ": " + bestFitness);
+            Debug.WriteLine("*******************************************");
+            while (genNumber <= 5)
+                CreateNewGeneration();
+        }
+
 
         //[FUNCTION - CreateNewGenneration]
         //Creates a new set of schedules to test
@@ -47,7 +65,7 @@ namespace ClassScheduler
 
             for (int i = 0; i < schedulePopulation.Count(); i++)
             {
-                //implement elitism as needed (need to sort and tell how much first schedules to keep)
+                //implement elitism as needed (need to sort and tell how much first schedules to keep intact)
                 SingleSchedule parentSchedule1 = ChooseFitSchedule();
                 SingleSchedule parentSchedule2 = ChooseFitSchedule();
 
@@ -77,7 +95,7 @@ namespace ClassScheduler
             }
 
             bestFitness = curBestSchedule.getFitness();
-            curBestSchedule.getAllSections().CopyTo(bestSchedule, 0);
+            bestSchedule = new SingleSchedule(curBestSchedule);
         }
 
         //[Function - ChooseFitSchedule]
@@ -85,14 +103,14 @@ namespace ClassScheduler
         private SingleSchedule ChooseFitSchedule()
         {
             //***************may need to revise**********************
-            double randomNumber = random.NextDouble() * fitnessSum;
+            double randomFitness = (.35 * random.NextDouble()) * fitnessSum;
 
-            for (int i = 0; i < schedulePopulation.Count(); i++)
+            for (int i = 0; i < populationSize; i++)
             {
-                if (randomNumber < schedulePopulation[i].getFitness())
+                if (randomFitness < schedulePopulation[i].getFitness() * populationSize)
                     return schedulePopulation[i];
 
-                randomNumber -= schedulePopulation[i].getFitness();
+                randomFitness -= schedulePopulation[i].getFitness();
             }
 
             return null;
@@ -115,7 +133,7 @@ namespace ClassScheduler
         //[OVERLOAD - takes in course index instead]
         public SingleSection GetRandomSection(int courseIndex)
         {
-            int rand = random.Next(0, selectedCourses[courseIndex].sections.Count() - 1);
+            int rand = random.Next(0, selectedCourses[courseIndex].sections.Count());
             return selectedCourses[courseIndex].sections[rand];
         }
     }

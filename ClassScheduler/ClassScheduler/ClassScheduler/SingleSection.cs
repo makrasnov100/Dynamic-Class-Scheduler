@@ -28,7 +28,7 @@ namespace ClassScheduler
 
         private List<string> startTimes;
         private List<string> stopTimes;
-        private List<TimeInfo> formattedTimes = new List<TimeInfo>();
+        private List<SingleTimeSlot> formattedTimes = new List<SingleTimeSlot>();
 
         public SingleSection()
         {
@@ -124,30 +124,40 @@ namespace ClassScheduler
             this.seatingCap = seatingCap;
         }
 
+        public void addTimeInfo()
+        {
+            formattedTimes.Add(new SingleTimeSlot());
+        }
+
         public void addTimeInfo(string day, int start, int end)
         {
-            formattedTimes.Add(new TimeInfo(day, start, end));
+            formattedTimes.Add(new SingleTimeSlot(day, start, end));
         }
 
-        public int getFormatedTimeStart(int index)
+        public List<SingleTimeSlot> getFormatedTime()
         {
-            return formattedTimes[index].getStart();
+            return formattedTimes;
         }
 
-        public int getFormatedTimeStop(int index)
-        {
-            return formattedTimes[index].getEnd();
-        }
+        //public int getFormatedTimeStart(int index)
+        //{
+        //    return formattedTimes[index].getStart();
+        //}
 
-        public int getFormatedTimeRange(int index)
-        {
-            return formattedTimes[index].getRange();
-        }
+        //public int getFormatedTimeStop(int index)
+        //{
+        //    return formattedTimes[index].getEnd();
+        //}
 
-        public string getFormatedTimeDayOfWeek(int index)
-        {
-            return formattedTimes[index].getDayOfWeek();
-        }
+        //public int getFormatedTimeRange(int index)
+        //{
+        //    return formattedTimes[index].getRange();
+        //}
+
+        //public string getFormatedTimeDayOfWeek(int index)
+        //{
+        //    return formattedTimes[index].getDayOfWeek();
+        //}
 
         //[FUNCTION - FormatTimeToMinutes]
         //Converts start/stop times to integers - the number of minutes since midnight
@@ -209,8 +219,14 @@ namespace ClassScheduler
             }
 
             //[Add a TimeInfo Class for each unique day]
-            foreach (var day in meetDays)
-                addTimeInfo(day, start, stop);
+            List<String> normalWeek = new List<string> { "M", "T", "W", "TH", "F" };
+            foreach (var day in normalWeek)
+            {
+                if (meetDays.Exists(s => s == day))
+                    addTimeInfo(day, start, stop);
+                else
+                    addTimeInfo();
+            }
 
             //(ADD MULTIPLE TIME SLOTS PER DAY FUNCTIONALITY HERE)
         }

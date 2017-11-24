@@ -161,6 +161,9 @@ namespace ClassScheduler
         {
             while (excelReader.Read())
             {
+                if (Convert.ToInt32(excelReader.GetDouble(12)) == 0)
+                    continue;
+
                 if (!courses.Exists(s => s.getCourseName() == excelReader.GetString(6) && s.getAbrvCourseName() == TruncatedCourseID()))
                 {
                     // SingleCourse constructor to inputs initial data 
@@ -170,6 +173,7 @@ namespace ClassScheduler
                         TruncatedCourseID(),
                         GetCourseLevel(),
                         excelReader.GetString(3),
+                        Convert.ToInt32(excelReader.GetDouble(12)),
                         new List<string> { (excelReader.GetString(2)) },
                         new List<string> ( GetRowInstructNames()),
                         new List<SingleSection> { (new SingleSection { }) }
@@ -244,6 +248,28 @@ namespace ClassScheduler
                 }
             }
         }
+
+        //[FUNCTION - GetCellCredits()]
+        //Returns the integer amount of credits for one row
+        //int GetCellCredits(string str)
+        //{
+        //    bool isNum = true;
+
+        //    foreach (char c in str)
+        //        if (c < '0' || c > '9')
+        //        {
+        //            isNum = false;
+        //            break;
+        //        }
+
+        //    int result;
+        //    if (isNum)
+        //        result = Int32.Parse(str);
+        //    else
+        //        result = 0;
+
+        //    return result;
+        //}
 
         //[FUNCTION - TruncatedCourseID]
         //Cuts course ID before second slash "-"

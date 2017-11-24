@@ -6,22 +6,33 @@ using System.Threading.Tasks;
 
 namespace ClassScheduler
 {
-    class ScheduleDay
+    public class ScheduleDay
     {
         private string dayID; //M-T-W-TH-F
-        private List<TimeInfo> dayTimes = new List<TimeInfo>();
+        private List<SingleAssignedTimeSlot> dayTimes = new List<SingleAssignedTimeSlot>();
+
+        public ScheduleDay()
+        {
+            dayID = "NA";
+            dayTimes = null;
+        }
+
+        public ScheduleDay(string dayID)
+        {
+            this.dayID = dayID;
+        }
 
         public string getDayID()
         {
             return dayID;
         }
 
-        public List<TimeInfo> getDayTimes()
+        public List<SingleAssignedTimeSlot> getDayTimes()
         {
             return dayTimes;
         }
 
-        public void addTimetoDay(TimeInfo timeSlot)
+        public void addTimetoDay(SingleAssignedTimeSlot timeSlot)
         {
             dayTimes.Add(timeSlot);
         }

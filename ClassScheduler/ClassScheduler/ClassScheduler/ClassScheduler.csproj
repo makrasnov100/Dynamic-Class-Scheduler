@@ -55,9 +55,18 @@
     <Compile Include="AddCoursePopup.Designer.cs">
       <DependentUpon>AddCoursePopup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Calculation.cs" />
+    <Compile Include="BasicCalculation.cs" />
+    <Compile Include="GeneticCalculation.cs" />
+    <Compile Include="GeneticCalculationList.cs" />
+    <Compile Include="SingleAssignedTimeSlot.cs" />
+    <Compile Include="LoadingResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingResultsForm.Designer.cs">
+      <DependentUpon>LoadingResultsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ScheduleDay.cs" />
-    <Compile Include="TimeInfo.cs" />
+    <Compile Include="SingleTimeSlot.cs" />
     <Compile Include="CourseSelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CourseSelectionForm.resx">
       <DependentUpon>CourseSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingResultsForm.resx">
+      <DependentUpon>LoadingResultsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ResultForm.resx">
       <DependentUpon>ResultForm.cs</DependentUpon>

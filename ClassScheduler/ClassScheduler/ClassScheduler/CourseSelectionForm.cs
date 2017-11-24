@@ -26,11 +26,15 @@ namespace ClassScheduler
 
         public List<SingleCourse> availableCourses;
         public List<SingleCourse> selectedCourses = new List<SingleCourse>();
+        private List<List<SingleCourse>> suggestedCourses;
+        private int creditAmount = 0;
+
         private DataGridViewRow selectedRow;
         private int selectedTableRowIndex;
         private DataTable selectedCourseTable;
+
         private UserConfig userInfo;
-        bool popUpCreated = false;
+        private bool popUpCreated = false;
 
         public CourseSelectionForm(InitialInputForm userDataForm)
         {
@@ -71,11 +75,13 @@ namespace ClassScheduler
         private void MainToResultButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ResultForm Result = new ResultForm(this);
+            ComputeOptimalTimes();
+
+            //ResultForm Result = new ResultForm(this);
             //Manipulate the Result form before it is displayed...
             //manipulateSelectedCourses();
 
-            Result.ShowDialog();
+            //Result.ShowDialog();
             //manipulateSelectedCourses();
         }
 
@@ -92,6 +98,7 @@ namespace ClassScheduler
             else
                 fullTermName = "January";
             CourseSelectionLabel.Text = "Welcome " + userInfo.getFirstName() + ", please add your " + fullTermName + " course(s)... ";
+            UpdateCreditAmount();
 
             //Table labels
             selectedCourseTable = new DataTable();
@@ -172,6 +179,49 @@ namespace ClassScheduler
                 selectedCoursesGridView.Rows[selectedTableRowIndex].Selected = true;
                 selectedRow = selectedCoursesGridView.Rows[selectedTableRowIndex];
             }
+            UpdateCreditAmount();
+        }
+
+        //[FUNCTION - UpdateCreditAmount()]
+        //Updates the variable value and label for total course credits
+        public void UpdateCreditAmount()
+        {
+            int totalCredits = 0;
+            foreach(var course in selectedCourses)
+                totalCredits += course.getCreditAmount();
+
+            creditAmount = totalCredits;
+
+            //Find a credit limit based on term
+            int creditTopLimit = 0;
+            int creditBottomLimit = 0;
+            if (userInfo.getTermInterest() == "JA")
+            {
+                creditTopLimit = 5;
+                creditBottomLimit = 3;
+            }
+            else
+            {
+                creditTopLimit = 17;
+                creditBottomLimit = 12;
+            }
+
+            //Display formated credit label
+            if (totalCredits < creditBottomLimit)
+            {
+                TotalCreditsLabel.ForeColor = Color.Red;
+                TotalCreditsLabel.Text = "Total Credits: " + totalCredits + "\n - Need " + (creditBottomLimit - totalCredits) + " more for Full-Time!";
+            }
+            else if (totalCredits > creditTopLimit)
+            {
+                TotalCreditsLabel.ForeColor = Color.DarkOrange;
+                TotalCreditsLabel.Text = "Total Credits: " + totalCredits + "\n - " + (totalCredits - creditTopLimit) + " credit overload!";
+            }
+            else
+            {
+                TotalCreditsLabel.ForeColor = Color.Green;
+                TotalCreditsLabel.Text = "Total Credits: " + totalCredits + "\n - Full-Time attendence!";
+            }
         }
 
         public void manipulateSelectedCourses(ResultForm form)
@@ -201,28 +251,28 @@ namespace ClassScheduler
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), 
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k], 
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k+1], 
-                                    selectedCourses[i].getSections()[j].getFormatedTimeStart(0));
+                                    selectedCourses[i].getSections()[j].getFormatedTime()[0].getStart());
                                     break;
                                 case 3:
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), 
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k], 
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k+1] 
                                     + selectedCourses[i].getSections()[j].getMeetDays()[k + 2],
-                                    selectedCourses[i].getSections()[j].getFormatedTimeStart(0));
+                                    selectedCourses[i].getSections()[j].getFormatedTime()[0].getStart());
                                     break;
                                 case 4:
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(),
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k],
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k + 1]
                                     + selectedCourses[i].getSections()[j].getMeetDays()[k + 2] + selectedCourses[i].getSections()[j].getMeetDays()[k + 3], 
-                                    selectedCourses[i].getSections()[j].getFormatedTimeStart(0));
+                                    selectedCourses[i].getSections()[j].getFormatedTime()[0].getStart());
                                     break;
                                 case 5:
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(),
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k],
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k + 1]
                                     + selectedCourses[i].getSections()[j].getMeetDays()[k + 2] + selectedCourses[i].getSections()[j].getMeetDays()[k + 3] +
-                                    selectedCourses[i].getSections()[j].getMeetDays()[k + 4], selectedCourses[i].getSections()[j].getFormatedTimeStart(0));
+                                    selectedCourses[i].getSections()[j].getMeetDays()[k + 4], selectedCourses[i].getSections()[j].getFormatedTime()[0].getStart());
                                     break;
                             }
                         }
@@ -230,7 +280,7 @@ namespace ClassScheduler
                         {
                             form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), selectedCourses[i].getSections()[j].getID(),
                             selectedCourses[i].getSections()[j].getStartTimes()[k], selectedCourses[i].getSections()[j].getMeetDays()[k],
-                            selectedCourses[i].getSections()[j].getFormatedTimeStart(0));
+                            selectedCourses[i].getSections()[j].getFormatedTime()[0].getStart());
                         }
                     }
                 }
@@ -239,19 +289,36 @@ namespace ClassScheduler
             form.timesDataGridView.AutoResizeRows();
         }
 
-        public void computeOptimalTimes(ResultForm form)
+        //[FUNCTION - ComputeOptimalTimes]
+        //Chooses the correct algorithm
+        public void ComputeOptimalTimes()
         {
-            List<string> times = new List<string>();
+            LoadingResultsForm ResultLoad = new LoadingResultsForm();
+            //ShowDialog(ResultLoad);
 
-            for (int i = 0; i < form.timesDataGridView.Rows.Count; i++)
+            Random random = new Random();
+
+            int numPossib = 1;
+            foreach (var course in availableCourses)
             {
-                times.Add(form.timesDataGridView.Rows[i].Cells[2].ToString());
+                Debug.WriteLine(course.sections.Count());
+                if(course.sections.Count() != 0)
+                    numPossib *= course.sections.Count();
             }
-            
-            for (int i = 0; i < form.timesDataGridView.Rows.Count; i++)
-            {
-                Debug.WriteLine("Time " + i + ": " + times[i]);
-            }
+            Debug.WriteLine("NUMBER OF SCHEDULE POSSIBILITIES: " + numPossib);
+            //if (numPossib <= 20)
+            //{
+            //    BasicCalculation sectionCalculation = new BasicCalculation(selectedCourses);
+            //}
+            //else
+            //{
+            //    GeneticCalculation sectionCalculation = new GeneticCalculation(20, selectedCourses.Count(), creditAmount, random, selectedCourses, ResultLoad, mutationRate: .01);
+            //}
+        }
+
+        public void ComputeOptimalTimes(List<List<SingleCourse>> suggestedCourses)
+        {
+            //performs List Algorithms with suggested courses variable
         }
     }
 }

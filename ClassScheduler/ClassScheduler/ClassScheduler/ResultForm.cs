@@ -44,7 +44,7 @@ namespace ClassScheduler
         private void ResultForm_Load(object sender, EventArgs e)
         {
             MainPageForm.manipulateSelectedCourses(this);
-            MainPageForm.computeOptimalTimes(this);
+            //MainPageForm.computeOptimalTimes(this);
         }
     }
 }
