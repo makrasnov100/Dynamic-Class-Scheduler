@@ -115,7 +115,7 @@ namespace ClassScheduler
             ProcessCourseData();
             RemoveIrevSections();
             SortCourses();
-            //WriteDebugFile();
+            WriteDebugFile();
         }
 
         //[FUNCTION - checkImputCompletion)
@@ -184,7 +184,7 @@ namespace ClassScheduler
                     courses[courseIndex].sections[0].setID(excelReader.GetString(5));
                     courses[courseIndex].sections[0].setStartTimes(SplitCellIntoList(17, ", ", " NA"));
                     courses[courseIndex].sections[0].setStopTimes(SplitCellIntoList(18, ", ", " NA"));
-                    courses[courseIndex].sections[0].setMeetDays(SplitCellIntoList(19, ", ", "NA"));
+                    courses[courseIndex].sections[0].setMeetDays(SplitCellIntoList(19, ",", "NA"));
                     courses[courseIndex].sections[0].FormatTimeToMinutes();
                     courses[courseIndex].sections[0].setInstructFirstN(SplitCellIntoList(10, ", ", ""));
                     courses[courseIndex].sections[0].setInstructLastN(SplitCellIntoList(9, ", ", "NA"));
@@ -239,7 +239,7 @@ namespace ClassScheduler
                     courses[courseIndex].sections[sectionIndex].setID(excelReader.GetString(5));
                     courses[courseIndex].sections[sectionIndex].setStartTimes(SplitCellIntoList(17, ", ", " NA"));
                     courses[courseIndex].sections[sectionIndex].setStopTimes(SplitCellIntoList(18, ", ", " NA"));
-                    courses[courseIndex].sections[sectionIndex].setMeetDays(SplitCellIntoList(19, ", ", "NA"));
+                    courses[courseIndex].sections[sectionIndex].setMeetDays(SplitCellIntoList(19, ",", "NA"));
                     courses[courseIndex].sections[sectionIndex].FormatTimeToMinutes();
                     courses[courseIndex].sections[sectionIndex].setInstructFirstN(SplitCellIntoList(10, ", ", ""));
                     courses[courseIndex].sections[sectionIndex].setInstructLastN(SplitCellIntoList(9, ", ", "NA"));
@@ -248,28 +248,6 @@ namespace ClassScheduler
                 }
             }
         }
-
-        //[FUNCTION - GetCellCredits()]
-        //Returns the integer amount of credits for one row
-        //int GetCellCredits(string str)
-        //{
-        //    bool isNum = true;
-
-        //    foreach (char c in str)
-        //        if (c < '0' || c > '9')
-        //        {
-        //            isNum = false;
-        //            break;
-        //        }
-
-        //    int result;
-        //    if (isNum)
-        //        result = Int32.Parse(str);
-        //    else
-        //        result = 0;
-
-        //    return result;
-        //}
 
         //[FUNCTION - TruncatedCourseID]
         //Cuts course ID before second slash "-"
@@ -308,6 +286,18 @@ namespace ClassScheduler
         List<string> SplitCellIntoList(int columnIndex, string delim, string nullReplace)
         {
             List<string> result = new List<string>(((excelReader.GetString(columnIndex)) != null ? excelReader.GetString(columnIndex) : nullReplace).Split(new string[] { delim }, StringSplitOptions.None));
+
+            if (delim == ",")
+            {
+                List<string> trimmedResult = new List<string>();
+                int itemCounter = 0;
+                foreach (var item in result)
+                {
+                    trimmedResult.Add(item.Trim());
+                    itemCounter++;
+                }
+                return trimmedResult;
+            }
 
             return result;
         }

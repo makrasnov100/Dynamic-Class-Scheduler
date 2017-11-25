@@ -22,6 +22,12 @@ namespace ClassScheduler
             this.dayID = dayID;
         }
 
+        public void SortTimes()
+        {
+            dayTimes = dayTimes.OrderBy(s => s.getStart()).ToList();
+        }
+
+        //accessor/mutator functions
         public string getDayID()
         {
             return dayID;

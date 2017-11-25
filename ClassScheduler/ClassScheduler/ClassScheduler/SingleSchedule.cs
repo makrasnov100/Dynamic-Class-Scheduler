@@ -7,43 +7,36 @@ using System.Threading.Tasks;
 
 namespace ClassScheduler
 {
-    class SingleSchedule
+    public class SingleSchedule
     {
-        private SingleSection[] allSections;
+        //private SingleSection[] allSections;
+        private List<SingleSection> allSections;
         private List<ScheduleDay> allDays = new List<ScheduleDay>();
         private int courseAmount;
         private int minutesAtSchool;
         private double fitness = 0;
 
-        private double effeciencyWeight = .20;
-        private double overlapWeight = .80;
-
-        bool acceptableLayout = false;
+        private bool acceptableLayout = true;
 
         private List<string> templateWeek;
         private Random random;
-        private Func<string, SingleSection> GetRandomSectionByID;
-        private Func<int, SingleSection> GetRandomSectionByIndex;
 
-        public SingleSchedule(int courseAmount, int creditAmount, Random random, List<string> templateWeek, Func<string, SingleSection> GetRandomSectionByID, Func<int, SingleSection> GetRandomSectionByIndex,  bool firstGen = true)
+        public SingleSchedule(int courseAmount, int creditAmount, Random random, List<string> templateWeek, List<SingleSection> scheduleSections)
         {
-            allSections = new SingleSection[courseAmount];
+            //allSections = new SingleSection[courseAmount];
+            allSections = scheduleSections;
+
             this.random = random;
             this.courseAmount = courseAmount;
             minutesAtSchool = creditAmount*60;
-            this.GetRandomSectionByID = GetRandomSectionByID;
-            this.GetRandomSectionByIndex = GetRandomSectionByIndex;
             this.templateWeek = templateWeek;
 
-            //generates random sections only for the first set of schedule populations
-            if (firstGen)
-                for (int i = 0; i < allSections.Length; i++)
-                    allSections[i] = GetRandomSectionByIndex(i);
+            
 
             string allSec = "* ";
             foreach (var section in allSections)
                 allSec += section.getID() + " * ";
-            Debug.WriteLine(allSec);
+            Debug.Write(allSec);
 
 
             //populate allDays list with time information
@@ -60,29 +53,22 @@ namespace ClassScheduler
                 sectionIndexCounter++;
             }
 
-            if(firstGen)
-                EvaluateFitness();
+            EvaluateFitness();
         }
 
-        public SingleSchedule (SingleSchedule oldCopy)
-        {
-            this.allSections = oldCopy.getAllSections();
-            this.allDays = oldCopy.getAllDays();
-            this.fitness = getFitness();
-        }
+        //public SingleSchedule (SingleSchedule oldCopy)
+        //{
+        //    this.allSections = oldCopy.getAllSections();
+        //    this.allDays = oldCopy.getAllDays();
+        //    this.fitness = getFitness();
+        //}
 
         //[FUNCTION - EvaluateFitness]
         //Calculates the fitness of a particular setup
         public void EvaluateFitness()
         {
-            double finalCalcFitness = 0;
-            double effecFitness = CalcEffeciency();
-            double overlapFitness = CalcOverlap();
-            finalCalcFitness += effecFitness * effeciencyWeight;
-            finalCalcFitness += overlapFitness * overlapWeight;
-            //Debug.WriteLine("Effeciency Fitness: " + effecFitness + " | Overlap Fitness: " + overlapFitness + " | TOTAL: " + finalCalcFitness);
-
-            fitness = finalCalcFitness;
+            fitness = CalcEffeciency();
+            CalcOverlap();
         }
 
         //[FUNCTION - EvaluateFitness]
@@ -91,15 +77,13 @@ namespace ClassScheduler
         {
             double effecFitness = 0;
 
-            int lowestTime = 2400;
+            //Calculate of total minutes spent at school per week
+            int lowestTime = 1440;
             int highestTime = 0;
             int totalTime = 0;
-            int dayCount = 0;
-
-            //find time range of sections
             for (int i = 0; i < 5; i++)
             {
-                lowestTime = 2400;
+                lowestTime = 1440;
                 highestTime = 0;
                 foreach (SingleSection section in allSections)
                 {
@@ -111,72 +95,86 @@ namespace ClassScheduler
                             highestTime = section.getFormatedTime()[i].getEnd();
                     }
                 }
-                if(lowestTime != 2400 && highestTime != 0)
+                if(lowestTime != 1440 && highestTime != 0)
                     totalTime += highestTime - lowestTime;
             }
 
-            //get effieciency fitness (200 min added for lunchtime on all days)
-            effecFitness = 1.00000 - (((double) totalTime - ((double)minutesAtSchool + 200.0)) / ((double)minutesAtSchool + 200.0)); // **********adjust as needed************
-            //Debug.WriteLine("This > [1 - ((" + totalTime + " - " + (minutesAtSchool + 200) + ") / " + (minutesAtSchool + 200) + ") = " + effecFitness);
+            //Calculate max time possible to be in school per week (may need to revise)
+            int maxTime = 1440 * templateWeek.Count();
 
-            return effecFitness <= 0 ? 0 : effecFitness;
+            //Calculate min time possible to be in school given the set of sections
+            int minTime = 0;
+            foreach (var section in allSections)
+                foreach(var timeSlot in section.getFormatedTime())
+                    minTime += timeSlot.getRange();
+
+            //Calculate max overtime possible per week
+            int maxOverTime = maxTime - minTime;
+
+            //Calcuate current overtime
+            Debug.Write("| Total: " + totalTime + " | Min: " + minTime + " | ");
+            int currentOverTime = totalTime - minTime;
+
+            //Calculate Efficiency Fitness (1 to 0)
+            effecFitness = (((double)maxOverTime - (double)currentOverTime) / (double)maxOverTime);
+
+            Debug.WriteLine("Fitness: " + effecFitness);
+
+            return effecFitness >= 1.00 ? 1.00 : effecFitness;
         }
 
         //[FUNCTION - CalcOverlap]
         //Returns the overlap fitness of course (factors: amount of intersection)
-        public double CalcOverlap()
+        public void CalcOverlap()
         {
-            double overlapFitness = 0;
-            double score = 100;
-
             bool firstTimeSlot = true;
             int timeSlotsInDay;
 
             if (courseAmount == 1)
-                return 1;
+                return;
+
+            string overlapParts = "";
 
             foreach (ScheduleDay day in allDays)
             {
                 timeSlotsInDay = day.getDayTimes().Count();
+
                 if (timeSlotsInDay <= 1)
                     continue;
 
+                day.SortTimes();
+
                 firstTimeSlot = true;
-                for (int i = 1; i < timeSlotsInDay; i++)
+                for (int i = 0; i < timeSlotsInDay; i++)
                 {
                     if (!firstTimeSlot)
+                    {
                         if (day.getDayTimes()[i].getStart() - day.getDayTimes()[i - 1].getStart() <= day.getDayTimes()[i - 1].getRange())
-                            score -= 5;
-                        else
-                            firstTimeSlot = false;
+                        {
+                            //Collect debug data
+                            int hours = day.getDayTimes()[i].getStart() / 60;
+                            int minutes = day.getDayTimes()[i].getStart() % 60;
+                            overlapParts += "Day - " + day.getDayID() + " Time - " + hours + ":" + minutes + " | ";
+
+                            day.getDayTimes()[i-1].setOverlapState(true);
+                            day.getDayTimes()[i].setOverlapState(true);
+                            day.getDayTimes()[i].setOverlapAmount(day.getDayTimes()[i].getStart() - day.getDayTimes()[i - 1].getStart());
+                            if (day.getDayTimes()[i-1].getOverlapState() == true)
+                                day.getDayTimes()[i].setOverlapRank(day.getDayTimes()[i - 1].getOverlapRank() + 1);
+
+                            acceptableLayout = false;
+                            break;
+                        }
+                    }
+                    else
+                        firstTimeSlot = false;
                 }
+
+                //if (!acceptableLayout)
+                //    break;
             }
 
-            return score > 0 ? score/100 : 0; // *****************adjust to take into account course amount & overlap possibilities*************
-        }
-
-
-        //[FUNCTION - CrossoverSchedule]
-        //Returns a crossed over schedule
-        public SingleSchedule CrossoverSchedule(SingleSchedule anotherSchedule)
-        {
-            SingleSchedule crossoverSchedule = new SingleSchedule(allSections.Length, (minutesAtSchool / 60), random, templateWeek, GetRandomSectionByID, GetRandomSectionByIndex, false);
-
-            for (int i = 0; i < allSections.Length; i++)
-                crossoverSchedule.allSections[i] = random.NextDouble() > 0.5 ? allSections[i] : anotherSchedule.allSections[i];
-
-            crossoverSchedule.EvaluateFitness();
-
-            return crossoverSchedule;
-        }
-
-        //[FUNCTION - MutateNewSchedule]
-        //Changes a random section to another section (amount based of mutation rate)
-        public void MutateNewSchedule(double mutateRate)
-        {
-            for(int i = 0; i < allSections.Length; i++)
-                if (random.NextDouble() < mutateRate)
-                    allSections[i] = GetRandomSectionByIndex(i);
+            //Debug.WriteLine(" | Overlap At: " + (overlapParts == "" ? "NONE" : overlapParts));
         }
 
         //Accessor/Mutator Functions
@@ -184,7 +182,7 @@ namespace ClassScheduler
         {
             return fitness;
         }
-        public SingleSection[] getAllSections()
+        public List<SingleSection> getAllSections()
         {
             return allSections;
         }
@@ -192,5 +190,33 @@ namespace ClassScheduler
         {
             return allDays;
         }
+        public bool getAcceptableLayoutState()
+        {
+            return acceptableLayout;
+        }
+
+        //GENETIC ALGORITHM FUNCTIONS
+        //[FUNCTION - CrossoverSchedule]
+        //Returns a crossed over schedule
+        //public SingleSchedule CrossoverSchedule(SingleSchedule anotherSchedule)
+        //{
+        //    SingleSchedule crossoverSchedule = new SingleSchedule(allSections.Length, (minutesAtSchool / 60), random, templateWeek, GetRandomSectionByID, GetRandomSectionByIndex, false);
+
+        //    for (int i = 0; i < allSections.Length; i++)
+        //        crossoverSchedule.allSections[i] = random.NextDouble() > 0.5 ? allSections[i] : anotherSchedule.allSections[i];
+
+        //    crossoverSchedule.EvaluateFitness();
+
+        //    return crossoverSchedule;
+        //}
+
+        //[FUNCTION - MutateNewSchedule]
+        //Changes a random section to another section (amount based of mutation rate)
+        //public void MutateNewSchedule(double mutateRate)
+        //{
+        //    for(int i = 0; i < allSections.Length; i++)
+        //        if (random.NextDouble() < mutateRate)
+        //            allSections[i] = GetRandomSectionByIndex(i);
+        //}
     }
 }

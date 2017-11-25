@@ -293,27 +293,25 @@ namespace ClassScheduler
         //Chooses the correct algorithm
         public void ComputeOptimalTimes()
         {
-            LoadingResultsForm ResultLoad = new LoadingResultsForm();
+            //LoadingResultsForm ResultLoad = new LoadingResultsForm();
             //ShowDialog(ResultLoad);
 
             Random random = new Random();
 
             int numPossib = 1;
-            foreach (var course in availableCourses)
+            foreach (var course in selectedCourses)
             {
-                Debug.WriteLine(course.sections.Count());
-                if(course.sections.Count() != 0)
-                    numPossib *= course.sections.Count();
+                if (course.sections.Count() != 0)
+                {
+                    //Debug.WriteLine(numPossib + " * " + course.sections.Count() + " = " + (numPossib * course.sections.Count()));
+                    numPossib = numPossib * course.sections.Count();
+                }
             }
-            Debug.WriteLine("NUMBER OF SCHEDULE POSSIBILITIES: " + numPossib);
-            //if (numPossib <= 20)
-            //{
-            //    BasicCalculation sectionCalculation = new BasicCalculation(selectedCourses);
-            //}
-            //else
-            //{
-            //    GeneticCalculation sectionCalculation = new GeneticCalculation(20, selectedCourses.Count(), creditAmount, random, selectedCourses, ResultLoad, mutationRate: .01);
-            //}
+
+            Debug.WriteLine("Number of Schedule Possibilities: " + numPossib);
+            Debug.WriteLine("*****************************************************************");
+
+            BasicCalculation sectionCalculation = new BasicCalculation(selectedCourses, numPossib, random, creditAmount);
         }
 
         public void ComputeOptimalTimes(List<List<SingleCourse>> suggestedCourses)
