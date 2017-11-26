@@ -14,27 +14,44 @@ namespace ClassScheduler
     public partial class LoadingResultsForm : Form
     {
         private Graphics g;
-        private Bitmap bmp;
-        private float verticalScale = 2;
+        private Bitmap fullBmp;
+        private Rectangle timeSlotRect;
+        private Rectangle dayLabelRect;
+        private int picBoxExtend = 300;
+        private float verticalScale = 1.0f; //larger = bigger slots
         private float rectWidth = 50;
-        private float rectPadding = 3;
         private float dayXPadding = 150;
         private Font dayLabelFont = new Font("Times New Roman", 12f, FontStyle.Italic);
-        SolidBrush drawBrush = new SolidBrush(System.Drawing.Color.Black);
+        private Font timeLabelFont = new Font("Microsoft Sans Serif", 7.5f, FontStyle.Regular);
+        private SolidBrush drawBrush = new SolidBrush(System.Drawing.Color.Black);
+        private SolidBrush drawBrushWhite = new SolidBrush(System.Drawing.Color.White);
         private Pen blackPen = Pens.Black;
         private Brush blackBrush = Brushes.Black;
         private Brush greenBrush = Brushes.Green;
         private Brush redBrush = Brushes.Red;
+        private StringFormat sCenterFormat = new StringFormat();
 
         private List<SingleCourse> selectedCourses;
         private List<SingleSchedule> resultSchedules;
 
-        private float curScheduleIndex = 0;
-        private float lastXPos = 0;
-        private float lastYPos = 30;
+        private CourseSelectionForm RefToCourseSelectForm;
 
-        public LoadingResultsForm(List<SingleCourse> selectedCourses,List<SingleSchedule> resultSchedules)
+        private bool firstDraw = true;
+        private int curScheduleIndex = 0;
+        private float lastXPos = 0;
+        private float topSeperator = 30;
+        private float lastYPos;
+
+        public LoadingResultsForm(List<SingleCourse> selectedCourses,List<SingleSchedule> resultSchedules, CourseSelectionForm courseForm)
         {
+            //References to previous form
+            RefToCourseSelectForm = courseForm;
+
+            //Graphics
+            sCenterFormat.LineAlignment = StringAlignment.Center;
+            sCenterFormat.Alignment = StringAlignment.Center;
+            lastYPos = topSeperator + 3; // provides gap for first timeslot
+
             this.selectedCourses = selectedCourses;
             this.resultSchedules = resultSchedules;
             InitializeComponent();
@@ -42,20 +59,36 @@ namespace ClassScheduler
 
         private void LoadingResultsForm_Load(object sender, EventArgs e)
         {
-            CreateGraph(0);
+            UpdateShownSchedule();
         }
 
         //[FUNCTION - CreateGraphics]
         //Displays the generated schedule with C# graphics given its index location
-        private void CreateGraph(int scheduleIndex)
+        private void CreateGraph()
         {
-            bmp = new Bitmap(SectionGraphBox.Width, SectionGraphBox.Height);
-            g = Graphics.FromImage(bmp);
+            lastXPos = 0;
+            topSeperator = 30;
+            lastYPos = topSeperator + 3;
 
-            foreach (var day in resultSchedules[scheduleIndex].getAllDays())
+            if (firstDraw)
+            {
+                Bitmap bmp = new Bitmap(SectionGraphBox.Width, SectionGraphBox.Height);
+                int initYSize = SectionGraphBox.Height;
+                fullBmp = new Bitmap(bmp, new Size(SectionGraphBox.Width, (initYSize + picBoxExtend)));
+                g = Graphics.FromImage(fullBmp);
+                firstDraw = false;
+            }
+
+            g.Clear(Color.White);
+            dayXPadding = (float) fullBmp.Width / (float) resultSchedules[0].getAllDays().Count();
+            rectWidth = (float) fullBmp.Width / (float) resultSchedules[0].getAllDays().Count() / 3.0f;
+
+            g.DrawLine(blackPen, 0, lastYPos, fullBmp.Width, lastYPos);
+
+            foreach (var day in resultSchedules[curScheduleIndex].getAllDays())
                 GraphDay(day);
 
-            SectionGraphBox.Image = bmp;
+            SectionGraphBox.Image = fullBmp;
         }
 
         //[FUNCTION - GraphDay]
@@ -63,76 +96,216 @@ namespace ClassScheduler
         private void GraphDay(ScheduleDay day)
         {
             GraphDayLabel(day.getDayID());
+            GraphDayTimeSlots(day);
+
+
+            if(day.getDayID() != "F")
+                g.DrawLine(blackPen, lastXPos, 0, lastXPos, fullBmp.Height);
+        }
+
+        //[FUNCTION - GetTimeSlotString]
+        //Returns the info to be displayed on rectangle given particular timeslot
+        private string GetTimeSlotString(SingleAssignedTimeSlot timeSlot, int displayCount)
+        {
+            string result = displayCount + "\n";
+            result += resultSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getID() + "\n";
+            result += resultSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getStartTimes()[0].Trim() + " -\n";
+            result += resultSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getStopTimes()[0].Trim() + "\n";
+            //result += timeSlot.getStart() + " -\n";
+            //result += timeSlot.getEnd() + "\n";
+
+            return result;
+        }
+
+        //[FUNCTION - GraphDayLabel]
+        //Graphs out the label for current day
+        public void GraphDayLabel(string dayID)
+        {
+            dayLabelRect = new Rectangle((int)lastXPos, 0, (int)dayXPadding, (int)topSeperator);
+
+            switch (dayID)
+            {
+                case "M":
+                    g.DrawString("Monday:", dayLabelFont, drawBrush, dayLabelRect, sCenterFormat);
+                    break;
+                case "T":
+                    g.DrawString("Tuesday:", dayLabelFont, drawBrush, dayLabelRect, sCenterFormat);
+                    break;
+                case "W":
+                    g.DrawString("Wednesday:", dayLabelFont, drawBrush, dayLabelRect, sCenterFormat);
+                    break;
+                case "TH":
+                    g.DrawString("Thursday:", dayLabelFont, drawBrush, dayLabelRect, sCenterFormat);
+                    break;
+                case "F":
+                    g.DrawString("Friday:", dayLabelFont, drawBrush, dayLabelRect, sCenterFormat);
+                    break;
+                default:
+                    Debug.WriteLine("ERROR - Displaying Day Labels");
+                    break;
+            }
+        }
+
+        //[FUNCTION - GraphDayTimeSlots]
+        //Prints out the time slot boxes for current day
+        public void GraphDayTimeSlots(ScheduleDay day)
+        {
             int timeSlotCounter = 0;
             float gapTime = 0;
             float rankOffset = 0;
             foreach (var timeSlot in day.getDayTimes())
             {
+                //Gap Calculation
+                if (timeSlotCounter != 0)
+                {
+                    gapTime = timeSlot.getStart() - day.getDayTimes()[timeSlotCounter - 1].getStart();
+                    gapTime *= verticalScale;
+                    lastYPos = lastYPos + gapTime;
+                }
+
+                //Diplay Slots and Labels
                 if (timeSlot.getOverlapState() == false)
                 {
-                    g.FillRectangle(greenBrush, lastXPos, lastYPos, rectWidth, timeSlot.getRange() / verticalScale);
-                    g.DrawRectangle(blackPen, lastXPos, lastYPos, rectWidth, timeSlot.getRange() / verticalScale);
+                    g.FillRectangle(greenBrush, lastXPos, lastYPos, rectWidth, timeSlot.getRange() * verticalScale);
+                    g.DrawRectangle(blackPen, lastXPos, lastYPos, rectWidth, timeSlot.getRange() * verticalScale);
 
-                    if((day.getDayTimes().Count() - 1) > timeSlotCounter)
-                    {
-                        gapTime = day.getDayTimes()[timeSlotCounter + 1].getStart() - timeSlot.getEnd();
-                        gapTime /= verticalScale;
-                    }
-
-                    //Debug.WriteLine( "Evaluating: " + lastYPos + " + (" + timeSlot.getRange() + " / 3) + " + gapTime);
-                    lastYPos = lastYPos + (timeSlot.getRange() / verticalScale) + gapTime;
+                    timeSlotRect = new Rectangle((int)lastXPos, (int)lastYPos, (int)rectWidth, (int)(timeSlot.getRange() * verticalScale));
+                    g.DrawString(GetTimeSlotString(timeSlot, timeSlotCounter), timeLabelFont, drawBrushWhite, timeSlotRect, sCenterFormat);
                 }
                 else
                 {
-                    rankOffset = timeSlot.getOverlapRank() * 50;
+                    rankOffset = timeSlot.getOverlapRank() * rectWidth;
 
-                    g.FillRectangle(redBrush, lastXPos + rankOffset, lastYPos, rectWidth, timeSlot.getRange() / verticalScale);
-                    g.DrawRectangle(blackPen, lastXPos + rankOffset, lastYPos , rectWidth, timeSlot.getRange() / verticalScale);
+                    g.FillRectangle(redBrush, lastXPos + rankOffset, lastYPos, rectWidth, timeSlot.getRange() * verticalScale);
+                    g.DrawRectangle(blackPen, lastXPos + rankOffset, lastYPos, rectWidth, timeSlot.getRange() * verticalScale);
 
-                    if ((((day.getDayTimes().Count() - 1) > timeSlotCounter) && (day.getDayTimes()[timeSlotCounter + 1].getOverlapState() == true)))
-                    {
-                        gapTime = day.getDayTimes()[timeSlotCounter + 1].getOverlapAmount();
-                        gapTime /= verticalScale;
-                        lastYPos = lastYPos + gapTime;
-                    }
-                    else if ((day.getDayTimes().Count() - 1) > timeSlotCounter)
-                    {
-                        gapTime = day.getDayTimes()[timeSlotCounter + 1].getStart() - timeSlot.getEnd();
-                        gapTime /= verticalScale;
-                        lastYPos = lastYPos + (timeSlot.getRange() / verticalScale) + gapTime;
-                    }
+                    timeSlotRect = new Rectangle((int)(lastXPos + rankOffset), (int)lastYPos, (int)rectWidth, (int)(timeSlot.getRange() * verticalScale));
+                    g.DrawString(GetTimeSlotString(timeSlot, timeSlotCounter), timeLabelFont, drawBrushWhite, timeSlotRect, sCenterFormat);
                 }
                 timeSlotCounter++;
             }
             lastXPos += dayXPadding;
-            lastYPos = 30;
-            timeSlotCounter = 0;
+            lastYPos = topSeperator + 3;
         }
 
-        //[FUNCTION - GraphDayLabel]
-        //Prints out the label for current day
-        public void GraphDayLabel(string dayID)
+        private void UpdateShownSchedule()
         {
-            switch (dayID)
+            UpdateScheduleLabels();
+            UpdateButtonAppearence();
+            CreateGraph();
+        }
+
+        private void UpdateScheduleLabels()
+        {
+            ScheduleAmountLabel.Text = "Schedule " + (curScheduleIndex + 1) + " of " + resultSchedules.Count();
+
+            //Updates Fitness Level Labels (revise to be more accurate)
+            if (resultSchedules[curScheduleIndex].getAcceptableLayoutState() == false)
             {
-                case "M":
-                    g.DrawString("Monday:", dayLabelFont, drawBrush, lastXPos, 0);
-                    break;
-                case "T":
-                    g.DrawString("Tuesday:", dayLabelFont, drawBrush, lastXPos, 0);
-                    break;
-                case "W":
-                    g.DrawString("Wednesday:", dayLabelFont, drawBrush, lastXPos, 0);
-                    break;
-                case "TH":
-                    g.DrawString("Thursday:", dayLabelFont, drawBrush, lastXPos, 0);
-                    break;
-                case "F":
-                    g.DrawString("Friday:", dayLabelFont, drawBrush, lastXPos, 0);
-                    break;
-                default:
-                    Debug.WriteLine("ERROR - Displaying Day Labels");
-                    break;
+                EffecFitLabel.ForeColor = Color.Red;
+                EffecFitLabel.Text = "[N/A]";
+                OverlapFitLabel.ForeColor = Color.Red;
+                OverlapFitLabel.Text = "[FAIL]";
+            }
+            else if (curScheduleIndex != 0)
+            {
+                EffecFitLabel.ForeColor = Color.DarkOrange;
+                EffecFitLabel.Text = "[GOOD]";
+                OverlapFitLabel.ForeColor = Color.Green;
+                OverlapFitLabel.Text = "[PASS]";
+            }
+            else
+            {
+                EffecFitLabel.ForeColor = Color.Green;
+                EffecFitLabel.Text = "[BEST]";
+                OverlapFitLabel.ForeColor = Color.Green;
+                OverlapFitLabel.Text = "[PASS]";
+            }
+        }
+
+        private void UpdateButtonAppearence()
+        {
+            if(resultSchedules[curScheduleIndex].getAcceptableLayoutState() == false)
+            {
+                SelectScheduleButton.BackColor = Color.DimGray;
+                PrevScheduleButton.Enabled = false;
+            }
+            else
+            {
+                SelectScheduleButton.BackColor = Color.Black;
+                PrevScheduleButton.Enabled = true;
+            }
+
+            //Change appearence based on current schedule index (revise for effeciency)
+            if (resultSchedules.Count() == 1)
+            {
+                PrevScheduleButton.BackColor = Color.DimGray;
+                PrevScheduleButton.Enabled = false;
+                NextScheduleButton.BackColor = Color.DimGray;
+                NextScheduleButton.Enabled = false;
+            }
+            else
+            {
+                if (curScheduleIndex == 0)
+                {
+                    PrevScheduleButton.BackColor = Color.DimGray;
+                    PrevScheduleButton.Enabled = false;
+                    NextScheduleButton.BackColor = Color.Black;
+                    NextScheduleButton.Enabled = true;
+
+                }
+                else if (curScheduleIndex != resultSchedules.Count() - 1)
+                {
+                    PrevScheduleButton.BackColor = Color.Black;
+                    PrevScheduleButton.Enabled = true;
+                    NextScheduleButton.BackColor = Color.Black;
+                    NextScheduleButton.Enabled = true;
+                }
+                else
+                {
+                    PrevScheduleButton.BackColor = Color.Black;
+                    PrevScheduleButton.Enabled = true;
+                    NextScheduleButton.BackColor = Color.DimGray;
+                    NextScheduleButton.Enabled = false;
+                }
+            }
+           
+        }
+
+        //[FUNCTION - CourseReselectionButton_Click]
+        //Closes schedule select form and goes back course select form after buttton "Reselect Courses" click
+        private void CourseReselectionButton_Click(object sender, EventArgs e)
+        {
+            RefToCourseSelectForm.Show();
+            this.Hide(); //(revise because form cannot closed - open forms from main program)!!!!!!!!!!!!!!!
+        }
+
+        //[FUNCTION - LoadingResultsForm_FormClosed]
+        //Exits aplication when window is closed
+        private void LoadingResultsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //[FUNCTION - PrevScheduleButton_Click]
+        //Goes back one schedule
+        private void PrevScheduleButton_Click(object sender, EventArgs e)
+        {
+            if (PrevScheduleButton.Enabled == true)
+            {
+                curScheduleIndex--;
+                UpdateShownSchedule();
+            }
+        }
+
+        //[FUNCTION - NextScheduleButton_Click]
+        //Closes schedule select form and goes back course select form after buttton "Reselect Courses" click
+        private void NextScheduleButton_Click(object sender, EventArgs e)
+        {
+            if (NextScheduleButton.Enabled == true)
+            {
+                curScheduleIndex++;
+                UpdateShownSchedule();
             }
         }
     }

@@ -311,7 +311,7 @@ namespace ClassScheduler
             Debug.WriteLine("Number of Schedule Possibilities: " + numPossib);
             Debug.WriteLine("*****************************************************************");
 
-            BasicCalculation sectionCalculation = new BasicCalculation(selectedCourses, numPossib, random, creditAmount);
+            BasicCalculation sectionCalculation = new BasicCalculation(selectedCourses, numPossib, random, creditAmount, this);
         }
 
         public void ComputeOptimalTimes(List<List<SingleCourse>> suggestedCourses)

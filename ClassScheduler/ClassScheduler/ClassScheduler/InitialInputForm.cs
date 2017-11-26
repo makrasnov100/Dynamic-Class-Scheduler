@@ -325,6 +325,9 @@ namespace ClassScheduler
 
             //REMOVE course entry from primary list
             int indexOffset = 0;
+            if (removeCourseIndexes.Count() == 0)
+                return;
+
             int currentCourseIndex = removeCourseIndexes[0];
             for (int i = 0; i < removeCourseIndexes.Count(); i++)
             {

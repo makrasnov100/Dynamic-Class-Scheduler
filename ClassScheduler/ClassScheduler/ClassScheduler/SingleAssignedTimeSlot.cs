@@ -11,7 +11,8 @@ namespace ClassScheduler
 
         private int sectionID;
         private bool isOverlapping = false;
-        private int overlapAmount = 0;
+        private bool isOverlapOverride = false;
+        private int gapAmount = 0;
         private int overlapRank = 0;
 
         public SingleAssignedTimeSlot(SingleTimeSlot oldTime, int sectionIndex)
@@ -40,13 +41,22 @@ namespace ClassScheduler
             this.isOverlapping = isOverlapping;
         }
 
-        public int getOverlapAmount()
+        public bool getOverlapOverrideState()
         {
-            return overlapAmount;
+            return isOverlapOverride;
         }
-        public void setOverlapAmount(int overlapAmount)
+        public void setOverlapOverrideState(bool isOverlapOverride)
         {
-            this.overlapAmount = overlapAmount;
+            this.isOverlapOverride = isOverlapOverride;
+        }
+
+        public int getGapAmount()
+        {
+            return gapAmount;
+        }
+        public void setGapAmount(int gapAmount)
+        {
+            this.gapAmount = gapAmount;
         }
 
         public int getOverlapRank()

@@ -9,7 +9,6 @@ namespace ClassScheduler
 {
     public class SingleSchedule
     {
-        //private SingleSection[] allSections;
         private List<SingleSection> allSections;
         private List<ScheduleDay> allDays = new List<ScheduleDay>();
         private int courseAmount;
@@ -23,15 +22,12 @@ namespace ClassScheduler
 
         public SingleSchedule(int courseAmount, int creditAmount, Random random, List<string> templateWeek, List<SingleSection> scheduleSections)
         {
-            //allSections = new SingleSection[courseAmount];
             allSections = scheduleSections;
 
             this.random = random;
             this.courseAmount = courseAmount;
             minutesAtSchool = creditAmount*60;
             this.templateWeek = templateWeek;
-
-            
 
             string allSec = "* ";
             foreach (var section in allSections)
@@ -127,14 +123,10 @@ namespace ClassScheduler
         //Returns the overlap fitness of course (factors: amount of intersection)
         public void CalcOverlap()
         {
-            bool firstTimeSlot = true;
-            int timeSlotsInDay;
-
             if (courseAmount == 1)
                 return;
 
-            string overlapParts = "";
-
+            int timeSlotsInDay;
             foreach (ScheduleDay day in allDays)
             {
                 timeSlotsInDay = day.getDayTimes().Count();
@@ -144,37 +136,28 @@ namespace ClassScheduler
 
                 day.SortTimes();
 
-                firstTimeSlot = true;
-                for (int i = 0; i < timeSlotsInDay; i++)
+                for (int i = 1; i < timeSlotsInDay; i++)
                 {
-                    if (!firstTimeSlot)
-                    {
-                        if (day.getDayTimes()[i].getStart() - day.getDayTimes()[i - 1].getStart() <= day.getDayTimes()[i - 1].getRange())
-                        {
-                            //Collect debug data
-                            int hours = day.getDayTimes()[i].getStart() / 60;
-                            int minutes = day.getDayTimes()[i].getStart() % 60;
-                            overlapParts += "Day - " + day.getDayID() + " Time - " + hours + ":" + minutes + " | ";
+                    if (day.getDayTimes()[i-1].getEnd() >= day.getDayTimes()[i].getStart())
+                    {                 
+                        day.getDayTimes()[i].setOverlapState(true);
+                        day.getDayTimes()[i - 1].setOverlapState(true);
 
-                            day.getDayTimes()[i-1].setOverlapState(true);
-                            day.getDayTimes()[i].setOverlapState(true);
-                            day.getDayTimes()[i].setOverlapAmount(day.getDayTimes()[i].getStart() - day.getDayTimes()[i - 1].getStart());
-                            if (day.getDayTimes()[i-1].getOverlapState() == true)
-                                day.getDayTimes()[i].setOverlapRank(day.getDayTimes()[i - 1].getOverlapRank() + 1);
+                        if (i >= 2 && day.getDayTimes()[i - 2].getOverlapState() == true && day.getDayTimes()[i - 2].getEnd() <= day.getDayTimes()[i].getStart())
+                            day.getDayTimes()[i].setOverlapRank(day.getDayTimes()[i - 2].getOverlapRank());
+                        else
+                            day.getDayTimes()[i].setOverlapRank(day.getDayTimes()[i - 1].getOverlapRank() + 1);
 
-                            acceptableLayout = false;
-                            break;
-                        }
+                        acceptableLayout = false;
                     }
-                    else
-                        firstTimeSlot = false;
+                    else if (i >= 2 && day.getDayTimes()[i-1].getOverlapState() == true && day.getDayTimes()[i - 2].getEnd() >= day.getDayTimes()[i].getStart())
+                    {
+                        day.getDayTimes()[i].setOverlapState(true);
+                        day.getDayTimes()[i].setOverlapOverrideState(true);
+                        day.getDayTimes()[i].setOverlapRank(day.getDayTimes()[i - 1].getOverlapRank()-1);
+                    }
                 }
-
-                //if (!acceptableLayout)
-                //    break;
             }
-
-            //Debug.WriteLine(" | Overlap At: " + (overlapParts == "" ? "NONE" : overlapParts));
         }
 
         //Accessor/Mutator Functions

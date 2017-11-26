@@ -9,7 +9,7 @@ namespace ClassScheduler
 {
     class BasicCalculation
     {
-        private LoadingResultsForm CalculationForm;
+        private CourseSelectionForm RefToCourseSelectForm;
         private List<SingleCourse> selectedCourses;
         private int courseAmount;
         private int creditAmount;
@@ -17,22 +17,26 @@ namespace ClassScheduler
 
         private List<SingleSchedule> schedulePopulation;
         private List<SingleSchedule> resultSchedules = new List<SingleSchedule>();
-        private double bestFitness;
-        private SingleSchedule bestSchedule;
 
         private Random random;
         private List<string> templateWeek = new List<string> { "M", "T", "W", "TH", "F" };
 
-        public BasicCalculation(List<SingleCourse> selectedCourses, int numPossib, Random random, int creditAmount)
+        public BasicCalculation(List<SingleCourse> selectedCourses, int numPossib, Random random, int creditAmount, CourseSelectionForm courseForm)
         {
+            //References to previous form
+            RefToCourseSelectForm = courseForm;
+
+            //calculation variables
             this.random = random;
             this.creditAmount = creditAmount;
             this.selectedCourses = selectedCourses;
             this.courseAmount = selectedCourses.Count();
+
             schedulePopulation = new List<SingleSchedule>(numPossib);
             this.sectionAmountAll = new List<int>(selectedCourses.Count());
             foreach (var course in selectedCourses)
                 sectionAmountAll.Add(course.sections.Count());
+
             BeginCalculation();
         }
 
@@ -147,14 +151,14 @@ namespace ClassScheduler
         {
             if(resultSchedules.Count() != 0)
             {
-                LoadingResultsForm ResultLoadForm = new LoadingResultsForm(selectedCourses, resultSchedules);
+                LoadingResultsForm ResultLoadForm = new LoadingResultsForm(selectedCourses, resultSchedules, RefToCourseSelectForm);
                 ResultLoadForm.ShowDialog();
             }
             else
             {
                 if (schedulePopulation.Count() != 0)
                     schedulePopulation = schedulePopulation.OrderByDescending(s => s.getFitness()).ToList();
-                LoadingResultsForm ResultLoadForm = new LoadingResultsForm(selectedCourses, schedulePopulation);
+                LoadingResultsForm ResultLoadForm = new LoadingResultsForm(selectedCourses, schedulePopulation, RefToCourseSelectForm);
                 ResultLoadForm.ShowDialog();
             }
         }
