@@ -56,6 +56,12 @@
       <DependentUpon>AddCoursePopup.cs</DependentUpon>
     </Compile>
     <Compile Include="Calculation.cs" />
+    <Compile Include="PreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreviewForm.Designer.cs">
+      <DependentUpon>PreviewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ScheduleDay.cs" />
     <Compile Include="TimeInfo.cs" />
     <Compile Include="CourseSelectionForm.cs">
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CourseSelectionForm.resx">
       <DependentUpon>CourseSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreviewForm.resx">
+      <DependentUpon>PreviewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ResultForm.resx">
       <DependentUpon>ResultForm.cs</DependentUpon>

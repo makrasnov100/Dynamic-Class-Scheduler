@@ -453,5 +453,12 @@ namespace ClassScheduler
 
             return resultNames;
         }
+
+        private void PreviewExcelSheetButton_Click(object sender, EventArgs e)
+        {
+            PreviewForm p = new PreviewForm();
+            p.Size = new Size(700, 480);
+            p.ShowDialog();
+        }
     }
 }

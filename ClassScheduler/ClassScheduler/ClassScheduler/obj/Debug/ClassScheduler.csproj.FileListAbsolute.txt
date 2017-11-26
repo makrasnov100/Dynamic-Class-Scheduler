@@ -84,3 +84,4 @@ C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassSchedu
 C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.csproj.CoreCompileInputs.cache
 C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.exe
 C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.pdb
+C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.PreviewForm.resources
