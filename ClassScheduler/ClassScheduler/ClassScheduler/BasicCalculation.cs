@@ -16,8 +16,11 @@ namespace ClassScheduler
         private List<int> sectionAmountAll; // parallel list that allows for creation of all unique schedules
 
         private List<SingleSchedule> schedulePopulation;
+        private List<SingleSchedule> acceptableSchedules = new List<SingleSchedule>();
+        private List<SingleSchedule> overlapSchedules = new List<SingleSchedule>();
         private List<SingleSchedule> resultSchedules = new List<SingleSchedule>();
 
+        LoadingResultsForm ResultLoadForm;
         private Random random;
         private List<string> templateWeek = new List<string> { "M", "T", "W", "TH", "F" };
 
@@ -40,12 +43,28 @@ namespace ClassScheduler
             BeginCalculation();
         }
 
+        //[FUNCTION - RestartCalculation]
+        //Begins calculation again with new sections
+        public void RestartCalculation(List<SingleCourse> selectedCourses, int numPossib)
+        {
+            acceptableSchedules = new List<SingleSchedule>();
+            overlapSchedules = new List<SingleSchedule>();
+            resultSchedules = new List<SingleSchedule>();
+
+            schedulePopulation = new List<SingleSchedule>(numPossib);
+            this.sectionAmountAll = new List<int>(selectedCourses.Count());
+            foreach (var course in selectedCourses)
+                sectionAmountAll.Add(course.sections.Count());
+
+            BeginCalculation();
+        }
+
         //[FUNCTION - BeginCalculation]
-        //Handles the population creation proccess
+        //Handles the result schedule population creation proccess
         private void BeginCalculation()
         {
             CreateAllPossibilities();
-            DetemineFitSchedules();
+            DetemineShownSchedules();
             DisplayDebugResult();
             DisplayResultLoadForm();
         }
@@ -95,18 +114,32 @@ namespace ClassScheduler
             return resultSchedule;
         }
 
-        //[FUNCTION - DetemineFitSchedules]
+        //[FUNCTION - DetemineShownSchedules]
         //Sorts all schedules by fitness and adds possible ones to resultSchedules
-        public void DetemineFitSchedules()
+        public void DetemineShownSchedules()
         {
-            //Add possible combinations to resulting list
+            //Add possible combinations to correct list
             foreach(var schedule in schedulePopulation)
+            {
                 if (schedule.getAcceptableLayoutState())
-                    resultSchedules.Add(schedule);
+                    acceptableSchedules.Add(schedule);
+                else
+                    overlapSchedules.Add(schedule);
+            }
 
-            //Sort for best fitness
+            //Sort both lists
             if (resultSchedules.Count() != 0)
                 resultSchedules = resultSchedules.OrderByDescending(s => s.getFitness()).ToList();
+            if (overlapSchedules.Count() != 0)
+                overlapSchedules = overlapSchedules.OrderBy(s => s.getOverlapCount()).ToList();
+
+            //Add all schedules to resulting schedules list
+            resultSchedules = new List<SingleSchedule>(acceptableSchedules);
+            Debug.WriteLine("Overlap Schedules: " + overlapSchedules.Count() + " Acceptable Schedules: " + acceptableSchedules.Count());
+            int additionsNeeded = overlapSchedules.Count() <= 100 - acceptableSchedules.Count() ?
+                                  overlapSchedules.Count() : 100 - acceptableSchedules.Count();
+            for (int i = 0; i < additionsNeeded; i++)
+                resultSchedules.Add(overlapSchedules[i]);
         }
 
         //[FUNCTION - DisplayDebugResult]
@@ -151,15 +184,15 @@ namespace ClassScheduler
         {
             if(resultSchedules.Count() != 0)
             {
-                LoadingResultsForm ResultLoadForm = new LoadingResultsForm(selectedCourses, resultSchedules, RefToCourseSelectForm);
-                ResultLoadForm.ShowDialog();
-            }
-            else
-            {
-                if (schedulePopulation.Count() != 0)
-                    schedulePopulation = schedulePopulation.OrderByDescending(s => s.getFitness()).ToList();
-                LoadingResultsForm ResultLoadForm = new LoadingResultsForm(selectedCourses, schedulePopulation, RefToCourseSelectForm);
-                ResultLoadForm.ShowDialog();
+                if (ResultLoadForm == null)
+                {
+                    ResultLoadForm = new LoadingResultsForm(selectedCourses, resultSchedules, RefToCourseSelectForm);
+                    ResultLoadForm.ShowDialog();
+                }
+                else
+                {
+                    ResultLoadForm.ShowNewScheduleSet(selectedCourses, resultSchedules);
+                }
             }
         }
     }

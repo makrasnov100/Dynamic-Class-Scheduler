@@ -6,20 +6,23 @@ using System.Threading.Tasks;
 
 namespace ClassScheduler
 {
+    [Serializable]
     public class SingleAssignedTimeSlot : SingleTimeSlot
     {
 
         private int sectionID;
         private bool isOverlapping = false;
         private bool isOverlapOverride = false;
+        private bool isOptimized = false;
         private int gapAmount = 0;
         private int overlapRank = 0;
 
-        public SingleAssignedTimeSlot(SingleTimeSlot oldTime, int sectionIndex)
+        public SingleAssignedTimeSlot(SingleTimeSlot oldTime, bool isOptimized, int sectionIndex)
         {
             this.setStart(oldTime.getStart());
             this.setEnd(oldTime.getEnd());
             this.setRange(oldTime.getRange());
+            this.isOptimized = isOptimized;
             sectionID = sectionIndex;
         }
 
@@ -48,6 +51,15 @@ namespace ClassScheduler
         public void setOverlapOverrideState(bool isOverlapOverride)
         {
             this.isOverlapOverride = isOverlapOverride;
+        }
+
+        public bool getOptimizedState()
+        {
+            return isOptimized;
+        }
+        public void setOptimizedState(bool isOptimized)
+        {
+            this.isOptimized = isOptimized;
         }
 
         public int getGapAmount()

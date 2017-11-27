@@ -20,21 +20,26 @@ namespace ClassScheduler
         private int picBoxExtend = 300;
         private float verticalScale = 1.0f; //larger = bigger slots
         private float rectWidth = 50;
-        private float dayXPadding = 150;
+        private int dayXPadding = 150;
         private Font dayLabelFont = new Font("Times New Roman", 12f, FontStyle.Italic);
         private Font timeLabelFont = new Font("Microsoft Sans Serif", 7.5f, FontStyle.Regular);
         private SolidBrush drawBrush = new SolidBrush(System.Drawing.Color.Black);
         private SolidBrush drawBrushWhite = new SolidBrush(System.Drawing.Color.White);
         private Pen blackPen = Pens.Black;
+        private Pen dimGreyPen = Pens.DimGray;
+        private Pen darkGreyPen = Pens.DarkGray;
         private Brush blackBrush = Brushes.Black;
         private Brush greenBrush = Brushes.Green;
+        private Brush yellowBrush = Brushes.Yellow;
         private Brush redBrush = Brushes.Red;
+        private Brush lightGreyBrush = Brushes.LightGray;
         private StringFormat sCenterFormat = new StringFormat();
 
         private List<SingleCourse> selectedCourses;
         private List<SingleSchedule> resultSchedules;
 
         private CourseSelectionForm RefToCourseSelectForm;
+        private OptimizationSettingsForm OptimizeSettingsForm;
 
         private bool firstDraw = true;
         private int curScheduleIndex = 0;
@@ -55,6 +60,28 @@ namespace ClassScheduler
             this.selectedCourses = selectedCourses;
             this.resultSchedules = resultSchedules;
             InitializeComponent();
+        }
+
+        //[FUNCTION - ShowNewScheduleSet]
+        //Resets form after optimization
+        public void ShowNewScheduleSet(List<SingleCourse> selectedCourses, List<SingleSchedule> resultSchedules)
+        {
+            lastYPos = topSeperator + 3; // provides gap for first timeslot
+            curScheduleIndex = 0;
+
+            this.selectedCourses = selectedCourses;
+            this.resultSchedules = resultSchedules;
+
+            UpdateShownSchedule();
+        }
+
+        //[FUNCTION - UpdateShownSchedule]
+        //Performs redraw of schedules
+        private void UpdateShownSchedule()
+        {
+            UpdateScheduleLabels();
+            UpdateButtonAppearence();
+            CreateGraph();
         }
 
         private void LoadingResultsForm_Load(object sender, EventArgs e)
@@ -80,10 +107,27 @@ namespace ClassScheduler
             }
 
             g.Clear(Color.White);
-            dayXPadding = (float) fullBmp.Width / (float) resultSchedules[0].getAllDays().Count();
+            dayXPadding = fullBmp.Width / resultSchedules[0].getAllDays().Count();
             rectWidth = (float) fullBmp.Width / (float) resultSchedules[0].getAllDays().Count() / 3.0f;
 
+            //Draw overlap region
+            for (int i = 0; i < resultSchedules[0].getAllDays().Count(); i++)
+            {
+                Rectangle overlapRegion = new Rectangle((i * dayXPadding) + (dayXPadding * 1/3) + 2, (int)topSeperator + 3,  dayXPadding * 2/3, fullBmp.Height);
+                g.FillRectangle(lightGreyBrush, overlapRegion);
+            }
+
+            //Draw label and hour lines
             g.DrawLine(blackPen, 0, lastYPos, fullBmp.Width, lastYPos);
+            for (int i = 1; i <= 16; i++)
+                g.DrawLine(dimGreyPen, 0, topSeperator + (i * (60/verticalScale)), fullBmp.Width, topSeperator + (i * (60 / verticalScale)));
+            for (int i = 1; i <= 16*4; i++)
+            {
+                if(i % 4 == 0)
+                    continue;
+                g.DrawLine(darkGreyPen, 0, topSeperator + (i * (15 / verticalScale)), fullBmp.Width, topSeperator + (i * (15 / verticalScale)));
+            }
+                
 
             foreach (var day in resultSchedules[curScheduleIndex].getAllDays())
                 GraphDay(day);
@@ -97,17 +141,14 @@ namespace ClassScheduler
         {
             GraphDayLabel(day.getDayID());
             GraphDayTimeSlots(day);
-
-
-            if(day.getDayID() != "F")
-                g.DrawLine(blackPen, lastXPos, 0, lastXPos, fullBmp.Height);
+            g.DrawLine(blackPen, lastXPos, 0, lastXPos, fullBmp.Height);
         }
 
         //[FUNCTION - GetTimeSlotString]
         //Returns the info to be displayed on rectangle given particular timeslot
         private string GetTimeSlotString(SingleAssignedTimeSlot timeSlot, int displayCount)
         {
-            string result = displayCount + "\n";
+            string result = "";
             result += resultSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getID() + "\n";
             result += resultSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getStartTimes()[0].Trim() + " -\n";
             result += resultSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getStopTimes()[0].Trim() + "\n";
@@ -156,7 +197,11 @@ namespace ClassScheduler
             foreach (var timeSlot in day.getDayTimes())
             {
                 //Gap Calculation
-                if (timeSlotCounter != 0)
+                if (timeSlotCounter == 0)
+                {
+                    lastYPos = lastYPos + ((timeSlot.getStart() - 360) * 1/3);
+                }
+                else
                 {
                     gapTime = timeSlot.getStart() - day.getDayTimes()[timeSlotCounter - 1].getStart();
                     gapTime *= verticalScale;
@@ -166,6 +211,12 @@ namespace ClassScheduler
                 //Diplay Slots and Labels
                 if (timeSlot.getOverlapState() == false)
                 {
+                    //Optimal section markup
+                    Brush curBrush;
+                    if (timeSlot.getOptimizedState() == true)
+                        curBrush = yellowBrush;
+                    else
+                        curBrush = greenBrush;
                     g.FillRectangle(greenBrush, lastXPos, lastYPos, rectWidth, timeSlot.getRange() * verticalScale);
                     g.DrawRectangle(blackPen, lastXPos, lastYPos, rectWidth, timeSlot.getRange() * verticalScale);
 
@@ -186,13 +237,6 @@ namespace ClassScheduler
             }
             lastXPos += dayXPadding;
             lastYPos = topSeperator + 3;
-        }
-
-        private void UpdateShownSchedule()
-        {
-            UpdateScheduleLabels();
-            UpdateButtonAppearence();
-            CreateGraph();
         }
 
         private void UpdateScheduleLabels()
@@ -277,7 +321,7 @@ namespace ClassScheduler
         private void CourseReselectionButton_Click(object sender, EventArgs e)
         {
             RefToCourseSelectForm.Show();
-            this.Hide(); //(revise because form cannot closed - open forms from main program)!!!!!!!!!!!!!!!
+            this.Hide(); //(revise because form cannot be closed - open forms from main program)!!!!!!!!!!!!!!!
         }
 
         //[FUNCTION - LoadingResultsForm_FormClosed]
@@ -307,6 +351,16 @@ namespace ClassScheduler
                 curScheduleIndex++;
                 UpdateShownSchedule();
             }
+        }
+
+        //[FUNCTION - NextScheduleButton_Click]
+        //Opens up optimization settings after button "Optimize" is clicked
+        private void SuggestedCoursesButton_Click(object sender, EventArgs e)
+        {
+            if (OptimizeSettingsForm == null)
+                OptimizeSettingsForm = new OptimizationSettingsForm(resultSchedules[curScheduleIndex], RefToCourseSelectForm);
+
+            OptimizeSettingsForm.ShowDialog();
         }
     }
 }

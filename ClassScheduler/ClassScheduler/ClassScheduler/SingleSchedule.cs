@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClassScheduler
 {
+    [Serializable]
     public class SingleSchedule
     {
         private List<SingleSection> allSections;
@@ -14,6 +15,7 @@ namespace ClassScheduler
         private int courseAmount;
         private int minutesAtSchool;
         private double fitness = 0;
+        private int overlapCount = 0;
 
         private bool acceptableLayout = true;
 
@@ -44,11 +46,10 @@ namespace ClassScheduler
             {
                 for (int i = 0; i < templateWeek.Count(); i++)
                     if (section.getFormatedTime()[i].getDayOfWeek() != "NA")
-                        allDays[i].addTimetoDay(new SingleAssignedTimeSlot(section.getFormatedTime()[i], sectionIndexCounter));
+                        allDays[i].addTimetoDay(new SingleAssignedTimeSlot(section.getFormatedTime()[i], section.getIsOptimizedState() ,sectionIndexCounter));
 
                 sectionIndexCounter++;
             }
-
             EvaluateFitness();
         }
 
@@ -148,6 +149,7 @@ namespace ClassScheduler
                         else
                             day.getDayTimes()[i].setOverlapRank(day.getDayTimes()[i - 1].getOverlapRank() + 1);
 
+                        overlapCount++;
                         acceptableLayout = false;
                     }
                     else if (i >= 2 && day.getDayTimes()[i-1].getOverlapState() == true && day.getDayTimes()[i - 2].getEnd() >= day.getDayTimes()[i].getStart())
@@ -155,6 +157,7 @@ namespace ClassScheduler
                         day.getDayTimes()[i].setOverlapState(true);
                         day.getDayTimes()[i].setOverlapOverrideState(true);
                         day.getDayTimes()[i].setOverlapRank(day.getDayTimes()[i - 1].getOverlapRank()-1);
+                        overlapCount++;
                     }
                 }
             }
@@ -176,6 +179,10 @@ namespace ClassScheduler
         public bool getAcceptableLayoutState()
         {
             return acceptableLayout;
+        }
+        public int getOverlapCount()
+        {
+            return overlapCount;
         }
 
         //GENETIC ALGORITHM FUNCTIONS

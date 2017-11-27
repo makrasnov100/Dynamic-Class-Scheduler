@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassScheduler
 {
+    [Serializable]
     public class SingleTimeSlot
     {
         private string dayOfWeek;

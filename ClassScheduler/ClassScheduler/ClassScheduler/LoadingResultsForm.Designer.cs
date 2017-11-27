@@ -145,6 +145,7 @@
             this.SuggestedCoursesButton.TabIndex = 23;
             this.SuggestedCoursesButton.Text = "Optimize Schedule";
             this.SuggestedCoursesButton.UseVisualStyleBackColor = false;
+            this.SuggestedCoursesButton.Click += new System.EventHandler(this.SuggestedCoursesButton_Click);
             // 
             // SuggestionScheduleLabel
             // 

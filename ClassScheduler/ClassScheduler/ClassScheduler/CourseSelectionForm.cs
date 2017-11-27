@@ -26,7 +26,8 @@ namespace ClassScheduler
 
         public List<SingleCourse> availableCourses;
         public List<SingleCourse> selectedCourses = new List<SingleCourse>();
-        private List<List<SingleCourse>> suggestedCourses;
+        Random random = new Random();
+        BasicCalculation sectionCalculation;
         private int creditAmount = 0;
 
         private DataGridViewRow selectedRow;
@@ -75,7 +76,7 @@ namespace ClassScheduler
         private void MainToResultButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ComputeOptimalTimes();
+            ComputeOptimalTimes(selectedCourses);
 
             //ResultForm Result = new ResultForm(this);
             //Manipulate the Result form before it is displayed...
@@ -291,15 +292,13 @@ namespace ClassScheduler
 
         //[FUNCTION - ComputeOptimalTimes]
         //Chooses the correct algorithm
-        public void ComputeOptimalTimes()
+        public void ComputeOptimalTimes(List<SingleCourse> givenCourses)
         {
             //LoadingResultsForm ResultLoad = new LoadingResultsForm();
             //ShowDialog(ResultLoad);
 
-            Random random = new Random();
-
             int numPossib = 1;
-            foreach (var course in selectedCourses)
+            foreach (var course in givenCourses)
             {
                 if (course.sections.Count() != 0)
                 {
@@ -311,12 +310,43 @@ namespace ClassScheduler
             Debug.WriteLine("Number of Schedule Possibilities: " + numPossib);
             Debug.WriteLine("*****************************************************************");
 
-            BasicCalculation sectionCalculation = new BasicCalculation(selectedCourses, numPossib, random, creditAmount, this);
+            if(sectionCalculation == null)
+                sectionCalculation = new BasicCalculation(givenCourses, numPossib, random, creditAmount, this);
+            else
+                sectionCalculation.RestartCalculation(givenCourses, numPossib);
         }
 
-        public void ComputeOptimalTimes(List<List<SingleCourse>> suggestedCourses)
+        //[FUNCTION - ChooseOptimizationCourses]
+        //Adds sections that can be substituted based on user defined settings (revise so courses fit better)
+        public void ChooseOptimizationCourses(List<bool> canOptimize, SingleSchedule oldSchedule)
         {
-            //performs List Algorithms with suggested courses variable
+            List<SingleCourse> selectedCoursesMod = new List<SingleCourse>(selectedCourses);
+            //Add all similar courses to section list
+            int optimizeCounter = 0;
+            foreach (var optimizeOption in canOptimize)
+            {
+                if (optimizeOption == true)
+                {
+                    string matchCourseID = oldSchedule.getAllSections()[optimizeCounter].getID();
+                    string depID = matchCourseID.Substring(0, matchCourseID.IndexOf("-", 0));
+                    string levelID = matchCourseID.Substring((matchCourseID.IndexOf("-", 0) + 1), 1) + "00";
+                    Debug.WriteLine("Dep ID: " + depID + " | Level ID: " + levelID);
+                    //string matchCourseIDTrim = matchCourseID.Substring(0, matchCourseID.IndexOf("-", 4));
+                    //string matchCourseFull = matchCourseIDTrim + "|" + oldSchedule.getAllSections()[optimizeCounter].getCourseName();
+
+                    foreach (var course in availableCourses)
+                        if((course.getCourseLevel() == levelID && course.getAbrvCourseName().Contains(depID)) && 
+                           (course.getAbrvCourseName() != matchCourseID.Substring(0, matchCourseID.IndexOf("-", 4))))
+                            foreach(var section in course.getSections())
+                            {
+                                Debug.WriteLine("Added a suggested schedule!");
+                                selectedCoursesMod[optimizeCounter].getSections().Add(new SingleSection(section, true));
+                            }    
+                }
+                optimizeCounter++;
+            }
+
+            ComputeOptimalTimes(selectedCoursesMod);
         }
     }
 }

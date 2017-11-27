@@ -24,11 +24,11 @@ namespace ClassScheduler
     public partial class InitialInputForm : Form
     {
 
-        private UserConfig userData = new UserConfig(){ };
+        private UserConfig userData = new UserConfig() { };
         public List<SingleCourse> courses = new List<SingleCourse>();
         public List<SingleCourse> unneededCourses = new List<SingleCourse>();
         List<string> sectionIDs = new List<string>();
-        List<string> courseIDs = new List<string>();
+        private List<string> courseIDs = new List<string>();
         IExcelDataReader excelReader;
 
         public InitialInputForm()
@@ -175,13 +175,14 @@ namespace ClassScheduler
                         excelReader.GetString(3),
                         Convert.ToInt32(excelReader.GetDouble(12)),
                         new List<string> { (excelReader.GetString(2)) },
-                        new List<string> ( GetRowInstructNames()),
+                        new List<string>(GetRowInstructNames()),
                         new List<SingleSection> { (new SingleSection { }) }
                     ));
 
                     int courseIndex = courses.Count() - 1;
                     courses[courseIndex].sections[0].setTerm(excelReader.GetString(2));
                     courses[courseIndex].sections[0].setID(excelReader.GetString(5));
+                    courses[courseIndex].sections[0].setCourseName(excelReader.GetString(6));
                     courses[courseIndex].sections[0].setStartTimes(SplitCellIntoList(17, ", ", " NA"));
                     courses[courseIndex].sections[0].setStopTimes(SplitCellIntoList(18, ", ", " NA"));
                     courses[courseIndex].sections[0].setMeetDays(SplitCellIntoList(19, ",", "NA"));
@@ -209,10 +210,10 @@ namespace ClassScheduler
                     List<string> currentInstructs = SplitCellIntoList(9, ",", "NA");
                     foreach (var course in courses)
                     {
-                        foreach(var section in course.getSections())
-                            foreach(var instruct in section.getInstructLastN())
-                                foreach(var currentInstruct in currentInstructs)
-                                    if(currentInstruct == instruct)
+                        foreach (var section in course.getSections())
+                            foreach (var instruct in section.getInstructLastN())
+                                foreach (var currentInstruct in currentInstructs)
+                                    if (currentInstruct == instruct)
                                         instructRecorded = true;
                     }
                     if (!instructRecorded)
@@ -220,7 +221,7 @@ namespace ClassScheduler
                         List<string> lastNames = SplitCellIntoList(9, ", ", "NA");
                         List<string> firstNames = SplitCellIntoList(10, ", ", "NA");
                         int indexCounter = 0;
-                        foreach(var lastName in lastNames)
+                        foreach (var lastName in lastNames)
                         {
                             if (firstNames.Count() == 1 && firstNames[0] == "NA")
                                 courses[courseIndex].getInstructAvailable().Add(lastName);
@@ -237,6 +238,7 @@ namespace ClassScheduler
 
                     courses[courseIndex].sections[sectionIndex].setTerm(excelReader.GetString(2));
                     courses[courseIndex].sections[sectionIndex].setID(excelReader.GetString(5));
+                    courses[courseIndex].sections[sectionIndex].setCourseName(excelReader.GetString(6));
                     courses[courseIndex].sections[sectionIndex].setStartTimes(SplitCellIntoList(17, ", ", " NA"));
                     courses[courseIndex].sections[sectionIndex].setStopTimes(SplitCellIntoList(18, ", ", " NA"));
                     courses[courseIndex].sections[sectionIndex].setMeetDays(SplitCellIntoList(19, ",", "NA"));
@@ -269,8 +271,8 @@ namespace ClassScheduler
                     section.getTerm() == excelReader.GetString(2) &&
                     section.getInstructFirstN().SequenceEqual(SplitCellIntoList(10, ", ", "")) &&
                     section.getMeetDays().SequenceEqual(SplitCellIntoList(19, ", ", "")))// &&
-                    //section.stopTimes.SequenceEqual(SplitCellIntoList(18, ", ", " NA")) &&
-                    //section.instructLastN.SequenceEqual(SplitCellIntoList(9, ", ", "")))
+                                                                                         //section.stopTimes.SequenceEqual(SplitCellIntoList(18, ", ", " NA")) &&
+                                                                                         //section.instructLastN.SequenceEqual(SplitCellIntoList(9, ", ", "")))
                 {
                     needSection = false;
                 }
@@ -312,7 +314,7 @@ namespace ClassScheduler
             //DETEMNINE section need
             foreach (var course in courses)
                 foreach (var section in course.sections)
-                    if (section.getMeetDays().Exists(s => s.Contains("NA")) || section.getStartTimes().Exists(s => s.Contains("NA")) 
+                    if (section.getMeetDays().Exists(s => s.Contains("NA")) || section.getStartTimes().Exists(s => s.Contains("NA"))
                         || !section.getTerm().Contains(userData.getTermInterest()))
                     {
                         removeCourseIndexes.Add(courses.IndexOf(course));
@@ -395,7 +397,7 @@ namespace ClassScheduler
                 if (course.getTermsAvailable().Any(s => s.EndsWith(abrvTerm)))
                 {
                     courseNum++;
-                    sw.WriteLine("[" + Term.ToUpper() + " COURSE #" + courseNum + "] - [" + course.getAbrvCourseName() + "] - " 
+                    sw.WriteLine("[" + Term.ToUpper() + " COURSE #" + courseNum + "] - [" + course.getAbrvCourseName() + "] - "
                         + course.getCourseName() + ": ");
 
                     int indexCount = 0;
@@ -473,6 +475,12 @@ namespace ClassScheduler
             indexCounter = 0;
 
             return resultNames;
+        }
+
+        //Accessor/mutator functions (revise by adding more)
+        public List<string> getCourseIDs()
+        {
+            return courseIDs;
         }
     }
 }

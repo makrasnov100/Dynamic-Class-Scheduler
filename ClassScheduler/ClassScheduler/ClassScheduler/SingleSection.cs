@@ -16,11 +16,13 @@ namespace ClassScheduler
     /// </summary>
     /// Author: Kostiantyn Makrasnov (variables)
     /// Author: Yuri Fedas (accessor/mutator functions & constructors)
-
+    /// 
+    [Serializable]
     public class SingleSection
     {
         private string term = "";
         private string ID = "";
+        private string courseName = "";
         private List<string> meetDays;
         private List<string> instructFirstN;
         private List<string> instructLastN;
@@ -29,6 +31,8 @@ namespace ClassScheduler
         private List<string> startTimes;
         private List<string> stopTimes;
         private List<SingleTimeSlot> formattedTimes = new List<SingleTimeSlot>();
+
+        private bool isOptimized = false;
 
         public SingleSection()
         {
@@ -44,11 +48,27 @@ namespace ClassScheduler
             this.seatingCap = seatingCap;
         }
 
+        public SingleSection(SingleSection oldschedule, bool isOptimized)
+        {
+            this.term = oldschedule.getTerm();
+            this.ID = oldschedule.getID();
+            this.courseName = oldschedule.getCourseName();
+            this.meetDays = oldschedule.getMeetDays();
+            this.instructFirstN = oldschedule.getInstructFirstN();
+            this.instructLastN = oldschedule.getInstructLastN();
+            this.seatingCap = oldschedule.getSeatingCapacity();
+
+            this.startTimes = oldschedule.getStartTimes();
+            this.stopTimes = oldschedule.getStopTimes();
+            this.formattedTimes = oldschedule.getFormatedTime();
+
+            this.isOptimized = isOptimized;
+        }
+
         public string getTerm()
         {
             return term;
         }
-
         public void setTerm(string term)
         {
             this.term = term;
@@ -58,10 +78,18 @@ namespace ClassScheduler
         {
             return ID;
         }
-
         public void setID(string ID)
         {
             this.ID = ID;
+        }
+
+        public string getCourseName()
+        {
+            return courseName;
+        }
+        public void setCourseName(string courseName)
+        {
+            this.courseName = courseName;
         }
 
         public List<string> getStartTimes()
@@ -137,6 +165,16 @@ namespace ClassScheduler
         public List<SingleTimeSlot> getFormatedTime()
         {
             return formattedTimes;
+        }
+
+        public void setIsOptimizedState(bool isOptimized)
+        {
+            this.isOptimized = isOptimized;
+        }
+
+        public bool getIsOptimizedState()
+        {
+            return isOptimized;
         }
 
         //public int getFormatedTimeStart(int index)

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ClassScheduler
 {
@@ -78,8 +80,8 @@ namespace ClassScheduler
             if(courseAccepted)
             {
                 selectedRow = addCoursesDataTable.Rows[selectedTableIndex];     
-                SingleCourse selectedCourseClass = allCourses[allCourses.IndexOf(allCourses.Find(s => (s.getCourseName() == (string)selectedRow.Cells[1].Value)
-                                                                                                   && (s.getAbrvCourseName() == (string)selectedRow.Cells[0].Value)))];
+                SingleCourse selectedCourseClass = DeepCopySingleCourse(allCourses[allCourses.IndexOf(allCourses.Find(s => (s.getCourseName() == (string)selectedRow.Cells[1].Value) && 
+                                                                                  (s.getAbrvCourseName() == (string)selectedRow.Cells[0].Value)))]);
                 MainCourseForm.selectedCourses.Add(selectedCourseClass);
                 addCourseStateLabel.ForeColor = Color.Green;
                 addCourseStateLabel.Text = "Added " + (string)selectedRow.Cells[1].Value + " to course list!";
@@ -267,6 +269,20 @@ namespace ClassScheduler
         public List<SingleCourse> getFilteredCourses()
         {
             return filteredCourses;
+        }
+
+        //USED ONLY IN THIS FORM
+        //Function is mainly the answwer from the following post on how to copy a complex object
+        //https://stackoverflow.com/questions/16696448/how-to-make-a-copy-of-an-object-in-c-sharp
+        public static SingleCourse DeepCopySingleCourse(SingleCourse other)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(ms, other);
+                ms.Position = 0;
+                return (SingleCourse)formatter.Deserialize(ms);
+            }
         }
     }
 }
