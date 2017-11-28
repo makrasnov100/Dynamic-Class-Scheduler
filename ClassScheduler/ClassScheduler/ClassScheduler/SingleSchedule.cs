@@ -31,10 +31,10 @@ namespace ClassScheduler
             minutesAtSchool = creditAmount*60;
             this.templateWeek = templateWeek;
 
-            string allSec = "* ";
-            foreach (var section in allSections)
-                allSec += section.getID() + " * ";
-            Debug.Write(allSec);
+            //string allSec = "* ";
+            //foreach (var section in allSections)
+            //    allSec += section.getID() + " * ";
+            //Debug.Write(allSec);
 
 
             //populate allDays list with time information
@@ -52,13 +52,6 @@ namespace ClassScheduler
             }
             EvaluateFitness();
         }
-
-        //public SingleSchedule (SingleSchedule oldCopy)
-        //{
-        //    this.allSections = oldCopy.getAllSections();
-        //    this.allDays = oldCopy.getAllDays();
-        //    this.fitness = getFitness();
-        //}
 
         //[FUNCTION - EvaluateFitness]
         //Calculates the fitness of a particular setup
@@ -109,13 +102,13 @@ namespace ClassScheduler
             int maxOverTime = maxTime - minTime;
 
             //Calcuate current overtime
-            Debug.Write("| Total: " + totalTime + " | Min: " + minTime + " | ");
+            //Debug.Write("| Total: " + totalTime + " | Min: " + minTime + " | ");
             int currentOverTime = totalTime - minTime;
 
             //Calculate Efficiency Fitness (1 to 0)
             effecFitness = (((double)maxOverTime - (double)currentOverTime) / (double)maxOverTime);
 
-            Debug.WriteLine("Fitness: " + effecFitness);
+            //Debug.WriteLine("Fitness: " + effecFitness);
 
             return effecFitness >= 1.00 ? 1.00 : effecFitness;
         }

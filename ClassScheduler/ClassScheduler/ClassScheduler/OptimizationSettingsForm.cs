@@ -12,15 +12,17 @@ namespace ClassScheduler
 {
     public partial class OptimizationSettingsForm : Form
     {
-        //private Font checkBoxFont = new Font("Times New Roman", 10f, FontStyle.Italic);
         private List<CheckBox> allCB = new List<CheckBox>();
         private SingleSchedule oldSchedule;
 
-        private CourseSelectionForm CourseSelectForm;
+        private CourseSelectionForm RefToCourseSelectForm;
+        private LoadingResultsForm RefToLoadResultsForm;
 
-        public OptimizationSettingsForm(SingleSchedule oldSchedule, CourseSelectionForm CourseSelectForm)
+        public OptimizationSettingsForm(SingleSchedule oldSchedule, CourseSelectionForm CourseSelectForm, LoadingResultsForm LoadResultsForm)
         {
-            this.CourseSelectForm = CourseSelectForm;
+            //Build references
+            RefToCourseSelectForm = CourseSelectForm;
+            RefToLoadResultsForm = LoadResultsForm;
             this.oldSchedule = oldSchedule;
 
             InitializeComponent();
@@ -29,14 +31,19 @@ namespace ClassScheduler
 
         private void UpdateCheckBoxes(SingleSchedule oldSchedule)
         {
+            //Remove last checkboxes
+            foreach (var cb in allCB)
+                this.Controls.Remove(cb);
+            allCB.Clear();
+
+            //Create new checkboxes 
             int locationCounter = 0;
             foreach(var section in oldSchedule.getAllSections())
             {
                 allCB.Add(new CheckBox());
                 allCB[allCB.Count()-1].Location = new Point(70, 120 + (locationCounter * 25));
-                allCB[allCB.Count() - 1].Text = section.getCourseName();
-                allCB[allCB.Count() - 1].Size = new Size(500,20);
-                //allCB[allCB.Count() - 1].Tag = locationCounter;
+                allCB[allCB.Count()-1].Text = section.getID().Substring(0, section.getID().IndexOf("-", 4)) + " | " + section.getCourseName();
+                allCB[allCB.Count()-1].Size = new Size(500,20);
                 this.Controls.Add(allCB[allCB.Count() - 1]);
                 locationCounter++;
             }
@@ -44,6 +51,8 @@ namespace ClassScheduler
 
         private void GoBackToScheduleSelectionButton_Click(object sender, EventArgs e)
         {
+            RefToLoadResultsForm.setIsOptimizedState(!RefToLoadResultsForm.getIsOptimizedState());
+            RefToLoadResultsForm.ChangeOptimizationText();
             this.Hide();
         }
 
@@ -57,7 +66,7 @@ namespace ClassScheduler
                 else
                     canOptimize.Add(true);
             }
-            CourseSelectForm.ChooseOptimizationCourses(canOptimize, oldSchedule);
+            RefToCourseSelectForm.ChooseOptimizationCourses(canOptimize, oldSchedule, RefToLoadResultsForm);
             this.Hide();
         }
     }

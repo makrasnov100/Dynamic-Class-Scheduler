@@ -18,7 +18,7 @@ namespace ClassScheduler
         private Rectangle timeSlotRect;
         private Rectangle dayLabelRect;
         private int picBoxExtend = 300;
-        private float verticalScale = 1.0f; //larger = bigger slots
+        private float verticalScale = 0.9f; //larger = bigger slots
         private float rectWidth = 50;
         private int dayXPadding = 150;
         private Font dayLabelFont = new Font("Times New Roman", 12f, FontStyle.Italic);
@@ -30,18 +30,21 @@ namespace ClassScheduler
         private Pen darkGreyPen = Pens.DarkGray;
         private Brush blackBrush = Brushes.Black;
         private Brush greenBrush = Brushes.Green;
-        private Brush yellowBrush = Brushes.Yellow;
+        private Brush darkOrangeBrush = Brushes.DarkOrange;
         private Brush redBrush = Brushes.Red;
         private Brush lightGreyBrush = Brushes.LightGray;
         private StringFormat sCenterFormat = new StringFormat();
 
         private List<SingleCourse> selectedCourses;
         private List<SingleSchedule> resultSchedules;
+        private List<SingleSchedule> resultOptimizedSchedules;
+        private List<SingleSchedule> graphedSchedules;
 
         private CourseSelectionForm RefToCourseSelectForm;
         private OptimizationSettingsForm OptimizeSettingsForm;
 
         private bool firstDraw = true;
+        private bool isOptimized = false;
         private int curScheduleIndex = 0;
         private float lastXPos = 0;
         private float topSeperator = 30;
@@ -62,15 +65,25 @@ namespace ClassScheduler
             InitializeComponent();
         }
 
+        //[FUNCTION - LoadingResultsForm_Load]
+        //Runs on load of wwin form
+        private void LoadingResultsForm_Load(object sender, EventArgs e)
+        {
+            UpdateShownSchedule();
+        }
+
         //[FUNCTION - ShowNewScheduleSet]
         //Resets form after optimization
-        public void ShowNewScheduleSet(List<SingleCourse> selectedCourses, List<SingleSchedule> resultSchedules)
+        public void ShowNewScheduleSet(List<SingleCourse> selectedCourses, List<SingleSchedule> resultSchedules, bool isOptimization)
         {
-            lastYPos = topSeperator + 3; // provides gap for first timeslot
+            lastYPos = topSeperator; // provides gap for first timeslot
             curScheduleIndex = 0;
 
             this.selectedCourses = selectedCourses;
-            this.resultSchedules = resultSchedules;
+            if(isOptimization)
+                resultOptimizedSchedules = resultSchedules;
+            else
+                this.resultSchedules = resultSchedules;
 
             UpdateShownSchedule();
         }
@@ -79,14 +92,20 @@ namespace ClassScheduler
         //Performs redraw of schedules
         private void UpdateShownSchedule()
         {
+            DecideGraphedSchedules();
             UpdateScheduleLabels();
             UpdateButtonAppearence();
             CreateGraph();
         }
 
-        private void LoadingResultsForm_Load(object sender, EventArgs e)
+        //[FUNCTION - DecideGraphedSchedules]
+        //Chooses either the optimized or regular schedules to be displayed
+        private void DecideGraphedSchedules()
         {
-            UpdateShownSchedule();
+            if (isOptimized)
+                graphedSchedules = resultOptimizedSchedules;
+            else
+                graphedSchedules = resultSchedules;
         }
 
         //[FUNCTION - CreateGraphics]
@@ -95,7 +114,7 @@ namespace ClassScheduler
         {
             lastXPos = 0;
             topSeperator = 30;
-            lastYPos = topSeperator + 3;
+            lastYPos = topSeperator;
 
             if (firstDraw)
             {
@@ -107,29 +126,29 @@ namespace ClassScheduler
             }
 
             g.Clear(Color.White);
-            dayXPadding = fullBmp.Width / resultSchedules[0].getAllDays().Count();
-            rectWidth = (float) fullBmp.Width / (float) resultSchedules[0].getAllDays().Count() / 3.0f;
+            dayXPadding = fullBmp.Width / graphedSchedules[0].getAllDays().Count();
+            rectWidth = (float) fullBmp.Width / (float)graphedSchedules[0].getAllDays().Count() / 3.0f;
 
             //Draw overlap region
-            for (int i = 0; i < resultSchedules[0].getAllDays().Count(); i++)
+            for (int i = 0; i < graphedSchedules[0].getAllDays().Count(); i++)
             {
-                Rectangle overlapRegion = new Rectangle((i * dayXPadding) + (dayXPadding * 1/3) + 2, (int)topSeperator + 3,  dayXPadding * 2/3, fullBmp.Height);
+                Rectangle overlapRegion = new Rectangle((i * dayXPadding) + (dayXPadding * 1/3) + 1, (int)topSeperator,  dayXPadding * 2/3, fullBmp.Height);
                 g.FillRectangle(lightGreyBrush, overlapRegion);
             }
 
             //Draw label and hour lines
             g.DrawLine(blackPen, 0, lastYPos, fullBmp.Width, lastYPos);
             for (int i = 1; i <= 16; i++)
-                g.DrawLine(dimGreyPen, 0, topSeperator + (i * (60/verticalScale)), fullBmp.Width, topSeperator + (i * (60 / verticalScale)));
+                g.DrawLine(dimGreyPen, 0, topSeperator + (i * (60.0f*verticalScale)), fullBmp.Width, topSeperator + (i * (60*verticalScale)));
             for (int i = 1; i <= 16*4; i++)
             {
                 if(i % 4 == 0)
                     continue;
-                g.DrawLine(darkGreyPen, 0, topSeperator + (i * (15 / verticalScale)), fullBmp.Width, topSeperator + (i * (15 / verticalScale)));
+                g.DrawLine(darkGreyPen, 0, topSeperator + (i * (15.0f*verticalScale)), fullBmp.Width, topSeperator + (i * (15*verticalScale)));
             }
                 
 
-            foreach (var day in resultSchedules[curScheduleIndex].getAllDays())
+            foreach (var day in graphedSchedules[curScheduleIndex].getAllDays())
                 GraphDay(day);
 
             SectionGraphBox.Image = fullBmp;
@@ -149,9 +168,9 @@ namespace ClassScheduler
         private string GetTimeSlotString(SingleAssignedTimeSlot timeSlot, int displayCount)
         {
             string result = "";
-            result += resultSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getID() + "\n";
-            result += resultSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getStartTimes()[0].Trim() + " -\n";
-            result += resultSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getStopTimes()[0].Trim() + "\n";
+            result += graphedSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getID() + "\n";
+            result += graphedSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getStartTimes()[0].Trim() + " -\n";
+            result += graphedSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getStopTimes()[0].Trim() + "\n";
             //result += timeSlot.getStart() + " -\n";
             //result += timeSlot.getEnd() + "\n";
 
@@ -199,7 +218,7 @@ namespace ClassScheduler
                 //Gap Calculation
                 if (timeSlotCounter == 0)
                 {
-                    lastYPos = lastYPos + ((timeSlot.getStart() - 360) * 1/3);
+                    lastYPos = topSeperator + ((timeSlot.getStart() - 360) * verticalScale);
                 }
                 else
                 {
@@ -214,16 +233,16 @@ namespace ClassScheduler
                     //Optimal section markup
                     Brush curBrush;
                     if (timeSlot.getOptimizedState() == true)
-                        curBrush = yellowBrush;
+                        curBrush = darkOrangeBrush;
                     else
                         curBrush = greenBrush;
-                    g.FillRectangle(greenBrush, lastXPos, lastYPos, rectWidth, timeSlot.getRange() * verticalScale);
+                    g.FillRectangle(curBrush, lastXPos, lastYPos, rectWidth, timeSlot.getRange() * verticalScale);
                     g.DrawRectangle(blackPen, lastXPos, lastYPos, rectWidth, timeSlot.getRange() * verticalScale);
 
                     timeSlotRect = new Rectangle((int)lastXPos, (int)lastYPos, (int)rectWidth, (int)(timeSlot.getRange() * verticalScale));
                     g.DrawString(GetTimeSlotString(timeSlot, timeSlotCounter), timeLabelFont, drawBrushWhite, timeSlotRect, sCenterFormat);
                 }
-                else
+                else //if an overlapping schedule
                 {
                     rankOffset = timeSlot.getOverlapRank() * rectWidth;
 
@@ -236,15 +255,15 @@ namespace ClassScheduler
                 timeSlotCounter++;
             }
             lastXPos += dayXPadding;
-            lastYPos = topSeperator + 3;
+            lastYPos = topSeperator;
         }
 
         private void UpdateScheduleLabels()
         {
-            ScheduleAmountLabel.Text = "Schedule " + (curScheduleIndex + 1) + " of " + resultSchedules.Count();
+            ScheduleAmountLabel.Text = "Schedule " + (curScheduleIndex + 1) + " of " + graphedSchedules.Count();
 
             //Updates Fitness Level Labels (revise to be more accurate)
-            if (resultSchedules[curScheduleIndex].getAcceptableLayoutState() == false)
+            if (graphedSchedules[curScheduleIndex].getAcceptableLayoutState() == false)
             {
                 EffecFitLabel.ForeColor = Color.Red;
                 EffecFitLabel.Text = "[N/A]";
@@ -269,7 +288,7 @@ namespace ClassScheduler
 
         private void UpdateButtonAppearence()
         {
-            if(resultSchedules[curScheduleIndex].getAcceptableLayoutState() == false)
+            if(graphedSchedules[curScheduleIndex].getAcceptableLayoutState() == false)
             {
                 SelectScheduleButton.BackColor = Color.DimGray;
                 PrevScheduleButton.Enabled = false;
@@ -281,7 +300,7 @@ namespace ClassScheduler
             }
 
             //Change appearence based on current schedule index (revise for effeciency)
-            if (resultSchedules.Count() == 1)
+            if (graphedSchedules.Count() == 1)
             {
                 PrevScheduleButton.BackColor = Color.DimGray;
                 PrevScheduleButton.Enabled = false;
@@ -298,7 +317,7 @@ namespace ClassScheduler
                     NextScheduleButton.Enabled = true;
 
                 }
-                else if (curScheduleIndex != resultSchedules.Count() - 1)
+                else if (curScheduleIndex != graphedSchedules.Count() - 1)
                 {
                     PrevScheduleButton.BackColor = Color.Black;
                     PrevScheduleButton.Enabled = true;
@@ -320,8 +339,10 @@ namespace ClassScheduler
         //Closes schedule select form and goes back course select form after buttton "Reselect Courses" click
         private void CourseReselectionButton_Click(object sender, EventArgs e)
         {
+            isOptimized = false;
+            ChangeOptimizationText();
             RefToCourseSelectForm.Show();
-            this.Hide(); //(revise because form cannot be closed - open forms from main program)!!!!!!!!!!!!!!!
+            this.Hide(); //(revise because form cannot be closed - open forms from main program)
         }
 
         //[FUNCTION - LoadingResultsForm_FormClosed]
@@ -357,10 +378,51 @@ namespace ClassScheduler
         //Opens up optimization settings after button "Optimize" is clicked
         private void SuggestedCoursesButton_Click(object sender, EventArgs e)
         {
-            if (OptimizeSettingsForm == null)
-                OptimizeSettingsForm = new OptimizationSettingsForm(resultSchedules[curScheduleIndex], RefToCourseSelectForm);
+            if (!isOptimized)
+            {
+                isOptimized = true;
+                if (OptimizeSettingsForm == null)
+                    OptimizeSettingsForm = new OptimizationSettingsForm(graphedSchedules[curScheduleIndex], RefToCourseSelectForm, this);
+                OptimizeSettingsForm.ShowDialog();
+            }
+            else
+            {
+                curScheduleIndex = 0;
+                isOptimized = false;
+                UpdateShownSchedule();
+            }
+            ChangeOptimizationText();
+        }
 
-            OptimizeSettingsForm.ShowDialog();
+        //[FUNCTION - ChangeOptimizationtext]
+        //Alters Optimization labeles and button words to fit situation optimized/not-optimized
+        public void ChangeOptimizationText()
+        {
+            if (isOptimized)
+            {
+                SuggestedCoursesButton.BackColor = Color.Black;
+                SuggestedCoursesButton.ForeColor = Color.White;
+                SuggestedCoursesButton.Text = "Original Schedule";
+                ScheduleSuggestionLabel.Text = "Go back to original course selection\n if you dont like the new setup.";
+            }
+            else
+            {
+                SuggestedCoursesButton.BackColor = Color.ForestGreen;
+                SuggestedCoursesButton.ForeColor = Color.Black;
+                SuggestedCoursesButton.Text = "Optimize Schedule";
+                ScheduleSuggestionLabel.Text = "Optimize to shorten time at school by \nchoosing from similar courses!";
+            }
+        }
+
+        //Accessor/Mutator Functions
+        public void setIsOptimizedState(bool isOptimized)
+        {
+            this.isOptimized = isOptimized;
+        }
+        //Accessor/Mutator Functions
+        public bool getIsOptimizedState()
+        {
+            return isOptimized;
         }
     }
 }

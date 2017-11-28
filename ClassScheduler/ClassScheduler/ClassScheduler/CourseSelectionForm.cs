@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ClassScheduler
 {
@@ -34,8 +36,10 @@ namespace ClassScheduler
         private int selectedTableRowIndex;
         private DataTable selectedCourseTable;
 
+        private LoadingResultsForm RefToScheduleSelectForm;
         private UserConfig userInfo;
         private bool popUpCreated = false;
+        private bool isOptimization = false;
 
         public CourseSelectionForm(InitialInputForm userDataForm)
         {
@@ -51,7 +55,7 @@ namespace ClassScheduler
             Application.Exit();
         }
 
-        //[FUNCTION - MainToResultButton_Click]
+        //[FUNCTION - AddCourseButton_Click]
         //Shows popup once a "Add Course" button is clicked
         private void AddCourseButton_Click(object sender, EventArgs e)
         {
@@ -310,17 +314,22 @@ namespace ClassScheduler
             Debug.WriteLine("Number of Schedule Possibilities: " + numPossib);
             Debug.WriteLine("*****************************************************************");
 
-            if(sectionCalculation == null)
-                sectionCalculation = new BasicCalculation(givenCourses, numPossib, random, creditAmount, this);
-            else
-                sectionCalculation.RestartCalculation(givenCourses, numPossib);
+            Debug.WriteLine("NEW CALCULATION CLASS CREATED");
+            sectionCalculation = new BasicCalculation(givenCourses, numPossib, random, creditAmount, this, RefToScheduleSelectForm, isOptimization);
+            isOptimization = false;
         }
 
         //[FUNCTION - ChooseOptimizationCourses]
         //Adds sections that can be substituted based on user defined settings (revise so courses fit better)
-        public void ChooseOptimizationCourses(List<bool> canOptimize, SingleSchedule oldSchedule)
+        public void ChooseOptimizationCourses(List<bool> canOptimize, SingleSchedule oldSchedule, LoadingResultsForm ScheduleSelectForm)
         {
-            List<SingleCourse> selectedCoursesMod = new List<SingleCourse>(selectedCourses);
+            //Create references|copies & set bools
+            RefToScheduleSelectForm = ScheduleSelectForm;
+            List<SingleCourse> selectedCoursesMod = new List<SingleCourse>(selectedCourses.Count());
+            foreach (var course in selectedCourses)
+                selectedCoursesMod.Add(DeepCopySingleCourse(course));
+            isOptimization = true;
+
             //Add all similar courses to section list
             int optimizeCounter = 0;
             foreach (var optimizeOption in canOptimize)
@@ -339,7 +348,7 @@ namespace ClassScheduler
                            (course.getAbrvCourseName() != matchCourseID.Substring(0, matchCourseID.IndexOf("-", 4))))
                             foreach(var section in course.getSections())
                             {
-                                Debug.WriteLine("Added a suggested schedule!");
+                                Debug.WriteLine("Added a suggested section: " + section.getID());
                                 selectedCoursesMod[optimizeCounter].getSections().Add(new SingleSection(section, true));
                             }    
                 }
@@ -347,6 +356,20 @@ namespace ClassScheduler
             }
 
             ComputeOptimalTimes(selectedCoursesMod);
+        }
+
+        //USED ONLY IN THIS AND ONE MORE FORM
+        //Function is mainly the answer from the following post on how to copy a complex object
+        //https://stackoverflow.com/questions/16696448/how-to-make-a-copy-of-an-object-in-c-sharp
+        public static SingleCourse DeepCopySingleCourse(SingleCourse other)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(ms, other);
+                ms.Position = 0;
+                return (SingleCourse)formatter.Deserialize(ms);
+            }
         }
     }
 }

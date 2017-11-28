@@ -271,7 +271,7 @@ namespace ClassScheduler
             return filteredCourses;
         }
 
-        //USED ONLY IN THIS FORM
+        //USED ONLY IN THIS AND ONE MORE FORM
         //Function is mainly the answwer from the following post on how to copy a complex object
         //https://stackoverflow.com/questions/16696448/how-to-make-a-copy-of-an-object-in-c-sharp
         public static SingleCourse DeepCopySingleCourse(SingleCourse other)

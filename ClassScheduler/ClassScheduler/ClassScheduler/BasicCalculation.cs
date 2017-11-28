@@ -9,10 +9,10 @@ namespace ClassScheduler
 {
     class BasicCalculation
     {
-        private CourseSelectionForm RefToCourseSelectForm;
         private List<SingleCourse> selectedCourses;
         private int courseAmount;
         private int creditAmount;
+        private bool isOptimization;
         private List<int> sectionAmountAll; // parallel list that allows for creation of all unique schedules
 
         private List<SingleSchedule> schedulePopulation;
@@ -20,20 +20,24 @@ namespace ClassScheduler
         private List<SingleSchedule> overlapSchedules = new List<SingleSchedule>();
         private List<SingleSchedule> resultSchedules = new List<SingleSchedule>();
 
-        LoadingResultsForm ResultLoadForm;
+        private CourseSelectionForm RefToCourseSelectForm;
+        LoadingResultsForm RefTOResultLoadForm;
         private Random random;
         private List<string> templateWeek = new List<string> { "M", "T", "W", "TH", "F" };
 
-        public BasicCalculation(List<SingleCourse> selectedCourses, int numPossib, Random random, int creditAmount, CourseSelectionForm courseForm)
+        public BasicCalculation(List<SingleCourse> selectedCourses, int numPossib, Random random, int creditAmount, 
+                                CourseSelectionForm courseForm, LoadingResultsForm ScheduleSelectForm, bool isOptimization)
         {
             //References to previous form
             RefToCourseSelectForm = courseForm;
+            RefTOResultLoadForm = ScheduleSelectForm;
 
-            //calculation variables
+            //Calculation variables
             this.random = random;
             this.creditAmount = creditAmount;
             this.selectedCourses = selectedCourses;
             this.courseAmount = selectedCourses.Count();
+            this.isOptimization = isOptimization;
 
             schedulePopulation = new List<SingleSchedule>(numPossib);
             this.sectionAmountAll = new List<int>(selectedCourses.Count());
@@ -43,21 +47,39 @@ namespace ClassScheduler
             BeginCalculation();
         }
 
-        //[FUNCTION - RestartCalculation]
-        //Begins calculation again with new sections
-        public void RestartCalculation(List<SingleCourse> selectedCourses, int numPossib)
-        {
-            acceptableSchedules = new List<SingleSchedule>();
-            overlapSchedules = new List<SingleSchedule>();
-            resultSchedules = new List<SingleSchedule>();
+        ////[FUNCTION - RestartCalculation]
+        ////Begins calculation again with new courses (full restart)
+        //public void StartNewCalculation(List<SingleCourse> selectedCourses, int numPossib, int creditAmount)
+        //{
+        //    this.creditAmount = creditAmount;
+        //    this.selectedCourses = selectedCourses;
+        //    this.courseAmount = selectedCourses.Count();
 
-            schedulePopulation = new List<SingleSchedule>(numPossib);
-            this.sectionAmountAll = new List<int>(selectedCourses.Count());
-            foreach (var course in selectedCourses)
-                sectionAmountAll.Add(course.sections.Count());
+        //    schedulePopulation = new List<SingleSchedule>(numPossib);
+        //    this.sectionAmountAll = new List<int>(selectedCourses.Count());
+        //    foreach (var course in selectedCourses)
+        //        sectionAmountAll.Add(course.sections.Count());
 
-            BeginCalculation();
-        }
+        //    BeginCalculation();
+        //}
+
+        ////[FUNCTION - RestartCalculation]
+        ////Begins calculation again with new sections (optimization)
+        //public void RestartCalculation(List<SingleCourse> selectedCourses, int numPossib)
+        //{
+        //    Debug.WriteLine("CALCULATION RESTARTED");
+        //    acceptableSchedules = new List<SingleSchedule>();
+        //    overlapSchedules = new List<SingleSchedule>();
+        //    resultSchedules = new List<SingleSchedule>();
+
+        //    schedulePopulation = new List<SingleSchedule>(numPossib);
+        //    this.selectedCourses = selectedCourses;
+        //    this.sectionAmountAll = new List<int>(selectedCourses.Count());
+        //    foreach (var course in selectedCourses)
+        //        sectionAmountAll.Add(course.sections.Count());
+
+        //    BeginCalculation();
+        //}
 
         //[FUNCTION - BeginCalculation]
         //Handles the result schedule population creation proccess
@@ -128,16 +150,16 @@ namespace ClassScheduler
             }
 
             //Sort both lists
-            if (resultSchedules.Count() != 0)
-                resultSchedules = resultSchedules.OrderByDescending(s => s.getFitness()).ToList();
+            if (acceptableSchedules.Count() != 0)
+                acceptableSchedules = acceptableSchedules.OrderByDescending(s => s.getFitness()).ToList();
             if (overlapSchedules.Count() != 0)
                 overlapSchedules = overlapSchedules.OrderBy(s => s.getOverlapCount()).ToList();
 
             //Add all schedules to resulting schedules list
             resultSchedules = new List<SingleSchedule>(acceptableSchedules);
             Debug.WriteLine("Overlap Schedules: " + overlapSchedules.Count() + " Acceptable Schedules: " + acceptableSchedules.Count());
-            int additionsNeeded = overlapSchedules.Count() <= 100 - acceptableSchedules.Count() ?
-                                  overlapSchedules.Count() : 100 - acceptableSchedules.Count();
+            int additionsNeeded = overlapSchedules.Count() <= 1000 - acceptableSchedules.Count() ?
+                                  overlapSchedules.Count() : 1000 - acceptableSchedules.Count();
             for (int i = 0; i < additionsNeeded; i++)
                 resultSchedules.Add(overlapSchedules[i]);
         }
@@ -154,16 +176,16 @@ namespace ClassScheduler
             }
 
             Debug.WriteLine("*****************************************************************");
-            Debug.WriteLine("Amount of Acceptable Schedule Combinations: " + resultSchedules.Count());
+            Debug.WriteLine("Amount of Viewable Schedule Combinations: " + resultSchedules.Count());
 
             Debug.WriteLine("*****************************************************************");
-            Debug.WriteLine("Best Schedule Fitness: " + resultSchedules[0].getFitness());
-            foreach(var section in resultSchedules[0].getAllSections())
+            Debug.WriteLine("Best Schedule Fitness: " + resultSchedules[0].getFitness() + " | Overlaps: " + resultSchedules[0].getOverlapCount());
+            foreach (var section in resultSchedules[0].getAllSections())
                 Debug.WriteLine(section.getID() + ":" + section.getStartTimes()[0] + " -" + section.getStopTimes()[0] + " on " + SecMeetDays(section));
 
             Debug.WriteLine("*****************************************************************");
             int lastIndex = resultSchedules.Count() - 1;
-            Debug.WriteLine("Worst Schedule Fitness: " + resultSchedules[lastIndex].getFitness());
+            Debug.WriteLine("Worst Schedule Fitness: " + resultSchedules[lastIndex].getFitness() + " | Overlaps: " + resultSchedules[lastIndex].getOverlapCount());
             foreach (var section in resultSchedules[lastIndex].getAllSections())
                 Debug.WriteLine(section.getID() + ":" + section.getStartTimes()[0] + " -" + section.getStopTimes()[0] + " on " + SecMeetDays(section));
         }
@@ -184,15 +206,14 @@ namespace ClassScheduler
         {
             if(resultSchedules.Count() != 0)
             {
-                if (ResultLoadForm == null)
-                {
-                    ResultLoadForm = new LoadingResultsForm(selectedCourses, resultSchedules, RefToCourseSelectForm);
-                    ResultLoadForm.ShowDialog();
-                }
+                if (RefTOResultLoadForm == null)
+                    RefTOResultLoadForm = new LoadingResultsForm(selectedCourses, resultSchedules, RefToCourseSelectForm);
                 else
-                {
-                    ResultLoadForm.ShowNewScheduleSet(selectedCourses, resultSchedules);
-                }
+                    RefTOResultLoadForm.ShowNewScheduleSet(selectedCourses, resultSchedules, isOptimization);
+
+
+                if(!RefTOResultLoadForm.Visible)
+                    RefTOResultLoadForm.ShowDialog();
             }
         }
     }
