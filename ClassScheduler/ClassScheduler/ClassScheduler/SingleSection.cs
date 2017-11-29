@@ -15,9 +15,14 @@ namespace ClassScheduler
     /// of a single class section including its start/end time, meet days and instructor name
     /// </summary>
     /// Author: Kostiantyn Makrasnov (variables)
+<<<<<<< HEAD
     /// Author: Yuri Fedas (accessor/mutator functions & constructors)
     /// 
     [Serializable]
+=======
+    /// Author: Yuriy Fedas (accessor/mutator functions & constructors)
+
+>>>>>>> master
     public class SingleSection
     {
         private string term = "";
@@ -162,6 +167,7 @@ namespace ClassScheduler
             formattedTimes.Add(new SingleTimeSlot(day, start, end));
         }
 
+<<<<<<< HEAD
         public List<SingleTimeSlot> getFormatedTime()
         {
             return formattedTimes;
@@ -218,9 +224,88 @@ namespace ClassScheduler
                 //[Grab first meet time start/stop of day]
                 if (b == 0)
                     unformTime = startTimes[0];
+=======
+            //Functions extracting hours, minutes, and AM/PM
+            int numHour = getTimeHour(stringArr);
+            int numMin = getTimeMinute(startTime);
+            string amPm = getAmPm(stringArr);
+
+            //Test whether the time is morning or afternoon
+            if (amPm == "AM")
+            {
+                return (numHour * 60) + numMin;
+            }
+            else if (amPm == "PM")
+            {
+                if (numHour == 12)
+                {
+                    return (12 * 60) + numMin;
+                }
+                else
+                {
+                    return ((numHour + 12) * 60) + numMin;
+                }
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
+        public int getTimeHour(char[] stringArr)
+        {
+            int hours = -1;
+            string stringHour = "";
+            //Extract the hour from the startTimes[0] string
+            for (int i = 0; i < stringArr.Count(); i++)
+            {
+                if (stringArr[i] != ':')
+                {
+                    stringHour += stringArr[i];
+                }
+                else
+                {
+                    break; //Exit the loop once it tests the colon
+                }
+            }
+            //Parse the string into an integer
+            Int32.TryParse(stringHour, out hours);
+
+            return hours;
+        }
+
+        public int getTimeMinute(string startTime)
+        {
+            int minutes = -1;
+            string timeString = startTime.Trim();
+
+            char delimiter = ' ';
+            string[] substrings = timeString.Split(delimiter);
+
+            delimiter = ':';
+            string[] hourMin = substrings[0].Split(delimiter);
+
+            Int32.TryParse(hourMin[1], out minutes);
+
+            return minutes; 
+        }
+
+        public string getAmPm(char[] stringArr)
+        {
+            //Extract whether the time is AM or PM 
+            string stringAmPm = "NA";
+            for (int i = 0; i < stringArr.Count(); i++)
+            {
+                if (stringArr[i] == 'P' || stringArr[i] == 'p')
+                {
+                    stringAmPm = "PM";
+                    break;
+                }
+>>>>>>> master
                 else
                     unformTime = stopTimes[0];
 
+<<<<<<< HEAD
                 //[Remove leading and trailing whitespace]
                 unformTime.Trim();
 
@@ -254,6 +339,39 @@ namespace ClassScheduler
                     start = (hours * 60) + minutes + pmOffset;
                 else
                     stop = (hours * 60) + minutes + pmOffset;
+=======
+            return stringAmPm;
+        }
+
+        public int getStopTimeMinutes()
+        {
+            string stopTime = stopTimes[0]; //Most sections only have one start time
+            stopTime.Trim(); //Removes leading and trailing whitespace 
+
+            //Convert start time string to char array for easier manipulation
+            char[] stringArr = stopTime.ToCharArray();
+
+            //Functions extracting hours, minutes, and AM/PM
+            int numHour = getTimeHour(stringArr);
+            int numMin = getTimeMinute(stopTime);
+            string amPm = getAmPm(stringArr);
+
+            //Test whether the time is morning or afternoon
+            if (amPm == "AM")
+            {
+                return (numHour * 60) + numMin;
+            }
+            else if (amPm == "PM")
+            {
+                if (numHour == 12)
+                {
+                    return (12 * 60) + numMin;
+                }
+                else
+                {
+                    return ((numHour + 12) * 60) + numMin;
+                }
+>>>>>>> master
             }
 
             //[Add a TimeInfo Class for each unique day]

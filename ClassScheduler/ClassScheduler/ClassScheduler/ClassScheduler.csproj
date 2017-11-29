@@ -58,6 +58,7 @@
     <Compile Include="AddCoursePopup.Designer.cs">
       <DependentUpon>AddCoursePopup.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="BasicCalculation.cs" />
     <Compile Include="OptimizationSettingsForm.cs">
       <SubType>Form</SubType>
@@ -72,6 +73,14 @@
     </Compile>
     <Compile Include="LoadingResultsForm.Designer.cs">
       <DependentUpon>LoadingResultsForm.cs</DependentUpon>
+=======
+    <Compile Include="Calculation.cs" />
+    <Compile Include="PreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreviewForm.Designer.cs">
+      <DependentUpon>PreviewForm.cs</DependentUpon>
+>>>>>>> master
     </Compile>
     <Compile Include="ScheduleDay.cs" />
     <Compile Include="SingleTimeSlot.cs" />
@@ -105,11 +114,16 @@
     <EmbeddedResource Include="CourseSelectionForm.resx">
       <DependentUpon>CourseSelectionForm.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="OptimizationSettingsForm.resx">
       <DependentUpon>OptimizationSettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoadingResultsForm.resx">
       <DependentUpon>LoadingResultsForm.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="PreviewForm.resx">
+      <DependentUpon>PreviewForm.cs</DependentUpon>
+>>>>>>> master
     </EmbeddedResource>
     <EmbeddedResource Include="ResultForm.resx">
       <DependentUpon>ResultForm.cs</DependentUpon>
@@ -142,7 +156,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\loadingLogo.jpg" />
+=======
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+>>>>>>> master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
