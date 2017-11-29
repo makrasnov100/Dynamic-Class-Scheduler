@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.previewDataGridView = new System.Windows.Forms.DataGridView();
             this.closeButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.previewDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // previewDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(660, 368);
-            this.dataGridView1.TabIndex = 0;
+            this.previewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.previewDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.previewDataGridView.Name = "previewDataGridView";
+            this.previewDataGridView.RowTemplate.Height = 24;
+            this.previewDataGridView.Size = new System.Drawing.Size(858, 410);
+            this.previewDataGridView.TabIndex = 0;
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(565, 399);
+            this.closeButton.Location = new System.Drawing.Point(779, 446);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(107, 30);
+            this.closeButton.Size = new System.Drawing.Size(91, 35);
             this.closeButton.TabIndex = 1;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
@@ -53,25 +54,28 @@
             // 
             // PreviewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 441);
+            this.ClientSize = new System.Drawing.Size(882, 493);
             this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.previewDataGridView);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 480);
-            this.MinimumSize = new System.Drawing.Size(700, 480);
+            this.MaximumSize = new System.Drawing.Size(900, 540);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(900, 540);
             this.Name = "PreviewForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PreviewForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Preview Form";
+            this.Load += new System.EventHandler(this.PreviewForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.previewDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView previewDataGridView;
         private System.Windows.Forms.Button closeButton;
     }
 }

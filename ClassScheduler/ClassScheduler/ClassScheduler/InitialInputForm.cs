@@ -20,16 +20,19 @@ namespace ClassScheduler
     /// </summary>
     /// Author: Kostiantyn Makrasnov (Excel Reader Part & Form's Layout/User Input Validation)
     /// Author: Yuriy Fedas (Preview of Selected Excel Data File & Proper control through access/mutator functions)
+    /// 
+    /// Sources for ExcelDataReader: Source code from https://github.com/ExcelDataReader/ExcelDataReader, used methods
+    /// from ExcelDataReader and ExcelDataReader.DataSet Nuget packages.
 
     public partial class InitialInputForm : Form
     {
-
         private UserConfig userData = new UserConfig(){ };
         public List<SingleCourse> courses = new List<SingleCourse>();
         public List<SingleCourse> unneededCourses = new List<SingleCourse>();
         List<string> sectionIDs = new List<string>();
         List<string> courseIDs = new List<string>();
         IExcelDataReader excelReader;
+        private PreviewForm previewForm = new PreviewForm();
 
         public InitialInputForm()
         {
@@ -53,6 +56,7 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - btnFind_Click]
+        //Source: https://github.com/executeautomation/DataReader and ExcelDataReader documentation (README)
         //Performs actions designated for "Find" button click
         private void btnFind_Click(object sender, EventArgs e)
         {
@@ -60,6 +64,11 @@ namespace ClassScheduler
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
+                    SelectedFileName = ofd.FileName;
+                    DataTable final = ExcelToDataTable(SelectedFileName);
+
+                    previewForm.getPreviewDGV().DataSource = final;
+
                     FileStream stream = File.Open(ofd.FileName, FileMode.Open, FileAccess.Read);
                     excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
                 }
@@ -73,13 +82,36 @@ namespace ClassScheduler
             }
         }
 
+        //[METHOD - ExcelToDataTable]
+        //Return a DataTable with excel file contents
+        public static DataTable ExcelToDataTable(string fileName)
+        {
+            using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read))
+            {
+                using (var reader = ExcelReaderFactory.CreateReader(stream))
+                {
+                    var result = reader.AsDataSet(new ExcelDataSetConfiguration()
+                    {
+                        ConfigureDataTable = (data) => new ExcelDataTableConfiguration()
+                        {
+                            UseHeaderRow = true
+                        }
+                    });
+
+                    DataTableCollection table = result.Tables;
+                    DataTable resultTable = table["Sheet1"];
+                    return resultTable;
+                }
+            }
+        }
+
         //[FUNCTION - InputToMainButton_Click]
         //Performs actions designated for "InputToMainButton" button click
         private void InputToMainButton_Click(object sender, EventArgs e)
         {
             if (checkInputCompletion())
             {
-                //Removes all imput error labels
+                //Removes all input error labels
                 FirstNameNeedLabel.Visible = false;
                 LastNameNeedLabel.Visible = false;
                 TermNeedLabel.Visible = false;
@@ -456,9 +488,9 @@ namespace ClassScheduler
 
         private void PreviewExcelSheetButton_Click(object sender, EventArgs e)
         {
-            PreviewForm p = new PreviewForm();
-            p.Size = new Size(700, 480);
-            p.ShowDialog();
+            previewForm.ShowDialog();
         }
+
+        public string SelectedFileName { get; set; }
     }
 }
