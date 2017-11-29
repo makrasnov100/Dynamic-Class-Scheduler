@@ -315,7 +315,6 @@ namespace ClassScheduler
             Debug.WriteLine("*****************************************************************");
 
             Debug.WriteLine("NEW CALCULATION CLASS CREATED");
-
             sectionCalculation = new BasicCalculation(givenCourses, numPossib, random, creditAmount, this, RefToScheduleSelectForm, isOptimization);
             isOptimization = false;
         }

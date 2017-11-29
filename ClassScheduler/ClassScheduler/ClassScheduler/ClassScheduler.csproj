@@ -32,11 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExcelDataReader, Version=3.3.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
-      <HintPath>..\packages\ExcelDataReader.3.3.0\lib\net45\ExcelDataReader.dll</HintPath>
-    </Reference>
-    <Reference Include="ExcelDataReader.DataSet, Version=3.3.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
-      <HintPath>..\packages\ExcelDataReader.DataSet.3.3.0\lib\net45\ExcelDataReader.DataSet.dll</HintPath>
+    <Reference Include="ExcelDataReader, Version=3.2.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.2.0\lib\net45\ExcelDataReader.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -139,7 +136,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -155,6 +151,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
 <<<<<<< HEAD
     <None Include="Resources\loadingLogo.jpg" />
@@ -188,5 +185,7 @@
     </COMReference>
 >>>>>>> master
   </ItemGroup>
+=======
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

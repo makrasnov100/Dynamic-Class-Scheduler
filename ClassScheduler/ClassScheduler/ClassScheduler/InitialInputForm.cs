@@ -27,23 +27,21 @@ namespace ClassScheduler
     public partial class InitialInputForm : Form
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         //ExcelReader Varaibles
+=======
+
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
         private UserConfig userData = new UserConfig() { };
 =======
         private UserConfig userData = new UserConfig(){ };
 >>>>>>> master
         public List<SingleCourse> courses = new List<SingleCourse>();
         public List<SingleCourse> unneededCourses = new List<SingleCourse>();
-        private List<string> sectionIDs = new List<string>();
+        List<string> sectionIDs = new List<string>();
         private List<string> courseIDs = new List<string>();
         IExcelDataReader excelReader;
         private PreviewForm previewForm = new PreviewForm();
-
-        //Progress Bar Variables
-        private float totalCalcNum;
-        private float curCalcNum;
-        private float precentComplete;
-        private DataTable dt;
 
         public InitialInputForm()
         {
@@ -64,7 +62,6 @@ namespace ClassScheduler
             LastNameNeedLabel.Visible = false;
             TermNeedLabel.Visible = false;
             PreviewStatusLabel.Visible = false;
-            LoadingCoursesPanel.Visible = false;
         }
 
         //[FUNCTION - btnFind_Click]
@@ -83,9 +80,6 @@ namespace ClassScheduler
 
                     FileStream stream = File.Open(ofd.FileName, FileMode.Open, FileAccess.Read);
                     excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-                    //suggested at http://www.c-sharpcorner.com/forums/datareaders-row-count to get row count
-                    DataSet result = excelReader.AsDataSet();
-                    dt = result.Tables[0];
                 }
 
                 if (excelReader != null)
@@ -124,13 +118,12 @@ namespace ClassScheduler
         //Performs actions designated for "InputToMainButton" button click
         private void InputToMainButton_Click(object sender, EventArgs e)
         {
-            if (checkInputCompletion() && !BackgroundWorkerCourses.IsBusy)
+            if (checkInputCompletion())
             {
-                //Removes all input error labels
+                //Removes all imput error labels
                 FirstNameNeedLabel.Visible = false;
                 LastNameNeedLabel.Visible = false;
                 TermNeedLabel.Visible = false;
-                LoadingCoursesPanel.Visible = true;
 
                 //Gathers all input into userData object
                 userData.setFirstName(FirstNameTextBox.Text);
@@ -142,12 +135,12 @@ namespace ClassScheduler
                 else
                     userData.setTermInterest("JA");
 
-                StartCalcPB();
+                ReadExcelData();
 
-                //PARTIAL INSTRUCTION FROM LINK (background worker)
-                //https://www.youtube.com/watch?v=G3zRhhGCJJA
-                BackgroundWorkerCourses.RunWorkerAsync();
-
+                //Shows course selection form
+                CourseSelectionForm CourseSelection = new CourseSelectionForm(this);
+                this.Hide();
+                CourseSelection.ShowDialog();
             }
             else
             {
@@ -207,14 +200,10 @@ namespace ClassScheduler
         //Goes through each row in selected excel spreadsheet dynamically populating the course list
         void ProcessCourseData()
         {
-            curCalcNum = 0;
             while (excelReader.Read())
             {
                 if (Convert.ToInt32(excelReader.GetDouble(12)) == 0)
                     continue;
-
-                precentComplete = (curCalcNum / totalCalcNum) * 100f;
-                BackgroundWorkerCourses.ReportProgress((int)precentComplete);
 
                 if (!courses.Exists(s => s.getCourseName() == excelReader.GetString(6) && s.getAbrvCourseName() == TruncatedCourseID()))
                 {
@@ -300,7 +289,6 @@ namespace ClassScheduler
 
                     sectionIDs.Add(excelReader.GetString(5));
                 }
-                curCalcNum++;
             }
         }
 
@@ -366,7 +354,6 @@ namespace ClassScheduler
 
             //DETEMNINE section need
             foreach (var course in courses)
-            {
                 foreach (var section in course.sections)
                     if (section.getMeetDays().Exists(s => s.Contains("NA")) || section.getStartTimes().Exists(s => s.Contains("NA"))
                         || !section.getTerm().Contains(userData.getTermInterest()))
@@ -374,8 +361,6 @@ namespace ClassScheduler
                         removeCourseIndexes.Add(courses.IndexOf(course));
                         removeSectionIndexes.Add(course.sections.IndexOf(section));
                     }
-            }
-
 
             //ADD unneeded courses to secondary list (some may have partial valid data)
             foreach (var index in removeCourseIndexes)
@@ -434,8 +419,7 @@ namespace ClassScheduler
             FileStream fs = new FileStream(@"AllSectionTimes.txt", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite); //last parameter needed to open file at end
             StreamWriter file = new StreamWriter(fs);
 
-            string term = "Fall"; //(revise always will be fall cant assess control that was created on different thread)
-            WriteTermSections(userData.getTermInterest(), term, file);
+            WriteTermSections(userData.getTermInterest(), TermComboBox.Text, file);
             file.Flush();
 
             Process.Start(@"AllSectionTimes.txt");
@@ -535,6 +519,7 @@ namespace ClassScheduler
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         //PROGRESS BAR CODE
         //[FUNCTION - StartCalc]
         //Resets all needed variables
@@ -545,11 +530,14 @@ namespace ClassScheduler
             totalCalcNum = dt.Rows.Count;
         }
 
+=======
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
         //Accessor/mutator functions (revise by adding more)
         public List<string> getCourseIDs()
         {
             return courseIDs;
         }
+<<<<<<< HEAD
 
         //BACKGROUND WORKER FUNCTIONS (same citation as above)
         private void BackgroundWorkerCourses_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -581,5 +569,7 @@ namespace ClassScheduler
 
         public string SelectedFileName { get; set; }
 >>>>>>> master
+=======
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
     }
 }

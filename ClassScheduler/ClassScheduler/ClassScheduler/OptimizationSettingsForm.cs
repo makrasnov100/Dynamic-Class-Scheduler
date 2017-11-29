@@ -36,29 +36,13 @@ namespace ClassScheduler
                 this.Controls.Remove(cb);
             allCB.Clear();
 
-            //Find checkbox apperence info
-            // - color
-            // - overlap amount
-            int courseAmount = oldSchedule.getAllSections().Count();
-            List<int> amountOverlap = new List<int>(courseAmount);
-            for (int i = 0; i < courseAmount; i++)
-                amountOverlap.Add(0);
-            foreach (var day in oldSchedule.getAllDays())
-                foreach(var timeSlot in day.getDayTimes())
-                    if(timeSlot.getOverlapState() == true)
-                        amountOverlap[timeSlot.getSectionID()]++;
-
             //Create new checkboxes 
             int locationCounter = 0;
             foreach(var section in oldSchedule.getAllSections())
             {
                 allCB.Add(new CheckBox());
                 allCB[allCB.Count()-1].Location = new Point(70, 120 + (locationCounter * 25));
-                allCB[allCB.Count()-1].Text = section.getID().Substring(0, section.getID().IndexOf("-", 4)) + " | " + section.getCourseName() + " | Overlaps: " + amountOverlap[locationCounter];
-                if (amountOverlap[locationCounter] > 0)
-                    allCB[allCB.Count() - 1].ForeColor = Color.Red;
-                else
-                    allCB[allCB.Count() - 1].ForeColor = Color.Green;
+                allCB[allCB.Count()-1].Text = section.getID().Substring(0, section.getID().IndexOf("-", 4)) + " | " + section.getCourseName();
                 allCB[allCB.Count()-1].Size = new Size(500,20);
                 this.Controls.Add(allCB[allCB.Count() - 1]);
                 locationCounter++;

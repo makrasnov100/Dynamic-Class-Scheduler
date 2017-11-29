@@ -1246,13 +1246,6 @@
             <param name="message">The error message</param>
             <param name="inner">The inner exception</param>
         </member>
-        <member name="M:ExcelDataReader.Exceptions.ExcelReaderException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Initializes a new instance of the <see cref="T:ExcelDataReader.Exceptions.ExcelReaderException"/> class.
-            </summary>
-            <param name="info">The serialization info</param>
-            <param name="context">The streaming context</param>
-        </member>
         <member name="T:ExcelDataReader.Exceptions.HeaderException">
             <summary>
             Thrown when ExcelDataReader cannot parse the header
@@ -1275,13 +1268,6 @@
             </summary>
             <param name="message">The error message</param>
             <param name="inner">The inner exception</param>
-        </member>
-        <member name="M:ExcelDataReader.Exceptions.HeaderException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Initializes a new instance of the <see cref="T:ExcelDataReader.Exceptions.HeaderException"/> class.
-            </summary>
-            <param name="info">The serialization info</param>
-            <param name="context">The streaming context</param>
         </member>
         <member name="T:ExcelDataReader.Exceptions.InvalidPasswordException">
             <summary>
