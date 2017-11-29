@@ -21,7 +21,7 @@ namespace ClassScheduler
         private List<SingleSchedule> resultSchedules = new List<SingleSchedule>();
 
         private CourseSelectionForm RefToCourseSelectForm;
-        LoadingResultsForm RefTOResultLoadForm;
+        private LoadingResultsForm RefTOResultLoadForm;
         private Random random;
         private List<string> templateWeek = new List<string> { "M", "T", "W", "TH", "F" };
 
@@ -46,40 +46,6 @@ namespace ClassScheduler
 
             BeginCalculation();
         }
-
-        ////[FUNCTION - RestartCalculation]
-        ////Begins calculation again with new courses (full restart)
-        //public void StartNewCalculation(List<SingleCourse> selectedCourses, int numPossib, int creditAmount)
-        //{
-        //    this.creditAmount = creditAmount;
-        //    this.selectedCourses = selectedCourses;
-        //    this.courseAmount = selectedCourses.Count();
-
-        //    schedulePopulation = new List<SingleSchedule>(numPossib);
-        //    this.sectionAmountAll = new List<int>(selectedCourses.Count());
-        //    foreach (var course in selectedCourses)
-        //        sectionAmountAll.Add(course.sections.Count());
-
-        //    BeginCalculation();
-        //}
-
-        ////[FUNCTION - RestartCalculation]
-        ////Begins calculation again with new sections (optimization)
-        //public void RestartCalculation(List<SingleCourse> selectedCourses, int numPossib)
-        //{
-        //    Debug.WriteLine("CALCULATION RESTARTED");
-        //    acceptableSchedules = new List<SingleSchedule>();
-        //    overlapSchedules = new List<SingleSchedule>();
-        //    resultSchedules = new List<SingleSchedule>();
-
-        //    schedulePopulation = new List<SingleSchedule>(numPossib);
-        //    this.selectedCourses = selectedCourses;
-        //    this.sectionAmountAll = new List<int>(selectedCourses.Count());
-        //    foreach (var course in selectedCourses)
-        //        sectionAmountAll.Add(course.sections.Count());
-
-        //    BeginCalculation();
-        //}
 
         //[FUNCTION - BeginCalculation]
         //Handles the result schedule population creation proccess

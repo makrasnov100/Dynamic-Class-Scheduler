@@ -23,13 +23,19 @@ namespace ClassScheduler
 
     public partial class InitialInputForm : Form
     {
-
+        //ExcelReader Varaibles
         private UserConfig userData = new UserConfig() { };
         public List<SingleCourse> courses = new List<SingleCourse>();
         public List<SingleCourse> unneededCourses = new List<SingleCourse>();
-        List<string> sectionIDs = new List<string>();
+        private List<string> sectionIDs = new List<string>();
         private List<string> courseIDs = new List<string>();
         IExcelDataReader excelReader;
+
+        //Progress Bar Variables
+        private float totalCalcNum;
+        private float curCalcNum;
+        private float precentComplete;
+        private DataTable dt;
 
         public InitialInputForm()
         {
@@ -50,6 +56,7 @@ namespace ClassScheduler
             LastNameNeedLabel.Visible = false;
             TermNeedLabel.Visible = false;
             PreviewStatusLabel.Visible = false;
+            LoadingCoursesPanel.Visible = false;
         }
 
         //[FUNCTION - btnFind_Click]
@@ -62,6 +69,9 @@ namespace ClassScheduler
                 {
                     FileStream stream = File.Open(ofd.FileName, FileMode.Open, FileAccess.Read);
                     excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
+                    //suggested at http://www.c-sharpcorner.com/forums/datareaders-row-count to get row count
+                    DataSet result = excelReader.AsDataSet();
+                    dt = result.Tables[0];
                 }
 
                 if (excelReader != null)
@@ -77,12 +87,13 @@ namespace ClassScheduler
         //Performs actions designated for "InputToMainButton" button click
         private void InputToMainButton_Click(object sender, EventArgs e)
         {
-            if (checkInputCompletion())
+            if (checkInputCompletion() && !BackgroundWorkerCourses.IsBusy)
             {
-                //Removes all imput error labels
+                //Removes all input error labels
                 FirstNameNeedLabel.Visible = false;
                 LastNameNeedLabel.Visible = false;
                 TermNeedLabel.Visible = false;
+                LoadingCoursesPanel.Visible = true;
 
                 //Gathers all input into userData object
                 userData.setFirstName(FirstNameTextBox.Text);
@@ -94,12 +105,12 @@ namespace ClassScheduler
                 else
                     userData.setTermInterest("JA");
 
-                ReadExcelData();
+                StartCalcPB();
 
-                //Shows course selection form
-                CourseSelectionForm CourseSelection = new CourseSelectionForm(this);
-                this.Hide();
-                CourseSelection.ShowDialog();
+                //PARTIAL INSTRUCTION FROM LINK (background worker)
+                //https://www.youtube.com/watch?v=G3zRhhGCJJA
+                BackgroundWorkerCourses.RunWorkerAsync();
+
             }
             else
             {
@@ -159,10 +170,14 @@ namespace ClassScheduler
         //Goes through each row in selected excel spreadsheet dynamically populating the course list
         void ProcessCourseData()
         {
+            curCalcNum = 0;
             while (excelReader.Read())
             {
                 if (Convert.ToInt32(excelReader.GetDouble(12)) == 0)
                     continue;
+
+                precentComplete = (curCalcNum / totalCalcNum) * 100f;
+                BackgroundWorkerCourses.ReportProgress((int)precentComplete);
 
                 if (!courses.Exists(s => s.getCourseName() == excelReader.GetString(6) && s.getAbrvCourseName() == TruncatedCourseID()))
                 {
@@ -248,6 +263,7 @@ namespace ClassScheduler
 
                     sectionIDs.Add(excelReader.GetString(5));
                 }
+                curCalcNum++;
             }
         }
 
@@ -313,6 +329,7 @@ namespace ClassScheduler
 
             //DETEMNINE section need
             foreach (var course in courses)
+            {
                 foreach (var section in course.sections)
                     if (section.getMeetDays().Exists(s => s.Contains("NA")) || section.getStartTimes().Exists(s => s.Contains("NA"))
                         || !section.getTerm().Contains(userData.getTermInterest()))
@@ -320,6 +337,8 @@ namespace ClassScheduler
                         removeCourseIndexes.Add(courses.IndexOf(course));
                         removeSectionIndexes.Add(course.sections.IndexOf(section));
                     }
+            }
+
 
             //ADD unneeded courses to secondary list (some may have partial valid data)
             foreach (var index in removeCourseIndexes)
@@ -378,7 +397,8 @@ namespace ClassScheduler
             FileStream fs = new FileStream(@"AllSectionTimes.txt", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite); //last parameter needed to open file at end
             StreamWriter file = new StreamWriter(fs);
 
-            WriteTermSections(userData.getTermInterest(), TermComboBox.Text, file);
+            string term = "Fall"; //(revise always will be fall cant assess control that was created on different thread)
+            WriteTermSections(userData.getTermInterest(), term, file);
             file.Flush();
 
             Process.Start(@"AllSectionTimes.txt");
@@ -477,10 +497,43 @@ namespace ClassScheduler
             return resultNames;
         }
 
+        //PROGRESS BAR CODE
+        //[FUNCTION - StartCalc]
+        //Resets all needed variables
+        public void StartCalcPB()
+        {
+            LoadingTypeLabel.Text = "Course Calculation";
+            curCalcNum = 0;
+            totalCalcNum = dt.Rows.Count;
+        }
+
         //Accessor/mutator functions (revise by adding more)
         public List<string> getCourseIDs()
         {
             return courseIDs;
+        }
+
+        //BACKGROUND WORKER FUNCTIONS (same citation as above)
+        private void BackgroundWorkerCourses_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            ProgressBar.Value = e.ProgressPercentage;
+            PercentCompleteLabel.Text = string.Format("Progress: {0}%", e.ProgressPercentage);
+            int iCurAmount = (int)(totalCalcNum * (e.ProgressPercentage / 100f));
+            CurrentAmountLabel.Text = "Current: " + iCurAmount;
+            TotalAmountLabel.Text = "Total: " + totalCalcNum;
+        }
+
+        private void BackgroundWorkerCourses_DoWork(object sender, DoWorkEventArgs e)
+        {
+            ReadExcelData();
+        }
+
+        private void BackgroundWorkerCourses_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            //Shows course selection form after calculation is complete
+            CourseSelectionForm CourseSelection = new CourseSelectionForm(this);
+            this.Hide();
+            CourseSelection.ShowDialog();
         }
     }
 }

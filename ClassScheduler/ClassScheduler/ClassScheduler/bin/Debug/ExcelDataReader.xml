@@ -748,7 +748,7 @@
             Gets the worksheet data offset.
             </summary>
         </member>
-        <member name="M:ExcelDataReader.Core.BinaryFormat.XlsWorksheet.ReadSingleCell(ExcelDataReader.Core.BinaryFormat.XlsBiffStream,ExcelDataReader.Core.BinaryFormat.XlsBiffBlankCell,System.UInt16)">
+        <member name="M:ExcelDataReader.Core.BinaryFormat.XlsWorksheet.ReadSingleCell(ExcelDataReader.Core.BinaryFormat.XlsBiffStream,ExcelDataReader.Core.BinaryFormat.XlsBiffBlankCell,System.Int32)">
             <summary>
             Reads additional records if needed: a string record might follow a formula result
             </summary>
@@ -964,22 +964,6 @@
             Gets or sets the first 109 locations in the DIF sector chain
             </summary>
         </member>
-        <member name="T:ExcelDataReader.Core.FormatReader">
-            <summary>
-            Helper class for working with Excel number format strings.
-            </summary>
-        </member>
-        <member name="P:ExcelDataReader.Core.FormatReader.FormatString">
-            <summary>
-            Gets or sets the number format string to analyze.
-            </summary>
-        </member>
-        <member name="M:ExcelDataReader.Core.FormatReader.IsDateFormatString">
-            <summary>
-            Check for date format
-            </summary>
-            <returns>true if FormatString is a date format</returns>
-        </member>
         <member name="T:ExcelDataReader.Core.Helpers">
             <summary>
             Helpers class
@@ -1009,6 +993,43 @@
         <member name="T:ExcelDataReader.Core.IWorksheet">
             <summary>
             The common worksheet interface between the binary and OpenXml formats
+            </summary>
+        </member>
+        <member name="T:ExcelDataReader.Core.NumberFormat.NumberFormatString">
+            <summary>
+            Parse ECMA-376 number format strings from Excel and other spreadsheet softwares.
+            </summary>
+        </member>
+        <member name="M:ExcelDataReader.Core.NumberFormat.NumberFormatString.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ExcelDataReader.Core.NumberFormat.NumberFormatString"/> class.
+            </summary>
+            <param name="formatString">The number format string.</param>
+        </member>
+        <member name="P:ExcelDataReader.Core.NumberFormat.NumberFormatString.IsValid">
+            <summary>
+            Gets a value indicating whether the number format string is valid.
+            </summary>
+        </member>
+        <member name="P:ExcelDataReader.Core.NumberFormat.NumberFormatString.FormatString">
+            <summary>
+            Gets the number format string.
+            </summary>
+        </member>
+        <member name="P:ExcelDataReader.Core.NumberFormat.NumberFormatString.IsDateTimeFormat">
+            <summary>
+            Gets a value indicating whether the format represents a DateTime
+            </summary>
+        </member>
+        <member name="P:ExcelDataReader.Core.NumberFormat.NumberFormatString.IsTimeSpanFormat">
+            <summary>
+            Gets a value indicating whether the format represents a TimeSpan
+            </summary>
+        </member>
+        <member name="M:ExcelDataReader.Core.NumberFormat.Parser.ParseNumberTokens(System.Collections.Generic.List{System.String},System.Int32,System.Collections.Generic.List{System.String}@,System.Boolean@,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Parses as many placeholders and literals needed to format a number with optional decimals. 
+            Returns number of tokens parsed, or 0 if the tokens didn't form a number.
             </summary>
         </member>
         <member name="T:ExcelDataReader.Core.OfficeCrypto.AgileEncryptedPackageStream">
@@ -1378,6 +1399,13 @@
             <summary>
             Seeks to the first result.
             </summary>
+        </member>
+        <member name="M:ExcelDataReader.IExcelDataReader.GetNumberFormatString(System.Int32)">
+            <summary>
+            Gets the number format for the specified field -or- <see langword="null"/> if there is no value.
+            </summary>
+            <param name="i">The index of the field to find.</param>
+            <returns>The number format string of the specified field.</returns>
         </member>
         <member name="T:ExcelDataReader.Log.ILog">
             <summary>
