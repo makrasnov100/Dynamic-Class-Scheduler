@@ -58,14 +58,31 @@
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.label1.Location = new System.Drawing.Point(322, 251);
             this.label1.Name = "label1";
+<<<<<<< HEAD
+<<<<<<< HEAD
+            this.label1.Size = new System.Drawing.Size(166, 43);
+=======
             this.label1.Size = new System.Drawing.Size(123, 32);
+>>>>>>> master
+=======
+            this.label1.Size = new System.Drawing.Size(148, 39);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.label1.TabIndex = 1;
             this.label1.Text = "First Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnFind
             // 
+<<<<<<< HEAD
+            this.btnFind.Location = new System.Drawing.Point(595, 460);
+<<<<<<< HEAD
+            this.btnFind.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.btnFind.Location = new System.Drawing.Point(446, 374);
+>>>>>>> master
+=======
+            this.btnFind.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(158, 33);
             this.btnFind.TabIndex = 15;
@@ -78,9 +95,20 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+<<<<<<< HEAD
+            this.pictureBox1.Location = new System.Drawing.Point(52, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(336, 185);
+<<<<<<< HEAD
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+=======
             this.pictureBox1.Location = new System.Drawing.Point(39, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(252, 150);
+>>>>>>> master
+=======
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -91,7 +119,15 @@
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label2.Location = new System.Drawing.Point(327, 291);
             this.label2.Name = "label2";
+<<<<<<< HEAD
+<<<<<<< HEAD
+            this.label2.Size = new System.Drawing.Size(160, 43);
+=======
             this.label2.Size = new System.Drawing.Size(118, 32);
+>>>>>>> master
+=======
+            this.label2.Size = new System.Drawing.Size(143, 39);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.label2.TabIndex = 4;
             this.label2.Text = "Last Name:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -103,7 +139,15 @@
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label3.Location = new System.Drawing.Point(374, 332);
             this.label3.Name = "label3";
+<<<<<<< HEAD
+<<<<<<< HEAD
+            this.label3.Size = new System.Drawing.Size(94, 43);
+=======
             this.label3.Size = new System.Drawing.Size(71, 32);
+>>>>>>> master
+=======
+            this.label3.Size = new System.Drawing.Size(84, 39);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.label3.TabIndex = 5;
             this.label3.Text = "Term:";
             // 
@@ -114,7 +158,15 @@
             this.label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label4.Location = new System.Drawing.Point(359, 48);
             this.label4.Name = "label4";
+<<<<<<< HEAD
+<<<<<<< HEAD
+            this.label4.Size = new System.Drawing.Size(763, 130);
+=======
             this.label4.Size = new System.Drawing.Size(543, 92);
+>>>>>>> master
+=======
+            this.label4.Size = new System.Drawing.Size(680, 116);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.label4.TabIndex = 6;
             this.label4.Text = "Dynamic Scheduler";
             // 
@@ -125,7 +177,15 @@
             this.label5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.label5.Location = new System.Drawing.Point(316, 194);
             this.label5.Name = "label5";
+<<<<<<< HEAD
+<<<<<<< HEAD
+            this.label5.Size = new System.Drawing.Size(462, 55);
+=======
             this.label5.Size = new System.Drawing.Size(327, 39);
+>>>>>>> master
+=======
+            this.label5.Size = new System.Drawing.Size(419, 49);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.label5.TabIndex = 7;
             this.label5.Text = "Please Enter the Following...";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -137,7 +197,15 @@
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label6.Location = new System.Drawing.Point(265, 374);
             this.label6.Name = "label6";
+<<<<<<< HEAD
+<<<<<<< HEAD
+            this.label6.Size = new System.Drawing.Size(243, 43);
+=======
             this.label6.Size = new System.Drawing.Size(180, 32);
+>>>>>>> master
+=======
+            this.label6.Size = new System.Drawing.Size(218, 39);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.label6.TabIndex = 8;
             this.label6.Text = "Course Data Path:";
             // 
@@ -146,7 +214,16 @@
             this.InputToMainButton.BackColor = System.Drawing.Color.Black;
             this.InputToMainButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputToMainButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
+            this.InputToMainButton.Location = new System.Drawing.Point(527, 561);
+<<<<<<< HEAD
+            this.InputToMainButton.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.InputToMainButton.Location = new System.Drawing.Point(395, 456);
+>>>>>>> master
+=======
+            this.InputToMainButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.InputToMainButton.Name = "InputToMainButton";
             this.InputToMainButton.Size = new System.Drawing.Size(209, 47);
             this.InputToMainButton.TabIndex = 17;
@@ -156,7 +233,16 @@
             // 
             // PreviewExcelSheetButton
             // 
+<<<<<<< HEAD
+            this.PreviewExcelSheetButton.Location = new System.Drawing.Point(807, 460);
+<<<<<<< HEAD
+            this.PreviewExcelSheetButton.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.PreviewExcelSheetButton.Location = new System.Drawing.Point(605, 374);
+>>>>>>> master
+=======
+            this.PreviewExcelSheetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.PreviewExcelSheetButton.Name = "PreviewExcelSheetButton";
             this.PreviewExcelSheetButton.Size = new System.Drawing.Size(108, 33);
             this.PreviewExcelSheetButton.TabIndex = 16;
@@ -173,9 +259,20 @@
             "Fall",
             "January",
             "Spring"});
+<<<<<<< HEAD
+            this.TermComboBox.Location = new System.Drawing.Point(595, 414);
+            this.TermComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TermComboBox.Name = "TermComboBox";
+<<<<<<< HEAD
+            this.TermComboBox.Size = new System.Drawing.Size(209, 41);
+=======
             this.TermComboBox.Location = new System.Drawing.Point(446, 336);
             this.TermComboBox.Name = "TermComboBox";
             this.TermComboBox.Size = new System.Drawing.Size(158, 31);
+>>>>>>> master
+=======
+            this.TermComboBox.Size = new System.Drawing.Size(209, 37);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.TermComboBox.TabIndex = 14;
             // 
             // FirstNameTextBox
@@ -183,17 +280,39 @@
             this.FirstNameTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.FirstNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.FirstNameTextBox.Font = new System.Drawing.Font("Sitka Heading", 12F);
+<<<<<<< HEAD
+            this.FirstNameTextBox.Location = new System.Drawing.Point(595, 316);
+            this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FirstNameTextBox.Name = "FirstNameTextBox";
+<<<<<<< HEAD
+            this.FirstNameTextBox.Size = new System.Drawing.Size(209, 36);
+=======
             this.FirstNameTextBox.Location = new System.Drawing.Point(446, 257);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(158, 28);
+>>>>>>> master
+=======
+            this.FirstNameTextBox.Size = new System.Drawing.Size(209, 33);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.FirstNameTextBox.TabIndex = 12;
             // 
             // LastNameTextBox
             // 
             this.LastNameTextBox.Font = new System.Drawing.Font("Sitka Heading", 12F);
+<<<<<<< HEAD
+            this.LastNameTextBox.Location = new System.Drawing.Point(595, 366);
+            this.LastNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+<<<<<<< HEAD
+            this.LastNameTextBox.Size = new System.Drawing.Size(209, 36);
+=======
             this.LastNameTextBox.Location = new System.Drawing.Point(446, 297);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(158, 28);
+>>>>>>> master
+=======
+            this.LastNameTextBox.Size = new System.Drawing.Size(209, 33);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.LastNameTextBox.TabIndex = 13;
             // 
             // FirstNameNeedLabel
@@ -256,6 +375,14 @@
             this.InitialInputPanel.Controls.Add(this.btnFind);
             this.InitialInputPanel.Controls.Add(this.label1);
             this.InitialInputPanel.Location = new System.Drawing.Point(-1, 0);
+<<<<<<< HEAD
+<<<<<<< HEAD
+            this.InitialInputPanel.Margin = new System.Windows.Forms.Padding(4);
+=======
+>>>>>>> master
+=======
+            this.InitialInputPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
             this.InitialInputPanel.Name = "InitialInputPanel";
             this.InitialInputPanel.Size = new System.Drawing.Size(985, 562);
             this.InitialInputPanel.TabIndex = 18;
@@ -267,7 +394,16 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.InitialInputPanel);
+<<<<<<< HEAD
+<<<<<<< HEAD
+            this.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
+            this.MinimumSize = new System.Drawing.Size(1327, 728);
+=======
             this.MinimumSize = new System.Drawing.Size(999, 599);
+>>>>>>> master
             this.Name = "InitialInputForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Input";

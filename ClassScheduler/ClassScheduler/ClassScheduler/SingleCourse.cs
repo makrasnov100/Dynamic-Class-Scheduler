@@ -15,24 +15,26 @@ namespace ClassScheduler
     /// </summary>
     /// Author: Kostiantyn Makrasnov (variables)
     /// Author: Yuri Fedas (accessor/mutator functions & constructors)
-
+    [Serializable]
     public class SingleCourse
     {
         private string courseName;
         private string abrvCourseName;
         private string courseLevel;
         private string departmentName;
+        private int creditAmount;
         private List<string> termsAvaliable = new List<string>();
         private List<string> instructAvaliable = new List<string>();
         public List<SingleSection> sections = new List<SingleSection>();
 
-        public SingleCourse(string courseName, string abrvCourseName, string courseLevel, string departmentName,
+        public SingleCourse(string courseName, string abrvCourseName, string courseLevel, string departmentName, int creditAmount,
             List<string> termsAvailable, List<string> instructAvailable, List<SingleSection> sections)
         {
             this.courseName = courseName;
             this.abrvCourseName = abrvCourseName;
             this.courseLevel = courseLevel;
             this.departmentName = departmentName;
+            this.creditAmount = creditAmount;
             this.termsAvaliable = termsAvailable;
             this.instructAvaliable = instructAvailable;
             this.sections = sections;
@@ -77,6 +79,16 @@ namespace ClassScheduler
         public void setDepartmentName(string departmentName)
         {
             this.departmentName = departmentName;
+        }
+
+        public void setCreditAmount(int creditAmount)
+        {
+            this.creditAmount = creditAmount;
+        }
+
+        public int getCreditAmount()
+        {
+            return creditAmount;
         }
 
         public List<string> getTermsAvailable()

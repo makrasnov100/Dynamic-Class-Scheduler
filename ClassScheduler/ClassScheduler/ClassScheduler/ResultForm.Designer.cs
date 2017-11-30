@@ -41,7 +41,7 @@
             this.resultsToMainButton.BackColor = System.Drawing.Color.Black;
             this.resultsToMainButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.resultsToMainButton.ForeColor = System.Drawing.Color.White;
-            this.resultsToMainButton.Location = new System.Drawing.Point(793, 482);
+            this.resultsToMainButton.Location = new System.Drawing.Point(786, 494);
             this.resultsToMainButton.Name = "resultsToMainButton";
             this.resultsToMainButton.Size = new System.Drawing.Size(148, 46);
             this.resultsToMainButton.TabIndex = 0;
@@ -53,11 +53,11 @@
             // 
             this.groupBox1.Controls.Add(this.timesDataGridView);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(88, 54);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(45, 33);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(646, 436);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(889, 444);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select course times";
@@ -74,13 +74,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.timesDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.timesDataGridView.Location = new System.Drawing.Point(24, 33);
-            this.timesDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.timesDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.timesDataGridView.MultiSelect = false;
             this.timesDataGridView.Name = "timesDataGridView";
             this.timesDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.timesDataGridView.RowTemplate.Height = 24;
             this.timesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.timesDataGridView.Size = new System.Drawing.Size(590, 364);
+            this.timesDataGridView.Size = new System.Drawing.Size(847, 391);
             this.timesDataGridView.TabIndex = 0;
             // 
             // ResultForm

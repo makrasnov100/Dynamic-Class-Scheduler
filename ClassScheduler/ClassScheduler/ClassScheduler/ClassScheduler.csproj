@@ -32,11 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExcelDataReader, Version=3.3.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
-      <HintPath>..\packages\ExcelDataReader.3.3.0\lib\net45\ExcelDataReader.dll</HintPath>
-    </Reference>
-    <Reference Include="ExcelDataReader.DataSet, Version=3.3.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
-      <HintPath>..\packages\ExcelDataReader.DataSet.3.3.0\lib\net45\ExcelDataReader.DataSet.dll</HintPath>
+    <Reference Include="ExcelDataReader, Version=3.2.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.2.0\lib\net45\ExcelDataReader.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,15 +55,32 @@
     <Compile Include="AddCoursePopup.Designer.cs">
       <DependentUpon>AddCoursePopup.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="BasicCalculation.cs" />
+    <Compile Include="OptimizationSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptimizationSettingsForm.Designer.cs">
+      <DependentUpon>OptimizationSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneticCalculation.cs" />
+    <Compile Include="SingleAssignedTimeSlot.cs" />
+    <Compile Include="LoadingResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingResultsForm.Designer.cs">
+      <DependentUpon>LoadingResultsForm.cs</DependentUpon>
+=======
     <Compile Include="Calculation.cs" />
     <Compile Include="PreviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PreviewForm.Designer.cs">
       <DependentUpon>PreviewForm.cs</DependentUpon>
+>>>>>>> master
     </Compile>
     <Compile Include="ScheduleDay.cs" />
-    <Compile Include="TimeInfo.cs" />
+    <Compile Include="SingleTimeSlot.cs" />
     <Compile Include="CourseSelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,8 +111,16 @@
     <EmbeddedResource Include="CourseSelectionForm.resx">
       <DependentUpon>CourseSelectionForm.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="OptimizationSettingsForm.resx">
+      <DependentUpon>OptimizationSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingResultsForm.resx">
+      <DependentUpon>LoadingResultsForm.cs</DependentUpon>
+=======
     <EmbeddedResource Include="PreviewForm.resx">
       <DependentUpon>PreviewForm.cs</DependentUpon>
+>>>>>>> master
     </EmbeddedResource>
     <EmbeddedResource Include="ResultForm.resx">
       <DependentUpon>ResultForm.cs</DependentUpon>
@@ -129,7 +151,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
+<<<<<<< HEAD
+    <None Include="Resources\loadingLogo.jpg" />
+=======
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
       <VersionMajor>2</VersionMajor>
@@ -157,6 +183,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+>>>>>>> master
   </ItemGroup>
+=======
+>>>>>>> parent of 59606f6... Updated Excel readed to simplify merge, added progress bar using Background worker
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
