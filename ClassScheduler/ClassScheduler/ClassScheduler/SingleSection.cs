@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,18 +15,24 @@ namespace ClassScheduler
     /// of a single class section including its start/end time, meet days and instructor name
     /// </summary>
     /// Author: Kostiantyn Makrasnov (variables)
-    /// Author: Yuriy Fedas (accessor/mutator functions & constructors)
-
+    /// Author: Yuri Fedas (accessor/mutator functions & constructors)
+    /// 
+    [Serializable]
     public class SingleSection
     {
         private string term = "";
         private string ID = "";
-        private List<string> startTimes;
-        private List<string> stopTimes;
+        private string courseName = "";
         private List<string> meetDays;
         private List<string> instructFirstN;
         private List<string> instructLastN;
         private int seatingCap = 0;
+
+        private List<string> startTimes;
+        private List<string> stopTimes;
+        private List<SingleTimeSlot> formattedTimes = new List<SingleTimeSlot>();
+
+        private bool isOptimized = false;
 
         public SingleSection()
         {
@@ -40,11 +48,27 @@ namespace ClassScheduler
             this.seatingCap = seatingCap;
         }
 
+        public SingleSection(SingleSection oldschedule, bool isOptimized)
+        {
+            this.term = oldschedule.getTerm();
+            this.ID = oldschedule.getID();
+            this.courseName = oldschedule.getCourseName();
+            this.meetDays = oldschedule.getMeetDays();
+            this.instructFirstN = oldschedule.getInstructFirstN();
+            this.instructLastN = oldschedule.getInstructLastN();
+            this.seatingCap = oldschedule.getSeatingCapacity();
+
+            this.startTimes = oldschedule.getStartTimes();
+            this.stopTimes = oldschedule.getStopTimes();
+            this.formattedTimes = oldschedule.getFormatedTime();
+
+            this.isOptimized = isOptimized;
+        }
+
         public string getTerm()
         {
             return term;
         }
-
         public void setTerm(string term)
         {
             this.term = term;
@@ -54,10 +78,18 @@ namespace ClassScheduler
         {
             return ID;
         }
-
         public void setID(string ID)
         {
             this.ID = ID;
+        }
+
+        public string getCourseName()
+        {
+            return courseName;
+        }
+        public void setCourseName(string courseName)
+        {
+            this.courseName = courseName;
         }
 
         public List<string> getStartTimes()
@@ -120,133 +152,121 @@ namespace ClassScheduler
             this.seatingCap = seatingCap;
         }
 
-        //Return start time as an integer - the number of minutes since midnight
-        public int getStartTimeMinutes()
+        public void addTimeInfo()
         {
-            string startTime = startTimes[0]; //Most sections only have one start time
-            startTime.Trim(); //Removes leading and trailing whitespace 
-
-            //Convert start time string to char array for easier manipulation
-            char[] stringArr = startTime.ToCharArray();
-
-            //Functions extracting hours, minutes, and AM/PM
-            int numHour = getTimeHour(stringArr);
-            int numMin = getTimeMinute(startTime);
-            string amPm = getAmPm(stringArr);
-
-            //Test whether the time is morning or afternoon
-            if (amPm == "AM")
-            {
-                return (numHour * 60) + numMin;
-            }
-            else if (amPm == "PM")
-            {
-                if (numHour == 12)
-                {
-                    return (12 * 60) + numMin;
-                }
-                else
-                {
-                    return ((numHour + 12) * 60) + numMin;
-                }
-            }
-            else
-            {
-                return -1;
-            }
+            formattedTimes.Add(new SingleTimeSlot());
         }
 
-        public int getTimeHour(char[] stringArr)
+        public void addTimeInfo(string day, int start, int end)
         {
-            int hours = -1;
-            string stringHour = "";
-            //Extract the hour from the startTimes[0] string
-            for (int i = 0; i < stringArr.Count(); i++)
-            {
-                if (stringArr[i] != ':')
-                {
-                    stringHour += stringArr[i];
-                }
-                else
-                {
-                    break; //Exit the loop once it tests the colon
-                }
-            }
-            //Parse the string into an integer
-            Int32.TryParse(stringHour, out hours);
-
-            return hours;
+            formattedTimes.Add(new SingleTimeSlot(day, start, end));
         }
 
-        public int getTimeMinute(string startTime)
+        public List<SingleTimeSlot> getFormatedTime()
         {
-            int minutes = -1;
-            string timeString = startTime.Trim();
-
-            char delimiter = ' ';
-            string[] substrings = timeString.Split(delimiter);
-
-            delimiter = ':';
-            string[] hourMin = substrings[0].Split(delimiter);
-
-            Int32.TryParse(hourMin[1], out minutes);
-
-            return minutes; 
+            return formattedTimes;
         }
 
-        public string getAmPm(char[] stringArr)
+        public void setIsOptimizedState(bool isOptimized)
         {
-            //Extract whether the time is AM or PM 
-            string stringAmPm = "NA";
-            for (int i = 0; i < stringArr.Count(); i++)
-            {
-                if (stringArr[i] == 'P' || stringArr[i] == 'p')
-                {
-                    stringAmPm = "PM";
-                    break;
-                }
-                else
-                {
-                    stringAmPm = "AM";
-                }
-            }
-
-            return stringAmPm;
+            this.isOptimized = isOptimized;
         }
 
-        public int getStopTimeMinutes()
+        public bool getIsOptimizedState()
         {
-            string stopTime = stopTimes[0]; //Most sections only have one start time
-            stopTime.Trim(); //Removes leading and trailing whitespace 
+            return isOptimized;
+        }
 
-            //Convert start time string to char array for easier manipulation
-            char[] stringArr = stopTime.ToCharArray();
+        //public int getFormatedTimeStart(int index)
+        //{
+        //    return formattedTimes[index].getStart();
+        //}
 
-            //Functions extracting hours, minutes, and AM/PM
-            int numHour = getTimeHour(stringArr);
-            int numMin = getTimeMinute(stopTime);
-            string amPm = getAmPm(stringArr);
+        //public int getFormatedTimeStop(int index)
+        //{
+        //    return formattedTimes[index].getEnd();
+        //}
 
-            //Test whether the time is morning or afternoon
-            if (amPm == "AM")
+        //public int getFormatedTimeRange(int index)
+        //{
+        //    return formattedTimes[index].getRange();
+        //}
+
+        //public string getFormatedTimeDayOfWeek(int index)
+        //{
+        //    return formattedTimes[index].getDayOfWeek();
+        //}
+
+        //[FUNCTION - FormatTimeToMinutes]
+        //Converts start/stop times to integers - the number of minutes since midnight
+        public void FormatTimeToMinutes()
+        {
+            //[Don't create time info if no section times provided]
+            if (startTimes[0] == "NA " || stopTimes[0] == " NA" || startTimes[0] == "" || stopTimes[0] == "")
+                return;
+
+            string unformTime; //unformated time (e.g. 9:00 PM)
+            int start = 0;
+            int stop = 0;
+            for (int b = 0; b < 2; b++)
             {
-                return (numHour * 60) + numMin;
-            }
-            else if (amPm == "PM")
-            {
-                if (numHour == 12)
-                {
-                    return (12 * 60) + numMin;
-                }
+                //[Define needed variables at start of loop]
+                string stringMin = "";
+                string stringHour = "";
+                int pmOffset = 0;
+
+                //[Grab first meet time start/stop of day]
+                if (b == 0)
+                    unformTime = startTimes[0];
                 else
-                {
-                    return ((numHour + 12) * 60) + numMin;
-                }
+                    unformTime = stopTimes[0];
+
+                //[Remove leading and trailing whitespace]
+                unformTime.Trim();
+
+                //[Extract hours] (weird bug with not recognizing colons)
+                stringHour = unformTime.Substring(0, unformTime.IndexOf(':'));
+
+                //[Extract minutes]
+                string tempI = unformTime.Trim();
+                string tempF = Regex.Replace(tempI, "[^0-9]", "");
+
+                int tempLen = tempF.Count();
+                if (tempLen == 3)
+                    stringMin = tempF.Substring(1, 2);
+                else if (tempLen == 4)
+                    stringMin = tempF.Substring(2, 2);
+
+                //[Parse collected times]
+                int hours = 0;
+                Int32.TryParse(stringHour, out hours);
+                int minutes = 0;
+                Int32.TryParse(stringMin, out minutes);
+
+                //[Add offset minutes if string contains "PM"]
+                if (unformTime.Contains("PM") && hours != 12)
+                    pmOffset = 720;
+                else if (unformTime.Contains("AM") && hours == 12)
+                    pmOffset = -720;
+
+                //[Write totals]
+                if (b == 0)
+                    start = (hours * 60) + minutes + pmOffset;
+                else
+                    stop = (hours * 60) + minutes + pmOffset;
             }
-            else
+
+            //[Add a TimeInfo Class for each unique day]
+            List<String> normalWeek = new List<string> { "M", "T", "W", "TH", "F" };
+            foreach (var day in normalWeek)
             {
-                return -1;
+                if (meetDays.Exists(s => s == day))
+                    addTimeInfo(day, start, stop);
+                else
+                    addTimeInfo();
             }
+
+            //(ADD MULTIPLE TIME SLOTS PER DAY FUNCTIONALITY HERE)
         }
     }
 }

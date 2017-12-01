@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ClassScheduler
 {
@@ -75,17 +77,7 @@ namespace ClassScheduler
         //Adds selected course to user's courses when "add" button is clicked
         private void addButton_Click(object sender, EventArgs e)
         {
-            if(courseAccepted)
-            {
-                selectedRow = addCoursesDataTable.Rows[selectedTableIndex];     
-                SingleCourse selectedCourseClass = allCourses[allCourses.IndexOf(allCourses.Find(s => (s.getCourseName() == (string)selectedRow.Cells[1].Value)
-                                                                                                   && (s.getAbrvCourseName() == (string)selectedRow.Cells[0].Value)))];
-                MainCourseForm.selectedCourses.Add(selectedCourseClass);
-                addCourseStateLabel.ForeColor = Color.Green;
-                addCourseStateLabel.Text = "Added " + (string)selectedRow.Cells[1].Value + " to course list!";
-                MainCourseForm.RefreshTable();
-                courseAccepted = false;
-            }
+            AddSelectedCourse();
         }
 
         //[FUNCTION - cancelAddButton_Click]
@@ -100,10 +92,38 @@ namespace ClassScheduler
         //Records index and row info of selected cell
         private void addCoursesDataTable_CellClick(object sender, DataGridViewCellEventArgs e) 
         {
-            if(e.RowIndex >= 0)
+            selectedTableIndex = e.RowIndex; //*different method needed for multiple course selection at once*
+            TryAddingCourse();
+        }
+
+        //[FUNCTION - addCoursesDataTable_CellContentDoubleClick]
+        //Tryes to add acourse upon double clicked cell
+        private void addCoursesDataTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedTableIndex = e.RowIndex;
+            TryAddingCourse();
+            AddSelectedCourse();
+        }
+
+        //[FUNCTION - AddSelectedCourse]
+        //Adds the course that the user selected last
+        private void AddSelectedCourse()
+        {
+            if (courseAccepted)
             {
-                selectedTableIndex = e.RowIndex; //*different method needed for multiple course selection at once*
-                TryAddingCourse();
+                selectedRow = addCoursesDataTable.Rows[selectedTableIndex];
+                SingleCourse selectedCourseClass = DeepCopySingleCourse(allCourses[allCourses.IndexOf(allCourses.Find(s => (s.getCourseName() == (string)selectedRow.Cells[1].Value) &&
+                                                                                  (s.getAbrvCourseName() == (string)selectedRow.Cells[0].Value)))]);
+                MainCourseForm.selectedCourses.Add(selectedCourseClass);
+                addCourseStateLabel.ForeColor = Color.Green;
+                addCourseStateLabel.Text = "Added " + (string)selectedRow.Cells[1].Value + " to course list!";
+                MainCourseForm.RefreshTable();
+                courseAccepted = false;
+            }
+            if (MainCourseForm.selectedCourses.Count() >= 10)
+            {
+                addCourseStateLabel.ForeColor = Color.Red;
+                addCourseStateLabel.Text = "Cannot have more that 10 courses!";
             }
         }
 
@@ -123,8 +143,8 @@ namespace ClassScheduler
                 addCourseStateLabel.Text = "Cannot have more that 10 courses!";
                 courseAccepted = false;
             }
-            else if (MainCourseForm.selectedCourses.IndexOf(allCourses.Find(s => (s.getCourseName() == (string)selectedRow.Cells[1].Value) 
-                                                                        && (s.getAbrvCourseName() == (string)selectedRow.Cells[0].Value))) != -1)
+            else if (MainCourseForm.selectedCourses.Exists(s => (s.getCourseName() == (string)selectedRow.Cells[1].Value) && 
+                                                                (s.getAbrvCourseName() == (string)selectedRow.Cells[0].Value)))             
             {
                 addCourseStateLabel.ForeColor = Color.Red;
                 addCourseStateLabel.Text = "You already added this course!";
@@ -267,6 +287,20 @@ namespace ClassScheduler
         public List<SingleCourse> getFilteredCourses()
         {
             return filteredCourses;
+        }
+
+        //USED ONLY IN THIS AND ONE MORE FORM
+        //Function is mainly the answwer from the following post on how to copy a complex object
+        //https://stackoverflow.com/questions/16696448/how-to-make-a-copy-of-an-object-in-c-sharp
+        public static SingleCourse DeepCopySingleCourse(SingleCourse other)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(ms, other);
+                ms.Position = 0;
+                return (SingleCourse)formatter.Deserialize(ms);
+            }
         }
     }
 }

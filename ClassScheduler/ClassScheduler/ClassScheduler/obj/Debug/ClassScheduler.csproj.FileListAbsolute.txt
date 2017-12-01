@@ -84,4 +84,9 @@ C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassSchedu
 C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.csproj.CoreCompileInputs.cache
 C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.exe
 C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.pdb
-C:\Users\bossman\Source\Repos\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.PreviewForm.resources
+D:\Current Projects\CS-172 Final\GitFiles\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.LoadingResultsForm.resources
+D:\Current Projects\CS-172 Final\GitFiles\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.OptimizationSettingsForm.resources
+E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.OptimizationSettingsForm.resources
+E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.LoadingResultsForm.resources
+D:\Current Projects\CS-172 Final\GitFiles\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Current Projects\CS-172 Final\GitFiles\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.DataSet.xml

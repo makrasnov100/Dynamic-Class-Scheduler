@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ClassScheduler
 {
@@ -26,11 +28,18 @@ namespace ClassScheduler
 
         public List<SingleCourse> availableCourses;
         public List<SingleCourse> selectedCourses = new List<SingleCourse>();
+        Random random = new Random();
+        BasicCalculation sectionCalculation;
+        private int creditAmount = 0;
+
         private DataGridViewRow selectedRow;
         private int selectedTableRowIndex;
         private DataTable selectedCourseTable;
+
+        private LoadingResultsForm RefToScheduleSelectForm;
         private UserConfig userInfo;
-        bool popUpCreated = false;
+        private bool popUpCreated = false;
+        private bool isOptimization = false;
 
         public CourseSelectionForm(InitialInputForm userDataForm)
         {
@@ -46,7 +55,7 @@ namespace ClassScheduler
             Application.Exit();
         }
 
-        //[FUNCTION - MainToResultButton_Click]
+        //[FUNCTION - AddCourseButton_Click]
         //Shows popup once a "Add Course" button is clicked
         private void AddCourseButton_Click(object sender, EventArgs e)
         {
@@ -70,12 +79,17 @@ namespace ClassScheduler
         //Performs actions when "View Results" button is clicked
         private void MainToResultButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ResultForm Result = new ResultForm(this);
+            if(selectedCourses.Count() != 0)
+            {
+                this.Hide();
+                ComputeOptimalTimes(selectedCourses);
+            }
+
+            //ResultForm Result = new ResultForm(this);
             //Manipulate the Result form before it is displayed...
             //manipulateSelectedCourses();
 
-            Result.ShowDialog();
+            //Result.ShowDialog();
             //manipulateSelectedCourses();
         }
 
@@ -92,6 +106,7 @@ namespace ClassScheduler
             else
                 fullTermName = "January";
             CourseSelectionLabel.Text = "Welcome " + userInfo.getFirstName() + ", please add your " + fullTermName + " course(s)... ";
+            UpdateCreditAmount();
 
             //Table labels
             selectedCourseTable = new DataTable();
@@ -172,6 +187,49 @@ namespace ClassScheduler
                 selectedCoursesGridView.Rows[selectedTableRowIndex].Selected = true;
                 selectedRow = selectedCoursesGridView.Rows[selectedTableRowIndex];
             }
+            UpdateCreditAmount();
+        }
+
+        //[FUNCTION - UpdateCreditAmount()]
+        //Updates the variable value and label for total course credits
+        public void UpdateCreditAmount()
+        {
+            int totalCredits = 0;
+            foreach(var course in selectedCourses)
+                totalCredits += course.getCreditAmount();
+
+            creditAmount = totalCredits;
+
+            //Find a credit limit based on term
+            int creditTopLimit = 0;
+            int creditBottomLimit = 0;
+            if (userInfo.getTermInterest() == "JA")
+            {
+                creditTopLimit = 5;
+                creditBottomLimit = 3;
+            }
+            else
+            {
+                creditTopLimit = 17;
+                creditBottomLimit = 12;
+            }
+
+            //Display formated credit label
+            if (totalCredits < creditBottomLimit)
+            {
+                TotalCreditsLabel.ForeColor = Color.Red;
+                TotalCreditsLabel.Text = "Total Credits: " + totalCredits + "\n - Need " + (creditBottomLimit - totalCredits) + " more for Full-Time!";
+            }
+            else if (totalCredits > creditTopLimit)
+            {
+                TotalCreditsLabel.ForeColor = Color.DarkOrange;
+                TotalCreditsLabel.Text = "Total Credits: " + totalCredits + "\n - " + (totalCredits - creditTopLimit) + " credit overload!";
+            }
+            else
+            {
+                TotalCreditsLabel.ForeColor = Color.Green;
+                TotalCreditsLabel.Text = "Total Credits: " + totalCredits + "\n - Full-Time attendence!";
+            }
         }
 
         public void manipulateSelectedCourses(ResultForm form)
@@ -181,8 +239,6 @@ namespace ClassScheduler
             form.timesDataGridView.Columns.Add("sectionTime", "Section Time");
             form.timesDataGridView.Columns.Add("sectionDay", "Section Day");
             form.timesDataGridView.Columns.Add("startTimeMinutes", "Start Minutes since midnight");
-            form.timesDataGridView.Columns.Add("stopTimeMinutes", "Stop Minutes since midnight");
-            form.timesDataGridView.Columns.Add("totalSectionTime", "Section class time");
 
             //Get all sections and section start times
             for (int i = 0; i < selectedCourses.Count; i++)
@@ -203,33 +259,28 @@ namespace ClassScheduler
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), 
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k], 
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k+1], 
-                                    selectedCourses[i].getSections()[j].getStartTimeMinutes(), selectedCourses[i].getSections()[j].getStopTimeMinutes(),
-                                    (selectedCourses[i].getSections()[j].getStopTimeMinutes() - selectedCourses[i].getSections()[j].getStartTimeMinutes()));
+                                    selectedCourses[i].getSections()[j].getFormatedTime()[0].getStart());
                                     break;
                                 case 3:
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), 
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k], 
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k+1] 
-                                    + selectedCourses[i].getSections()[j].getMeetDays()[k + 2], selectedCourses[i].getSections()[j].getStartTimeMinutes(),
-                                    selectedCourses[i].getSections()[j].getStopTimeMinutes(),
-                                    (selectedCourses[i].getSections()[j].getStopTimeMinutes() - selectedCourses[i].getSections()[j].getStartTimeMinutes()));
+                                    + selectedCourses[i].getSections()[j].getMeetDays()[k + 2],
+                                    selectedCourses[i].getSections()[j].getFormatedTime()[0].getStart());
                                     break;
                                 case 4:
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(),
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k],
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k + 1]
                                     + selectedCourses[i].getSections()[j].getMeetDays()[k + 2] + selectedCourses[i].getSections()[j].getMeetDays()[k + 3], 
-                                    selectedCourses[i].getSections()[j].getStartTimeMinutes(), selectedCourses[i].getSections()[j].getStopTimeMinutes(),
-                                    (selectedCourses[i].getSections()[j].getStopTimeMinutes() - selectedCourses[i].getSections()[j].getStartTimeMinutes()));
+                                    selectedCourses[i].getSections()[j].getFormatedTime()[0].getStart());
                                     break;
                                 case 5:
                                     form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(),
                                     selectedCourses[i].getSections()[j].getID(), selectedCourses[i].getSections()[j].getStartTimes()[k],
                                     selectedCourses[i].getSections()[j].getMeetDays()[k] + selectedCourses[i].getSections()[j].getMeetDays()[k + 1]
                                     + selectedCourses[i].getSections()[j].getMeetDays()[k + 2] + selectedCourses[i].getSections()[j].getMeetDays()[k + 3] +
-                                    selectedCourses[i].getSections()[j].getMeetDays()[k + 4], selectedCourses[i].getSections()[j].getStartTimeMinutes(), 
-                                    selectedCourses[i].getSections()[j].getStopTimeMinutes(), (selectedCourses[i].getSections()[j].getStopTimeMinutes() - 
-                                    selectedCourses[i].getSections()[j].getStartTimeMinutes()));
+                                    selectedCourses[i].getSections()[j].getMeetDays()[k + 4], selectedCourses[i].getSections()[j].getFormatedTime()[0].getStart());
                                     break;
                             }
                         }
@@ -237,8 +288,7 @@ namespace ClassScheduler
                         {
                             form.timesDataGridView.Rows.Add(selectedCourses[i].getCourseName(), selectedCourses[i].getSections()[j].getID(),
                             selectedCourses[i].getSections()[j].getStartTimes()[k], selectedCourses[i].getSections()[j].getMeetDays()[k],
-                            selectedCourses[i].getSections()[j].getStartTimeMinutes(), selectedCourses[i].getSections()[j].getStopTimeMinutes(),
-                            (selectedCourses[i].getSections()[j].getStopTimeMinutes() - selectedCourses[i].getSections()[j].getStartTimeMinutes()));
+                            selectedCourses[i].getSections()[j].getFormatedTime()[0].getStart());
                         }
                     }
                 }
@@ -247,18 +297,90 @@ namespace ClassScheduler
             form.timesDataGridView.AutoResizeRows();
         }
 
-        public void computeOptimalTimes(ResultForm form)
+        //[FUNCTION - ComputeOptimalTimes]
+        //Chooses the correct algorithm
+        public void ComputeOptimalTimes(List<SingleCourse> givenCourses)
         {
-            List<string> times = new List<string>();
+            //LoadingResultsForm ResultLoad = new LoadingResultsForm();
+            //ShowDialog(ResultLoad);
 
-            for (int i = 0; i < form.timesDataGridView.Rows.Count; i++)
+            int numPossib = 1;
+            foreach (var course in givenCourses)
             {
-                times.Add(form.timesDataGridView.Rows[i].Cells[2].ToString());
+                if (course.getSections().Count() != 0)
+                {
+                    //Debug.WriteLine(numPossib + " * " + course.sections.Count() + " = " + (numPossib * course.sections.Count()));
+                    numPossib = numPossib * course.getSections().Count();
+                }
             }
-            
-            for (int i = 0; i < form.timesDataGridView.Rows.Count; i++)
+
+            Debug.WriteLine("Number of Schedule Possibilities: " + numPossib);
+            Debug.WriteLine("*****************************************************************");
+
+            Debug.WriteLine("NEW CALCULATION CLASS CREATED");
+
+            sectionCalculation = new BasicCalculation(givenCourses, numPossib, random, creditAmount, this, RefToScheduleSelectForm, isOptimization);
+            isOptimization = false;
+        }
+
+        //[FUNCTION - ChooseOptimizationCourses]
+        //Adds sections that can be substituted based on user defined settings (revise so courses fit better)
+        public void ChooseOptimizationCourses(List<bool> canOptimize, SingleSchedule oldSchedule, LoadingResultsForm ScheduleSelectForm)
+        {
+            //Create references|copies & set bools
+            RefToScheduleSelectForm = ScheduleSelectForm;
+            List<SingleCourse> selectedCoursesMod = new List<SingleCourse>(selectedCourses.Count());
+            foreach (var course in selectedCourses)
+                selectedCoursesMod.Add(DeepCopySingleCourse(course));
+            isOptimization = true;
+
+            //Add all similar courses to section list
+            int optimizeCounter = 0;
+            foreach (var optimizeOption in canOptimize)
             {
-                Debug.WriteLine("Time " + i + ": " + times[i]);
+                if (optimizeOption == true)
+                {
+                    string matchCourseID = oldSchedule.getAllSections()[optimizeCounter].getID();
+                    string matchCourseIDTrim = matchCourseID.Substring(0, matchCourseID.IndexOf("-", 4));
+                    string depID = matchCourseID.Substring(0, matchCourseID.IndexOf("-", 0));
+                    string levelID = matchCourseID.Substring((matchCourseID.IndexOf("-", 0) + 1), 1) + "00";
+                    bool isLab = matchCourseIDTrim[matchCourseIDTrim.Length - 1] == 'L' ? true : false;
+                    Debug.WriteLine("Dep ID: " + depID + " | Level ID: " + levelID + " | Lab State: " + isLab);
+                    //string matchCourseIDTrim = matchCourseID.Substring(0, matchCourseID.IndexOf("-", 4));
+                    //string matchCourseFull = matchCourseIDTrim + "|" + oldSchedule.getAllSections()[optimizeCounter].getCourseName();
+
+                    bool isLabCourse = false;
+                    foreach (var course in availableCourses)
+                    {
+                        isLabCourse = course.getAbrvCourseName()[course.getAbrvCourseName().Length - 1] == 'L' ? true : false;
+                        if ((course.getCourseLevel() == levelID && course.getAbrvCourseName().Contains(depID)) &&
+                            (course.getAbrvCourseName() != matchCourseID.Substring(0, matchCourseID.IndexOf("-", 4))) &&
+                            (isLab == isLabCourse))
+                            foreach (var section in course.getSections())
+                            {
+                                Debug.WriteLine("Added a suggested section: " + section.getID());
+                                selectedCoursesMod[optimizeCounter].getSections().Add(new SingleSection(section, true));
+                            }
+                    }
+                        
+                }
+                optimizeCounter++;
+            }
+
+            ComputeOptimalTimes(selectedCoursesMod);
+        }
+
+        //USED ONLY IN THIS AND ONE MORE FORM
+        //Function is mainly the answer from the following post on how to copy a complex object
+        //https://stackoverflow.com/questions/16696448/how-to-make-a-copy-of-an-object-in-c-sharp
+        public static SingleCourse DeepCopySingleCourse(SingleCourse other)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(ms, other);
+                ms.Position = 0;
+                return (SingleCourse)formatter.Deserialize(ms);
             }
         }
     }

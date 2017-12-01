@@ -47,30 +47,47 @@
             this.TermNeedLabel = new System.Windows.Forms.Label();
             this.PreviewStatusLabel = new System.Windows.Forms.Label();
             this.InitialInputPanel = new System.Windows.Forms.Panel();
+            this.LoadingCoursesPanel = new System.Windows.Forms.Panel();
+            this.TotalAmountLabel = new System.Windows.Forms.Label();
+            this.PercentCompleteLabel = new System.Windows.Forms.Label();
+            this.ProgressBar = new System.Windows.Forms.ProgressBar();
+            this.CurrentAmountLabel = new System.Windows.Forms.Label();
+            this.LoadingTypeLabel = new System.Windows.Forms.Label();
+            this.BackgroundWorkerCourses = new System.ComponentModel.BackgroundWorker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.InitialInputPanel.SuspendLayout();
+            this.LoadingCoursesPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Gainsboro;
             this.label1.Font = new System.Drawing.Font("Sitka Heading", 16F);
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label1.Location = new System.Drawing.Point(322, 251);
+            this.label1.Location = new System.Drawing.Point(374, 127);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 32);
+            this.label1.Size = new System.Drawing.Size(166, 43);
             this.label1.TabIndex = 1;
             this.label1.Text = "First Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(446, 374);
+            this.btnFind.BackColor = System.Drawing.Color.Black;
+            this.btnFind.ForeColor = System.Drawing.Color.White;
+            this.btnFind.Location = new System.Drawing.Point(548, 270);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(4);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(158, 33);
+            this.btnFind.Size = new System.Drawing.Size(211, 41);
             this.btnFind.TabIndex = 15;
             this.btnFind.Text = "Find File";
-            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.UseVisualStyleBackColor = false;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // pictureBox1
@@ -78,20 +95,24 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 24);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(252, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(336, 185);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Gainsboro;
             this.label2.Font = new System.Drawing.Font("Sitka Heading", 16F);
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(327, 291);
+            this.label2.Location = new System.Drawing.Point(380, 170);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 32);
+            this.label2.Size = new System.Drawing.Size(160, 43);
             this.label2.TabIndex = 4;
             this.label2.Text = "Last Name:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -99,11 +120,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Gainsboro;
             this.label3.Font = new System.Drawing.Font("Sitka Heading", 16F);
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(374, 332);
+            this.label3.Location = new System.Drawing.Point(446, 219);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 32);
+            this.label3.Size = new System.Drawing.Size(94, 43);
             this.label3.TabIndex = 5;
             this.label3.Text = "Term:";
             // 
@@ -112,20 +135,23 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sitka Heading", 48F, System.Drawing.FontStyle.Italic);
             this.label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label4.Location = new System.Drawing.Point(359, 48);
+            this.label4.Location = new System.Drawing.Point(432, 60);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(543, 92);
+            this.label4.Size = new System.Drawing.Size(763, 130);
             this.label4.TabIndex = 6;
             this.label4.Text = "Dynamic Scheduler";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Gainsboro;
             this.label5.Font = new System.Drawing.Font("Sitka Heading", 20.25F, System.Drawing.FontStyle.Italic);
             this.label5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label5.Location = new System.Drawing.Point(316, 194);
+            this.label5.Location = new System.Drawing.Point(169, 50);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(327, 39);
+            this.label5.Size = new System.Drawing.Size(462, 55);
             this.label5.TabIndex = 7;
             this.label5.Text = "Please Enter the Following...";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -133,11 +159,13 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Gainsboro;
             this.label6.Font = new System.Drawing.Font("Sitka Heading", 16F);
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(265, 374);
+            this.label6.Location = new System.Drawing.Point(297, 268);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(180, 32);
+            this.label6.Size = new System.Drawing.Size(243, 43);
             this.label6.TabIndex = 8;
             this.label6.Text = "Course Data Path:";
             // 
@@ -146,9 +174,10 @@
             this.InputToMainButton.BackColor = System.Drawing.Color.Black;
             this.InputToMainButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputToMainButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.InputToMainButton.Location = new System.Drawing.Point(395, 456);
+            this.InputToMainButton.Location = new System.Drawing.Point(548, 319);
+            this.InputToMainButton.Margin = new System.Windows.Forms.Padding(4);
             this.InputToMainButton.Name = "InputToMainButton";
-            this.InputToMainButton.Size = new System.Drawing.Size(209, 47);
+            this.InputToMainButton.Size = new System.Drawing.Size(363, 58);
             this.InputToMainButton.TabIndex = 17;
             this.InputToMainButton.Text = "Begin Course Selection";
             this.InputToMainButton.UseVisualStyleBackColor = false;
@@ -156,13 +185,15 @@
             // 
             // PreviewExcelSheetButton
             // 
-            this.PreviewExcelSheetButton.Location = new System.Drawing.Point(605, 374);
+            this.PreviewExcelSheetButton.BackColor = System.Drawing.Color.Black;
+            this.PreviewExcelSheetButton.ForeColor = System.Drawing.Color.White;
+            this.PreviewExcelSheetButton.Location = new System.Drawing.Point(767, 270);
+            this.PreviewExcelSheetButton.Margin = new System.Windows.Forms.Padding(4);
             this.PreviewExcelSheetButton.Name = "PreviewExcelSheetButton";
-            this.PreviewExcelSheetButton.Size = new System.Drawing.Size(108, 33);
+            this.PreviewExcelSheetButton.Size = new System.Drawing.Size(144, 41);
             this.PreviewExcelSheetButton.TabIndex = 16;
             this.PreviewExcelSheetButton.Text = "Preview";
-            this.PreviewExcelSheetButton.UseVisualStyleBackColor = true;
-            this.PreviewExcelSheetButton.Click += new System.EventHandler(this.PreviewExcelSheetButton_Click);
+            this.PreviewExcelSheetButton.UseVisualStyleBackColor = false;
             // 
             // TermComboBox
             // 
@@ -173,101 +204,218 @@
             "Fall",
             "January",
             "Spring"});
-            this.TermComboBox.Location = new System.Drawing.Point(446, 336);
+            this.TermComboBox.Location = new System.Drawing.Point(548, 221);
+            this.TermComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.TermComboBox.Name = "TermComboBox";
-            this.TermComboBox.Size = new System.Drawing.Size(158, 31);
+            this.TermComboBox.Size = new System.Drawing.Size(209, 41);
             this.TermComboBox.TabIndex = 14;
             // 
             // FirstNameTextBox
             // 
             this.FirstNameTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.FirstNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FirstNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.FirstNameTextBox.Font = new System.Drawing.Font("Sitka Heading", 12F);
-            this.FirstNameTextBox.Location = new System.Drawing.Point(446, 257);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(548, 133);
+            this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(158, 28);
+            this.FirstNameTextBox.Size = new System.Drawing.Size(209, 36);
             this.FirstNameTextBox.TabIndex = 12;
             // 
             // LastNameTextBox
             // 
+            this.LastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LastNameTextBox.Font = new System.Drawing.Font("Sitka Heading", 12F);
-            this.LastNameTextBox.Location = new System.Drawing.Point(446, 297);
+            this.LastNameTextBox.Location = new System.Drawing.Point(548, 177);
+            this.LastNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.LastNameTextBox.Name = "LastNameTextBox";
-            this.LastNameTextBox.Size = new System.Drawing.Size(158, 28);
+            this.LastNameTextBox.Size = new System.Drawing.Size(209, 36);
             this.LastNameTextBox.TabIndex = 13;
             // 
             // FirstNameNeedLabel
             // 
             this.FirstNameNeedLabel.AutoSize = true;
+            this.FirstNameNeedLabel.BackColor = System.Drawing.Color.Gainsboro;
             this.FirstNameNeedLabel.ForeColor = System.Drawing.Color.Red;
-            this.FirstNameNeedLabel.Location = new System.Drawing.Point(610, 265);
+            this.FirstNameNeedLabel.Location = new System.Drawing.Point(771, 148);
+            this.FirstNameNeedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FirstNameNeedLabel.Name = "FirstNameNeedLabel";
-            this.FirstNameNeedLabel.Size = new System.Drawing.Size(103, 13);
+            this.FirstNameNeedLabel.Size = new System.Drawing.Size(140, 17);
             this.FirstNameNeedLabel.TabIndex = 14;
             this.FirstNameNeedLabel.Text = "This field is required.";
             // 
             // LastNameNeedLabel
             // 
             this.LastNameNeedLabel.AutoSize = true;
+            this.LastNameNeedLabel.BackColor = System.Drawing.Color.Gainsboro;
             this.LastNameNeedLabel.ForeColor = System.Drawing.Color.Red;
-            this.LastNameNeedLabel.Location = new System.Drawing.Point(610, 305);
+            this.LastNameNeedLabel.Location = new System.Drawing.Point(771, 191);
+            this.LastNameNeedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LastNameNeedLabel.Name = "LastNameNeedLabel";
-            this.LastNameNeedLabel.Size = new System.Drawing.Size(103, 13);
+            this.LastNameNeedLabel.Size = new System.Drawing.Size(140, 17);
             this.LastNameNeedLabel.TabIndex = 15;
             this.LastNameNeedLabel.Text = "This field is required.";
             // 
             // TermNeedLabel
             // 
             this.TermNeedLabel.AutoSize = true;
+            this.TermNeedLabel.BackColor = System.Drawing.Color.Gainsboro;
             this.TermNeedLabel.ForeColor = System.Drawing.Color.Red;
-            this.TermNeedLabel.Location = new System.Drawing.Point(610, 344);
+            this.TermNeedLabel.Location = new System.Drawing.Point(771, 237);
+            this.TermNeedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TermNeedLabel.Name = "TermNeedLabel";
-            this.TermNeedLabel.Size = new System.Drawing.Size(103, 13);
+            this.TermNeedLabel.Size = new System.Drawing.Size(140, 17);
             this.TermNeedLabel.TabIndex = 16;
             this.TermNeedLabel.Text = "This field is required.";
             // 
             // PreviewStatusLabel
             // 
             this.PreviewStatusLabel.AutoSize = true;
+            this.PreviewStatusLabel.BackColor = System.Drawing.Color.Gainsboro;
             this.PreviewStatusLabel.ForeColor = System.Drawing.Color.Red;
-            this.PreviewStatusLabel.Location = new System.Drawing.Point(719, 386);
+            this.PreviewStatusLabel.Location = new System.Drawing.Point(919, 282);
+            this.PreviewStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PreviewStatusLabel.Name = "PreviewStatusLabel";
-            this.PreviewStatusLabel.Size = new System.Drawing.Size(87, 13);
+            this.PreviewStatusLabel.Size = new System.Drawing.Size(115, 17);
             this.PreviewStatusLabel.TabIndex = 17;
             this.PreviewStatusLabel.Text = "File not selected.";
             // 
             // InitialInputPanel
             // 
-            this.InitialInputPanel.Controls.Add(this.PreviewStatusLabel);
-            this.InitialInputPanel.Controls.Add(this.TermNeedLabel);
-            this.InitialInputPanel.Controls.Add(this.LastNameNeedLabel);
-            this.InitialInputPanel.Controls.Add(this.FirstNameNeedLabel);
-            this.InitialInputPanel.Controls.Add(this.LastNameTextBox);
-            this.InitialInputPanel.Controls.Add(this.FirstNameTextBox);
-            this.InitialInputPanel.Controls.Add(this.TermComboBox);
-            this.InitialInputPanel.Controls.Add(this.PreviewExcelSheetButton);
-            this.InitialInputPanel.Controls.Add(this.InputToMainButton);
-            this.InitialInputPanel.Controls.Add(this.label6);
-            this.InitialInputPanel.Controls.Add(this.label5);
-            this.InitialInputPanel.Controls.Add(this.label4);
-            this.InitialInputPanel.Controls.Add(this.label3);
-            this.InitialInputPanel.Controls.Add(this.label2);
             this.InitialInputPanel.Controls.Add(this.pictureBox1);
-            this.InitialInputPanel.Controls.Add(this.btnFind);
-            this.InitialInputPanel.Controls.Add(this.label1);
+            this.InitialInputPanel.Controls.Add(this.label4);
+            this.InitialInputPanel.Controls.Add(this.LoadingCoursesPanel);
+            this.InitialInputPanel.Controls.Add(this.panel1);
             this.InitialInputPanel.Location = new System.Drawing.Point(-1, 0);
+            this.InitialInputPanel.Margin = new System.Windows.Forms.Padding(4);
             this.InitialInputPanel.Name = "InitialInputPanel";
-            this.InitialInputPanel.Size = new System.Drawing.Size(985, 562);
+            this.InitialInputPanel.Size = new System.Drawing.Size(1313, 692);
             this.InitialInputPanel.TabIndex = 18;
+            // 
+            // LoadingCoursesPanel
+            // 
+            this.LoadingCoursesPanel.Controls.Add(this.panel2);
+            this.LoadingCoursesPanel.Location = new System.Drawing.Point(0, 0);
+            this.LoadingCoursesPanel.Name = "LoadingCoursesPanel";
+            this.LoadingCoursesPanel.Size = new System.Drawing.Size(1313, 692);
+            this.LoadingCoursesPanel.TabIndex = 19;
+            // 
+            // TotalAmountLabel
+            // 
+            this.TotalAmountLabel.AutoSize = true;
+            this.TotalAmountLabel.Font = new System.Drawing.Font("Calibri", 12F);
+            this.TotalAmountLabel.ForeColor = System.Drawing.Color.Black;
+            this.TotalAmountLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.TotalAmountLabel.Location = new System.Drawing.Point(889, 221);
+            this.TotalAmountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TotalAmountLabel.Name = "TotalAmountLabel";
+            this.TotalAmountLabel.Size = new System.Drawing.Size(152, 28);
+            this.TotalAmountLabel.TabIndex = 20;
+            this.TotalAmountLabel.Text = "Total: 2342344\r\n";
+            // 
+            // PercentCompleteLabel
+            // 
+            this.PercentCompleteLabel.AutoSize = true;
+            this.PercentCompleteLabel.Font = new System.Drawing.Font("Calibri", 12F);
+            this.PercentCompleteLabel.ForeColor = System.Drawing.Color.Black;
+            this.PercentCompleteLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.PercentCompleteLabel.Location = new System.Drawing.Point(588, 223);
+            this.PercentCompleteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PercentCompleteLabel.Name = "PercentCompleteLabel";
+            this.PercentCompleteLabel.Size = new System.Drawing.Size(155, 28);
+            this.PercentCompleteLabel.TabIndex = 19;
+            this.PercentCompleteLabel.Text = "Progress: 100%";
+            // 
+            // ProgressBar
+            // 
+            this.ProgressBar.Location = new System.Drawing.Point(283, 174);
+            this.ProgressBar.Margin = new System.Windows.Forms.Padding(4);
+            this.ProgressBar.Name = "ProgressBar";
+            this.ProgressBar.Size = new System.Drawing.Size(749, 39);
+            this.ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.ProgressBar.TabIndex = 16;
+            // 
+            // CurrentAmountLabel
+            // 
+            this.CurrentAmountLabel.AutoSize = true;
+            this.CurrentAmountLabel.Font = new System.Drawing.Font("Calibri", 12F);
+            this.CurrentAmountLabel.ForeColor = System.Drawing.Color.Black;
+            this.CurrentAmountLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.CurrentAmountLabel.Location = new System.Drawing.Point(278, 223);
+            this.CurrentAmountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CurrentAmountLabel.Name = "CurrentAmountLabel";
+            this.CurrentAmountLabel.Size = new System.Drawing.Size(178, 28);
+            this.CurrentAmountLabel.TabIndex = 17;
+            this.CurrentAmountLabel.Text = "Current: 2342344";
+            this.CurrentAmountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LoadingTypeLabel
+            // 
+            this.LoadingTypeLabel.AutoSize = true;
+            this.LoadingTypeLabel.Font = new System.Drawing.Font("Calibri", 25F, System.Drawing.FontStyle.Bold);
+            this.LoadingTypeLabel.ForeColor = System.Drawing.Color.Black;
+            this.LoadingTypeLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.LoadingTypeLabel.Location = new System.Drawing.Point(473, 103);
+            this.LoadingTypeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LoadingTypeLabel.Name = "LoadingTypeLabel";
+            this.LoadingTypeLabel.Size = new System.Drawing.Size(388, 58);
+            this.LoadingTypeLabel.TabIndex = 18;
+            this.LoadingTypeLabel.Text = "Course Calculation";
+            this.LoadingTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BackgroundWorkerCourses
+            // 
+            this.BackgroundWorkerCourses.WorkerReportsProgress = true;
+            this.BackgroundWorkerCourses.WorkerSupportsCancellation = true;
+            this.BackgroundWorkerCourses.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorkerCourses_DoWork);
+            this.BackgroundWorkerCourses.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BackgroundWorkerCourses_ProgressChanged);
+            this.BackgroundWorkerCourses.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorkerCourses_RunWorkerCompleted);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.PreviewStatusLabel);
+            this.panel1.Controls.Add(this.btnFind);
+            this.panel1.Controls.Add(this.TermNeedLabel);
+            this.panel1.Controls.Add(this.PreviewExcelSheetButton);
+            this.panel1.Controls.Add(this.LastNameNeedLabel);
+            this.panel1.Controls.Add(this.InputToMainButton);
+            this.panel1.Controls.Add(this.FirstNameNeedLabel);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.FirstNameTextBox);
+            this.panel1.Controls.Add(this.LastNameTextBox);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.TermComboBox);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 235);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1313, 457);
+            this.panel1.TabIndex = 21;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.TotalAmountLabel);
+            this.panel2.Controls.Add(this.PercentCompleteLabel);
+            this.panel2.Controls.Add(this.ProgressBar);
+            this.panel2.Controls.Add(this.CurrentAmountLabel);
+            this.panel2.Controls.Add(this.LoadingTypeLabel);
+            this.panel2.Location = new System.Drawing.Point(0, 235);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1313, 456);
+            this.panel2.TabIndex = 21;
             // 
             // InitialInputForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1312, 690);
             this.Controls.Add(this.InitialInputPanel);
-            this.MinimumSize = new System.Drawing.Size(999, 599);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1327, 728);
             this.Name = "InitialInputForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Input";
@@ -275,6 +423,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.InitialInputPanel.ResumeLayout(false);
             this.InitialInputPanel.PerformLayout();
+            this.LoadingCoursesPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -298,6 +451,15 @@
         private System.Windows.Forms.Label TermNeedLabel;
         private System.Windows.Forms.Label PreviewStatusLabel;
         private System.Windows.Forms.Panel InitialInputPanel;
+        private System.Windows.Forms.Label LoadingTypeLabel;
+        private System.Windows.Forms.Label CurrentAmountLabel;
+        private System.Windows.Forms.ProgressBar ProgressBar;
+        private System.Windows.Forms.Panel LoadingCoursesPanel;
+        private System.Windows.Forms.Label PercentCompleteLabel;
+        private System.Windows.Forms.Label TotalAmountLabel;
+        private System.ComponentModel.BackgroundWorker BackgroundWorkerCourses;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

@@ -33,6 +33,7 @@
             this.RemoveCourseButton = new System.Windows.Forms.Button();
             this.MainToResultButton = new System.Windows.Forms.Button();
             this.selectedCoursesGridView = new System.Windows.Forms.DataGridView();
+            this.TotalCreditsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.selectedCoursesGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +80,7 @@
             this.MainToResultButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MainToResultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.MainToResultButton.ForeColor = System.Drawing.Color.White;
-            this.MainToResultButton.Location = new System.Drawing.Point(71, 500);
+            this.MainToResultButton.Location = new System.Drawing.Point(74, 499);
             this.MainToResultButton.Name = "MainToResultButton";
             this.MainToResultButton.Size = new System.Drawing.Size(146, 43);
             this.MainToResultButton.TabIndex = 11;
@@ -104,12 +105,23 @@
             this.selectedCoursesGridView.TabIndex = 12;
             this.selectedCoursesGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.selectedCoursesTable_CellClick);
             // 
+            // TotalCreditsLabel
+            // 
+            this.TotalCreditsLabel.AutoSize = true;
+            this.TotalCreditsLabel.ForeColor = System.Drawing.Color.Red;
+            this.TotalCreditsLabel.Location = new System.Drawing.Point(81, 210);
+            this.TotalCreditsLabel.Name = "TotalCreditsLabel";
+            this.TotalCreditsLabel.Size = new System.Drawing.Size(78, 13);
+            this.TotalCreditsLabel.TabIndex = 16;
+            this.TotalCreditsLabel.Text = "Total Credits: 0";
+            // 
             // CourseSelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.TotalCreditsLabel);
             this.Controls.Add(this.selectedCoursesGridView);
             this.Controls.Add(this.MainToResultButton);
             this.Controls.Add(this.RemoveCourseButton);
@@ -134,5 +146,6 @@
         private System.Windows.Forms.Button RemoveCourseButton;
         private System.Windows.Forms.Button MainToResultButton;
         private System.Windows.Forms.DataGridView selectedCoursesGridView;
+        private System.Windows.Forms.Label TotalCreditsLabel;
     }
 }
