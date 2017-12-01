@@ -45,7 +45,6 @@ C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassSchedul
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ClassScheduler.pdb
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.dll
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.xml
-C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.csprojResolveAssemblyReference.cache
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.AddCourseForm.resources
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.CourseSelectionForm.resources
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.ResultForm.resources
@@ -90,3 +89,8 @@ E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassSchedule
 E:\CS FINAL\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.LoadingResultsForm.resources
 D:\Current Projects\CS-172 Final\GitFiles\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.DataSet.dll
 D:\Current Projects\CS-172 Final\GitFiles\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.OptimizationSettingsForm.resources
+C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.LoadingResultsForm.resources
+C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.PreviewForm.resources

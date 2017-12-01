@@ -20,16 +20,20 @@ namespace ClassScheduler
     /// </summary>
     /// Author: Kostiantyn Makrasnov (Excel Reader Part & Form's Layout/User Input Validation)
     /// Author: Yuriy Fedas (Preview of Selected Excel Data File & Proper control through access/mutator functions)
+    /// /// 
+    /// Sources for ExcelDataReader: Source code from https://github.com/ExcelDataReader/ExcelDataReader, used methods
+    /// from ExcelDataReader and ExcelDataReader.DataSet Nuget packages.
 
     public partial class InitialInputForm : Form
     {
-        //ExcelReader Varaibles
+        //ExcelReader Variables
         private UserConfig userData = new UserConfig() { };
         public List<SingleCourse> courses = new List<SingleCourse>();
         public List<SingleCourse> unneededCourses = new List<SingleCourse>();
         private List<string> sectionIDs = new List<string>();
         private List<string> courseIDs = new List<string>();
         IExcelDataReader excelReader;
+        private PreviewForm previewForm = new PreviewForm();
 
         //Progress Bar Variables
         private float totalCalcNum;
@@ -60,6 +64,7 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - btnFind_Click]
+        //Source: https://github.com/executeautomation/DataReader and ExcelDataReader documentation (README)
         //Performs actions designated for "Find" button click
         private void btnFind_Click(object sender, EventArgs e)
         {
@@ -67,6 +72,11 @@ namespace ClassScheduler
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
+                    SelectedFileName = ofd.FileName;
+                    DataTable final = ExcelToDataTable(SelectedFileName);
+
+                    previewForm.getPreviewDGV().DataSource = final;
+
                     FileStream stream = File.Open(ofd.FileName, FileMode.Open, FileAccess.Read);
                     excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
                     //suggested at http://www.c-sharpcorner.com/forums/datareaders-row-count to get row count
@@ -79,6 +89,29 @@ namespace ClassScheduler
                     PreviewStatusLabel.Text = "Preview Ready!";
                     PreviewStatusLabel.ForeColor = Color.Green;
                     PreviewStatusLabel.Visible = true;
+                }
+            }
+        }
+
+        //[METHOD - ExcelToDataTable]
+        //Return a DataTable with excel file contents
+        public static DataTable ExcelToDataTable(string fileName)
+        {
+            using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read))
+            {
+                using (var reader = ExcelReaderFactory.CreateReader(stream))
+                {
+                    var result = reader.AsDataSet(new ExcelDataSetConfiguration()
+                    {
+                        ConfigureDataTable = (data) => new ExcelDataTableConfiguration()
+                        {
+                            UseHeaderRow = true
+                        }
+                    });
+
+                    DataTableCollection table = result.Tables;
+                    DataTable resultTable = table["Sheet1"];
+                    return resultTable;
                 }
             }
         }
@@ -535,6 +568,14 @@ namespace ClassScheduler
             CourseSelectionForm CourseSelection = new CourseSelectionForm(this);
             this.Hide();
             CourseSelection.ShowDialog();
+        }
+
+        //Property to hold the selected file name
+        public string SelectedFileName { get; set; }
+
+        private void PreviewExcelSheetButton_Click_1(object sender, EventArgs e)
+        {
+            previewForm.ShowDialog();
         }
     }
 }

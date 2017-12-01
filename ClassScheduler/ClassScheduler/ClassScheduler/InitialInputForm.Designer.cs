@@ -48,19 +48,19 @@
             this.PreviewStatusLabel = new System.Windows.Forms.Label();
             this.InitialInputPanel = new System.Windows.Forms.Panel();
             this.LoadingCoursesPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.TotalAmountLabel = new System.Windows.Forms.Label();
             this.PercentCompleteLabel = new System.Windows.Forms.Label();
             this.ProgressBar = new System.Windows.Forms.ProgressBar();
             this.CurrentAmountLabel = new System.Windows.Forms.Label();
             this.LoadingTypeLabel = new System.Windows.Forms.Label();
-            this.BackgroundWorkerCourses = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.BackgroundWorkerCourses = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.InitialInputPanel.SuspendLayout();
             this.LoadingCoursesPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -72,7 +72,7 @@
             this.label1.Location = new System.Drawing.Point(374, 127);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 43);
+            this.label1.Size = new System.Drawing.Size(148, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "First Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -112,7 +112,7 @@
             this.label2.Location = new System.Drawing.Point(380, 170);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 43);
+            this.label2.Size = new System.Drawing.Size(143, 39);
             this.label2.TabIndex = 4;
             this.label2.Text = "Last Name:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,7 +126,7 @@
             this.label3.Location = new System.Drawing.Point(446, 219);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 43);
+            this.label3.Size = new System.Drawing.Size(84, 39);
             this.label3.TabIndex = 5;
             this.label3.Text = "Term:";
             // 
@@ -138,7 +138,7 @@
             this.label4.Location = new System.Drawing.Point(432, 60);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(763, 130);
+            this.label4.Size = new System.Drawing.Size(680, 116);
             this.label4.TabIndex = 6;
             this.label4.Text = "Dynamic Scheduler";
             // 
@@ -151,7 +151,7 @@
             this.label5.Location = new System.Drawing.Point(169, 50);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(462, 55);
+            this.label5.Size = new System.Drawing.Size(419, 49);
             this.label5.TabIndex = 7;
             this.label5.Text = "Please Enter the Following...";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -165,7 +165,7 @@
             this.label6.Location = new System.Drawing.Point(297, 268);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(243, 43);
+            this.label6.Size = new System.Drawing.Size(218, 39);
             this.label6.TabIndex = 8;
             this.label6.Text = "Course Data Path:";
             // 
@@ -194,6 +194,7 @@
             this.PreviewExcelSheetButton.TabIndex = 16;
             this.PreviewExcelSheetButton.Text = "Preview";
             this.PreviewExcelSheetButton.UseVisualStyleBackColor = false;
+            this.PreviewExcelSheetButton.Click += new System.EventHandler(this.PreviewExcelSheetButton_Click_1);
             // 
             // TermComboBox
             // 
@@ -207,7 +208,7 @@
             this.TermComboBox.Location = new System.Drawing.Point(548, 221);
             this.TermComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.TermComboBox.Name = "TermComboBox";
-            this.TermComboBox.Size = new System.Drawing.Size(209, 41);
+            this.TermComboBox.Size = new System.Drawing.Size(209, 37);
             this.TermComboBox.TabIndex = 14;
             // 
             // FirstNameTextBox
@@ -219,7 +220,7 @@
             this.FirstNameTextBox.Location = new System.Drawing.Point(548, 133);
             this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(209, 36);
+            this.FirstNameTextBox.Size = new System.Drawing.Size(209, 33);
             this.FirstNameTextBox.TabIndex = 12;
             // 
             // LastNameTextBox
@@ -229,7 +230,7 @@
             this.LastNameTextBox.Location = new System.Drawing.Point(548, 177);
             this.LastNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.LastNameTextBox.Name = "LastNameTextBox";
-            this.LastNameTextBox.Size = new System.Drawing.Size(209, 36);
+            this.LastNameTextBox.Size = new System.Drawing.Size(209, 33);
             this.LastNameTextBox.TabIndex = 13;
             // 
             // FirstNameNeedLabel
@@ -300,6 +301,19 @@
             this.LoadingCoursesPanel.Size = new System.Drawing.Size(1313, 692);
             this.LoadingCoursesPanel.TabIndex = 19;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.TotalAmountLabel);
+            this.panel2.Controls.Add(this.PercentCompleteLabel);
+            this.panel2.Controls.Add(this.ProgressBar);
+            this.panel2.Controls.Add(this.CurrentAmountLabel);
+            this.panel2.Controls.Add(this.LoadingTypeLabel);
+            this.panel2.Location = new System.Drawing.Point(0, 233);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1313, 456);
+            this.panel2.TabIndex = 21;
+            // 
             // TotalAmountLabel
             // 
             this.TotalAmountLabel.AutoSize = true;
@@ -309,7 +323,7 @@
             this.TotalAmountLabel.Location = new System.Drawing.Point(889, 221);
             this.TotalAmountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TotalAmountLabel.Name = "TotalAmountLabel";
-            this.TotalAmountLabel.Size = new System.Drawing.Size(152, 28);
+            this.TotalAmountLabel.Size = new System.Drawing.Size(131, 24);
             this.TotalAmountLabel.TabIndex = 20;
             this.TotalAmountLabel.Text = "Total: 2342344\r\n";
             // 
@@ -322,7 +336,7 @@
             this.PercentCompleteLabel.Location = new System.Drawing.Point(588, 223);
             this.PercentCompleteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PercentCompleteLabel.Name = "PercentCompleteLabel";
-            this.PercentCompleteLabel.Size = new System.Drawing.Size(155, 28);
+            this.PercentCompleteLabel.Size = new System.Drawing.Size(134, 24);
             this.PercentCompleteLabel.TabIndex = 19;
             this.PercentCompleteLabel.Text = "Progress: 100%";
             // 
@@ -344,7 +358,7 @@
             this.CurrentAmountLabel.Location = new System.Drawing.Point(278, 223);
             this.CurrentAmountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CurrentAmountLabel.Name = "CurrentAmountLabel";
-            this.CurrentAmountLabel.Size = new System.Drawing.Size(178, 28);
+            this.CurrentAmountLabel.Size = new System.Drawing.Size(154, 24);
             this.CurrentAmountLabel.TabIndex = 17;
             this.CurrentAmountLabel.Text = "Current: 2342344";
             this.CurrentAmountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -358,18 +372,10 @@
             this.LoadingTypeLabel.Location = new System.Drawing.Point(473, 103);
             this.LoadingTypeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LoadingTypeLabel.Name = "LoadingTypeLabel";
-            this.LoadingTypeLabel.Size = new System.Drawing.Size(388, 58);
+            this.LoadingTypeLabel.Size = new System.Drawing.Size(348, 51);
             this.LoadingTypeLabel.TabIndex = 18;
             this.LoadingTypeLabel.Text = "Course Calculation";
             this.LoadingTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // BackgroundWorkerCourses
-            // 
-            this.BackgroundWorkerCourses.WorkerReportsProgress = true;
-            this.BackgroundWorkerCourses.WorkerSupportsCancellation = true;
-            this.BackgroundWorkerCourses.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorkerCourses_DoWork);
-            this.BackgroundWorkerCourses.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BackgroundWorkerCourses_ProgressChanged);
-            this.BackgroundWorkerCourses.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorkerCourses_RunWorkerCompleted);
             // 
             // panel1
             // 
@@ -394,18 +400,13 @@
             this.panel1.Size = new System.Drawing.Size(1313, 457);
             this.panel1.TabIndex = 21;
             // 
-            // panel2
+            // BackgroundWorkerCourses
             // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.TotalAmountLabel);
-            this.panel2.Controls.Add(this.PercentCompleteLabel);
-            this.panel2.Controls.Add(this.ProgressBar);
-            this.panel2.Controls.Add(this.CurrentAmountLabel);
-            this.panel2.Controls.Add(this.LoadingTypeLabel);
-            this.panel2.Location = new System.Drawing.Point(0, 235);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1313, 456);
-            this.panel2.TabIndex = 21;
+            this.BackgroundWorkerCourses.WorkerReportsProgress = true;
+            this.BackgroundWorkerCourses.WorkerSupportsCancellation = true;
+            this.BackgroundWorkerCourses.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorkerCourses_DoWork);
+            this.BackgroundWorkerCourses.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BackgroundWorkerCourses_ProgressChanged);
+            this.BackgroundWorkerCourses.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorkerCourses_RunWorkerCompleted);
             // 
             // InitialInputForm
             // 
@@ -417,6 +418,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1327, 728);
             this.Name = "InitialInputForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Input";
             this.Load += new System.EventHandler(this.InputWindow_Load);
@@ -424,10 +426,10 @@
             this.InitialInputPanel.ResumeLayout(false);
             this.InitialInputPanel.PerformLayout();
             this.LoadingCoursesPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
