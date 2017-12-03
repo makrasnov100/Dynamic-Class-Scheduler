@@ -24,12 +24,12 @@ namespace ClassScheduler
     public partial class CourseSelectionForm : Form
     {
 
-        AddCourseForm CourseAddPopup;
+        private AddCourseForm CourseAddPopup;
 
         public List<SingleCourse> availableCourses;
         public List<SingleCourse> selectedCourses = new List<SingleCourse>();
-        Random random = new Random();
-        BasicCalculation sectionCalculation;
+        private Random random = new Random();
+        private BasicCalculation sectionCalculation;
         private int creditAmount = 0;
 
         private DataGridViewRow selectedRow;
@@ -40,6 +40,7 @@ namespace ClassScheduler
         private UserConfig userInfo;
         private bool popUpCreated = false;
         private bool isOptimization = false;
+        int numPossib;
 
         public CourseSelectionForm(InitialInputForm userDataForm)
         {
@@ -81,7 +82,7 @@ namespace ClassScheduler
         {
             if(selectedCourses.Count() != 0)
             {
-                this.Hide();
+                LoadingSchedulesPanel.Visible = true;
                 ComputeOptimalTimes(selectedCourses);
             }
 
@@ -97,6 +98,10 @@ namespace ClassScheduler
         //Formats the labels on the courses selection form upon load
         private void CourseSelectionForm_Load(object sender, EventArgs e)
         {
+            //Hide loading panel
+            LoadingSchedulesPanel.Visible = false;
+            ModifyProgressBarColor.SetState(ProgressBar, 2);
+
             //Intro label
             string fullTermName;
             if (userInfo.getTermInterest() == "FA")
@@ -301,15 +306,12 @@ namespace ClassScheduler
         //Chooses the correct algorithm
         public void ComputeOptimalTimes(List<SingleCourse> givenCourses)
         {
-            //LoadingResultsForm ResultLoad = new LoadingResultsForm();
-            //ShowDialog(ResultLoad);
-
-            int numPossib = 1;
+            numPossib = 1;
             foreach (var course in givenCourses)
             {
                 if (course.getSections().Count() != 0)
                 {
-                    //Debug.WriteLine(numPossib + " * " + course.sections.Count() + " = " + (numPossib * course.sections.Count()));
+                   // Debug.WriteLine(numPossib + " * " + course.getSections().Count() + " = " + (numPossib * course.getSections().Count()));
                     numPossib = numPossib * course.getSections().Count();
                 }
             }
@@ -319,7 +321,7 @@ namespace ClassScheduler
 
             Debug.WriteLine("NEW CALCULATION CLASS CREATED");
 
-            sectionCalculation = new BasicCalculation(givenCourses, numPossib, random, creditAmount, this, RefToScheduleSelectForm, isOptimization);
+            sectionCalculation = new BasicCalculation(givenCourses, numPossib, random, creditAmount, this, RefToScheduleSelectForm, isOptimization, BackgroundWorkerSchedule);
             isOptimization = false;
         }
 
@@ -327,6 +329,7 @@ namespace ClassScheduler
         //Adds sections that can be substituted based on user defined settings (revise so courses fit better)
         public void ChooseOptimizationCourses(List<bool> canOptimize, SingleSchedule oldSchedule, LoadingResultsForm ScheduleSelectForm)
         {
+            LoadingSchedulesPanel.Visible = true;
             //Create references|copies & set bools
             RefToScheduleSelectForm = ScheduleSelectForm;
             List<SingleCourse> selectedCoursesMod = new List<SingleCourse>(selectedCourses.Count());
@@ -346,8 +349,6 @@ namespace ClassScheduler
                     string levelID = matchCourseID.Substring((matchCourseID.IndexOf("-", 0) + 1), 1) + "00";
                     bool isLab = matchCourseIDTrim[matchCourseIDTrim.Length - 1] == 'L' ? true : false;
                     Debug.WriteLine("Dep ID: " + depID + " | Level ID: " + levelID + " | Lab State: " + isLab);
-                    //string matchCourseIDTrim = matchCourseID.Substring(0, matchCourseID.IndexOf("-", 4));
-                    //string matchCourseFull = matchCourseIDTrim + "|" + oldSchedule.getAllSections()[optimizeCounter].getCourseName();
 
                     bool isLabCourse = false;
                     foreach (var course in availableCourses)
@@ -366,11 +367,14 @@ namespace ClassScheduler
                 }
                 optimizeCounter++;
             }
-
+            LoadingSchedulesPanel.Visible = true;
             ComputeOptimalTimes(selectedCoursesMod);
         }
 
-        //USED ONLY IN THIS AND ONE MORE FORM
+        //Property to hold the selected file name
+        public string SelectedFileName { get; set; }
+
+        //USED ON TWO FORMS
         //Function is mainly the answer from the following post on how to copy a complex object
         //https://stackoverflow.com/questions/16696448/how-to-make-a-copy-of-an-object-in-c-sharp
         public static SingleCourse DeepCopySingleCourse(SingleCourse other)
@@ -382,6 +386,41 @@ namespace ClassScheduler
                 ms.Position = 0;
                 return (SingleCourse)formatter.Deserialize(ms);
             }
+        }
+
+        //BACKGROUND WORKER FUNCTIONS
+        //PARTIAL INSTRUCTION FROM LINK (background worker)
+        //https://www.youtube.com/watch?v=G3zRhhGCJJA
+        private void BackgroundWorkerSchedule_DoWork(object sender, DoWorkEventArgs e)
+        {
+            
+            sectionCalculation.BeginCalculation();
+        }
+
+        private void BackgroundWorkerSchedule_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            ProgressBar.Value = e.ProgressPercentage;
+            PercentCompleteLabel.Text = string.Format("Progress: {0}%", e.ProgressPercentage);
+            int iCurAmount = (int)(numPossib * (e.ProgressPercentage / 100f));
+            CurrentAmountLabel.Text = "Current: " + iCurAmount;
+            TotalAmountLabel.Text = "Total: " + numPossib;
+        }
+
+        private void BackgroundWorkerSchedule_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            this.Hide();
+            sectionCalculation.DisplayResultLoadForm();
+        }
+
+        //Accessor/mutator functions
+        public Panel getLoadingSchedulesPanel()
+        {
+            return LoadingSchedulesPanel;
+        }
+
+        public void setLoadingResultForm(LoadingResultsForm loadResultForm)
+        {
+            RefToScheduleSelectForm = loadResultForm;
         }
     }
 }

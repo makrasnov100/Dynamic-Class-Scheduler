@@ -399,6 +399,7 @@ namespace ClassScheduler
             isOptimized = false;
             ChangeOptimizationText();
             RefToCourseSelectForm.Show();
+            RefToCourseSelectForm.getLoadingSchedulesPanel().Visible = false;
             this.Hide(); //(revise because form cannot be closed - open forms from main program)
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ namespace ClassScheduler
     {
         private List<SingleCourse> selectedCourses;
         private int courseAmount;
+        private int scheduleAmount;
         private int creditAmount;
         private bool isOptimization;
         private List<int> sectionAmountAll; // parallel list that allows for creation of all unique schedules
@@ -20,23 +22,30 @@ namespace ClassScheduler
         private List<SingleSchedule> overlapSchedules = new List<SingleSchedule>();
         private List<SingleSchedule> resultSchedules = new List<SingleSchedule>();
 
-        private CourseSelectionForm RefToCourseSelectForm;
         private LoadingResultsForm RefTOResultLoadForm;
+        private CourseSelectionForm RefToCourseSelectForm;
+        private BackgroundWorker scheduleWorker;
+        private float percentComplete;
         private Random random;
         private List<string> templateWeek = new List<string> { "M", "T", "W", "TH", "F" };
 
+        int numComplete = 0;
+
         public BasicCalculation(List<SingleCourse> selectedCourses, int numPossib, Random random, int creditAmount, 
-                                CourseSelectionForm courseForm, LoadingResultsForm ScheduleSelectForm, bool isOptimization)
+                                CourseSelectionForm courseForm, LoadingResultsForm ScheduleSelectForm, bool isOptimization, 
+                                BackgroundWorker scheduleWorker)
         {
-            //References to previous form
+            //References to previous form/worker
             RefToCourseSelectForm = courseForm;
             RefTOResultLoadForm = ScheduleSelectForm;
+            this.scheduleWorker = scheduleWorker;
 
             //Calculation variables
             this.random = random;
             this.creditAmount = creditAmount;
             this.selectedCourses = selectedCourses;
             this.courseAmount = selectedCourses.Count();
+            this.scheduleAmount = numPossib;
             this.isOptimization = isOptimization;
 
             schedulePopulation = new List<SingleSchedule>(numPossib);
@@ -44,17 +53,17 @@ namespace ClassScheduler
             foreach (var course in selectedCourses)
                 sectionAmountAll.Add(course.getSections().Count());
 
-            BeginCalculation();
+            scheduleWorker.CancelAsync();
+            scheduleWorker.RunWorkerAsync();
         }
 
         //[FUNCTION - BeginCalculation]
         //Handles the result schedule population creation proccess
-        private void BeginCalculation()
+        public void BeginCalculation()
         {
             CreateAllPossibilities();
             DetemineShownSchedules();
             DisplayDebugResult();
-            DisplayResultLoadForm();
         }
 
         //[FUNCTION - CreateAllPossibilities]
@@ -80,7 +89,10 @@ namespace ClassScheduler
             {
                 currentSecConfig[secID] = i;
                 if ((secID + 1) == courseAmount)
+                {
                     schedulePopulation.Add(new SingleSchedule(courseAmount, creditAmount, random, templateWeek, GetUniqueSec(currentSecConfig)));
+                    ReportToBuilder(1);
+                }
                 else
                     NestedForLoop((secIdNext), sectionAmountAll[secIdNext], currentSecConfig);
             }
@@ -167,20 +179,40 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - DisplayResultLoadForm]
-        //- Creates the load result form popup + passes needed info
-        private void DisplayResultLoadForm()
+        //Creates the load result form popup + passes needed info
+        public void DisplayResultLoadForm()
         {
             if(resultSchedules.Count() != 0)
             {
                 if (RefTOResultLoadForm == null)
+                {
+                    Debug.WriteLine("NEW RESULT FORM SHOWN");
                     RefTOResultLoadForm = new LoadingResultsForm(selectedCourses, resultSchedules, RefToCourseSelectForm);
+                    RefToCourseSelectForm.setLoadingResultForm(RefTOResultLoadForm);
+                }     
                 else
+                {
+                    Debug.WriteLine("RESULT SHOWN!");
                     RefTOResultLoadForm.ShowNewScheduleSet(selectedCourses, resultSchedules, isOptimization);
+                }
+
 
 
                 if(!RefTOResultLoadForm.Visible)
-                    RefTOResultLoadForm.ShowDialog();
+                {
+                    Debug.WriteLine("Result Form is Shown!");
+                    RefTOResultLoadForm.Show();
+                }
             }
+        }
+
+        //[FUNCTION - ReportToBuilder]
+        //Gives info to update the progress bar and labels
+        public void ReportToBuilder(int increaseStep)
+        {
+            numComplete += increaseStep;
+            percentComplete = (numComplete / scheduleAmount) * 100f;
+            scheduleWorker.ReportProgress((int)percentComplete <= 100 ? (int)percentComplete : 100);
         }
     }
 }

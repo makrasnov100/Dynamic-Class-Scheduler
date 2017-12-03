@@ -83,7 +83,9 @@ namespace ClassScheduler
                     canOptimize.Add(true);
             }
             RefToCourseSelectForm.ChooseOptimizationCourses(canOptimize, oldSchedule, RefToLoadResultsForm);
+            RefToCourseSelectForm.Show();
             this.Hide();
+            //RefToLoadResultsForm.Hide();
         }
     }
 }
