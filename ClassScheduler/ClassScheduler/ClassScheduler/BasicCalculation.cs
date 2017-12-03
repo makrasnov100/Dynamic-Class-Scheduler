@@ -24,7 +24,9 @@ namespace ClassScheduler
 
         private LoadingResultsForm RefTOResultLoadForm;
         private CourseSelectionForm RefToCourseSelectForm;
-        private BackgroundWorker scheduleWorker;
+        private OptimizationSettingsForm RefToOptimizationSettingsForm;
+
+        private BackgroundWorker scheduleWorker = new BackgroundWorker();
         private float percentComplete;
         private Random random;
         private List<string> templateWeek = new List<string> { "M", "T", "W", "TH", "F" };
@@ -32,13 +34,21 @@ namespace ClassScheduler
         int numComplete = 0;
 
         public BasicCalculation(List<SingleCourse> selectedCourses, int numPossib, Random random, int creditAmount, 
-                                CourseSelectionForm courseForm, LoadingResultsForm ScheduleSelectForm, bool isOptimization, 
-                                BackgroundWorker scheduleWorker)
+                                CourseSelectionForm courseForm, LoadingResultsForm ScheduleSelectForm, OptimizationSettingsForm OptimizationSettingsForm,
+                                bool isOptimization)
         {
+            //Worker Setup
+            scheduleWorker = new BackgroundWorker();
+            scheduleWorker.WorkerReportsProgress = true;
+            scheduleWorker.WorkerSupportsCancellation = true;
+            scheduleWorker.DoWork += new DoWorkEventHandler(scheduleWorker_DoWork);
+            scheduleWorker.ProgressChanged += new ProgressChangedEventHandler(scheduleWorker_ProgressChanged);
+            scheduleWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(scheduleWorker_RunWorkerCompleted);
+
             //References to previous form/worker
             RefToCourseSelectForm = courseForm;
             RefTOResultLoadForm = ScheduleSelectForm;
-            this.scheduleWorker = scheduleWorker;
+            RefToOptimizationSettingsForm = OptimizationSettingsForm;
 
             //Calculation variables
             this.random = random;
@@ -53,7 +63,6 @@ namespace ClassScheduler
             foreach (var course in selectedCourses)
                 sectionAmountAll.Add(course.getSections().Count());
 
-            scheduleWorker.CancelAsync();
             scheduleWorker.RunWorkerAsync();
         }
 
@@ -188,15 +197,12 @@ namespace ClassScheduler
                 {
                     Debug.WriteLine("NEW RESULT FORM SHOWN");
                     RefTOResultLoadForm = new LoadingResultsForm(selectedCourses, resultSchedules, RefToCourseSelectForm);
-                    RefToCourseSelectForm.setLoadingResultForm(RefTOResultLoadForm);
                 }     
                 else
                 {
                     Debug.WriteLine("RESULT SHOWN!");
                     RefTOResultLoadForm.ShowNewScheduleSet(selectedCourses, resultSchedules, isOptimization);
                 }
-
-
 
                 if(!RefTOResultLoadForm.Visible)
                 {
@@ -213,6 +219,26 @@ namespace ClassScheduler
             numComplete += increaseStep;
             percentComplete = (numComplete / scheduleAmount) * 100f;
             scheduleWorker.ReportProgress((int)percentComplete <= 100 ? (int)percentComplete : 100);
+        }
+
+
+        //BACKGROUND WORKER FUNCTIONS
+        //PARTIAL INSTRUCTION FROM LINK (background worker)
+        //https://www.youtube.com/watch?v=G3zRhhGCJJA
+        private void scheduleWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BeginCalculation();
+        }
+
+        private void scheduleWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            RefToCourseSelectForm.UpdateProgress(e.ProgressPercentage);
+        }
+
+        private void scheduleWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            RefToCourseSelectForm.Hide();
+            DisplayResultLoadForm();
         }
     }
 }

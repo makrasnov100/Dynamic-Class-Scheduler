@@ -37,6 +37,7 @@ namespace ClassScheduler
         private DataTable selectedCourseTable;
 
         private LoadingResultsForm RefToScheduleSelectForm;
+        private OptimizationSettingsForm RefToOptimizationSettingsForm;
         private UserConfig userInfo;
         private bool popUpCreated = false;
         private bool isOptimization = false;
@@ -321,17 +322,18 @@ namespace ClassScheduler
 
             Debug.WriteLine("NEW CALCULATION CLASS CREATED");
 
-            sectionCalculation = new BasicCalculation(givenCourses, numPossib, random, creditAmount, this, RefToScheduleSelectForm, isOptimization, BackgroundWorkerSchedule);
+            sectionCalculation = new BasicCalculation(givenCourses, numPossib, random, creditAmount, this, RefToScheduleSelectForm, RefToOptimizationSettingsForm, isOptimization);
             isOptimization = false;
         }
 
         //[FUNCTION - ChooseOptimizationCourses]
         //Adds sections that can be substituted based on user defined settings (revise so courses fit better)
-        public void ChooseOptimizationCourses(List<bool> canOptimize, SingleSchedule oldSchedule, LoadingResultsForm ScheduleSelectForm)
+        public void ChooseOptimizationCourses(List<bool> canOptimize, SingleSchedule oldSchedule, LoadingResultsForm ScheduleSelectForm, OptimizationSettingsForm OptimizationSettingsForm)
         {
             LoadingSchedulesPanel.Visible = true;
             //Create references|copies & set bools
             RefToScheduleSelectForm = ScheduleSelectForm;
+            RefToOptimizationSettingsForm = OptimizationSettingsForm;
             List<SingleCourse> selectedCoursesMod = new List<SingleCourse>(selectedCourses.Count());
             foreach (var course in selectedCourses)
                 selectedCoursesMod.Add(DeepCopySingleCourse(course));
@@ -357,18 +359,28 @@ namespace ClassScheduler
                         if ((course.getCourseLevel() == levelID && course.getAbrvCourseName().Contains(depID)) &&
                             (course.getAbrvCourseName() != matchCourseID.Substring(0, matchCourseID.IndexOf("-", 4))) &&
                             (isLab == isLabCourse))
+                        {
                             foreach (var section in course.getSections())
                             {
                                 Debug.WriteLine("Added a suggested section: " + section.getID());
                                 selectedCoursesMod[optimizeCounter].getSections().Add(new SingleSection(section, true));
                             }
-                    }
-                        
+                        }
+                    }           
                 }
                 optimizeCounter++;
             }
             LoadingSchedulesPanel.Visible = true;
             ComputeOptimalTimes(selectedCoursesMod);
+        }
+
+        public void UpdateProgress(int progressPercentage)
+        {
+            ProgressBar.Value = progressPercentage;
+            PercentCompleteLabel.Text = string.Format("Progress: {0}%", progressPercentage);
+            int iCurAmount = (int)(numPossib * (progressPercentage / 100f));
+            CurrentAmountLabel.Text = "Current: " + iCurAmount;
+            TotalAmountLabel.Text = "Total: " + numPossib;
         }
 
         //Property to hold the selected file name
@@ -388,39 +400,10 @@ namespace ClassScheduler
             }
         }
 
-        //BACKGROUND WORKER FUNCTIONS
-        //PARTIAL INSTRUCTION FROM LINK (background worker)
-        //https://www.youtube.com/watch?v=G3zRhhGCJJA
-        private void BackgroundWorkerSchedule_DoWork(object sender, DoWorkEventArgs e)
-        {
-            
-            sectionCalculation.BeginCalculation();
-        }
-
-        private void BackgroundWorkerSchedule_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            ProgressBar.Value = e.ProgressPercentage;
-            PercentCompleteLabel.Text = string.Format("Progress: {0}%", e.ProgressPercentage);
-            int iCurAmount = (int)(numPossib * (e.ProgressPercentage / 100f));
-            CurrentAmountLabel.Text = "Current: " + iCurAmount;
-            TotalAmountLabel.Text = "Total: " + numPossib;
-        }
-
-        private void BackgroundWorkerSchedule_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            this.Hide();
-            sectionCalculation.DisplayResultLoadForm();
-        }
-
         //Accessor/mutator functions
         public Panel getLoadingSchedulesPanel()
         {
             return LoadingSchedulesPanel;
-        }
-
-        public void setLoadingResultForm(LoadingResultsForm loadResultForm)
-        {
-            RefToScheduleSelectForm = loadResultForm;
         }
     }
 }

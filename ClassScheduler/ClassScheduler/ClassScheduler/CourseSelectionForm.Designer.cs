@@ -44,7 +44,6 @@
             this.ProgressBar = new System.Windows.Forms.ProgressBar();
             this.CurrentAmountLabel = new System.Windows.Forms.Label();
             this.LoadingTypeLabel = new System.Windows.Forms.Label();
-            this.BackgroundWorkerSchedule = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.selectedCoursesGridView)).BeginInit();
             this.LoadingSchedulesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -248,14 +247,6 @@
             this.LoadingTypeLabel.Text = "Schedule Calculation";
             this.LoadingTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // BackgroundWorkerSchedule
-            // 
-            this.BackgroundWorkerSchedule.WorkerReportsProgress = true;
-            this.BackgroundWorkerSchedule.WorkerSupportsCancellation = true;
-            this.BackgroundWorkerSchedule.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorkerSchedule_DoWork);
-            this.BackgroundWorkerSchedule.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BackgroundWorkerSchedule_ProgressChanged);
-            this.BackgroundWorkerSchedule.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorkerSchedule_RunWorkerCompleted);
-            // 
             // CourseSelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -304,6 +295,5 @@
         private System.Windows.Forms.Label LoadingTypeLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
-        private System.ComponentModel.BackgroundWorker BackgroundWorkerSchedule;
     }
 }
