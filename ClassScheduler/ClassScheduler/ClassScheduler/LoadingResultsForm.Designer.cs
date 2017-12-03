@@ -55,7 +55,7 @@
             this.ScheduleSelectionLabel.Location = new System.Drawing.Point(15, 19);
             this.ScheduleSelectionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ScheduleSelectionLabel.Name = "ScheduleSelectionLabel";
-            this.ScheduleSelectionLabel.Size = new System.Drawing.Size(507, 55);
+            this.ScheduleSelectionLabel.Size = new System.Drawing.Size(459, 49);
             this.ScheduleSelectionLabel.TabIndex = 9;
             this.ScheduleSelectionLabel.Text = "Choose Your Schedule Option...";
             this.ScheduleSelectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -84,11 +84,13 @@
             // 
             // SectionGraphBox
             // 
+            this.SectionGraphBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.SectionGraphBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SectionGraphBox.Location = new System.Drawing.Point(0, 0);
             this.SectionGraphBox.Name = "SectionGraphBox";
             this.SectionGraphBox.Size = new System.Drawing.Size(1004, 549);
-            this.SectionGraphBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.SectionGraphBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SectionGraphBox.TabIndex = 19;
             this.SectionGraphBox.TabStop = false;
             // 
@@ -132,6 +134,7 @@
             this.SelectScheduleButton.TabIndex = 22;
             this.SelectScheduleButton.Text = "Select";
             this.SelectScheduleButton.UseVisualStyleBackColor = false;
+            this.SelectScheduleButton.Click += new System.EventHandler(this.SelectScheduleButton_Click);
             // 
             // SuggestedCoursesButton
             // 
@@ -155,7 +158,7 @@
             this.SuggestionScheduleLabel.Location = new System.Drawing.Point(450, 629);
             this.SuggestionScheduleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SuggestionScheduleLabel.Name = "SuggestionScheduleLabel";
-            this.SuggestionScheduleLabel.Size = new System.Drawing.Size(0, 24);
+            this.SuggestionScheduleLabel.Size = new System.Drawing.Size(0, 20);
             this.SuggestionScheduleLabel.TabIndex = 24;
             // 
             // ScheduleSuggestionLabel
@@ -166,7 +169,7 @@
             this.ScheduleSuggestionLabel.Location = new System.Drawing.Point(458, 633);
             this.ScheduleSuggestionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ScheduleSuggestionLabel.Name = "ScheduleSuggestionLabel";
-            this.ScheduleSuggestionLabel.Size = new System.Drawing.Size(322, 48);
+            this.ScheduleSuggestionLabel.Size = new System.Drawing.Size(293, 40);
             this.ScheduleSuggestionLabel.TabIndex = 25;
             this.ScheduleSuggestionLabel.Text = "Optimize to shorten time at school by \r\nchoosing from similar courses!";
             this.ScheduleSuggestionLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -193,7 +196,7 @@
             this.ScheduleAmountLabel.Location = new System.Drawing.Point(597, 27);
             this.ScheduleAmountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ScheduleAmountLabel.Name = "ScheduleAmountLabel";
-            this.ScheduleAmountLabel.Size = new System.Drawing.Size(160, 33);
+            this.ScheduleAmountLabel.Size = new System.Drawing.Size(136, 29);
             this.ScheduleAmountLabel.TabIndex = 27;
             this.ScheduleAmountLabel.Text = "Schedule 0 of 0\r\n";
             this.ScheduleAmountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -233,8 +236,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1060, 685);
+            this.ClientSize = new System.Drawing.Size(1062, 685);
             this.Controls.Add(this.OverlapFitLabel);
             this.Controls.Add(this.EffecFitLabel);
             this.Controls.Add(this.ExampleSchedulePanel);
@@ -258,7 +262,6 @@
             this.Load += new System.EventHandler(this.LoadingResultsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SectionGraphBox)).EndInit();
             this.ExampleSchedulePanel.ResumeLayout(false);
-            this.ExampleSchedulePanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

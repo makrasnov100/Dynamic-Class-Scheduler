@@ -94,3 +94,4 @@ C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassSchedul
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.OptimizationSettingsForm.resources
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.LoadingResultsForm.resources
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.PreviewForm.resources
+C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.csprojResolveAssemblyReference.cache

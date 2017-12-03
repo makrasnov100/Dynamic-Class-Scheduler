@@ -75,6 +75,7 @@ namespace ClassScheduler
                     SelectedFileName = ofd.FileName;
                     DataTable final = ExcelToDataTable(SelectedFileName);
 
+                    previewForm.setFileName(SelectedFileName);
                     previewForm.getPreviewDGV().DataSource = final;
 
                     FileStream stream = File.Open(ofd.FileName, FileMode.Open, FileAccess.Read);
@@ -575,6 +576,7 @@ namespace ClassScheduler
 
         private void PreviewExcelSheetButton_Click_1(object sender, EventArgs e)
         {
+            previewForm.setFilenameLabel();
             previewForm.ShowDialog();
         }
     }

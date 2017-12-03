@@ -54,6 +54,9 @@ namespace ClassScheduler
         private float topSeperator = 30;
         private float lastYPos;
 
+        //Properties for resizing the LoadingResultsForm width to match the SectionGraphBox width
+        private int widthOfPBox;
+
         public LoadingResultsForm(List<SingleCourse> selectedCourses,List<SingleSchedule> resultSchedules, CourseSelectionForm courseForm)
         {
             //References to previous form
@@ -479,6 +482,14 @@ namespace ClassScheduler
         public bool getIsOptimizedState()
         {
             return isOptimized;
+        }
+
+        //[METHOD- Select Button Event Handler]
+        //Display the user's final schedule after optimization, 
+        //Display a pdf file in a pictureBox, and have a print dialog
+        private void SelectScheduleButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

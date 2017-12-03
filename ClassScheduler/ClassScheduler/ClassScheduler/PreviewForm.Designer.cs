@@ -30,13 +30,15 @@
         {
             this.previewDataGridView = new System.Windows.Forms.DataGridView();
             this.closeBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.fileTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.previewDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // previewDataGridView
             // 
             this.previewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.previewDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.previewDataGridView.Location = new System.Drawing.Point(12, 75);
             this.previewDataGridView.Name = "previewDataGridView";
             this.previewDataGridView.RowTemplate.Height = 24;
             this.previewDataGridView.Size = new System.Drawing.Size(958, 473);
@@ -44,7 +46,7 @@
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(875, 491);
+            this.closeBtn.Location = new System.Drawing.Point(875, 554);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(95, 36);
             this.closeBtn.TabIndex = 1;
@@ -52,21 +54,43 @@
             this.closeBtn.UseVisualStyleBackColor = true;
             this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 22);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Filename: ";
+            // 
+            // fileTextBox
+            // 
+            this.fileTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileTextBox.Location = new System.Drawing.Point(132, 24);
+            this.fileTextBox.Name = "fileTextBox";
+            this.fileTextBox.ReadOnly = true;
+            this.fileTextBox.Size = new System.Drawing.Size(838, 28);
+            this.fileTextBox.TabIndex = 3;
+            // 
             // PreviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 553);
+            this.ClientSize = new System.Drawing.Size(982, 603);
+            this.Controls.Add(this.fileTextBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.previewDataGridView);
-            this.MaximumSize = new System.Drawing.Size(1000, 600);
-            this.MinimumSize = new System.Drawing.Size(1000, 600);
+            this.MaximumSize = new System.Drawing.Size(1000, 650);
+            this.MinimumSize = new System.Drawing.Size(1000, 650);
             this.Name = "PreviewForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "File Preview";
             ((System.ComponentModel.ISupportInitialize)(this.previewDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -74,5 +98,7 @@
 
         private System.Windows.Forms.DataGridView previewDataGridView;
         private System.Windows.Forms.Button closeBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox fileTextBox;
     }
 }
