@@ -29,18 +29,18 @@ namespace ClassScheduler
         public List<SingleCourse> availableCourses;
         public List<SingleCourse> selectedCourses = new List<SingleCourse>();
         private Random random = new Random();
-        private BasicCalculation sectionCalculation;
         private int creditAmount = 0;
 
         private DataGridViewRow selectedRow;
         private int selectedTableRowIndex;
         private DataTable selectedCourseTable;
 
+        private BasicCalculationForm RefToBasicCalculationForm;
         private LoadingResultsForm RefToScheduleSelectForm;
-        private OptimizationSettingsForm RefToOptimizationSettingsForm;
         private UserConfig userInfo;
         private bool popUpCreated = false;
         private bool isOptimization = false;
+        private bool isFirstCalculation = true;
         int numPossib;
 
         public CourseSelectionForm(InitialInputForm userDataForm)
@@ -83,8 +83,10 @@ namespace ClassScheduler
         {
             if(selectedCourses.Count() != 0)
             {
-                LoadingSchedulesPanel.Visible = true;
-                ComputeOptimalTimes(selectedCourses);
+                if(isFirstCalculation)
+                    ComputeOptimalTimesFirst(selectedCourses);
+                else
+                    ComputeOptimalTimes(selectedCourses);
             }
 
             //ResultForm Result = new ResultForm(this);
@@ -99,10 +101,6 @@ namespace ClassScheduler
         //Formats the labels on the courses selection form upon load
         private void CourseSelectionForm_Load(object sender, EventArgs e)
         {
-            //Hide loading panel
-            LoadingSchedulesPanel.Visible = false;
-            ModifyProgressBarColor.SetState(ProgressBar, 2);
-
             //Intro label
             string fullTermName;
             if (userInfo.getTermInterest() == "FA")
@@ -304,8 +302,8 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - ComputeOptimalTimes]
-        //Chooses the correct algorithm
-        public void ComputeOptimalTimes(List<SingleCourse> givenCourses)
+        //Correctly sets up schedule calculation
+        public void ComputeOptimalTimesFirst(List<SingleCourse> givenCourses)
         {
             numPossib = 1;
             foreach (var course in givenCourses)
@@ -322,18 +320,46 @@ namespace ClassScheduler
 
             Debug.WriteLine("NEW CALCULATION CLASS CREATED");
 
-            sectionCalculation = new BasicCalculation(givenCourses, numPossib, random, creditAmount, this, RefToScheduleSelectForm, RefToOptimizationSettingsForm, isOptimization);
+            this.Hide();
+            RefToBasicCalculationForm = new BasicCalculationForm(givenCourses, numPossib, random, creditAmount, this, RefToScheduleSelectForm, isOptimization);
+            RefToBasicCalculationForm.BeginWorking(false);
+            RefToBasicCalculationForm.ShowDialog();
             isOptimization = false;
         }
 
+        //[FUNCTION - ComputeOptimalTimes]
+        //Correctly sets up schedule calculation w/ optimized sections
+        public void ComputeOptimalTimes(List<SingleCourse> givenCourses)
+        {
+            numPossib = 1;
+            foreach (var course in givenCourses)
+            {
+                if (course.getSections().Count() != 0)
+                {
+                    // Debug.WriteLine(numPossib + " * " + course.getSections().Count() + " = " + (numPossib * course.getSections().Count()));
+                    numPossib = numPossib * course.getSections().Count();
+                }
+            }
+
+            Debug.WriteLine("Number of Schedule Possibilities: " + numPossib);
+            Debug.WriteLine("*****************************************************************");
+
+            Debug.WriteLine("NEW OPTIMIZED CALCULATION STARTED");
+
+            this.Hide();
+            RefToBasicCalculationForm.Show();
+            RefToBasicCalculationForm.RestartCalculation(givenCourses, numPossib, creditAmount, isOptimization);
+            RefToBasicCalculationForm.BeginWorking(true);
+            isOptimization = false;
+        }
+
+
         //[FUNCTION - ChooseOptimizationCourses]
         //Adds sections that can be substituted based on user defined settings (revise so courses fit better)
-        public void ChooseOptimizationCourses(List<bool> canOptimize, SingleSchedule oldSchedule, LoadingResultsForm ScheduleSelectForm, OptimizationSettingsForm OptimizationSettingsForm)
+        public void ChooseOptimizationCourses(List<bool> canOptimize, SingleSchedule oldSchedule, LoadingResultsForm ScheduleSelectForm)
         {
-            LoadingSchedulesPanel.Visible = true;
             //Create references|copies & set bools
             RefToScheduleSelectForm = ScheduleSelectForm;
-            RefToOptimizationSettingsForm = OptimizationSettingsForm;
             List<SingleCourse> selectedCoursesMod = new List<SingleCourse>(selectedCourses.Count());
             foreach (var course in selectedCourses)
                 selectedCoursesMod.Add(DeepCopySingleCourse(course));
@@ -345,6 +371,7 @@ namespace ClassScheduler
             {
                 if (optimizeOption == true)
                 {
+                    Debug.WriteLine("Optimization counter:" + oldSchedule.getAllSections().Count());
                     string matchCourseID = oldSchedule.getAllSections()[optimizeCounter].getID();
                     string matchCourseIDTrim = matchCourseID.Substring(0, matchCourseID.IndexOf("-", 4));
                     string depID = matchCourseID.Substring(0, matchCourseID.IndexOf("-", 0));
@@ -370,17 +397,7 @@ namespace ClassScheduler
                 }
                 optimizeCounter++;
             }
-            LoadingSchedulesPanel.Visible = true;
             ComputeOptimalTimes(selectedCoursesMod);
-        }
-
-        public void UpdateProgress(int progressPercentage)
-        {
-            ProgressBar.Value = progressPercentage;
-            PercentCompleteLabel.Text = string.Format("Progress: {0}%", progressPercentage);
-            int iCurAmount = (int)(numPossib * (progressPercentage / 100f));
-            CurrentAmountLabel.Text = "Current: " + iCurAmount;
-            TotalAmountLabel.Text = "Total: " + numPossib;
         }
 
         //Property to hold the selected file name
@@ -400,10 +417,15 @@ namespace ClassScheduler
             }
         }
 
-        //Accessor/mutator functions
-        public Panel getLoadingSchedulesPanel()
+        //accessor/mutator functions
+        public void setIsFirstCalculationState(bool isFirstCalculation)
         {
-            return LoadingSchedulesPanel;
+            this.isFirstCalculation = isFirstCalculation;
+        }
+
+        public bool getIsFirstCalculationState()
+        {
+            return isFirstCalculation;
         }
     }
 }

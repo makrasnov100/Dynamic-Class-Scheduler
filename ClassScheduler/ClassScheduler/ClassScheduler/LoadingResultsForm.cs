@@ -399,7 +399,6 @@ namespace ClassScheduler
             isOptimized = false;
             ChangeOptimizationText();
             RefToCourseSelectForm.Show();
-            RefToCourseSelectForm.getLoadingSchedulesPanel().Visible = false;
             this.Hide(); //(revise because form cannot be closed - open forms from main program)
         }
 
@@ -435,6 +434,13 @@ namespace ClassScheduler
         //[FUNCTION - NextScheduleButton_Click]
         //Opens up optimization settings after button "Optimize" is clicked
         private void SuggestedCoursesButton_Click(object sender, EventArgs e)
+        {
+            ChageUIOptimizationState();
+        }
+
+        //[FUNCTION - ChageUIOptimizationState]
+        //Switches the view of form based on its current optimize state
+        public void ChageUIOptimizationState()
         {
             if (!isOptimized)
             {

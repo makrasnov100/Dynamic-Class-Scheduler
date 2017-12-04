@@ -371,12 +371,12 @@
             this.LoadingTypeLabel.Font = new System.Drawing.Font("Calibri", 25F, System.Drawing.FontStyle.Bold);
             this.LoadingTypeLabel.ForeColor = System.Drawing.Color.Black;
             this.LoadingTypeLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.LoadingTypeLabel.Location = new System.Drawing.Point(533, 136);
+            this.LoadingTypeLabel.Location = new System.Drawing.Point(465, 152);
             this.LoadingTypeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LoadingTypeLabel.Name = "LoadingTypeLabel";
-            this.LoadingTypeLabel.Size = new System.Drawing.Size(411, 61);
+            this.LoadingTypeLabel.Size = new System.Drawing.Size(560, 61);
             this.LoadingTypeLabel.TabIndex = 18;
-            this.LoadingTypeLabel.Text = "Course Calculation";
+            this.LoadingTypeLabel.Text = "Creating Course Database";
             this.LoadingTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -416,10 +416,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1476, 862);
+            this.ClientSize = new System.Drawing.Size(1478, 862);
             this.Controls.Add(this.InitialInputPanel);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MinimumSize = new System.Drawing.Size(1490, 896);
+            this.MinimumSize = new System.Drawing.Size(1500, 900);
             this.Name = "InitialInputForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

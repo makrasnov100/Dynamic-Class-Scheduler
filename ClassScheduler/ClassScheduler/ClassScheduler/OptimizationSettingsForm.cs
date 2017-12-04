@@ -85,8 +85,8 @@ namespace ClassScheduler
             RefToCourseSelectForm.Show();
             RefToLoadResultsForm.Hide();
             this.Hide();
-            RefToCourseSelectForm.ChooseOptimizationCourses(canOptimize, oldSchedule, RefToLoadResultsForm, this);
-
+            RefToCourseSelectForm.setIsFirstCalculationState(true);
+            RefToCourseSelectForm.ChooseOptimizationCourses(canOptimize, oldSchedule, RefToLoadResultsForm);
         }
     }
 }

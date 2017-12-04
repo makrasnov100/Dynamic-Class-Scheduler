@@ -537,7 +537,6 @@ namespace ClassScheduler
         public void StartCalcPB()
         {
             ModifyProgressBarColor.SetState(ProgressBar, 2);
-            LoadingTypeLabel.Text = "Course Calculation";
             curCalcNum = 0;
             totalCalcNum = dt.Rows.Count;
         }
