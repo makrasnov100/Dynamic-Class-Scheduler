@@ -23,9 +23,11 @@ namespace ClassScheduler
         private List<int> sectionAmountAll; // parallel list that allows for creation of all unique schedules
 
         private List<SingleSchedule> schedulePopulation;
-        private List<SingleSchedule> acceptableSchedules = new List<SingleSchedule>();
-        private List<SingleSchedule> overlapSchedules = new List<SingleSchedule>();
-        private List<SingleSchedule> resultSchedules = new List<SingleSchedule>();
+        private List<SingleSchedule> acceptableSchedulesTemp = new List<SingleSchedule>(20000);
+        private List<SingleSchedule> overlapSchedulesTemp = new List<SingleSchedule>(20000);
+        private List<SingleSchedule> acceptableSchedules = new List<SingleSchedule>(200);
+        private List<SingleSchedule> overlapSchedules = new List<SingleSchedule>(200);
+        private List<SingleSchedule> resultSchedules = new List<SingleSchedule>(200);
 
         private LoadingResultsForm RefToResultLoadForm;
         private CourseSelectionForm RefToCourseSelectForm;
@@ -52,7 +54,7 @@ namespace ClassScheduler
             this.scheduleAmount = numPossib;
             this.isOptimization = isOptimization;
 
-            schedulePopulation = new List<SingleSchedule>(numPossib);
+            schedulePopulation = new List<SingleSchedule>(20000);
             this.sectionAmountAll = new List<int>(selectedCourses.Count());
             foreach (var course in selectedCourses)
                 sectionAmountAll.Add(course.getSections().Count());
@@ -71,10 +73,12 @@ namespace ClassScheduler
 
         public void RestartCalculation(List<SingleCourse> selectedCourses, int numPossib, int creditAmount, bool isOptimization)
         {
-            //Resetred variables
-            acceptableSchedules = new List<SingleSchedule>();
-            overlapSchedules = new List<SingleSchedule>();
-            resultSchedules = new List<SingleSchedule>();
+            //Reseted variables
+            acceptableSchedulesTemp = new List<SingleSchedule>(20000);
+            overlapSchedulesTemp = new List<SingleSchedule>(20000);
+            acceptableSchedules = new List<SingleSchedule>(200);
+            overlapSchedules = new List<SingleSchedule>(200);
+            resultSchedules = new List<SingleSchedule>(200);
 
             //Calculation variables
             this.creditAmount = creditAmount;
@@ -83,7 +87,7 @@ namespace ClassScheduler
             this.scheduleAmount = numPossib;
             this.isOptimization = isOptimization;
 
-            schedulePopulation = new List<SingleSchedule>(scheduleAmount);
+            schedulePopulation = new List<SingleSchedule>(20000);
             this.sectionAmountAll = new List<int>(courseAmount);
             foreach (var course in selectedCourses)
                 sectionAmountAll.Add(course.getSections().Count());
@@ -107,12 +111,13 @@ namespace ClassScheduler
                 return;
 
             int[] currentSecConfig = new int[courseAmount];
-            NestedForLoop(0, sectionAmountAll[0], currentSecConfig);
+            NestedScheduleConfig(0, sectionAmountAll[0], currentSecConfig);
+            HandleScheduleOverload();
         }
 
         //[FUNCTION - NestedForLoop]
         //Allows for dynamic creation off all schedule possibilities
-        private void NestedForLoop(int secID, int secAmount, int[] secConfig)
+        private void NestedScheduleConfig(int secID, int secAmount, int[] secConfig)
         {
             int secIdNext = secID + 1;
             int[] currentSecConfig = new int[courseAmount];
@@ -124,17 +129,22 @@ namespace ClassScheduler
                 if ((secID + 1) == courseAmount)
                 {
                     schedulePopulation.Add(new SingleSchedule(courseAmount, creditAmount, random, templateWeek, GetUniqueSec(currentSecConfig)));
-                    numComplete += 1;
                     if(numComplete % 1000 == 0)
                     {
                         Debug.WriteLine("(" + (float)numComplete + " / " + (float)scheduleAmount + ") * " + 100f + " = " + ((float)numComplete / (float)scheduleAmount) * 100f);
                         percentComplete = ((float)numComplete / (float)scheduleAmount) * 100f;
                         BackgroundWorkerSchedules.ReportProgress((int)percentComplete <= 100 ? (int)percentComplete : 100);
                     }
+                    if(numComplete % 20000 == 0)
+                    {
+                        Debug.WriteLine("Memory Save!");
+                        HandleScheduleOverload();
+                    }
+                    numComplete += 1;
                 }
                 else
                 {
-                    NestedForLoop((secIdNext), sectionAmountAll[secIdNext], currentSecConfig);
+                    NestedScheduleConfig((secIdNext), sectionAmountAll[secIdNext], currentSecConfig);
                 }
             }
         }
@@ -155,30 +165,71 @@ namespace ClassScheduler
             return resultSchedule;
         }
 
-        //[FUNCTION - DetemineShownSchedules]
-        //Sorts all schedules by fitness and adds possible ones to resultSchedules
-        public void DetemineShownSchedules()
+        //[FUNCTION - HandleScheduleOverload]
+        //Frees some memory by doing a preliminary sorting when 50k calculations made & at end
+        private void HandleScheduleOverload()
         {
+            Debug.WriteLine("Overlap Schedules instance: " + overlapSchedules);
+
+            //Add fittest from last set
+            if (overlapSchedules.Count() != 0)
+                overlapSchedulesTemp.AddRange(overlapSchedules);
+
+            if (acceptableSchedules.Count() != 0)
+                acceptableSchedulesTemp.AddRange(acceptableSchedules);
+
             //Add possible combinations to correct list
             foreach (var schedule in schedulePopulation)
             {
                 if (schedule.getAcceptableLayoutState())
-                    acceptableSchedules.Add(schedule);
+                    acceptableSchedulesTemp.Add(schedule);
                 else
-                    overlapSchedules.Add(schedule);
+                    overlapSchedulesTemp.Add(schedule);
             }
 
-            //Sort both lists
-            if (acceptableSchedules.Count() != 0)
-                acceptableSchedules = acceptableSchedules.OrderByDescending(s => s.getFitness()).ToList();
-            if (overlapSchedules.Count() != 0)
-                overlapSchedules = overlapSchedules.OrderBy(s => s.getOverlapCount()).ToList();
+            //Sort both temp lists
+            if (acceptableSchedulesTemp.Count() != 0)
+                acceptableSchedulesTemp = acceptableSchedulesTemp.OrderByDescending(s => s.getFitness()).ToList();
+            if (overlapSchedulesTemp.Count() != 0)
+                overlapSchedulesTemp = overlapSchedulesTemp.OrderBy(s => s.getOverlapCount()).ToList();
 
-            //Add all schedules to resulting schedules list
-            resultSchedules = new List<SingleSchedule>(acceptableSchedules);
+            //Refresh fittest sets
+            acceptableSchedules.Clear();
+            overlapSchedules.Clear();
+            int scheduleNum = 1;
+            foreach(var schedule in acceptableSchedulesTemp)
+            {
+                acceptableSchedules.Add(schedule);
+                if (scheduleNum == 200)
+                    break;
+                scheduleNum++;
+            }
+            scheduleNum = 0;
+            foreach (var schedule in overlapSchedulesTemp)
+            {
+                overlapSchedules.Add(schedule);
+                if (scheduleNum == 200)
+                    break;
+                scheduleNum++;
+            }
+            scheduleNum = 0;
+
+            //Clear repeating lists
+            schedulePopulation.Clear();
+            acceptableSchedulesTemp.Clear();
+            overlapSchedulesTemp.Clear();
+        }
+
+        //[FUNCTION - DetemineShownSchedules]
+        //Add all schedules to resulting schedules list
+        public void DetemineShownSchedules()
+        {
+
+            resultSchedules.Clear();
             Debug.WriteLine("Overlap Schedules: " + overlapSchedules.Count() + " Acceptable Schedules: " + acceptableSchedules.Count());
-            int additionsNeeded = overlapSchedules.Count() <= 1000 - acceptableSchedules.Count() ?
-                                  overlapSchedules.Count() : 1000 - acceptableSchedules.Count();
+            resultSchedules.AddRange(acceptableSchedules);
+            int additionsNeeded = overlapSchedules.Count() <= 200 - acceptableSchedules.Count() ?
+                                  overlapSchedules.Count() : 200 - acceptableSchedules.Count();
             for (int i = 0; i < additionsNeeded; i++)
                 resultSchedules.Add(overlapSchedules[i]);
         }
@@ -292,6 +343,12 @@ namespace ClassScheduler
                 }
             }
             RefToCourseSelectForm.setIsFirstCalculationState(false);
+
+            acceptableSchedulesTemp.Clear();
+            overlapSchedulesTemp.Clear();
+            acceptableSchedules.Clear();
+            overlapSchedules.Clear();
+            resultSchedules.Clear();
         }
 
         private void BasicCalculationForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -313,6 +370,12 @@ namespace ClassScheduler
             {
                 RefToCourseSelectForm.Show();
             }
+
+            acceptableSchedulesTemp.Clear();
+            overlapSchedulesTemp.Clear();
+            acceptableSchedules.Clear();
+            overlapSchedules.Clear();
+            resultSchedules.Clear();
         }
     }
 }

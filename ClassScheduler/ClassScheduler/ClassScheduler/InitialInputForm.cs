@@ -320,7 +320,7 @@ namespace ClassScheduler
                     section.getStartTimes().SequenceEqual(SplitCellIntoList(17, ", ", " NA")) &&
                     section.getTerm() == excelReader.GetString(2) &&
                     section.getInstructFirstN().SequenceEqual(SplitCellIntoList(10, ", ", "")) &&
-                    section.getMeetDays().SequenceEqual(SplitCellIntoList(19, ", ", "")))// &&
+                    section.getMeetDays().SequenceEqual(SplitCellIntoList(19, ",", "")))// &&
                                                                                          //section.stopTimes.SequenceEqual(SplitCellIntoList(18, ", ", " NA")) &&
                                                                                          //section.instructLastN.SequenceEqual(SplitCellIntoList(9, ", ", "")))
                 {
