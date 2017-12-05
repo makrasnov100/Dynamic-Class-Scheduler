@@ -84,13 +84,11 @@
             // 
             // SectionGraphBox
             // 
-            this.SectionGraphBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.SectionGraphBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SectionGraphBox.Location = new System.Drawing.Point(0, 0);
             this.SectionGraphBox.Name = "SectionGraphBox";
             this.SectionGraphBox.Size = new System.Drawing.Size(1004, 549);
-            this.SectionGraphBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SectionGraphBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.SectionGraphBox.TabIndex = 19;
             this.SectionGraphBox.TabStop = false;
             // 
@@ -262,6 +260,7 @@
             this.Load += new System.EventHandler(this.LoadingResultsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SectionGraphBox)).EndInit();
             this.ExampleSchedulePanel.ResumeLayout(false);
+            this.ExampleSchedulePanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
