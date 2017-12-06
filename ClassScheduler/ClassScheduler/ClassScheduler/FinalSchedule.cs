@@ -36,5 +36,10 @@ namespace ClassScheduler
         {
             this.fullbmp = fullbmp;
         }
+
+        public TableLayoutPanel getScheduleTable()
+        {
+            return scheduleTable;
+        }
     }
 }

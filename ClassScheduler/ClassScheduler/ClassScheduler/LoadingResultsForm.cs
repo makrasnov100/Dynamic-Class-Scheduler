@@ -495,6 +495,12 @@ namespace ClassScheduler
         //Display a pdf file in a pictureBox, and have a print dialog
         private void SelectScheduleButton_Click(object sender, EventArgs e)
         {
+            Label m = new Label();
+            m.Text = "Monday";
+            //Set scheduleTable labels 
+            TableLayoutPanel tlp = finalSchedule.getScheduleTable();
+            tlp.Controls.Add(m, 0, 0);
+
             finalSchedule.ShowDialog();
             Close(); //Close the LoadingResultsForm form
         }

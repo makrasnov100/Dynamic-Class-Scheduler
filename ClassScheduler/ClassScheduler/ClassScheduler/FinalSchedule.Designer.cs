@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.studentScheduleLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.schedulePictureBox = new System.Windows.Forms.PictureBox();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.scheduleTable = new System.Windows.Forms.TableLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // studentScheduleLabel
@@ -45,51 +45,52 @@
             this.studentScheduleLabel.TabIndex = 4;
             this.studentScheduleLabel.Text = "Student Schedule for ";
             // 
-            // pictureBox1
+            // schedulePictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(29, 72);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(936, 621);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(29, 72);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 10;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 138F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 138F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 138F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 92F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(936, 630);
-            this.tableLayoutPanel1.TabIndex = 6;
+            this.schedulePictureBox.Location = new System.Drawing.Point(29, 72);
+            this.schedulePictureBox.Name = "schedulePictureBox";
+            this.schedulePictureBox.Size = new System.Drawing.Size(936, 621);
+            this.schedulePictureBox.TabIndex = 5;
+            this.schedulePictureBox.TabStop = false;
             // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
+            // 
+            // scheduleTable
+            // 
+            this.scheduleTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.scheduleTable.ColumnCount = 5;
+            this.scheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.scheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.scheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.scheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.scheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.scheduleTable.Location = new System.Drawing.Point(45, 86);
+            this.scheduleTable.Name = "scheduleTable";
+            this.scheduleTable.RowCount = 6;
+            this.scheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.scheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.scheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.scheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.scheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.scheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6F));
+            this.scheduleTable.Size = new System.Drawing.Size(906, 595);
+            this.scheduleTable.TabIndex = 6;
             // 
             // FinalSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 729);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.scheduleTable);
+            this.Controls.Add(this.schedulePictureBox);
             this.Controls.Add(this.studentScheduleLabel);
             this.Name = "FinalSchedule";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Schedule";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,8 +98,8 @@
 
         #endregion
         private System.Windows.Forms.Label studentScheduleLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.PictureBox schedulePictureBox;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.TableLayoutPanel scheduleTable;
     }
 }
