@@ -46,6 +46,7 @@ namespace ClassScheduler
 
         private CourseSelectionForm RefToCourseSelectForm;
         private OptimizationSettingsForm OptimizeSettingsForm;
+        private FinalSchedule finalSchedule = new FinalSchedule();
 
         private bool firstDraw = true;
         private bool isOptimized = false;
@@ -54,8 +55,6 @@ namespace ClassScheduler
         private float topSeperator = 30;
         private float lastYPos;
 
-        //Properties for resizing the LoadingResultsForm width to match the SectionGraphBox width
-        private int widthOfPBox;
 
         public LoadingResultsForm(List<SingleCourse> selectedCourses,List<SingleSchedule> resultSchedules, CourseSelectionForm courseForm)
         {
@@ -469,7 +468,7 @@ namespace ClassScheduler
                 SuggestedCoursesButton.BackColor = Color.Black;
                 SuggestedCoursesButton.ForeColor = Color.White;
                 SuggestedCoursesButton.Text = "Original Schedule";
-                ScheduleSuggestionLabel.Text = "Go back to original course selection\n if you dont like the new setup.";
+                ScheduleSuggestionLabel.Text = "Go back to original course selection\n if you don't like the new setup.";
             }
             else
             {
@@ -496,7 +495,12 @@ namespace ClassScheduler
         //Display a pdf file in a pictureBox, and have a print dialog
         private void SelectScheduleButton_Click(object sender, EventArgs e)
         {
+            finalSchedule.setPictureBox(SectionGraphBox);
+            finalSchedule.setBitmap(fullBmp);
+            finalSchedule.setBmpToPictureBox();
 
+            finalSchedule.ShowDialog();
+            Close(); //Close the LoadingResultsForm form
         }
     }
 }
