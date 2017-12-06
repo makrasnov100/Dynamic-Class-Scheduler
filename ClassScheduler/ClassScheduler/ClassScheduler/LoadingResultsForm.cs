@@ -495,10 +495,6 @@ namespace ClassScheduler
         //Display a pdf file in a pictureBox, and have a print dialog
         private void SelectScheduleButton_Click(object sender, EventArgs e)
         {
-            finalSchedule.setPictureBox(SectionGraphBox);
-            finalSchedule.setBitmap(fullBmp);
-            finalSchedule.setBmpToPictureBox();
-
             finalSchedule.ShowDialog();
             Close(); //Close the LoadingResultsForm form
         }

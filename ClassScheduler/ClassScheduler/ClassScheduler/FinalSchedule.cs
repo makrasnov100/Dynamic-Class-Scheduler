@@ -36,10 +36,5 @@ namespace ClassScheduler
         {
             this.fullbmp = fullbmp;
         }
-
-        public void setBmpToPictureBox()
-        {
-            schedulePictureBox.Image = fullbmp;
-        }
     }
 }
