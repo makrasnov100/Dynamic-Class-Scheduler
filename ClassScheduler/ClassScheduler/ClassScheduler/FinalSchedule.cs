@@ -37,9 +37,38 @@ namespace ClassScheduler
             this.fullbmp = fullbmp;
         }
 
-        public TableLayoutPanel getScheduleTable()
+        public void appendStudentScheduleLabelText(string text)
         {
-            return scheduleTable;
+            displayLbl.Text += text;
+        }
+
+        public void changeDisplayLabelText(string text)
+        {
+            displayLbl.Text = text;
+        }
+
+        private void savePanelToImage()
+        {
+            try
+            {
+                var pnl = this.schedulePanel;
+                using (var bmp = new Bitmap(pnl.Width, pnl.Height))
+                {
+                    pnl.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+                    bmp.Save("C:\\Users\\Yuriy\\Pictures\\panel.jpeg");
+                    MessageBox.Show("File successfully saved!");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message.ToString());
+            }
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            savePanelToImage();
+            this.Focus(); //Take the focus off the Save button
         }
     }
 }

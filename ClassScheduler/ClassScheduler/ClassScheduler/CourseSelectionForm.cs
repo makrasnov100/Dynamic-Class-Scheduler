@@ -427,5 +427,10 @@ namespace ClassScheduler
         {
             return isFirstCalculation;
         }
+
+        public UserConfig getUserConfig()
+        {
+            return userInfo;
+        }
     }
 }
