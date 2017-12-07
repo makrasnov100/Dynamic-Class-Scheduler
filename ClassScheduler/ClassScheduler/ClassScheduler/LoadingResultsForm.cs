@@ -495,19 +495,24 @@ namespace ClassScheduler
             return isOptimized;
         }
 
+        private void addLabelsToFinalScheduleForm()
+        {
+            string firstName = RefToCourseSelectForm.getUserConfig().getFirstName();
+            string lastName = RefToCourseSelectForm.getUserConfig().getLastName();
+            string termInterest = RefToCourseSelectForm.getUserConfig().getTermInterest();
+            //finalSchedule.appendStudentScheduleLabelText(firstName);
+            finalSchedule.changeDisplayLabelText(termInterest + " Schedule - " + firstName + " " + lastName);
+        }
+
         //[METHOD- Select Button Event Handler]
         //Display the user's final schedule after optimization, 
         //Display a pdf file in a pictureBox, and have a print dialog
         private void SelectScheduleButton_Click(object sender, EventArgs e)
         {
-            Label m = new Label();
-            m.Text = "Monday";
-            //Set scheduleTable labels 
-            TableLayoutPanel tlp = finalSchedule.getScheduleTable();
-            tlp.Controls.Add(m, 0, 0);
+            addLabelsToFinalScheduleForm();
 
             finalSchedule.ShowDialog();
-            Close(); //Close the LoadingResultsForm form
+            Close();
         }
     }
 }
