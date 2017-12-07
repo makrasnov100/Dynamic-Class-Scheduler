@@ -17,17 +17,16 @@ namespace ClassScheduler
 
     /// <summary>
     /// This is a window in which the user is expected to enter his courses for the term he/she selected in the input window beforehand.
-    /// This is the last location before the C++ algorithm is used to create the student's schedule.
+    /// This is the last location before an algorithm is used to create the student's schedule.
     /// </summary>
+    /// 
     /// Author: Kostiantyn Makrasnov
 
     public partial class CourseSelectionForm : Form
     {
 
-        private AddCourseForm CourseAddPopup;
-
         public List<SingleCourse> availableCourses;
-        public List<SingleCourse> selectedCourses = new List<SingleCourse>();
+        public List<SingleCourse> selectedCourses = new List<SingleCourse>(10);
         private Random random = new Random();
         private int creditAmount = 0;
 
@@ -35,6 +34,7 @@ namespace ClassScheduler
         private int selectedTableRowIndex;
         private DataTable selectedCourseTable;
 
+        private AddCourseForm RefToCourseAddPopup;
         private BasicCalculationForm RefToBasicCalculationForm;
         private LoadingResultsForm RefToScheduleSelectForm;
         private UserConfig userInfo;
@@ -63,17 +63,15 @@ namespace ClassScheduler
         {
             if (!popUpCreated)
             {
-                CourseAddPopup = new AddCourseForm(this);
-                CourseAddPopup.ShowDialog();
+                RefToCourseAddPopup = new AddCourseForm(this);
+                RefToCourseAddPopup.ShowDialog();
                 popUpCreated = true;
             }
             else
             {
-                if (CourseAddPopup.getFilteredCourses().Count() != 0)
-                {
-                    CourseAddPopup.TryAddingCourse();
-                } 
-                CourseAddPopup.Show();
+                if (RefToCourseAddPopup.getFilteredCourses().Count() != 0)
+                    RefToCourseAddPopup.TryAddingCourse();
+                RefToCourseAddPopup.Show();
             }
         }
 
@@ -86,22 +84,18 @@ namespace ClassScheduler
                 if(isFirstCalculation)
                     ComputeOptimalTimesFirst(selectedCourses);
                 else
+                {
+                    isOptimization = false;
                     ComputeOptimalTimes(selectedCourses);
+                }
             }
-
-            //ResultForm Result = new ResultForm(this);
-            //Manipulate the Result form before it is displayed...
-            //manipulateSelectedCourses();
-
-            //Result.ShowDialog();
-            //manipulateSelectedCourses();
         }
 
         //[FUNCTION - CourseSelectionForm_Load]
         //Formats the labels on the courses selection form upon load
         private void CourseSelectionForm_Load(object sender, EventArgs e)
         {
-            //Intro label
+            //Display correct intro label
             string fullTermName;
             if (userInfo.getTermInterest() == "FA")
                 fullTermName = "fall";
@@ -112,21 +106,21 @@ namespace ClassScheduler
             CourseSelectionLabel.Text = "Welcome " + userInfo.getFirstName() + ", please add your " + fullTermName + " course(s)... ";
             UpdateCreditAmount();
 
-            //Table labels
+            //Table Setup
             selectedCourseTable = new DataTable();
-
+            // - Set labels
             selectedCourseTable.Columns.Add("ID", typeof(string));
             selectedCourseTable.Columns.Add("Title", typeof(string));
-
+            // - Set initial entry (doesn't count as course)
             selectedCourseTable.Rows.Add("N/A", "No Courses Added");
-
+            // - Set formatting
             selectedCoursesGridView.DataSource = selectedCourseTable;
             selectedCoursesGridView.Columns["ID"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             selectedCoursesGridView.Columns["ID"].Width = 72;
-
+            // - Preselect first row
             selectedRow = selectedCoursesGridView.Rows[0];
             selectedTableRowIndex = 0;
-    }
+        }
 
         //[FUNCTION - updateCourseTable]
         //Records index and row info of selected cell
@@ -134,13 +128,13 @@ namespace ClassScheduler
         {
             if (e.RowIndex >= 0)
             {
-                selectedTableRowIndex = e.RowIndex; //*different method needed for multiple course selection at once*
+                selectedTableRowIndex = e.RowIndex; //(revise by creating different method for multiple course selection at once)
                 selectedRow = selectedCoursesGridView.Rows[selectedTableRowIndex];
             } 
         }
 
         //[FUNCTION - RemoveCourseButton_Click]
-        //Performs removal of a selected course upon click of "Remove"
+        //Performs removal of a selected course upon click of "Remove" button
         private void RemoveCourseButton_Click(object sender, EventArgs e)
         {
             if (selectedCourses.Count() >= 1)
@@ -162,14 +156,9 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - RefreshTable]
-        //Re-populates the entire table based on updated selectedStorage
+        //Re-populates the entire table based on updated selectedCourses
         public void RefreshTable()
         {
-            //Debug.WriteLine("Selected Courses Avalible:" + selectedCourses.Count());
-            //foreach (var course in selectedCourses)
-            //{
-            //    Debug.WriteLine("selected course ID:" + course.abrvCourseName);
-            //}
             if (selectedCourses.Count() == 0)
             {
                 selectedCourseTable.Rows.Clear();
@@ -236,6 +225,8 @@ namespace ClassScheduler
             }
         }
 
+        //[FUNCTION - manipulateSelectedCourses]
+        //Displays selected course info in a data grid view on the result form (temporarily unused)
         public void manipulateSelectedCourses(ResultForm form)
         {
             form.timesDataGridView.Columns.Add("courseName", "Course Name");
@@ -302,24 +293,21 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - ComputeOptimalTimes]
-        //Correctly sets up schedule calculation
+        //Correctly preps schedule calculation for the first time (different enough from the rest to deserve its owwn function)
         public void ComputeOptimalTimesFirst(List<SingleCourse> givenCourses)
         {
+            //Find amount of combinations possible
             numPossib = 1;
             foreach (var course in givenCourses)
-            {
                 if (course.getSections().Count() != 0)
-                {
-                   // Debug.WriteLine(numPossib + " * " + course.getSections().Count() + " = " + (numPossib * course.getSections().Count()));
                     numPossib = numPossib * course.getSections().Count();
-                }
-            }
 
+            //Show calculation info in console
             Debug.WriteLine("Number of Schedule Possibilities: " + numPossib);
             Debug.WriteLine("*****************************************************************");
-
             Debug.WriteLine("NEW CALCULATION CLASS CREATED");
 
+            //Create NEW calculation object/form
             this.Hide();
             RefToBasicCalculationForm = new BasicCalculationForm(givenCourses, numPossib, random, creditAmount, this, RefToScheduleSelectForm, isOptimization);
             RefToBasicCalculationForm.BeginWorking(false);
@@ -328,28 +316,25 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - ComputeOptimalTimes]
-        //Correctly sets up schedule calculation w/ optimized sections
+        //Correctly preps schedule calculation w/ optimized sections
         public void ComputeOptimalTimes(List<SingleCourse> givenCourses)
         {
+            //Find amount of combinations possible
             numPossib = 1;
             foreach (var course in givenCourses)
-            {
                 if (course.getSections().Count() != 0)
-                {
-                    // Debug.WriteLine(numPossib + " * " + course.getSections().Count() + " = " + (numPossib * course.getSections().Count()));
                     numPossib = numPossib * course.getSections().Count();
-                }
-            }
 
+            //Show calculation info in console
             Debug.WriteLine("Number of Schedule Possibilities: " + numPossib);
             Debug.WriteLine("*****************************************************************");
+            Debug.WriteLine("NEW OPTIMIZED CALCULATION STARTED | " + (isOptimization == true ? "OPTIMIZED" : "NOT OPTIMIZED"));
 
-            Debug.WriteLine("NEW OPTIMIZED CALCULATION STARTED");
-
+            //Use OLD calculation object/form
             this.Hide();
             RefToBasicCalculationForm.Show();
             RefToBasicCalculationForm.RestartCalculation(givenCourses, numPossib, creditAmount, isOptimization);
-            RefToBasicCalculationForm.BeginWorking(true);
+            RefToBasicCalculationForm.BeginWorking(true); //FIX THIS ***********************************************
             isOptimization = false;
         }
 
@@ -358,14 +343,14 @@ namespace ClassScheduler
         //Adds sections that can be substituted based on user defined settings (revise so courses fit better)
         public void ChooseOptimizationCourses(List<bool> canOptimize, SingleSchedule oldSchedule, LoadingResultsForm ScheduleSelectForm)
         {
-            //Create references|copies & set bools
+            //Create copy of selected courses & set optimization state
             RefToScheduleSelectForm = ScheduleSelectForm;
             List<SingleCourse> selectedCoursesMod = new List<SingleCourse>(selectedCourses.Count());
             foreach (var course in selectedCourses)
                 selectedCoursesMod.Add(DeepCopySingleCourse(course));
             isOptimization = true;
 
-            //Add all similar courses to section list
+            //Add all similar courses to section list (revise to get more accurate substitutions)
             int optimizeCounter = 0;
             foreach (var optimizeOption in canOptimize)
             {
@@ -400,12 +385,10 @@ namespace ClassScheduler
             ComputeOptimalTimes(selectedCoursesMod);
         }
 
-        //Property to hold the selected file name
-        public string SelectedFileName { get; set; }
-
-        //USED ON TWO FORMS
+        //[FUNCTION - DeepCopySingleCourse]
         //Function is mainly the answer from the following post on how to copy a complex object
         //https://stackoverflow.com/questions/16696448/how-to-make-a-copy-of-an-object-in-c-sharp
+        //Copies instance of a SingleCourse Object into an identical new object
         public static SingleCourse DeepCopySingleCourse(SingleCourse other)
         {
             using (MemoryStream ms = new MemoryStream())
@@ -417,15 +400,22 @@ namespace ClassScheduler
             }
         }
 
-        //accessor/mutator functions
+        //Accessor/mutator functions
         public void setIsFirstCalculationState(bool isFirstCalculation)
         {
             this.isFirstCalculation = isFirstCalculation;
         }
-
         public bool getIsFirstCalculationState()
         {
             return isFirstCalculation;
         }
+
+        public void setIsOptimizationState(bool isOptimization)
+        {
+            this.isOptimization = isOptimization;
+        }
+
+
+        public string SelectedFileName { get; set; }
     }
 }
