@@ -490,13 +490,58 @@ namespace ClassScheduler
             return isOptimized;
         }
 
+        //Add the schedule to the FinalSchedule form
+        private void drawSchedule()
+        {
+            foreach (var day in graphedSchedules[curScheduleIndex].getAllDays())
+            {
+                addDayScheduleToFinalForm(day);
+            }
+                
+        }
+
+        //Adds the schedule for each day
+        private void addDayScheduleToFinalForm(ScheduleDay day)
+        {
+            //day.getDayTimes();
+            for (int i = 0; i < day.getDayTimes().Count(); i++)
+            {
+
+            }
+        }
+
+        //Add flowLayoutPanel control, return panel
+        //private FlowLayoutPanel createFlowLayoutPanel(string name)
+        //{
+        //    //The string name is used as the FlowLayoutPanel name,
+        //    //and the count variable holds the number of items in the day.dayTimes[] list
+        //    FlowLayoutPanel panel = new FlowLayoutPanel();
+        //    panel.Name = name;
+        //    panel.Width = finalSchedule.getSchedulePanelWidth();
+        //    panel.Height = (finalSchedule.getDayLayoutPanelCellHeight() / 4);
+        //    return panel;
+        //}
+
+        //Add welcome label to FinalScheduleForm
         private void addLabelsToFinalScheduleForm()
         {
             string firstName = RefToCourseSelectForm.getUserConfig().getFirstName();
             string lastName = RefToCourseSelectForm.getUserConfig().getLastName();
             string termInterest = RefToCourseSelectForm.getUserConfig().getTermInterest();
-            //finalSchedule.appendStudentScheduleLabelText(firstName);
-            finalSchedule.changeDisplayLabelText(termInterest + " Schedule - " + firstName + " " + lastName);
+            if (termInterest == "FA")
+            {
+                termInterest = "Fall";
+            }
+            else if (termInterest == "JA")
+            {
+                termInterest = "Jan";
+            }
+            else
+                termInterest = "Spring";
+
+            finalSchedule.displayLblParent();
+            finalSchedule.changeDisplayLabelText(termInterest + " Schedule - " + 
+                firstName + " " + lastName);
         }
 
         //[METHOD- Select Button Event Handler]

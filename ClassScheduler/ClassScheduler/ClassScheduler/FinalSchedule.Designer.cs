@@ -31,17 +31,27 @@
             this.schedulePictureBox = new System.Windows.Forms.PictureBox();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.schedulePanel = new System.Windows.Forms.Panel();
+            this.dayLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.displayLbl = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.mondayLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.mondayLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.tuesdayLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.wednesdayLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.thursdayLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.fridayLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.mondayLbl = new System.Windows.Forms.Label();
+            this.tuesdayLbl = new System.Windows.Forms.Label();
+            this.wednesdayLbl = new System.Windows.Forms.Label();
+            this.thursdayLbl = new System.Windows.Forms.Label();
+            this.fridayLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.schedulePictureBox)).BeginInit();
             this.schedulePanel.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.dayLayoutPanel.SuspendLayout();
+            this.mondayLayoutPanel.SuspendLayout();
+            this.tuesdayLayoutPanel.SuspendLayout();
+            this.wednesdayLayoutPanel.SuspendLayout();
+            this.thursdayLayoutPanel.SuspendLayout();
+            this.fridayLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // schedulePictureBox
@@ -50,7 +60,7 @@
             this.schedulePictureBox.Location = new System.Drawing.Point(0, 0);
             this.schedulePictureBox.MinimumSize = new System.Drawing.Size(936, 621);
             this.schedulePictureBox.Name = "schedulePictureBox";
-            this.schedulePictureBox.Size = new System.Drawing.Size(1002, 1041);
+            this.schedulePictureBox.Size = new System.Drawing.Size(981, 1074);
             this.schedulePictureBox.TabIndex = 5;
             this.schedulePictureBox.TabStop = false;
             // 
@@ -61,7 +71,7 @@
             // schedulePanel
             // 
             this.schedulePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.schedulePanel.Controls.Add(this.tableLayoutPanel1);
+            this.schedulePanel.Controls.Add(this.dayLayoutPanel);
             this.schedulePanel.Controls.Add(this.displayLbl);
             this.schedulePanel.Location = new System.Drawing.Point(0, 0);
             this.schedulePanel.MaximumSize = new System.Drawing.Size(830, 1074);
@@ -70,13 +80,33 @@
             this.schedulePanel.Size = new System.Drawing.Size(830, 1074);
             this.schedulePanel.TabIndex = 6;
             // 
+            // dayLayoutPanel
+            // 
+            this.dayLayoutPanel.AutoScroll = true;
+            this.dayLayoutPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.dayLayoutPanel.ColumnCount = 1;
+            this.dayLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.dayLayoutPanel.Controls.Add(this.fridayLayoutPanel, 0, 4);
+            this.dayLayoutPanel.Controls.Add(this.wednesdayLayoutPanel, 0, 2);
+            this.dayLayoutPanel.Controls.Add(this.tuesdayLayoutPanel, 0, 1);
+            this.dayLayoutPanel.Controls.Add(this.mondayLayoutPanel, 0, 0);
+            this.dayLayoutPanel.Controls.Add(this.thursdayLayoutPanel, 0, 3);
+            this.dayLayoutPanel.Location = new System.Drawing.Point(0, 67);
+            this.dayLayoutPanel.Name = "dayLayoutPanel";
+            this.dayLayoutPanel.RowCount = 5;
+            this.dayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.dayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.dayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.dayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.dayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.dayLayoutPanel.Size = new System.Drawing.Size(830, 973);
+            this.dayLayoutPanel.TabIndex = 1;
+            // 
             // displayLbl
             // 
-            this.displayLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.displayLbl.AutoSize = true;
             this.displayLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayLbl.Location = new System.Drawing.Point(313, 32);
+            this.displayLbl.Location = new System.Drawing.Point(2, 32);
             this.displayLbl.Name = "displayLbl";
             this.displayLbl.Size = new System.Drawing.Size(158, 32);
             this.displayLbl.TabIndex = 0;
@@ -85,115 +115,184 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(836, 58);
+            this.saveBtn.Location = new System.Drawing.Point(836, 69);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(100, 43);
+            this.saveBtn.Size = new System.Drawing.Size(110, 43);
             this.saveBtn.TabIndex = 7;
-            this.saveBtn.Text = "Save to File";
+            this.saveBtn.Text = "Save as JPEG";
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-            // tableLayoutPanel1
+            // mondayLayoutPanel
             // 
-            this.tableLayoutPanel1.AutoScroll = true;
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.mondayLabel, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(-1, 67);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(830, 973);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.mondayLayoutPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.mondayLayoutPanel.ColumnCount = 1;
+            this.mondayLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.mondayLayoutPanel.Controls.Add(this.mondayLbl, 0, 0);
+            this.mondayLayoutPanel.Location = new System.Drawing.Point(-1, 0);
+            this.mondayLayoutPanel.Name = "mondayLayoutPanel";
+            this.mondayLayoutPanel.RowCount = 5;
+            this.mondayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.mondayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.mondayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.mondayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.mondayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.mondayLayoutPanel.Size = new System.Drawing.Size(832, 194);
+            this.mondayLayoutPanel.TabIndex = 8;
             // 
-            // mondayLabel
+            // tuesdayLayoutPanel
             // 
-            this.mondayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tuesdayLayoutPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.tuesdayLayoutPanel.ColumnCount = 1;
+            this.tuesdayLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tuesdayLayoutPanel.Controls.Add(this.tuesdayLbl, 0, 0);
+            this.tuesdayLayoutPanel.Location = new System.Drawing.Point(-1, 194);
+            this.tuesdayLayoutPanel.Name = "tuesdayLayoutPanel";
+            this.tuesdayLayoutPanel.RowCount = 5;
+            this.tuesdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tuesdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tuesdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tuesdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tuesdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tuesdayLayoutPanel.Size = new System.Drawing.Size(831, 195);
+            this.tuesdayLayoutPanel.TabIndex = 9;
+            // 
+            // wednesdayLayoutPanel
+            // 
+            this.wednesdayLayoutPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.wednesdayLayoutPanel.ColumnCount = 1;
+            this.wednesdayLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.wednesdayLayoutPanel.Controls.Add(this.wednesdayLbl, 0, 0);
+            this.wednesdayLayoutPanel.Location = new System.Drawing.Point(0, 389);
+            this.wednesdayLayoutPanel.Name = "wednesdayLayoutPanel";
+            this.wednesdayLayoutPanel.RowCount = 5;
+            this.wednesdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.wednesdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.wednesdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.wednesdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.wednesdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.wednesdayLayoutPanel.Size = new System.Drawing.Size(831, 195);
+            this.wednesdayLayoutPanel.TabIndex = 10;
+            // 
+            // thursdayLayoutPanel
+            // 
+            this.thursdayLayoutPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.thursdayLayoutPanel.ColumnCount = 1;
+            this.thursdayLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.thursdayLayoutPanel.Controls.Add(this.thursdayLbl, 0, 0);
+            this.thursdayLayoutPanel.Location = new System.Drawing.Point(0, 584);
+            this.thursdayLayoutPanel.Name = "thursdayLayoutPanel";
+            this.thursdayLayoutPanel.RowCount = 5;
+            this.thursdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.thursdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.thursdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.thursdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.thursdayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.thursdayLayoutPanel.Size = new System.Drawing.Size(831, 193);
+            this.thursdayLayoutPanel.TabIndex = 11;
+            // 
+            // fridayLayoutPanel
+            // 
+            this.fridayLayoutPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.fridayLayoutPanel.ColumnCount = 1;
+            this.fridayLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.fridayLayoutPanel.Controls.Add(this.fridayLbl, 0, 0);
+            this.fridayLayoutPanel.Location = new System.Drawing.Point(0, 777);
+            this.fridayLayoutPanel.Name = "fridayLayoutPanel";
+            this.fridayLayoutPanel.RowCount = 5;
+            this.fridayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.fridayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.fridayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.fridayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.fridayLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.fridayLayoutPanel.Size = new System.Drawing.Size(830, 196);
+            this.fridayLayoutPanel.TabIndex = 12;
+            // 
+            // mondayLbl
+            // 
+            this.mondayLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mondayLabel.AutoSize = true;
-            this.mondayLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.mondayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mondayLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.mondayLabel.Location = new System.Drawing.Point(4, 1);
-            this.mondayLabel.Name = "mondayLabel";
-            this.mondayLabel.Size = new System.Drawing.Size(822, 25);
-            this.mondayLabel.TabIndex = 0;
-            this.mondayLabel.Text = "Monday";
-            this.mondayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mondayLbl.AutoSize = true;
+            this.mondayLbl.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.mondayLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mondayLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.mondayLbl.Location = new System.Drawing.Point(5, 2);
+            this.mondayLbl.Name = "mondayLbl";
+            this.mondayLbl.Size = new System.Drawing.Size(822, 36);
+            this.mondayLbl.TabIndex = 0;
+            this.mondayLbl.Text = "Monday";
+            this.mondayLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // tuesdayLbl
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tuesdayLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(4, 195);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(822, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tuesday";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tuesdayLbl.AutoSize = true;
+            this.tuesdayLbl.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tuesdayLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tuesdayLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tuesdayLbl.Location = new System.Drawing.Point(5, 2);
+            this.tuesdayLbl.Name = "tuesdayLbl";
+            this.tuesdayLbl.Size = new System.Drawing.Size(821, 36);
+            this.tuesdayLbl.TabIndex = 1;
+            this.tuesdayLbl.Text = "Tuesday";
+            this.tuesdayLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // wednesdayLbl
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.wednesdayLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(4, 389);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(822, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Wednesday";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.wednesdayLbl.AutoSize = true;
+            this.wednesdayLbl.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.wednesdayLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wednesdayLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.wednesdayLbl.Location = new System.Drawing.Point(5, 2);
+            this.wednesdayLbl.Name = "wednesdayLbl";
+            this.wednesdayLbl.Size = new System.Drawing.Size(821, 36);
+            this.wednesdayLbl.TabIndex = 1;
+            this.wednesdayLbl.Text = "Wednesday";
+            this.wednesdayLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // thursdayLbl
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.thursdayLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(4, 583);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(822, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Thursday";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.thursdayLbl.AutoSize = true;
+            this.thursdayLbl.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.thursdayLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thursdayLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.thursdayLbl.Location = new System.Drawing.Point(5, 2);
+            this.thursdayLbl.Name = "thursdayLbl";
+            this.thursdayLbl.Size = new System.Drawing.Size(821, 36);
+            this.thursdayLbl.TabIndex = 1;
+            this.thursdayLbl.Text = "Thursday";
+            this.thursdayLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // fridayLbl
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.fridayLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(4, 777);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(822, 25);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Friday";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.fridayLbl.AutoSize = true;
+            this.fridayLbl.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.fridayLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fridayLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.fridayLbl.Location = new System.Drawing.Point(5, 2);
+            this.fridayLbl.Name = "fridayLbl";
+            this.fridayLbl.Size = new System.Drawing.Size(820, 36);
+            this.fridayLbl.TabIndex = 1;
+            this.fridayLbl.Text = "Friday";
+            this.fridayLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FinalSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1002, 1041);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.schedulePanel);
@@ -208,8 +307,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.schedulePictureBox)).EndInit();
             this.schedulePanel.ResumeLayout(false);
             this.schedulePanel.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.dayLayoutPanel.ResumeLayout(false);
+            this.mondayLayoutPanel.ResumeLayout(false);
+            this.mondayLayoutPanel.PerformLayout();
+            this.tuesdayLayoutPanel.ResumeLayout(false);
+            this.tuesdayLayoutPanel.PerformLayout();
+            this.wednesdayLayoutPanel.ResumeLayout(false);
+            this.wednesdayLayoutPanel.PerformLayout();
+            this.thursdayLayoutPanel.ResumeLayout(false);
+            this.thursdayLayoutPanel.PerformLayout();
+            this.fridayLayoutPanel.ResumeLayout(false);
+            this.fridayLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -220,11 +328,16 @@
         private System.Windows.Forms.Panel schedulePanel;
         private System.Windows.Forms.Label displayLbl;
         private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label mondayLabel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel dayLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel mondayLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel fridayLayoutPanel;
+        private System.Windows.Forms.Label fridayLbl;
+        private System.Windows.Forms.TableLayoutPanel wednesdayLayoutPanel;
+        private System.Windows.Forms.Label wednesdayLbl;
+        private System.Windows.Forms.TableLayoutPanel tuesdayLayoutPanel;
+        private System.Windows.Forms.Label tuesdayLbl;
+        private System.Windows.Forms.Label mondayLbl;
+        private System.Windows.Forms.TableLayoutPanel thursdayLayoutPanel;
+        private System.Windows.Forms.Label thursdayLbl;
     }
 }

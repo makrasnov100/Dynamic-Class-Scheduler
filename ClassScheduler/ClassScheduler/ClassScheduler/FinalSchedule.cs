@@ -49,14 +49,16 @@ namespace ClassScheduler
 
         private void savePanelToImage()
         {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures) + @"\test.jpeg";
+
             try
             {
                 var pnl = this.schedulePanel;
                 using (var bmp = new Bitmap(pnl.Width, pnl.Height))
                 {
                     pnl.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
-                    bmp.Save("C:\\Users\\Yuriy\\Pictures\\panel.jpeg");
-                    MessageBox.Show("File successfully saved!");
+                    bmp.Save(path);
+                    MessageBox.Show("File save to " + path + " successful!");
                 }
             }
             catch (Exception e)
@@ -68,7 +70,27 @@ namespace ClassScheduler
         private void saveBtn_Click(object sender, EventArgs e)
         {
             savePanelToImage();
-            this.Focus(); //Take the focus off the Save button
+        }
+
+        public void changeDisplayLabelAnchor()
+        {
+            displayLbl.Anchor = (AnchorStyles.Left | AnchorStyles.Right);
+        }
+
+        public void displayLblParent()
+        {
+            displayLbl.Parent = schedulePanel;
+            changeDisplayLabelAnchor();
+        }
+
+        public int getSchedulePanelWidth()
+        {
+            return schedulePanel.Width;
+        }
+
+        public TableLayoutPanel getDayLayoutPanel()
+        {
+            return dayLayoutPanel;
         }
     }
 }
