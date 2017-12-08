@@ -94,7 +94,6 @@ C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassSchedul
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.OptimizationSettingsForm.resources
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.LoadingResultsForm.resources
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.PreviewForm.resources
-C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.csprojResolveAssemblyReference.cache
 D:\Current Projects\CS-172 Final\GitFiles\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ClassScheduler.exe.config
 D:\Current Projects\CS-172 Final\GitFiles\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ClassScheduler.exe
 D:\Current Projects\CS-172 Final\GitFiles\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ClassScheduler.pdb

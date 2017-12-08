@@ -515,24 +515,47 @@ namespace ClassScheduler
             }
         }
 
-        //Add flowLayoutPanel control, return panel
-        //private FlowLayoutPanel createFlowLayoutPanel(string name)
-        //{
-        //    //The string name is used as the FlowLayoutPanel name,
-        //    //and the count variable holds the number of items in the day.dayTimes[] list
-        //    FlowLayoutPanel panel = new FlowLayoutPanel();
-        //    panel.Name = name;
-        //    panel.Width = finalSchedule.getSchedulePanelWidth();
-        //    panel.Height = (finalSchedule.getDayLayoutPanelCellHeight() / 4);
-        //    return panel;
-        //}
+        private void setFinalScheduleToPanels()
+        {
+            int numDays = resultSchedules[curScheduleIndex].getAllDays().Count();
+
+            for (int day = 0; day < numDays; day++)
+            {
+                int numClasses = resultSchedules[curScheduleIndex].getAllDays()[day].getDayTimes().Count();
+
+                for (int i = 0; i < numClasses; i++)
+                {
+                    int startMin, endMin;
+                    string courseID, courseName, lastName, firstName;
+                    int sectionIndex = resultSchedules[curScheduleIndex].getAllDays()[day].getDayTimes()[i].getSectionID();
+                    //Get time
+                    startMin = resultSchedules[curScheduleIndex].getAllDays()[day].getDayTimes()[i].getStart();
+                    endMin = resultSchedules[curScheduleIndex].getAllDays()[day].getDayTimes()[i].getEnd();
+                    //Get course ID and name
+                    courseID = resultSchedules[curScheduleIndex].getAllSections()[sectionIndex].getID();
+                    courseName = resultSchedules[curScheduleIndex].getAllSections()[sectionIndex].getCourseName();
+                    //Get instuctor first and last name
+                    lastName = resultSchedules[curScheduleIndex].getAllSections()[sectionIndex].getInstructLastN()[0];
+                    firstName = resultSchedules[curScheduleIndex].getAllSections()[sectionIndex].getInstructFirstN()[0];
+
+                    //Set the label properties...
+                    Label label = new Label();
+                    label.Text = startMin.ToString() + " " + endMin.ToString() + " " +
+                        courseID + " " + courseName + " " + lastName + ", " + firstName;
+                    label.AutoSize = true;
+                    label.Anchor = (AnchorStyles.Left | AnchorStyles.Right);
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    finalSchedule.getSpecificPanel(day).Controls.Add(label, 0, i + 1);
+                }
+            }
+        }
 
         //Add welcome label to FinalScheduleForm
         private void addLabelsToFinalScheduleForm()
         {
-            string firstName = RefToCourseSelectForm.getUserConfig().getFirstName();
-            string lastName = RefToCourseSelectForm.getUserConfig().getLastName();
-            string termInterest = RefToCourseSelectForm.getUserConfig().getTermInterest();
+            string firstName = RefToCourseSelectForm.getUserInfo().getFirstName();
+            string lastName = RefToCourseSelectForm.getUserInfo().getLastName();
+            string termInterest = RefToCourseSelectForm.getUserInfo().getTermInterest();
             if (termInterest == "FA")
             {
                 termInterest = "Fall";
@@ -550,12 +573,11 @@ namespace ClassScheduler
         }
 
         //[METHOD- Select Button Event Handler]
-        //Display the user's final schedule after optimization, 
-        //Display a pdf file in a pictureBox, and have a print dialog
+        //Display the user's final schedule after optimization
         private void SelectScheduleButton_Click(object sender, EventArgs e)
         {
             addLabelsToFinalScheduleForm();
-
+            setFinalScheduleToPanels();
             finalSchedule.ShowDialog();
             Close();
         }

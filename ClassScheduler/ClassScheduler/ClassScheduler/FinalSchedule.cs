@@ -16,6 +16,8 @@ namespace ClassScheduler
         private PictureBox pictureBox;
         private Bitmap fullbmp;
 
+        private int index;
+
         public FinalSchedule()
         {
             InitializeComponent();
@@ -91,6 +93,29 @@ namespace ClassScheduler
         public TableLayoutPanel getDayLayoutPanel()
         {
             return dayLayoutPanel;
+        }
+        
+        public TableLayoutPanel getMondayLayoutPanel()
+        {
+            return mondayLayoutPanel;
+        }
+
+        public TableLayoutPanel getSpecificPanel(int day)
+        {
+            switch (day)
+            {
+                case 0:
+                    return mondayLayoutPanel;
+                case 1:
+                    return tuesdayLayoutPanel;
+                case 2:
+                    return wednesdayLayoutPanel;
+                case 3:
+                    return thursdayLayoutPanel;
+                case 4:
+                    return fridayLayoutPanel;
+            }
+            return null;
         }
     }
 }

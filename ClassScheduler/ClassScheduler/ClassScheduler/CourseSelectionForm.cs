@@ -50,6 +50,12 @@ namespace ClassScheduler
             InitializeComponent();
         }
 
+        //Do not delete, I use this accessor in the FinalSchedule form!
+        public UserConfig getUserInfo()
+        {
+            return userInfo;
+        }
+
         //[FUNCTION - CourseSelectionForm_FormClosed]
         //Exits aplication when window is closed
         private void CourseSelectionForm_FormClosed(object sender, FormClosedEventArgs e)
