@@ -18,10 +18,11 @@ namespace ClassScheduler
     /// This is a window in which the user is expected to enter initial data 
     /// to be used for the rest of the program proccess.
     /// </summary>
+    /// 
     /// Author: Kostiantyn Makrasnov (Excel Reader Part & Form's Layout/User Input Validation)
     /// Author: Yuriy Fedas (Preview of Selected Excel Data File & Proper control through access/mutator functions)
-    /// /// 
-    /// Sources for ExcelDataReader: Source code from https://github.com/ExcelDataReader/ExcelDataReader, used methods
+    /// 
+    /// Source for ExcelDataReader: Source code from https://github.com/ExcelDataReader/ExcelDataReader, used methods
     /// from ExcelDataReader and ExcelDataReader.DataSet Nuget packages.
 
     public partial class InitialInputForm : Form
@@ -53,7 +54,7 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - InputWindow_Load]
-        //Mainly Turns OFF Visibility of Error Labels at Start
+        //Mainly Turns OFF the visibility of error labels at form load
         private void InputWindow_Load(object sender, EventArgs e)
         {
             FirstNameNeedLabel.Visible = false;
@@ -64,27 +65,32 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - btnFind_Click]
-        //Source: https://github.com/executeautomation/DataReader and ExcelDataReader documentation (README)
-        //Performs actions designated for "Find" button click
+        //ExcelReader Source: https://github.com/executeautomation/DataReader and ExcelDataReader documentation (README)
+        //Performs actions designated for "Find" button click (lets users choose the historic data)
         private void btnFind_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Excel Workbook|*.xlsx", ValidateNames = true })
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
+                    //Set file to analyze
                     SelectedFileName = ofd.FileName;
                     DataTable final = ExcelToDataTable(SelectedFileName);
 
+                    //Populate prieview form
                     previewForm.setFileName(SelectedFileName);
                     previewForm.getPreviewDGV().DataSource = final;
 
                     FileStream stream = File.Open(ofd.FileName, FileMode.Open, FileAccess.Read);
                     excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-                    //suggested at http://www.c-sharpcorner.com/forums/datareaders-row-count to get row count
+
+                    //Create data set of all info to allow for total row count
+                    //Suggested at http://www.c-sharpcorner.com/forums/datareaders-row-count to get row count
                     DataSet result = excelReader.AsDataSet();
                     dt = result.Tables[0];
                 }
 
+                //Display "Ready!" label once file loads
                 if (excelReader != null)
                 {
                     PreviewStatusLabel.Text = "Preview Ready!";
@@ -94,7 +100,7 @@ namespace ClassScheduler
             }
         }
 
-        //[METHOD - ExcelToDataTable]
+        //[FUNCTION - ExcelToDataTable]
         //Return a DataTable with excel file contents
         public static DataTable ExcelToDataTable(string fileName)
         {
@@ -118,18 +124,19 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - InputToMainButton_Click]
-        //Performs actions designated for "InputToMainButton" button click
+        //Begins irreversible course database creation from excel file
         private void InputToMainButton_Click(object sender, EventArgs e)
         {
-            if (checkInputCompletion() && !BackgroundWorkerCourses.IsBusy)
+            //[USER INPUT VALIDATION > everything needs to be completed/selected and excel file loaded]
+            if (CheckInputCompletion() && !BackgroundWorkerCourses.IsBusy)
             {
-                //Removes all input error labels
+                //Remove all input error labels
                 FirstNameNeedLabel.Visible = false;
                 LastNameNeedLabel.Visible = false;
                 TermNeedLabel.Visible = false;
                 LoadingCoursesPanel.Visible = true;
 
-                //Gathers all input into userData object
+                //Gather all input into userData object
                 userData.setFirstName(FirstNameTextBox.Text);
                 userData.setLastName(LastNameTextBox.Text);
                 if (TermComboBox.Text == "Fall")
@@ -139,22 +146,23 @@ namespace ClassScheduler
                 else
                     userData.setTermInterest("JA");
 
+                //Set initial progress view to zero/nothing-done
                 StartCalcPB();
 
                 //PARTIAL INSTRUCTION FROM LINK (background worker)
                 //https://www.youtube.com/watch?v=G3zRhhGCJJA
+                //Begin worker (allows for loading bar to update)
                 BackgroundWorkerCourses.RunWorkerAsync();
-
             }
             else
             {
-                displayInputErrors();
+                DisplayInputErrors();
             }
         }
 
         //[FUNCTION - ReadExcelData)
         //Summarizes the proccess of excel data filtering 
-        void ReadExcelData()
+        private void ReadExcelData()
         {
             excelReader.Read(); //skips first row
             ProcessCourseData();
@@ -164,8 +172,8 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - checkImputCompletion)
-        //Returns True if all imputs on this form are completed correctly
-        bool checkInputCompletion()
+        //Returns "true" if all inputs on this form are completed correctly
+        private bool CheckInputCompletion()
         {
             if (FirstNameTextBox.Text != "" && LastNameTextBox.Text != "" && TermComboBox.Text != "" && excelReader != null)
                 return true;
@@ -175,7 +183,7 @@ namespace ClassScheduler
 
         //[FUNCTION - displayInputErrors)
         //Dispays error labels by those fields that are empty or incorrect
-        void displayInputErrors()
+        private void DisplayInputErrors()
         {
             if (FirstNameTextBox.Text == "")
                 FirstNameNeedLabel.Visible = true;
@@ -202,21 +210,27 @@ namespace ClassScheduler
 
         //[FUNCTION - ProcessCourseData]
         //Goes through each row in selected excel spreadsheet dynamically populating the course list
-        void ProcessCourseData()
+        private void ProcessCourseData()
         {
             curCalcNum = 0;
             while (excelReader.Read())
             {
+                //Skip row if credit info is missing
                 if (Convert.ToInt32(excelReader.GetDouble(12)) == 0)
                     continue;
 
-                precentComplete = (curCalcNum / totalCalcNum) * 100f;
-                BackgroundWorkerCourses.ReportProgress((int)precentComplete);
+                //Update progress every 200 rows
+                if(curCalcNum % 200 == 0)
+                {
+                    precentComplete = (curCalcNum / totalCalcNum) * 100f;
+                    BackgroundWorkerCourses.ReportProgress((int)precentComplete);
+                }
 
+                //Selection that decides whether the current row contains a unique course or section
                 if (!courses.Exists(s => s.getCourseName() == excelReader.GetString(6) && s.getAbrvCourseName() == TruncatedCourseID()))
                 {
-                    // SingleCourse constructor to inputs initial data 
-                    courses.Add(new SingleCourse
+                    // SingleCourse constructor inputs initial course data 
+                    courses.Add(new SingleCourse  
                     (
                         excelReader.GetString(6),
                         TruncatedCourseID(),
@@ -228,7 +242,10 @@ namespace ClassScheduler
                         new List<SingleSection> { (new SingleSection { }) }
                     ));
 
+                    //Find index of last added course (above)
                     int courseIndex = courses.Count() - 1;
+
+                    //Updates the first section info for that course
                     courses[courseIndex].getSections()[0].setTerm(excelReader.GetString(2));
                     courses[courseIndex].getSections()[0].setID(excelReader.GetString(5));
                     courses[courseIndex].getSections()[0].setCourseName(excelReader.GetString(6));
@@ -243,19 +260,20 @@ namespace ClassScheduler
                 }
                 else if (DetermineSectionNeed(courseIDs.IndexOf(TruncatedCourseID() + "|" + excelReader.GetString(6))))
                 {
+                    //Collects info on where to put the unique section
                     int courseIndex = courseIDs.IndexOf(TruncatedCourseID() + "|" + excelReader.GetString(6));
                     int sectionIndex = courses[courseIndex].getSections().Count();
                     bool termRecorded = false;
                     bool instructRecorded = false;
 
-                    //Check for a unique term avaliability
+                    //Add new term avaliability to course if the section's term is unique
                     foreach (var availTerm in courses[courseIndex].getTermsAvailable())
                         if (availTerm == excelReader.GetString(2))
                             termRecorded = true;
                     if (!termRecorded)
                         courses[courseIndex].getTermsAvailable().Add(excelReader.GetString(2));
 
-                    //Check for a unique course instructor
+                    //Add unique instructors to course object if needed
                     List<string> currentInstructs = SplitCellIntoList(9, ",", "NA");
                     foreach (var course in courses)
                     {
@@ -283,8 +301,9 @@ namespace ClassScheduler
                         indexCounter = 0;
                     }
 
+                    //Creates a new singleSection object in the found course
                     courses[courseIndex].getSections().Add(new SingleSection { });
-
+                    //Sets up variables of the unique section
                     courses[courseIndex].getSections()[sectionIndex].setTerm(excelReader.GetString(2));
                     courses[courseIndex].getSections()[sectionIndex].setID(excelReader.GetString(5));
                     courses[courseIndex].getSections()[sectionIndex].setCourseName(excelReader.GetString(6));
@@ -302,31 +321,34 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - TruncatedCourseID]
-        //Cuts course ID before second slash "-"
-        string TruncatedCourseID()
+        //Returns course ID before second slash "-" (eg. CO-150-4 > CO-150)
+        private string TruncatedCourseID()
         {
             string fullID = excelReader.GetString(5);
             return fullID.Substring(0, fullID.IndexOf("-", 4));
         }
+
         //[FUNCTION - DetermineSectionNeed]
-        //Finds if a given excel line contains a unique section (returns false if already present)
+        //Finds if an excel row contains a unique section (returns false if already present)
+        //Takes in the index of the course in question
         bool DetermineSectionNeed(int checkIndex)
         {
             bool needSection = true;
 
+            //
             foreach (var section in courses[checkIndex].getSections())
             {
                 if (section.getID() == excelReader.GetString(5) &&
                     section.getStartTimes().SequenceEqual(SplitCellIntoList(17, ", ", " NA")) &&
                     section.getTerm() == excelReader.GetString(2) &&
                     section.getInstructFirstN().SequenceEqual(SplitCellIntoList(10, ", ", "")) &&
-                    section.getMeetDays().SequenceEqual(SplitCellIntoList(19, ", ", "")))// &&
-                                                                                         //section.stopTimes.SequenceEqual(SplitCellIntoList(18, ", ", " NA")) &&
-                                                                                         //section.instructLastN.SequenceEqual(SplitCellIntoList(9, ", ", "")))
+                    section.getMeetDays().SequenceEqual(SplitCellIntoList(19, ",", ""))) //&&
+                    //section.stopTimes.SequenceEqual(SplitCellIntoList(18, ", ", " NA")) &&
+                    //section.instructLastN.SequenceEqual(SplitCellIntoList(9, ", ", "")))
                 {
                     needSection = false;
                 }
-                if (needSection == false)
+                if (needSection == false) //quits search when an identical section was found
                     break;
             }
 
@@ -334,7 +356,7 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - SplitCellIntoList]
-        //Splits data from column index and given delim into a List of strings
+        //Splits data from column index and given delim into a List of strings | Returns the resulting list
         List<string> SplitCellIntoList(int columnIndex, string delim, string nullReplace)
         {
             List<string> result = new List<string>(((excelReader.GetString(columnIndex)) != null ? excelReader.GetString(columnIndex) : nullReplace).Split(new string[] { delim }, StringSplitOptions.None));
@@ -358,10 +380,11 @@ namespace ClassScheduler
         //Cleans up course data by removing irrevelant sections with missing times/days
         void RemoveIrevSections()
         {
+            //Store the locations of sections to remove
             List<int> removeCourseIndexes = new List<int>();
             List<int> removeSectionIndexes = new List<int>();
 
-            //DETEMNINE section need
+            //Detemine section need by iterating over all sections in all courses and marking their location in parallel lists above 
             foreach (var course in courses)
             {
                 foreach (var section in course.getSections())
@@ -373,16 +396,16 @@ namespace ClassScheduler
                     }
             }
 
-
-            //ADD unneeded courses to secondary list (some may have partial valid data)
+            //Add unneeded courses to secondary list (some may have partial valid data) (revise to deep copy courses instead)
             foreach (var index in removeCourseIndexes)
                 unneededCourses.Add(courses[index]);
 
-            //REMOVE course entry from primary list
+            //Remove course entry from primary list
             int indexOffset = 0;
             if (removeCourseIndexes.Count() == 0)
                 return;
 
+            //Iterates over all section removal locations removing them from database
             int currentCourseIndex = removeCourseIndexes[0];
             for (int i = 0; i < removeCourseIndexes.Count(); i++)
             {
@@ -431,7 +454,7 @@ namespace ClassScheduler
             FileStream fs = new FileStream(@"AllSectionTimes.txt", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite); //last parameter needed to open file at end
             StreamWriter file = new StreamWriter(fs);
 
-            string term = "Fall"; //(revise always will be fall cant assess control that was created on different thread)
+            string term = "Fall"; //(revise always will be fall can't assess control that was created on different thread)
             WriteTermSections(userData.getTermInterest(), term, file);
             file.Flush();
 
@@ -443,11 +466,14 @@ namespace ClassScheduler
         //Formats course information of a specific term and writes to debug .txt file (one course at a time)
         void WriteTermSections(string abrvTerm, string Term, StreamWriter sw)
         {
+            //Write database title
             sw.WriteLine("****************************[" + Term.ToUpper() + " Term]****************************");
+
             int courseNum = 0;
             foreach (var course in courses)
             {
-                sw.Flush();
+                sw.Flush(); //Added so text doesn't reach charecter limit
+                //Write relevant courses
                 if (course.getTermsAvailable().Any(s => s.EndsWith(abrvTerm)))
                 {
                     courseNum++;
@@ -457,6 +483,7 @@ namespace ClassScheduler
                     int indexCount = 0;
                     foreach (var section in course.getSections())
                     {
+                        //Write relevant sections
                         if (section.getTerm().Contains(abrvTerm))
                         {
                             int secTimeIndex = 0;
@@ -500,7 +527,7 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - GetCourseLevel]
-        //Returns the level of course based on excel reader position
+        //Returns the level of course in currently selected excel row
         string GetCourseLevel()
         {
             object value = excelReader.GetValue(8);
@@ -509,7 +536,7 @@ namespace ClassScheduler
         }
 
         //[FUNCTION - GetRowInstructNames]
-        //Formats and returns instructor names
+        //Formats and returns instructor names of currently selected excel row
         List<string> GetRowInstructNames()
         {
             List<string> resultNames = new List<string>();
@@ -531,7 +558,16 @@ namespace ClassScheduler
             return resultNames;
         }
 
-        //PROGRESS BAR CODE
+        //Property to hold the selected file name
+        public string SelectedFileName { get; set; }
+
+        private void PreviewExcelSheetButton_Click_1(object sender, EventArgs e)
+        {
+            previewForm.setFilenameLabel();
+            previewForm.ShowDialog();
+        }
+
+        //PROGRESS BAR FUNCTION
         //[FUNCTION - StartCalc]
         //Resets all needed variables
         public void StartCalcPB()
@@ -541,13 +577,9 @@ namespace ClassScheduler
             totalCalcNum = dt.Rows.Count;
         }
 
-        //Accessor/mutator functions (revise by adding more)
-        public List<string> getCourseIDs()
-        {
-            return courseIDs;
-        }
-
-        //BACKGROUND WORKER FUNCTIONS (same citation as above)
+        //BACKGROUND WORKER FUNCTIONS (self explanatory names)
+        //PARTIAL INSTRUCTION FROM LINK (background worker)
+        //https://www.youtube.com/watch?v=G3zRhhGCJJA
         private void BackgroundWorkerCourses_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             ProgressBar.Value = e.ProgressPercentage;
@@ -570,13 +602,10 @@ namespace ClassScheduler
             CourseSelection.ShowDialog();
         }
 
-        //Property to hold the selected file name
-        public string SelectedFileName { get; set; }
-
-        private void PreviewExcelSheetButton_Click_1(object sender, EventArgs e)
+        //Accessor/mutator functions (revise by adding more)
+        public List<string> getCourseIDs()
         {
-            previewForm.setFilenameLabel();
-            previewForm.ShowDialog();
+            return courseIDs;
         }
     }
 }

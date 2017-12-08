@@ -46,6 +46,7 @@ namespace ClassScheduler
 
         private CourseSelectionForm RefToCourseSelectForm;
         private OptimizationSettingsForm OptimizeSettingsForm;
+        private FinalSchedule finalSchedule = new FinalSchedule();
 
         private bool firstDraw = true;
         private bool isOptimized = false;
@@ -54,8 +55,6 @@ namespace ClassScheduler
         private float topSeperator = 30;
         private float lastYPos;
 
-        //Properties for resizing the LoadingResultsForm width to match the SectionGraphBox width
-        private int widthOfPBox;
 
         public LoadingResultsForm(List<SingleCourse> selectedCourses,List<SingleSchedule> resultSchedules, CourseSelectionForm courseForm)
         {
@@ -87,10 +86,13 @@ namespace ClassScheduler
             curScheduleIndex = 0;
 
             this.selectedCourses = selectedCourses;
-            if(isOptimization)
+            isOptimized = isOptimization;
+            ChangeOptimizationText();
+            if (isOptimization)
                 resultOptimizedSchedules = resultSchedules;
             else
                 this.resultSchedules = resultSchedules;
+
 
             UpdateShownSchedule();
         }
@@ -226,6 +228,7 @@ namespace ClassScheduler
             result += graphedSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getID() + "\n";
             result += graphedSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getStartTimes()[0].Trim() + " -\n";
             result += graphedSchedules[(int)curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getStopTimes()[0].Trim() + "\n";
+            //result += displayCount + "\n";
             //result += timeSlot.getStart() + " -\n";
             //result += timeSlot.getEnd() + "\n";
 
@@ -397,8 +400,10 @@ namespace ClassScheduler
         private void CourseReselectionButton_Click(object sender, EventArgs e)
         {
             isOptimized = false;
+            RefToCourseSelectForm.setIsOptimizationState(false);
             ChangeOptimizationText();
             RefToCourseSelectForm.Show();
+            Debug.WriteLine("CourseSelect Form Shown");
             this.Hide(); //(revise because form cannot be closed - open forms from main program)
         }
 
@@ -469,7 +474,7 @@ namespace ClassScheduler
                 SuggestedCoursesButton.BackColor = Color.Black;
                 SuggestedCoursesButton.ForeColor = Color.White;
                 SuggestedCoursesButton.Text = "Original Schedule";
-                ScheduleSuggestionLabel.Text = "Go back to original course selection\n if you dont like the new setup.";
+                ScheduleSuggestionLabel.Text = "Go back to original course selection\n if you don't like the new setup.";
             }
             else
             {
@@ -491,12 +496,92 @@ namespace ClassScheduler
             return isOptimized;
         }
 
-        //[METHOD- Select Button Event Handler]
-        //Display the user's final schedule after optimization, 
-        //Display a pdf file in a pictureBox, and have a print dialog
+        private void setFinalScheduleToPanels()
+        {
+            int numDays = resultSchedules[curScheduleIndex].getAllDays().Count();
+
+            for (int day = 0; day < numDays; day++)
+            {
+                int numClasses = resultSchedules[curScheduleIndex].getAllDays()[day].getDayTimes().Count();
+
+                for (int i = 0; i < numClasses; i++)
+                {
+                    int startMin, endMin;
+                    string courseID, courseName, lastName, firstName;
+                    int sectionIndex = resultSchedules[curScheduleIndex].getAllDays()[day].getDayTimes()[i].getSectionID();
+                    //Get time
+                    startMin = resultSchedules[curScheduleIndex].getAllDays()[day].getDayTimes()[i].getStart();
+                    endMin = resultSchedules[curScheduleIndex].getAllDays()[day].getDayTimes()[i].getEnd();
+                    //Get course ID and name
+                    courseID = resultSchedules[curScheduleIndex].getAllSections()[sectionIndex].getID();
+                    courseName = resultSchedules[curScheduleIndex].getAllSections()[sectionIndex].getCourseName();
+                    //Get instuctor first and last name
+                    lastName = resultSchedules[curScheduleIndex].getAllSections()[sectionIndex].getInstructLastN()[0];
+                    firstName = resultSchedules[curScheduleIndex].getAllSections()[sectionIndex].getInstructFirstN()[0];
+
+                    //Set the label properties...
+                    Label label = new Label();
+                    label.Text = startMin.ToString() + " " + endMin.ToString() + " " +
+                        courseID + " " + courseName + " " + lastName + ", " + firstName;
+                    label.AutoSize = true;
+                    label.Anchor = (AnchorStyles.Left | AnchorStyles.Right);
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    finalSchedule.getSpecificPanel(day).Controls.Add(label, 0, i + 1);
+                }
+            }
+        }
+
+
+        //Add the schedule to the FinalSchedule form
+        private void drawSchedule()
+        {
+            foreach (var day in graphedSchedules[curScheduleIndex].getAllDays())
+            {
+                addDayScheduleToFinalForm(day);
+            }
+
+        }
+
+        //Adds the schedule for each day
+        private void addDayScheduleToFinalForm(ScheduleDay day)
+        {
+            //day.getDayTimes();
+            for (int i = 0; i < day.getDayTimes().Count(); i++)
+            {
+
+            }
+        }
+
+        //Add welcome label to FinalScheduleForm
+        private void addLabelsToFinalScheduleForm()
+        {
+            string firstName = RefToCourseSelectForm.getUserInfo().getFirstName();
+            string lastName = RefToCourseSelectForm.getUserInfo().getLastName();
+            string termInterest = RefToCourseSelectForm.getUserInfo().getTermInterest();
+            if (termInterest == "FA")
+            {
+                termInterest = "Fall";
+            }
+            else if (termInterest == "JA")
+            {
+                termInterest = "Jan";
+            }
+            else
+                termInterest = "Spring";
+
+            finalSchedule.displayLblParent();
+            finalSchedule.changeDisplayLabelText(termInterest + " Schedule - " +
+                firstName + " " + lastName);
+        }
+
+        //[METHOD - Select Button Event Handler]
+        //Display the user's final schedule after optimization
         private void SelectScheduleButton_Click(object sender, EventArgs e)
         {
-
+            addLabelsToFinalScheduleForm();
+            setFinalScheduleToPanels();
+            finalSchedule.ShowDialog();
+            Close();
         }
     }
 }

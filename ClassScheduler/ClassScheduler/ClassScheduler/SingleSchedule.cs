@@ -31,12 +31,6 @@ namespace ClassScheduler
             minutesAtSchool = creditAmount*60;
             this.templateWeek = templateWeek;
 
-            //string allSec = "* ";
-            //foreach (var section in allSections)
-            //    allSec += section.getID() + " * ";
-            //Debug.Write(allSec);
-
-
             //populate allDays list with time information
             for (int g = 0; g < templateWeek.Count(); g++)
                 allDays.Add(new ScheduleDay(templateWeek[g]));
@@ -101,8 +95,7 @@ namespace ClassScheduler
             //Calculate max overtime possible per week
             int maxOverTime = maxTime - minTime;
 
-            //Calcuate current overtime
-            //Debug.Write("| Total: " + totalTime + " | Min: " + minTime + " | ");
+            //Calculate current overtime
             int currentOverTime = totalTime - minTime;
 
             //Calculate Efficiency Fitness (1 to 0)
@@ -130,6 +123,7 @@ namespace ClassScheduler
 
                 day.SortTimes();
 
+                //Course rank configuration (horizontal position in timetable day)
                 for (int i = 1; i < timeSlotsInDay; i++)
                 {
                     if (day.getDayTimes()[i-1].getEnd() >= day.getDayTimes()[i].getStart())
@@ -137,19 +131,33 @@ namespace ClassScheduler
                         day.getDayTimes()[i].setOverlapState(true);
                         day.getDayTimes()[i - 1].setOverlapState(true);
 
-                        if (i >= 2 && day.getDayTimes()[i - 2].getOverlapState() == true && day.getDayTimes()[i - 2].getEnd() <= day.getDayTimes()[i].getStart())
-                            day.getDayTimes()[i].setOverlapRank(day.getDayTimes()[i - 2].getOverlapRank());
+                        int previousRank = day.getDayTimes()[i - 1].getOverlapRank();
+                        int previousRankX2 = 0;
+                        if (i >= 2)
+                            previousRankX2 = day.getDayTimes()[i - 2].getOverlapRank();
+
+
+                        if (i >= 2 && 
+                            day.getDayTimes()[i - 2].getOverlapState() == true && 
+                            day.getDayTimes()[i - 2].getEnd() <= day.getDayTimes()[i].getStart())
+
+                            day.getDayTimes()[i].setOverlapRank(day.getDayTimes()[i - 1].getOverlapRank() - 1);
+
                         else
+
                             day.getDayTimes()[i].setOverlapRank(day.getDayTimes()[i - 1].getOverlapRank() + 1);
 
                         overlapCount++;
                         acceptableLayout = false;
                     }
-                    else if (i >= 2 && day.getDayTimes()[i-1].getOverlapState() == true && day.getDayTimes()[i - 2].getEnd() >= day.getDayTimes()[i].getStart())
+                    else if (i >= 2 && 
+                             day.getDayTimes()[i-1].getOverlapState() == true &&
+                             day.getDayTimes()[i-1].getOverlapRank() != 0 && 
+                             day.getDayTimes()[i-2].getEnd() >= day.getDayTimes()[i].getStart())
                     {
                         day.getDayTimes()[i].setOverlapState(true);
                         day.getDayTimes()[i].setOverlapOverrideState(true);
-                        day.getDayTimes()[i].setOverlapRank(day.getDayTimes()[i - 1].getOverlapRank()-1);
+                        day.getDayTimes()[i].setOverlapRank(day.getDayTimes()[i - 1].getOverlapRank() + 1);
                         overlapCount++;
                     }
                 }

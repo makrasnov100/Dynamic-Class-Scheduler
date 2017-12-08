@@ -34,7 +34,8 @@ namespace ClassScheduler
             //Remove last checkboxes
             foreach (var cb in allCB)
                 this.Controls.Remove(cb);
-            allCB.Clear();
+            allCB = new List<CheckBox>(); //causes bug if just clear
+            this.oldSchedule = oldSchedule;
 
             //Find checkbox apperence info
             // - color
@@ -86,6 +87,7 @@ namespace ClassScheduler
             RefToLoadResultsForm.Hide();
             this.Hide();
             RefToCourseSelectForm.setIsFirstCalculationState(true);
+            RefToCourseSelectForm.setIsOptimizationState(true);
             RefToCourseSelectForm.ChooseOptimizationCourses(canOptimize, oldSchedule, RefToLoadResultsForm);
         }
     }

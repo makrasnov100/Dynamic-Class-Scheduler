@@ -64,6 +64,12 @@
     <Compile Include="BasicCalculationForm.Designer.cs">
       <DependentUpon>BasicCalculationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FinalSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalSchedule.Designer.cs">
+      <DependentUpon>FinalSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModifyProgressBarColor.cs" />
     <Compile Include="OptimizationSettingsForm.cs">
       <SubType>Form</SubType>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CourseSelectionForm.resx">
       <DependentUpon>CourseSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalSchedule.resx">
+      <DependentUpon>FinalSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptimizationSettingsForm.resx">
       <DependentUpon>OptimizationSettingsForm.cs</DependentUpon>

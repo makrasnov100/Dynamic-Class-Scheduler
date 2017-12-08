@@ -310,10 +310,10 @@
             this.panel2.Controls.Add(this.ProgressBar);
             this.panel2.Controls.Add(this.CurrentAmountLabel);
             this.panel2.Controls.Add(this.LoadingTypeLabel);
-            this.panel2.Location = new System.Drawing.Point(0, 291);
+            this.panel2.Location = new System.Drawing.Point(0, 294);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1477, 570);
+            this.panel2.Size = new System.Drawing.Size(1477, 567);
             this.panel2.TabIndex = 21;
             // 
             // TotalAmountLabel
@@ -416,10 +416,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1478, 862);
+            this.ClientSize = new System.Drawing.Size(1482, 862);
             this.Controls.Add(this.InitialInputPanel);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MinimumSize = new System.Drawing.Size(1500, 900);
+            this.MinimumSize = new System.Drawing.Size(1499, 897);
             this.Name = "InitialInputForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
