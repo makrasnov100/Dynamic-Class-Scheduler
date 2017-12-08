@@ -13,6 +13,12 @@ namespace ClassScheduler
 {
     public partial class BasicCalculationForm : Form
     {
+        /// <summary>
+        /// This form performs the creation of all schedule combination and the calculation of the fittest one.
+        /// The progress of the calculations are shown with the help of a background worker that frees the UI thread.
+        /// </summary>
+        /// Author: Kostiantyn Makrasnov
+
 
         private List<SingleCourse> selectedCourses;
         private int courseAmount;
@@ -20,6 +26,7 @@ namespace ClassScheduler
         private int creditAmount;
         private float percentComplete;
         private bool isOptimization;
+        private bool isCancelled = false;
         private List<int> sectionAmountAll; // parallel list that allows for creation of all unique schedules
 
         private List<SingleSchedule> schedulePopulation;
@@ -65,14 +72,17 @@ namespace ClassScheduler
 
         public void BeginWorking(bool isOptimized)
         {
+            Debug.WriteLine("Began Working!");
+            this.isOptimization = isOptimized;
             numComplete = 0;
             ModifyProgressBarColor.SetState(ProgressBarSchedules, 2);
             BackgroundWorkerSchedules.RunWorkerAsync();
-            BackgroundWorkerSchedules.ReportProgress(0);
         }
 
         public void RestartCalculation(List<SingleCourse> selectedCourses, int numPossib, int creditAmount, bool isOptimization)
         {
+            Debug.WriteLine("Reseted Calculation variables!");
+
             //Reseted variables
             acceptableSchedulesTemp = new List<SingleSchedule>(20000);
             overlapSchedulesTemp = new List<SingleSchedule>(20000);
@@ -99,6 +109,10 @@ namespace ClassScheduler
         public void BeginCalculation()
         {
             CreateAllPossibilities();
+
+            if (BackgroundWorkerSchedules.CancellationPending == true)
+                return;
+
             DetemineShownSchedules();
             DisplayDebugResult();
         }
@@ -119,9 +133,17 @@ namespace ClassScheduler
         //Allows for dynamic creation off all schedule possibilities
         private void NestedScheduleConfig(int secID, int secAmount, int[] secConfig)
         {
+
             int secIdNext = secID + 1;
             int[] currentSecConfig = new int[courseAmount];
             secConfig.CopyTo(currentSecConfig, 0);
+
+            if (BackgroundWorkerSchedules.CancellationPending == true)
+            {
+                Debug.WriteLine("Work was HALTED!");
+                return;
+            }
+
 
             for (int i = 0; i < secAmount; i++)
             {
@@ -156,21 +178,18 @@ namespace ClassScheduler
             List<SingleSection> resultSchedule = new List<SingleSection>(secConfig.Length);
 
             int courseCounter = 0;
-            foreach (var secID in secConfig)
+            foreach (var secIndex in secConfig)
             {
-                resultSchedule.Add(selectedCourses[courseCounter].getSections()[secID]);
+                resultSchedule.Add(selectedCourses[courseCounter].getSections()[secIndex]);
                 courseCounter++;
             }
-
             return resultSchedule;
         }
 
         //[FUNCTION - HandleScheduleOverload]
-        //Frees some memory by doing a preliminary sorting when 50k calculations made & at end
+        //Frees some memory by doing a preliminary sorting each 50k calculations | Also performed at end
         private void HandleScheduleOverload()
         {
-            Debug.WriteLine("Overlap Schedules instance: " + overlapSchedules);
-
             //Add fittest from last set
             if (overlapSchedules.Count() != 0)
                 overlapSchedulesTemp.AddRange(overlapSchedules);
@@ -270,37 +289,9 @@ namespace ClassScheduler
             return meetDays;
         }
 
-        //[FUNCTION - DisplayResultLoadForm]
-        //Creates the load result form popup + passes needed info
-        //public void DisplayResultLoadForm()
-        //{
-        //    if (resultSchedules.Count() != 0)
-        //    {
-        //        if (RefTOResultLoadForm == null)
-        //        {
-        //            Debug.WriteLine("NEW RESULT FORM SHOWN");
-        //            RefTOResultLoadForm = new LoadingResultsForm(selectedCourses, resultSchedules, RefToCourseSelectForm);
-        //        }
-        //        else
-        //        {
-        //            Debug.WriteLine("OLD RESULT FORM SHOWN!");
-        //            RefTOResultLoadForm.ShowNewScheduleSet(selectedCourses, resultSchedules, isOptimization);
-        //        }
-
-        //        this.Hide();
-        //        if (!RefTOResultLoadForm.Visible)
-        //        {
-        //            Debug.WriteLine("Result Form is Shown!");
-        //            RefTOResultLoadForm.ShowDialog();
-        //        }
-        //    }
-        //}
-
-
-        //BACKGROUND WORKER FUNCTIONS
+        //BACKGROUND WORKER FUNCTIONS (self-explanatory names)
         //PARTIAL INSTRUCTION FROM LINK (background worker)
         //https://www.youtube.com/watch?v=G3zRhhGCJJA
-
         private void BackgroundWorkerSchedules_DoWork(object sender, DoWorkEventArgs e)
         {
             BeginCalculation();
@@ -319,47 +310,51 @@ namespace ClassScheduler
 
         private void BackgroundWorkerSchedules_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            this.Hide();
+            if (BackgroundWorkerSchedules.IsBusy)
+                return;
 
-            Debug.WriteLine("THERE ARE " + resultSchedules.Count() + " COURSES TO SHOW!");
-            if (resultSchedules.Count() != 0)
+            if (!isCancelled)
             {
-                if (RefToResultLoadForm == null)
-                {
-                    Debug.WriteLine("NEW RESULT FORM SHOWN");
-                    RefToResultLoadForm = new LoadingResultsForm(selectedCourses, resultSchedules, RefToCourseSelectForm);
-                }
-                else
-                {
-                    Debug.WriteLine("OLD RESULT FORM SHOWN!");
-                    RefToResultLoadForm.ShowNewScheduleSet(selectedCourses, resultSchedules, isOptimization);
-                }
-
                 this.Hide();
-                if (!RefToResultLoadForm.Visible)
+                Debug.WriteLine("THERE ARE " + resultSchedules.Count() + " COURSES TO SHOW!");
+                if (resultSchedules.Count() != 0)
                 {
-                    Debug.WriteLine("Result Form is NOW VISIBLE!");
-                    RefToResultLoadForm.ShowDialog();
+                    if (RefToResultLoadForm == null)
+                    {
+                        Debug.WriteLine("NEW RESULT FORM SHOWN");
+                        RefToResultLoadForm = new LoadingResultsForm(selectedCourses, resultSchedules, RefToCourseSelectForm);
+                    }
+                    else
+                    {
+                        Debug.WriteLine("OLD RESULT FORM SHOWN! IT IS " + (isOptimization == true ? "OPTIMIZED" : "NOT OPTIMIZED"));
+                        RefToResultLoadForm.ShowNewScheduleSet(selectedCourses, resultSchedules, isOptimization);
+                    }
+
+                    this.Hide();
+                    if (!RefToResultLoadForm.Visible)
+                    {
+                        Debug.WriteLine("Result Form is NOW VISIBLE!");
+                        RefToResultLoadForm.ShowDialog();
+                    }
                 }
+                RefToCourseSelectForm.setIsFirstCalculationState(false);
             }
-            RefToCourseSelectForm.setIsFirstCalculationState(false);
 
             acceptableSchedulesTemp.Clear();
             overlapSchedulesTemp.Clear();
             acceptableSchedules.Clear();
             overlapSchedules.Clear();
             resultSchedules.Clear();
-        }
-
-        private void BasicCalculationForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
+            isCancelled = false;
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)
         {
+            isCancelled = true;
+            Debug.WriteLine("CANCEL BUTTON WAS CLICKED!!!");
             BackgroundWorkerSchedules.CancelAsync();
             this.Hide();
+            Debug.WriteLine("isFirstCalculation: " + RefToCourseSelectForm.getIsFirstCalculationState());
             if (RefToCourseSelectForm.getIsFirstCalculationState() == false)
             {
                 RefToResultLoadForm.Show();
@@ -376,6 +371,13 @@ namespace ClassScheduler
             acceptableSchedules.Clear();
             overlapSchedules.Clear();
             resultSchedules.Clear();
+        }
+
+        //[FUNCTION - BasicCalculationForm_FormClosed]
+        //Exits Application if closed form during loading
+        private void BasicCalculationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -137,3 +137,4 @@ D:\Current Projects\CS-172 Final\Dynamic-Class-Scheduler\ClassScheduler\ClassSch
 D:\Current Projects\CS-172 Final\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.pdb
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.BasicCalculationForm.resources
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.FinalSchedule.resources
+D:\Current Projects\CS-172 Final\GitFiles\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.FinalSchedule.resources

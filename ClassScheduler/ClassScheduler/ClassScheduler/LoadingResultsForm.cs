@@ -86,10 +86,13 @@ namespace ClassScheduler
             curScheduleIndex = 0;
 
             this.selectedCourses = selectedCourses;
-            if(isOptimization)
+            isOptimized = isOptimization;
+            ChangeOptimizationText();
+            if (isOptimization)
                 resultOptimizedSchedules = resultSchedules;
             else
                 this.resultSchedules = resultSchedules;
+
 
             UpdateShownSchedule();
         }
@@ -396,8 +399,10 @@ namespace ClassScheduler
         private void CourseReselectionButton_Click(object sender, EventArgs e)
         {
             isOptimized = false;
+            RefToCourseSelectForm.setIsOptimizationState(false);
             ChangeOptimizationText();
             RefToCourseSelectForm.Show();
+            Debug.WriteLine("CourseSelect Form Shown");
             this.Hide(); //(revise because form cannot be closed - open forms from main program)
         }
 
