@@ -128,6 +128,7 @@ namespace ClassScheduler
 
             int[] currentSecConfig = new int[courseAmount];
             NestedScheduleConfig(0, sectionAmountAll[0], currentSecConfig);
+
             if (!isCancelled)
                 HandleScheduleOverload();
         }

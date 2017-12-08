@@ -26,7 +26,7 @@ namespace ClassScheduler
     {
 
         public List<SingleCourse> availableCourses;
-        public List<SingleCourse> selectedCourses = new List<SingleCourse>();
+        public List<SingleCourse> selectedCourses = new List<SingleCourse>(10);
         private Random random = new Random();
         private int creditAmount = 0;
 
