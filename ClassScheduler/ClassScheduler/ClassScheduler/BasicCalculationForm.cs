@@ -154,6 +154,7 @@ namespace ClassScheduler
                 if ((secIdNext) == courseAmount)
                 {
                     schedulePopulation.Add(new SingleSchedule(courseAmount, creditAmount, random, templateWeek, GetUniqueSec(currentSecConfig)));
+
                     if (numComplete % 1000 == 0)
                     {
                         //Debug.WriteLine("1k Schedules were added to schedule");
@@ -247,12 +248,15 @@ namespace ClassScheduler
         public void DetemineShownSchedules()
         {
             resultSchedules = new List<SingleSchedule>();
+
             Debug.WriteLine("Overlap Schedules: " + overlapSchedules.Count() + " Acceptable Schedules: " + acceptableSchedules.Count());
             if (acceptableSchedules.Count() != 0)
                 resultSchedules.AddRange(acceptableSchedules);
+
             Debug.WriteLine("Amount of Schedules after adding acceptable: " + resultSchedules.Count());
             int additionsNeeded = overlapSchedules.Count() <= 200 - acceptableSchedules.Count() ?
                                   overlapSchedules.Count() : 200 - acceptableSchedules.Count();
+
             Debug.WriteLine("Overlap additions required: " + additionsNeeded);
             for (int i = 0; i < additionsNeeded; i++)
                 resultSchedules.Add(overlapSchedules[i]);
@@ -320,12 +324,12 @@ namespace ClassScheduler
             if (BackgroundWorkerSchedules.IsBusy)
                 return;
 
-            //Debug.WriteLine("Result Schedules avaliable: " + resultSchedules[0].getAllSections()[0].getCourseName());
-
             if (!isCancelled)
-            {   
-                Debug.WriteLine("THERE ARE " + this.resultSchedules.Count() + " COURSES TO SHOW!");
-                if (this.resultSchedules.Count() != 0)
+            {
+                this.Hide();
+                Debug.WriteLine("THERE ARE " + resultSchedules.Count() + " COURSES TO SHOW!");
+                if (resultSchedules.Count() != 0)
+
                 {
                     if (RefToResultLoadForm == null)
                     {
@@ -360,6 +364,7 @@ namespace ClassScheduler
             isCancelled = true;
             Debug.WriteLine("CANCEL BUTTON WAS CLICKED!!!");
             BackgroundWorkerSchedules.CancelAsync();
+
             Debug.WriteLine("isFirstCalculation: " + RefToCourseSelectForm.getIsFirstCalculationState());
             if (RefToCourseSelectForm.getIsFirstCalculationState() == false)
             {

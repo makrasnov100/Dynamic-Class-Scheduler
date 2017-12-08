@@ -303,3 +303,5 @@ __pycache__/
 
 # OpenCover UI analysis results
 OpenCover/
+ClassScheduler/ClassScheduler/ClassScheduler/obj/Debug/ClassScheduler.csproj.GenerateResource.Cache
+ClassScheduler/ClassScheduler/.vs/ClassScheduler/v15/.suo
