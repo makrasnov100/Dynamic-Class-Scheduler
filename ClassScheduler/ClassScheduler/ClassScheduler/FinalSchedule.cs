@@ -63,9 +63,9 @@ namespace ClassScheduler
                 using (var bmp = new Bitmap(pnl.Width, pnl.Height))
                 {
                     pnl.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
-                    this.fullbmp = bmp;
                     bmp.Save(path);
                     MessageBox.Show("File save to " + path + " successful!");
+                    bmp.Dispose();
                 }
             }
             catch (Exception e)
@@ -127,7 +127,7 @@ namespace ClassScheduler
         private void saveAsPdfButton_Click(object sender, EventArgs e)
         {
             PrintDialog printDialog = new PrintDialog();
-            doc.PrintPage += new PrintPageEventHandler(document_PrintPage);
+            doc.PrintPage += Doc_PrintPage;
             printDialog.Document = doc;
 
             if (printDialog.ShowDialog() == DialogResult.OK)
@@ -136,9 +136,15 @@ namespace ClassScheduler
             }
         }
 
-        private void document_PrintPage(object sender, PrintPageEventArgs e)
+        private void Doc_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(fullbmp, 0, 0);
+            var pnl = this.schedulePanel;
+            using (var bmp = new Bitmap(pnl.Width, pnl.Height))
+            {
+                pnl.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+                e.Graphics.DrawImage(bmp, 0, 0);
+                bmp.Dispose();
+            }
         }
     }
 }
