@@ -518,7 +518,8 @@ namespace ClassScheduler
         private void setFinalScheduleToPanels()
         {
             int numDays = resultSchedules[curScheduleIndex].getAllDays().Count();
-
+            string tab = "    ";
+    
             for (int day = 0; day < numDays; day++)
             {
                 int numClasses = resultSchedules[curScheduleIndex].getAllDays()[day].getDayTimes().Count();
@@ -540,14 +541,55 @@ namespace ClassScheduler
 
                     //Set the label properties...
                     Label label = new Label();
-                    label.Text = startMin.ToString() + " " + endMin.ToString() + " " +
-                        courseID + " " + courseName + " " + lastName + ", " + firstName;
+                    label.Text = convertMinutes(startMin, endMin) + tab +
+                        courseID + " " + courseName + tab + lastName + ", " + firstName;
                     label.AutoSize = true;
                     label.Anchor = (AnchorStyles.Left | AnchorStyles.Right);
                     label.TextAlign = ContentAlignment.MiddleCenter;
                     finalSchedule.getSpecificPanel(day).Controls.Add(label, 0, i + 1);
                 }
             }
+        }
+
+        //Method to convert time from minutes to 12-hour clock
+        private string convertMinutes(int startTime, int endTime) {
+            string finalString;
+            int startHour = startTime, endHour = endTime, startMin, endMin;
+
+            if (startHour >= 780)
+            {
+                startHour = (startHour / 60) - 12; //convert to 12-hour clock
+            }
+            else
+            {
+                startHour /= 60; //sets startTime to the hour
+            }
+
+            if (endHour >= 780)
+            {
+                endHour = (endHour / 60) - 12;
+            }
+            else
+            {
+                endHour /= 60;
+            }
+
+            startMin = startTime % 60;
+            if (startMin == 0)
+            {
+                startMin = 00;
+            }
+            endMin = endTime % 60;
+            if (endMin == 0)
+            {
+                endMin = 00;
+            }
+
+            //Format string to return 
+            finalString = startHour.ToString() + ":" + startMin.ToString() + " - " + 
+                endHour.ToString() + ":" + endMin.ToString();
+
+            return finalString;
         }
 
         //Add welcome label to FinalScheduleForm
