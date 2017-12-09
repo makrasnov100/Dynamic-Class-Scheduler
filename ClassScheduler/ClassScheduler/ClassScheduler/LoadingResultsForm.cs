@@ -518,7 +518,7 @@ namespace ClassScheduler
         private void setFinalScheduleToPanels()
         {
             int numDays = resultSchedules[curScheduleIndex].getAllDays().Count();
-            string tab = "    ";
+            string tab = "            ";
     
             for (int day = 0; day < numDays; day++)
             {
@@ -554,6 +554,7 @@ namespace ClassScheduler
         //Method to convert time from minutes to 12-hour clock
         private string convertMinutes(int startTime, int endTime) {
             string finalString;
+            bool zeroStartMin = false, zeroEndMin = false;
             int startHour = startTime, endHour = endTime, startMin, endMin;
 
             if (startHour >= 780)
@@ -575,19 +576,10 @@ namespace ClassScheduler
             }
 
             startMin = startTime % 60;
-            if (startMin == 0)
-            {
-                startMin = 00;
-            }
             endMin = endTime % 60;
-            if (endMin == 0)
-            {
-                endMin = 00;
-            }
 
-            //Format string to return 
-            finalString = startHour.ToString() + ":" + startMin.ToString() + " - " + 
-                endHour.ToString() + ":" + endMin.ToString();
+            finalString = startHour.ToString() + ":" + startMin.ToString().PadLeft(2, '0') + " - " +
+            endHour.ToString() + ":" + endMin.ToString().PadLeft(2, '0');
 
             return finalString;
         }
