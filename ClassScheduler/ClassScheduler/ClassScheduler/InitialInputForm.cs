@@ -22,7 +22,7 @@ namespace ClassScheduler
     /// Author: Kostiantyn Makrasnov (Excel Reader Part & Form's Layout/User Input Validation)
     /// Author: Yuriy Fedas (Preview of Selected Excel Data File & Proper control through access/mutator functions)
     /// 
-    /// Sources for ExcelDataReader: Source code from https://github.com/ExcelDataReader/ExcelDataReader, used methods
+    /// Source for ExcelDataReader: Source code from https://github.com/ExcelDataReader/ExcelDataReader, used methods
     /// from ExcelDataReader and ExcelDataReader.DataSet Nuget packages.
 
     public partial class InitialInputForm : Form

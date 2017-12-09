@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,9 +34,9 @@ namespace ClassScheduler
         private List<SingleSchedule> schedulePopulation;
         private List<SingleSchedule> acceptableSchedulesTemp = new List<SingleSchedule>(20000);
         private List<SingleSchedule> overlapSchedulesTemp = new List<SingleSchedule>(20000);
-        private List<SingleSchedule> acceptableSchedules = new List<SingleSchedule>(200);
-        private List<SingleSchedule> overlapSchedules = new List<SingleSchedule>(200);
-        private List<SingleSchedule> resultSchedules = new List<SingleSchedule>(200);
+        private List<SingleSchedule> acceptableSchedules = new List<SingleSchedule>();
+        private List<SingleSchedule> overlapSchedules = new List<SingleSchedule>();
+        private List<SingleSchedule> resultSchedules = new List<SingleSchedule>();
 
         private LoadingResultsForm RefToResultLoadForm;
         private CourseSelectionForm RefToCourseSelectForm;
@@ -70,9 +72,11 @@ namespace ClassScheduler
             InitializeComponent();
         }
 
+        //[FUNCTION - BeginWorking()]
+        //Used from other classes as a way to start the evaluation/worker
         public void BeginWorking(bool isOptimized)
         {
-            Debug.WriteLine("Began Working!");
+            isCancelled = false;
             this.isOptimization = isOptimized;
             numComplete = 0;
             ModifyProgressBarColor.SetState(ProgressBarSchedules, 2);
@@ -81,14 +85,12 @@ namespace ClassScheduler
 
         public void RestartCalculation(List<SingleCourse> selectedCourses, int numPossib, int creditAmount, bool isOptimization)
         {
-            Debug.WriteLine("Reseted Calculation variables!");
-
             //Reseted variables
             acceptableSchedulesTemp = new List<SingleSchedule>(20000);
             overlapSchedulesTemp = new List<SingleSchedule>(20000);
-            acceptableSchedules = new List<SingleSchedule>(200);
-            overlapSchedules = new List<SingleSchedule>(200);
-            resultSchedules = new List<SingleSchedule>(200);
+            acceptableSchedules = new List<SingleSchedule>();
+            overlapSchedules = new List<SingleSchedule>();
+            resultSchedules = new List<SingleSchedule>();
 
             //Calculation variables
             this.creditAmount = creditAmount;
@@ -126,7 +128,9 @@ namespace ClassScheduler
 
             int[] currentSecConfig = new int[courseAmount];
             NestedScheduleConfig(0, sectionAmountAll[0], currentSecConfig);
-            HandleScheduleOverload();
+
+            if (!isCancelled)
+                HandleScheduleOverload();
         }
 
         //[FUNCTION - NestedForLoop]
@@ -148,18 +152,19 @@ namespace ClassScheduler
             for (int i = 0; i < secAmount; i++)
             {
                 currentSecConfig[secID] = i;
-                if ((secID + 1) == courseAmount)
+                if ((secIdNext) == courseAmount)
                 {
                     schedulePopulation.Add(new SingleSchedule(courseAmount, creditAmount, random, templateWeek, GetUniqueSec(currentSecConfig)));
-                    if(numComplete % 1000 == 0)
+
+                    if (numComplete % 1000 == 0)
                     {
-                        Debug.WriteLine("(" + (float)numComplete + " / " + (float)scheduleAmount + ") * " + 100f + " = " + ((float)numComplete / (float)scheduleAmount) * 100f);
+                        //Debug.WriteLine("1k Schedules were added to schedule");
+                        //Debug.WriteLine("(" + (float)numComplete + " / " + (float)scheduleAmount + ") * " + 100f + " = " + ((float)numComplete / (float)scheduleAmount) * 100f);
                         percentComplete = ((float)numComplete / (float)scheduleAmount) * 100f;
                         BackgroundWorkerSchedules.ReportProgress((int)percentComplete <= 100 ? (int)percentComplete : 100);
                     }
                     if(numComplete % 20000 == 0)
                     {
-                        Debug.WriteLine("Memory Save!");
                         HandleScheduleOverload();
                     }
                     numComplete += 1;
@@ -243,14 +248,20 @@ namespace ClassScheduler
         //Add all schedules to resulting schedules list
         public void DetemineShownSchedules()
         {
+            resultSchedules = new List<SingleSchedule>();
 
-            resultSchedules.Clear();
             Debug.WriteLine("Overlap Schedules: " + overlapSchedules.Count() + " Acceptable Schedules: " + acceptableSchedules.Count());
-            resultSchedules.AddRange(acceptableSchedules);
+            if (acceptableSchedules.Count() != 0)
+                resultSchedules.AddRange(acceptableSchedules);
+
+            Debug.WriteLine("Amount of Schedules after adding acceptable: " + resultSchedules.Count());
             int additionsNeeded = overlapSchedules.Count() <= 200 - acceptableSchedules.Count() ?
                                   overlapSchedules.Count() : 200 - acceptableSchedules.Count();
+
+            Debug.WriteLine("Overlap additions required: " + additionsNeeded);
             for (int i = 0; i < additionsNeeded; i++)
                 resultSchedules.Add(overlapSchedules[i]);
+            Debug.WriteLine("Final Amount of Result Schedules: " + resultSchedules.Count());
         }
 
         //[FUNCTION - DisplayDebugResult]
@@ -295,6 +306,7 @@ namespace ClassScheduler
         private void BackgroundWorkerSchedules_DoWork(object sender, DoWorkEventArgs e)
         {
             BeginCalculation();
+            Debug.WriteLine("Result list at the end of calculation in DoWork: " + resultSchedules.Count());
         }
 
         private void BackgroundWorkerSchedules_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -318,6 +330,7 @@ namespace ClassScheduler
                 this.Hide();
                 Debug.WriteLine("THERE ARE " + resultSchedules.Count() + " COURSES TO SHOW!");
                 if (resultSchedules.Count() != 0)
+
                 {
                     if (RefToResultLoadForm == null)
                     {
@@ -344,7 +357,6 @@ namespace ClassScheduler
             overlapSchedulesTemp.Clear();
             acceptableSchedules.Clear();
             overlapSchedules.Clear();
-            resultSchedules.Clear();
             isCancelled = false;
         }
 
@@ -353,7 +365,7 @@ namespace ClassScheduler
             isCancelled = true;
             Debug.WriteLine("CANCEL BUTTON WAS CLICKED!!!");
             BackgroundWorkerSchedules.CancelAsync();
-            this.Hide();
+
             Debug.WriteLine("isFirstCalculation: " + RefToCourseSelectForm.getIsFirstCalculationState());
             if (RefToCourseSelectForm.getIsFirstCalculationState() == false)
             {
@@ -371,6 +383,7 @@ namespace ClassScheduler
             acceptableSchedules.Clear();
             overlapSchedules.Clear();
             resultSchedules.Clear();
+            this.Hide();
         }
 
         //[FUNCTION - BasicCalculationForm_FormClosed]
@@ -378,6 +391,21 @@ namespace ClassScheduler
         private void BasicCalculationForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        //[FUNCTION - DeepCopySingleSchedule]
+        //Function is mainly the answer from the following post on how to copy a complex object
+        //https://stackoverflow.com/questions/16696448/how-to-make-a-copy-of-an-object-in-c-sharp
+        //Copies instance of a SingleCourse Object into an identical new object
+        public static SingleSchedule DeepCopySingleSchedule(SingleSchedule other)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(ms, other);
+                ms.Position = 0;
+                return (SingleSchedule)formatter.Deserialize(ms);
+            }
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassScheduler
 {
+    [Serializable]
     public class ScheduleDay
     {
         private string dayID; //M-T-W-TH-F

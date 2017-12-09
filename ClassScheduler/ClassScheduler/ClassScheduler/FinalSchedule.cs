@@ -94,7 +94,7 @@ namespace ClassScheduler
         {
             return dayLayoutPanel;
         }
-        
+
         public TableLayoutPanel getMondayLayoutPanel()
         {
             return mondayLayoutPanel;

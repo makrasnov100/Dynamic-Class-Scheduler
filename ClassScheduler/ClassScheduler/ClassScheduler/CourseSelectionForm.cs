@@ -50,12 +50,6 @@ namespace ClassScheduler
             InitializeComponent();
         }
 
-        //Do not delete, I use this accessor in the FinalSchedule form!
-        public UserConfig getUserInfo()
-        {
-            return userInfo;
-        }
-
         //[FUNCTION - CourseSelectionForm_FormClosed]
         //Exits aplication when window is closed
         private void CourseSelectionForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -340,7 +334,7 @@ namespace ClassScheduler
             this.Hide();
             RefToBasicCalculationForm.Show();
             RefToBasicCalculationForm.RestartCalculation(givenCourses, numPossib, creditAmount, isOptimization);
-            RefToBasicCalculationForm.BeginWorking(true); //FIX THIS ***********************************************
+            RefToBasicCalculationForm.BeginWorking(isOptimization);
             isOptimization = false;
         }
 
@@ -362,7 +356,6 @@ namespace ClassScheduler
             {
                 if (optimizeOption == true)
                 {
-                    Debug.WriteLine("Optimization counter:" + oldSchedule.getAllSections().Count());
                     string matchCourseID = oldSchedule.getAllSections()[optimizeCounter].getID();
                     string matchCourseIDTrim = matchCourseID.Substring(0, matchCourseID.IndexOf("-", 4));
                     string depID = matchCourseID.Substring(0, matchCourseID.IndexOf("-", 0));
@@ -421,7 +414,12 @@ namespace ClassScheduler
             this.isOptimization = isOptimization;
         }
 
-
         public string SelectedFileName { get; set; }
+
+        //Accessor for the FinalSchedule form
+        public UserConfig getUserInfo()
+        {
+            return userInfo;
+        }
     }
 }
