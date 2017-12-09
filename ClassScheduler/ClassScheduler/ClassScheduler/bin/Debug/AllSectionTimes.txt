@@ -1,1614 +1,1593 @@
 ****************************[FALL Term]****************************
-[FALL COURSE #1] - [AR-101] - Drawing I: 
+[FALL COURSE #1] - [AB-196] - Elementary Arabic I: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Lobna, Abdelhameed | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #2] - [AB-196] - Elementary Arabic II: 
+  [SECTION #1] - 10:25 AM - 11:35 AM | Lobna, Abdelhameed | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #3] - [AR-101] - Drawing I: 
   [SECTION #1] - 8:00 AM - 10:15 AM | Gordon, Wilson | W-F |
-  [SECTION #2] - 12:50 PM - 3:05 PM | Gordon, Wilson | W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #2] - [AR-120] - 2-D Design: 
-  [SECTION #1] - 8:00 AM - 10:15 AM | Stephen, Rue | M-W |
+[FALL COURSE #4] - [AR-120] - 2-D Design: 
+  [SECTION #1] - 8:30 AM - 10:45 AM | Lance, Sinnema | T-TH |
+  [SECTION #2] - 11:45 AM - 2:10 PM | Robert, Fifield | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #3] - [AR-124] - Intro to Photoshop: 
-  [SECTION #1] - 12:50 PM - 3:05 PM | Brytton, Bjorngaard | M-W |
-  [SECTION #2] - 11:45 AM - 2:10 PM | Scott, Kolbo | T-TH |
+[FALL COURSE #5] - [AR-124] - Intro to Photoshop: 
+  [SECTION #1] - 8:30 AM - 10:45 AM | David, Overstreet | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #4] - [AR-210] - Painting I: 
-  [SECTION #1] - 11:45 AM - 2:10 PM | Gordon, Wilson | T-TH |
+[FALL COURSE #6] - [AR-143] - Glass I: 
+  [SECTION #1] - 12:50 PM - 3:05 PM | Katie, Creyts | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #5] - [AR-211] - Watercolor I: 
-  [SECTION #1] - 12:50 PM - 3:05 PM | Stephen, Rue | M-W |
+[FALL COURSE #7] - [AR-201] - Drawing II: 
+  [SECTION #1] - 12:50 PM - 3:05 PM | Robert, Fifield | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #6] - [AR-220] - 3-D Design: 
-  [SECTION #1] - 11:45 AM - 2:10 PM | Katie, Creyts | T-TH |
+[FALL COURSE #8] - [AR-210] - Painting I: 
+  [SECTION #1] - 10:25 AM - 12:40 PM | Gordon, Wilson | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #7] - [AR-221] - Printmaking I: Relief/Intaglio: 
-  [SECTION #1] - 10:25 AM - 12:40 PM | Scott, Kolbo | M-W |
+[FALL COURSE #9] - [AR-222] - Printmaking II: Lith/Scrnprnt: 
+  [SECTION #1] - 8:00 AM - 10:15 AM | Robert, Fifield | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #8] - [AR-231] - Digital Photography I: 
-  [SECTION #1] - 8:00 AM - 10:15 AM | Brytton, Bjorngaard | M-W |
+[FALL COURSE #10] - [AR-227] - Intro to Time-Based Art Making: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Jeffrey, Huston | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #9] - [AR-240] - Ceramics (Wheelwork) I: 
+[FALL COURSE #11] - [AR-241] - Ceramics (Hand Building) I: 
   [SECTION #1] - 10:25 AM - 12:40 PM | Lance, Sinnema | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #10] - [AR-261] - Hist Renaissance/Baroque Art: 
+[FALL COURSE #12] - [AR-243] - Glass II: 
+  [SECTION #1] - 12:50 PM - 3:05 PM | Katie, Creyts | M-W |
+-------------------------------------------------------------------------------------
+[FALL COURSE #13] - [AR-259] - Seminar I: 
+  [SECTION #1] - 3:50 PM - 5:10 PM | Meredith, Tegrotenhuis Shimizu | TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #14] - [AR-263] - History of Modern Art: 
   [SECTION #1] - 9:05 AM - 10:15 AM | Meredith, Tegrotenhuis Shimizu | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #11] - [AR-268] - History of Photography: 
+[FALL COURSE #15] - [AR-268] - History of Photography: 
   [SECTION #1] - 1:55 PM - 3:05 PM | Meredith, Tegrotenhuis Shimizu | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #12] - [AR-310] - Painting II: 
-  [SECTION #1] - 11:45 AM - 2:10 PM | Gordon, Wilson | T-TH |
+[FALL COURSE #16] - [AR-301] - Drawing III: 
+  [SECTION #1] - 12:50 PM - 3:05 PM | Robert, Fifield | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #13] - [AR-315] - Community Arts in Practice: 
-  [SECTION #1] - 8:00 AM - 10:15 AM | Katie, Creyts | T-TH |
+[FALL COURSE #17] - [AR-302] - Figure Drawing I: 
+  [SECTION #1] - 8:30 AM - 10:45 AM | Gordon, Wilson | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #14] - [AR-321] - Intermediate Printmaking: 
-  [SECTION #1] - 10:25 AM - 12:40 PM | Scott, Kolbo | M-W |
+[FALL COURSE #18] - [AR-310] - Painting II: 
+  [SECTION #1] - 10:25 AM - 12:40 PM |  NA | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #15] - [AR-324] - Digital Imaging I: 
-  [SECTION #1] - 8:00 AM - 10:15 AM | Brytton, Bjorngaard | T-TH |
+[FALL COURSE #19] - [AR-321] - Intermediate Printmaking: 
+  [SECTION #1] - 8:00 AM - 10:15 AM | Robert, Fifield | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #16] - [AR-331] - Digital Photography II: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Kirk, Hirota | T |
+[FALL COURSE #20] - [AR-323] - Typography I: 
+  [SECTION #1] - 10:25 AM - 12:40 PM | David, Overstreet | W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #17] - [AR-340] - Ceramics (Wheelwork) II: 
+[FALL COURSE #21] - [AR-324] - Graphic Design 1: 
+  [SECTION #1] - 11:45 AM - 2:10 PM | David, Overstreet | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #22] - [AR-327] - Interm Time-Based Art Making: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Jeffrey, Huston | TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #23] - [AR-341] - Ceramics (Handbuilding) II: 
   [SECTION #1] - 10:25 AM - 12:40 PM | Lance, Sinnema | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #18] - [AR-344] - Elem Art: Curric & Methods: 
-  [SECTION #1] - 4:00 PM - 6:30 PM | James, Winkle | TH |
+[FALL COURSE #24] - [AR-344] - Elem Art: Curric & Methods: 
+  [SECTION #1] - 4:00 PM - 6:30 PM | James, Winkle | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #19] - [AR-361] - Hist Renaissance/Baroque Art: 
+[FALL COURSE #25] - [AR-355] - Sculpture I: 
+  [SECTION #1] - 11:45 AM - 2:10 PM | Katie, Creyts | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #26] - [AR-363] - History of Modern Art: 
   [SECTION #1] - 9:05 AM - 10:15 AM | Meredith, Tegrotenhuis Shimizu | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #20] - [AR-424] - Digital Imaging II: 
-  [SECTION #1] - 8:00 AM - 10:15 AM | Brytton, Bjorngaard | T-TH |
+[FALL COURSE #27] - [AR-365W] - Contemporary Art Seminar: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Katie, Creyts | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #21] - [AR-431] - Digital Photography III: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Kirk, Hirota | T |
+[FALL COURSE #28] - [AR-399] - Junior Exhibition Project: 
+  [SECTION #1] - 2:20 PM - 5:10 PM | Lance, Sinnema | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #22] - [AR-440] - Ceramics (Wheelwork) III: 
-  [SECTION #1] - 10:25 AM - 12:40 PM | Lance, Sinnema | M-W |
+[FALL COURSE #29] - [AR-402] - Figure Drawing II: 
+  [SECTION #1] - 8:30 AM - 10:45 AM | Gordon, Wilson | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #23] - [AR-460] - Seminar: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Scott, Kolbo | TH |
+[FALL COURSE #30] - [AR-410] - Painting III: 
+  [SECTION #1] - 10:25 AM - 12:40 PM | Gordon, Wilson | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #24] - [ASL-101] - Intro to Sign Language & Deaf: 
-  [SECTION #1] - 4:00 PM - 6:00 PM | Sharon, Mitchell | T-TH |
-  [SECTION #2] - 4:00 PM - 6:00 PM | Sarah, Mortensen | M-W |
-  [SECTION #3] - 6:30 PM - 8:30 PM | Sharon, Mitchell | T-TH |
+[FALL COURSE #31] - [AR-423] - Typography II: 
+  [SECTION #1] - 10:25 AM - 12:40 PM | David, Overstreet | W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #25] - [AT-270] - Emergency Response: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | Jolene, Fisher | T-TH |
+[FALL COURSE #32] - [AR-424] - Graphic Design II: 
+  [SECTION #1] - 11:45 AM - 2:10 PM | David, Overstreet | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #26] - [AT-283] - Clinical Experience I: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Todd, Sandberg | TH |
+[FALL COURSE #33] - [AR-455] - Sculpture II: 
+  [SECTION #1] - 11:45 AM - 2:10 PM | Katie, Creyts | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #27] - [AT-331W] - Advanced Athletic Training: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Dana, Bates | T-TH |
+[FALL COURSE #34] - [AR-499] - Senior Exhibition Project: 
+  [SECTION #1] - 2:20 PM - 5:10 PM | Lance, Sinnema | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #28] - [AT-334] - Lower Extremities Ath Training: 
-  [SECTION #1] - 9:05 AM - 10:15 AM | Dana, Bates | M-W-F |
+[FALL COURSE #35] - [ASL-102] - Sign Language & the Deaf II: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | Sharon, Mitchell | T-TH |
+  [SECTION #2] - 4:00 PM - 6:00 PM | Sharon, Mitchell | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #29] - [AT-383] - Clinical Experience III: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Jolene, Fisher | M |
+[FALL COURSE #36] - [AT-270] - Emergency Response: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Cheree, Sauer | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #30] - [AT-432] - Therapeutic Exercise: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Jolene, Fisher | T-TH |
+[FALL COURSE #37] - [AT-271] - Intro to Athletic Training: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Cynthia, Wright | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #31] - [AT-483] - Clinical Experience V: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Melinda, Larson | T |
+[FALL COURSE #38] - [AT-284] - Clinical Exp II: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Shane, Wibel | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #32] - [BI-140] - Gen Biol I: Genes/Cells/Evolut: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Frank, Caccavo | M-W-F |
-  [SECTION #2] - 1:55 PM - 2:50 PM | Finn, Pond | M-W-F |
+[FALL COURSE #39] - [AT-332] - Pathophy & Modalities/Training: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Stacey, Nauman | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #33] - [BI-196] - Conservation Biology: 
-  [SECTION #1] - 10:25 AM - 11:35 AM | Grant, Casady | M-W-F |
+[FALL COURSE #40] - [AT-333] - Org & Admin of Ath Training: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Cynthia, Wright | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #34] - [BI-230] - Introductory Biochemistry: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | Michael, Sardinia | M-W-F |
+[FALL COURSE #41] - [AT-335] - Upper Extrem in Ath Training: 
+  [SECTION #1] - 10:25 AM - 11:35 AM and 11:45 AM - 12:40 PM | Stacey, Nauman | M-W-F-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #35] - [BI-323] - Animal Physiology: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Michael, Sardinia | M-W-F |
+[FALL COURSE #42] - [AT-336] - Medical Issues in Ath Training: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Stacey, Nauman | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #36] - [BI-323W] - Animal Physiology: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Michael, Sardinia | M-W-F |
+[FALL COURSE #43] - [AT-384] - Clinical Experience IV: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Stacey, Nauman | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #37] - [BI-324] - Animal Behavior: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Craig, Tsuchida | M-W-F |
+[FALL COURSE #44] - [AT-484] - Clinical Experience VI: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Cheree, Sauer | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #38] - [BI-324W] - Animal Behavior: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Craig, Tsuchida | M-W-F |
+[FALL COURSE #45] - [BI-102] - Introductory Biology: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Finn, Pond | Lee Anne, Chaney | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #39] - [BI-363] - Genetics: 
+[FALL COURSE #46] - [BI-120] - Intro to Environmental Science: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Grant, Casady | Lee Anne, Chaney | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #47] - [BI-141] - Gen Biol II: Organismal Biol: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 11:45 AM - 2:35 PM | Craig, Tsuchida | Jack, Dunbar | Lee Anne, Chaney | M-W-F-TH |
+  [SECTION #2] - 12:50 PM - 1:45 PM and 11:45 AM - 2:35 PM | Lee Anne, Chaney | Tamar, Schiller | M-W-F-TH |
+  [SECTION #3] - 11:45 AM - 12:40 PM and 3:15 PM - 6:05 PM | Craig, Tsuchida | Jack, Dunbar | Lee Anne, Chaney | M-W-F-TH |
+  [SECTION #4] - 11:45 AM - 12:40 PM and 8:00 AM - 10:50 AM | Craig, Tsuchida | Jack, Dunbar | Lee Anne, Chaney | M-W-F-TH |
+  [SECTION #5] - 12:50 PM - 1:45 PM and 8:00 AM - 10:50 AM | Lee Anne, Chaney | Debra, Harris | M-W-F-TH |
+  [SECTION #6] - 12:50 PM - 1:45 PM and 3:15 PM - 6:05 PM | Lee Anne, Chaney | Tamar, Schiller | M-W-F-W |
+  [SECTION #7] - 12:50 PM - 1:45 PM and 3:15 PM - 6:05 PM | Lee Anne, Chaney | Tamar, Schiller | M-W-F-TH |
+  [SECTION #8] - 11:45 AM - 12:40 PM and 3:15 PM - 6:05 PM | Craig, Tsuchida | Jack, Dunbar | Lee Anne, Chaney | M-W-F-W |
+-------------------------------------------------------------------------------------
+[FALL COURSE #48] - [BI-204] - Medical Microbiology: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Frank, Caccavo | Lee Anne, Chaney | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #49] - [BI-204L] - Lab: Medical Micro: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Debra, Harris | Lee Anne, Chaney | T |
+  [SECTION #2] - 9:30 AM - 11:00 AM | Debra, Harris | Lee Anne, Chaney | T |
+-------------------------------------------------------------------------------------
+[FALL COURSE #50] - [BI-296] - Topics in Diversity: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Grant, Casady | Lee Anne, Chaney | T |
+-------------------------------------------------------------------------------------
+[FALL COURSE #51] - [BI-303] - Plant Taxonomy: 
   [SECTION #1] - 1:55 PM - 2:50 PM | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #40] - [BI-363W] - Genetics: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Lee Anne, Chaney | M-W-F |
+[FALL COURSE #52] - [BI-305] - Landscape Ecology: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Grant, Casady | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #41] - [BI-388] - Cell & Moleculr Techniques: 
-  [SECTION #1] - 8:00 AM - 10:50 AM | Finn, Pond | T |
+[FALL COURSE #53] - [BI-305W] - Landscape Ecology: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Grant, Casady | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #42] - [BI-396W] - Landscape Ecology: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | Grant, Casady | M-W-F |
+[FALL COURSE #54] - [BI-345] - Ecology: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Craig, Tsuchida | Lee Anne, Chaney | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #43] - [BU-110] - Intro to Business and Mgmt: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Robert, Buckham | M-W-F |
+[FALL COURSE #55] - [BI-345W] - Ecology: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Craig, Tsuchida | Lee Anne, Chaney | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #56] - [BI-347] - Microbial Physiology: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Frank, Caccavo | Lee Anne, Chaney | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #57] - [BI-350] - Comp Vertebrate Anatomy: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Michael, Sardinia | Lee Anne, Chaney | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #58] - [BI-350W] - Comp Vertebrate Anatomy: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Michael, Sardinia | Lee Anne, Chaney | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #59] - [BI-354] - Developmental Biology: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Finn, Pond | Lee Anne, Chaney | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #60] - [BI-354W] - Developmental Biology: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Finn, Pond | Lee Anne, Chaney | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #61] - [BI-412] - Advanced Cell Biology: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Michael, Sardinia | Lee Anne, Chaney | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #62] - [BI-412W] - Advanced Cell Biology: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Michael, Sardinia | Lee Anne, Chaney | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #63] - [BU-110] - Intro to Business and Mgmt: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Eric, Sartell | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #64] - [BU-218] - Marketing: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | David, Sloan | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #65] - [BU-230] - Financial Accounting: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Candy, Correia | M-W-F |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Candy, Correia | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #66] - [BU-231] - Managerial Accounting: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Tara, Lambert | T-TH |
+  [SECTION #2] - 2:20 PM - 3:40 PM | Tara, Lambert | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #67] - [BU-240] - Business Law: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Jeffrey, Miller | M-W-F |
+  [SECTION #2] - 9:05 AM - 10:00 AM | Jeffrey, Miller | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #68] - [BU-311] - Prin International Business: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Todd, Friends | T-TH |
   [SECTION #2] - 12:50 PM - 2:10 PM | Todd, Friends | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #44] - [BU-218] - Marketing: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Eric, Sartell | M-W-F |
-  [SECTION #2] - 12:50 PM - 2:10 PM | Dane, Sago | T-TH |
+[FALL COURSE #69] - [BU-332] - Cost Accounting: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Rick, Street | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #45] - [BU-230] - Financial Accounting: 
-  [SECTION #1] - 2:20 PM - 3:40 PM | Margie, LaShaw | T-TH |
-  [SECTION #2] - 12:50 PM - 2:10 PM | Margie, LaShaw | T-TH |
+[FALL COURSE #70] - [BU-333] - Accounting Systems and Theory: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Allan, Snodgrass | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #46] - [BU-231] - Managerial Accounting: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Heather, Rogers | T-TH |
+[FALL COURSE #71] - [BU-335] - Intermediate Accounting II: 
+  [SECTION #1] - 10:25 AM - 11:35 AM | Margie, LaShaw | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #47] - [BU-240] - Business Law: 
-  [SECTION #1] - 12:50 PM - 1:45 PM |  Staff | M-W-F |
-  [SECTION #2] - 11:45 AM - 12:40 PM | Janna, Wix | M-W-F |
+[FALL COURSE #72] - [BU-341] - Customer Rel/Channel Mgmt: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | David, Sloan | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #48] - [BU-301] - Consumer Behavior: 
-  [SECTION #1] - 8:00 AM - 9:20 AM | Dane, Sago | T-TH |
+[FALL COURSE #73] - [BU-357] - Financial Management: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Brian, Bergquist | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #49] - [BU-311] - Prin International Business: 
-  [SECTION #1] - 2:20 PM - 3:40 PM | Todd, Friends | T-TH |
-  [SECTION #2] - 8:00 AM - 9:20 AM | Todd, Friends | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #50] - [BU-334] - Intermediate Accounting I: 
-  [SECTION #1] - 1:55 PM - 3:15 PM | Margie, LaShaw | M-W |
--------------------------------------------------------------------------------------
-[FALL COURSE #51] - [BU-336] - Introduction to Taxation: 
-  [SECTION #1] - 9:00 AM - 10:20 AM and 10:25 AM - 11:20 AM | Michael, Patrick | M-W-M |
--------------------------------------------------------------------------------------
-[FALL COURSE #52] - [BU-348] - Integrated Marketing Comm: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Dane, Sago | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #53] - [BU-357] - Financial Management: 
+[FALL COURSE #74] - [BU-367] - Fundamentals of Investing: 
   [SECTION #1] - 8:00 AM - 9:20 AM | Brian, Bergquist | T-TH |
-  [SECTION #2] - 9:30 AM - 10:50 AM | Brian, Bergquist | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #54] - [BU-376] - Glob. Operat/Supply Chain Mgmt: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Robert, Buckham | M |
+[FALL COURSE #75] - [BU-373] - Human Resource Management: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Robert, Buckham | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #55] - [BU-396] - International Accounting: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Margie, LaShaw | W |
+[FALL COURSE #76] - [BU-376] - Glob. Operat/Supply Chain Mgmt: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Robert, Buckham | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #56] - [BU-396] - Executive Lecture Series: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Robert, Beatty | T |
+[FALL COURSE #77] - [BU-396] - Dean's Executive Speaker Serie: 
+  [SECTION #1] - 6:30 PM - 8:00 PM | Timothy, Wilkinson | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #57] - [BU-405] - Business Plan Preparation: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Michael, Allen | W |
+[FALL COURSE #78] - [BU-396] - Whitworth in China Prep: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Todd, Friends | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #58] - [BU-410] - Business Policy: 
-  [SECTION #1] - 12:50 PM - 2:10 PM and 12:50 PM - 2:10 PM | Brian, Bergquist | T-TH-T-TH |
-  [SECTION #2] - 9:30 AM - 10:50 AM | John, Hengesh | T-TH |
+[FALL COURSE #79] - [BU-406] - Business Plan Competition: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | David, Sloan | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #59] - [BU-425] - Organizational Behavior: 
-  [SECTION #1] - 2:20 PM - 3:40 PM | John, Hengesh | T-TH |
-  [SECTION #2] - 12:50 PM - 1:45 PM | Robert, Buckham | M-W-F |
+[FALL COURSE #80] - [BU-410] - Business Policy: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Brian, Bergquist | T-TH |
+  [SECTION #2] - 2:20 PM - 3:40 PM | John, Hengesh | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #60] - [BU-450W] - Soc & Ethical Iss in Bus & Ec: 
+[FALL COURSE #81] - [BU-425] - Organizational Behavior: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Nancy, Isaacson | T |
+-------------------------------------------------------------------------------------
+[FALL COURSE #82] - [BU-436] - Advanced Taxation: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Michael, Patrick | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #83] - [BU-443] - Product and Pricing Management: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Richard, George | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #84] - [BU-450W] - Soc & Ethical Iss in Bus & Ec: 
   [SECTION #1] - 10:25 AM - 11:20 AM | Robert, Hinnenkamp | M-W-F |
+  [SECTION #2] - 6:30 PM - 9:30 PM | Robert, Buckham | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #61] - [CH-101] - Introduction to Chemistry: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Janice, Gard | M-W-F |
+[FALL COURSE #85] - [BU-453W] - Organizational Theory: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Robert, Hinnenkamp | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #62] - [CH-101L] - Introduction to Chemistry Lab: 
-  [SECTION #1] - 8:00 AM - 10:50 AM | Janice, Gard | TH |
-  [SECTION #2] - 11:45 AM - 2:35 PM | Janice, Gard | TH |
-  [SECTION #3] - 3:15 PM - 6:05 PM | Janice, Gard | W |
+[FALL COURSE #86] - [BU-466W] - Principles of Auditing: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Margie, LaShaw | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #63] - [CH-161] - General Chemistry I: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Karen, Stevens | M-W-F |
-  [SECTION #2] - 10:25 AM - 11:20 AM | Lori, Keeling | M-W-F |
-  [SECTION #3] - 10:25 AM - 11:20 AM | Karen, Stevens | M-W-F |
-  [SECTION #4] - 12:50 PM - 1:45 PM | James, Elliston | M-W-F |
+[FALL COURSE #87] - [BU-489] - Marktng Planning/Implementatn: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Richard, George | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #64] - [CH-161L] - General Chemistry I Lab: 
-  [SECTION #1] - 8:00 AM - 10:50 AM | Karen, Stevens | TH |
-  [SECTION #2] - 8:00 AM - 10:50 AM | James, Elliston | T |
-  [SECTION #3] - 11:45 AM - 2:35 PM | James, Elliston | T |
-  [SECTION #4] - 3:15 PM - 6:05 PM | Lori, Keeling | M |
-  [SECTION #5] - 9:30 AM - 12:20 PM | Lori, Keeling | T |
-  [SECTION #6] - 11:45 AM - 2:35 PM | Lori, Keeling | TH |
-  [SECTION #7] - 3:00 PM - 5:50 PM | Lori, Keeling | TH |
-  [SECTION #8] - 3:00 PM - 5:50 PM | Janice, Gard | T |
-  [SECTION #9] - 12:50 PM - 3:40 PM | Lori, Keeling | T |
+[FALL COURSE #88] - [CH-102] - Bioorganic Chemistry: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Janice, Gard | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #65] - [CH-162] - Honors General Chemistry I: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Drew, Budner | M-W-F |
+[FALL COURSE #89] - [CH-102L] - Bioorganic Chemistry Lab: 
+  [SECTION #1] - 12:50 PM - 3:40 PM | Janice, Gard | TH |
+  [SECTION #2] - 3:15 PM - 6:15 PM | Janice, Gard | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #66] - [CH-271] - Organic Chemistry I: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Trisha, Russell | M-W-F |
-  [SECTION #2] - 9:05 AM - 10:00 AM | Kerry, Breno | M-W-F |
-  [SECTION #3] - 11:45 AM - 12:40 PM | Kerry, Breno | M-W-F |
+[FALL COURSE #90] - [CH-161] - General Chemistry I: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Lori, Keeling | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #67] - [CH-271L] - Organic Chemistry I Lab: 
-  [SECTION #1] - 12:50 PM - 3:40 PM | Trisha, Russell | T |
+[FALL COURSE #91] - [CH-161L] - General Chemistry I Lab: 
+  [SECTION #1] - 8:00 AM - 10:50 AM | Lori, Keeling | T |
+  [SECTION #2] - 11:45 AM - 2:35 PM | Lori, Keeling | T |
+-------------------------------------------------------------------------------------
+[FALL COURSE #92] - [CH-181] - General Chemistry II: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | James, Elliston | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:20 AM | Karen, Stevens | M-W-F |
+  [SECTION #3] - 1:55 PM - 2:50 PM | Lori, Keeling | M-W-F |
+  [SECTION #4] - 12:50 PM - 1:45 PM | Karen, Stevens | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #93] - [CH-181L] - General Chemistry II Lab: 
+  [SECTION #1] - 8:00 AM - 10:50 AM | James, Elliston | T |
+  [SECTION #2] - 3:15 PM - 6:05 PM | James, Elliston | M |
+  [SECTION #3] - 3:15 PM - 6:05 PM | James, Elliston | TH |
+  [SECTION #4] - 11:45 AM - 2:35 PM | Karen, Stevens | T |
+  [SECTION #5] - 8:00 AM - 10:50 AM | Karen, Stevens | TH |
+  [SECTION #6] - 11:45 AM - 2:35 PM | James, Elliston | TH |
+  [SECTION #7] - 3:15 PM - 6:05 PM | Janice, Gard | T |
+  [SECTION #8] - 3:15 PM - 6:05 PM | James, Elliston | W |
+  [SECTION #9] - 9:30 AM - 12:20 PM | Janice, Gard | TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #94] - [CH-278] - Organic Chemistry II: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Kerry, Breno | M-W-F |
+  [SECTION #2] - 11:45 AM - 12:40 PM | William, Samuels | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #95] - [CH-278L] - Organic Chemistry II Lab: 
+  [SECTION #1] - 3:15 PM - 6:05 PM | William, Samuels | W |
+  [SECTION #2] - 3:15 PM - 6:05 PM | William, Samuels | M |
+  [SECTION #3] - 3:15 PM - 6:05 PM | Kerry, Breno | T |
+  [SECTION #4] - 8:00 AM - 10:50 AM | William, Samuels | T |
+  [SECTION #5] - 11:45 AM - 2:35 PM | William, Samuels | T |
+  [SECTION #6] - 3:15 PM - 6:05 PM | Lori, Keeling | TH |
+  [SECTION #7] - 8:00 AM - 10:50 AM | Kerry, Breno | TH |
+  [SECTION #8] - 11:45 AM - 2:35 PM | William, Samuels | TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #96] - [CH-336] - Spectroscopic Analysis: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Trisha, Russell | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #97] - [CH-336L] - Spectroscopic Analysis Lab: 
+  [SECTION #1] - 9:30 AM - 12:20 PM | Trisha, Russell | TH |
   [SECTION #2] - 9:30 AM - 12:20 PM | Trisha, Russell | T |
-  [SECTION #3] - 3:00 PM - 5:50 PM | Deanna, Ojennus | TH |
-  [SECTION #4] - 11:45 AM - 2:35 PM | Deanna, Ojennus | TH |
-  [SECTION #5] - 8:00 AM - 10:50 AM | Kerry, Breno | T |
-  [SECTION #6] - 3:15 PM - 6:05 PM | Trisha, Russell | W |
-  [SECTION #7] - 3:15 PM - 6:05 PM | Trisha, Russell | M |
-  [SECTION #8] - 11:45 AM - 2:35 PM | Deanna, Ojennus | T |
-  [SECTION #9] - 3:00 PM - 5:50 PM | Deanna, Ojennus | T |
+  [SECTION #3] - 12:50 PM - 3:40 PM | Trisha, Russell | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #68] - [CH-315] - Survey of Chemical Literature: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Drew, Budner | TH |
+[FALL COURSE #98] - [CH-336W] - Spectroscopic Analysis: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Trisha, Russell | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #69] - [CH-335L] - Analytical Chemistry Lab: 
-  [SECTION #1] - 8:00 AM - 10:50 AM | Drew, Budner | TH |
-  [SECTION #2] - 12:50 PM - 3:40 PM | Drew, Budner | TH |
+[FALL COURSE #99] - [CH-383] - Chemistry Seminar: 
+  [SECTION #1] - 3:15 PM - 4:05 PM | Trisha, Russell | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #70] - [CH-335W] - Analytical Chemistry: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Drew, Budner | M-W-F |
+[FALL COURSE #100] - [CH-401L] - Biochemistry I Lab: 
+  [SECTION #1] - 3:15 PM - 6:05 PM | Deanna, Ojennus | W |
+  [SECTION #2] - 8:00 AM - 10:50 AM | Deanna, Ojennus | T |
+  [SECTION #3] - 8:00 AM - 10:50 AM | Deanna, Ojennus | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #71] - [CH-381] - Chemistry Seminar: 
-  [SECTION #1] - 3:15 PM - 4:10 PM | Karen, Stevens | W |
+[FALL COURSE #101] - [CH-403] - Biochemistry II: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Deanna, Ojennus | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #72] - [CH-401] - Biochemistry I: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Deanna, Ojennus | M-W-F |
+[FALL COURSE #102] - [CH-403W] - Biochemistry II: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Deanna, Ojennus | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #73] - [CH-481] - Chemistry Seminar: 
-  [SECTION #1] - 3:15 PM - 4:10 PM | Karen, Stevens | W |
+[FALL COURSE #103] - [CH-483] - Chemistry Seminar: 
+  [SECTION #1] - 3:15 PM - 4:05 PM | Trisha, Russell | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #74] - [CN-101] - Elementary Chinese I: 
+[FALL COURSE #104] - [CH-497] - Dissemination of Chem Research: 
+  [SECTION #1] - 2:20 PM - 3:15 PM | Trisha, Russell | T |
+-------------------------------------------------------------------------------------
+[FALL COURSE #105] - [CN-102] - Elementary Chinese II: 
   [SECTION #1] - 9:05 AM - 10:15 AM | Lily, Liu | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #75] - [CN-201] - Intermediate Chinese I: 
+[FALL COURSE #106] - [CN-202] - Intermediate Chinese II: 
   [SECTION #1] - 10:25 AM - 11:35 AM | Lily, Liu | M-W-F |
-  [SECTION #2] - 10:25 AM - 11:35 AM | Lily, Liu | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #76] - [CO-150] - Western Civ I: 
-  [SECTION #1] - 11:45 AM - 12:40 PM and 9:05 AM - 10:15 AM | Travis, Howell | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
-  [SECTION #2] - 11:45 AM - 12:40 PM and 9:05 AM - 10:15 AM | Terry, Mitchell | Keith, Beebe | Nicole, Boymook | W-M-W-F |
-  [SECTION #3] - 10:00 AM - 10:55 AM and 9:05 AM - 10:15 AM | Toby, Schwarz | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
-  [SECTION #4] - 10:00 AM - 10:55 AM and 9:05 AM - 10:15 AM | Karen, Finch | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
-  [SECTION #5] - 11:45 AM - 12:40 PM and 9:05 AM - 10:15 AM | Mary, Harwood | Keith, Beebe | Nicole, Boymook | W-M-W-F |
-  [SECTION #6] - 12:50 PM - 1:45 PM and 9:05 AM - 10:15 AM | Janet, Hauck | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
-  [SECTION #7] - 10:00 AM - 10:55 AM and 9:05 AM - 10:15 AM | Earl, Bobb | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
-  [SECTION #8] - 1:55 PM - 2:50 PM and 9:05 AM - 10:15 AM | Janet, Hauck | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
-  [SECTION #9] - 9:00 AM - 9:55 AM and 9:05 AM - 10:15 AM | Earl, Bobb | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
-  [SECTION #10] - 9:00 AM - 9:55 AM and 9:05 AM - 10:15 AM | Karen, Finch | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
-  [SECTION #11] - 12:50 PM - 1:45 PM and 9:05 AM - 10:15 AM | Mary, Harwood | Keith, Beebe | Nicole, Boymook | W-M-W-F |
-  [SECTION #12] - 3:00 PM - 3:55 PM and 9:05 AM - 10:15 AM | John, Burns | Keith, Beebe | Nicole, Boymook | W-M-W-F |
-  [SECTION #13] - 12:50 PM - 1:45 PM and 9:05 AM - 10:15 AM | Travis, Howell | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
-  [SECTION #14] - 3:30 PM - 4:25 PM and 9:05 AM - 10:15 AM | Arlin, Migliazzo | Keith, Beebe | Nicole, Boymook | W-M-W-F |
-  [SECTION #15] - 12:50 PM - 1:45 PM and 9:05 AM - 10:15 AM | Terry, Mitchell | Keith, Beebe | Nicole, Boymook | W-M-W-F |
-  [SECTION #16] - 1:55 PM - 2:50 PM and 9:05 AM - 10:15 AM | John, Burns | Keith, Beebe | Nicole, Boymook | W-M-W-F |
-  [SECTION #17] - 2:25 PM - 3:20 PM and 9:05 AM - 10:15 AM | Arlin, Migliazzo | Keith, Beebe | Nicole, Boymook | W-M-W-F |
-  [SECTION #18] - 9:00 AM - 9:55 AM and 9:05 AM - 10:15 AM | CyBelle, Barthelmess | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
-  [SECTION #19] - 10:00 AM - 10:55 AM and 9:05 AM - 10:15 AM | CyBelle, Barthelmess | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
-  [SECTION #20] - 9:00 AM - 9:55 AM and 9:05 AM - 10:15 AM | Toby, Schwarz | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
+[FALL COURSE #107] - [CO-150] - Western Civ I: 
+  [SECTION #1] - 10:00 AM - 10:55 AM and 9:05 AM - 10:15 AM | Karen, Finch | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
+  [SECTION #2] - 2:20 PM - 3:15 PM and 9:05 AM - 10:15 AM | Landon, Crecelius | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
+  [SECTION #3] - 1:55 PM - 2:50 PM and 9:05 AM - 10:15 AM | Angela, Allen | Keith, Beebe | Nicole, Boymook | W-M-W-F |
+  [SECTION #4] - 10:00 AM - 10:55 AM and 9:05 AM - 10:15 AM | Angela, Allen | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
+  [SECTION #5] - 11:45 AM - 12:40 PM and 9:05 AM - 10:15 AM | Meredith, Devey | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
+  [SECTION #6] - 11:45 AM - 12:40 PM and 9:05 AM - 10:15 AM | Angela, Allen | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
+  [SECTION #7] - 12:50 PM - 1:45 PM and 9:05 AM - 10:15 AM | Janet, Hauck | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
+  [SECTION #8] - 9:00 AM - 9:55 AM and 9:05 AM - 10:15 AM | Karen, Finch | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
+  [SECTION #9] - 12:50 PM - 1:45 PM and 9:05 AM - 10:15 AM | Nicole, Boymook | Keith, Beebe | W-M-W-F |
+  [SECTION #10] - 4:00 PM - 4:55 PM and 9:05 AM - 10:15 AM | John, Burns | Keith, Beebe | Nicole, Boymook | W-M-W-F |
+  [SECTION #11] - 12:50 PM - 1:45 PM and 9:05 AM - 10:15 AM | Meredith, Devey | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
+  [SECTION #12] - 1:55 PM - 2:50 PM and 9:05 AM - 10:15 AM | Janet, Hauck | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
+  [SECTION #13] - 1:55 PM - 2:50 PM and 9:05 AM - 10:15 AM | Nicole, Boymook | Keith, Beebe | W-M-W-F |
+  [SECTION #14] - 12:50 PM - 1:45 PM and 9:05 AM - 10:15 AM | Angela, Allen | Keith, Beebe | Nicole, Boymook | W-M-W-F |
+  [SECTION #15] - 9:05 AM - 10:00 AM and 9:05 AM - 10:15 AM | Gregg, Brekke | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
+  [SECTION #16] - 3:00 PM - 3:55 PM and 9:05 AM - 10:15 AM | John, Burns | Keith, Beebe | Nicole, Boymook | W-M-W-F |
+  [SECTION #17] - 3:25 PM - 4:20 PM and 9:05 AM - 10:15 AM | Landon, Crecelius | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
+  [SECTION #18] - 10:05 AM - 11:00 AM and 9:05 AM - 10:15 AM | Gregg, Brekke | Keith, Beebe | Nicole, Boymook | TH-M-W-F |
+  [SECTION #19] - 3:00 PM - 3:55 PM and 9:05 AM - 10:15 AM | Gregg, Brekke | W-M-W-F |
+  [SECTION #20] - 10:00 AM - 10:55 AM and 9:05 AM - 10:15 AM | Rafaela, Acevedo-Field | TH-M-W-F |
+  [SECTION #21] - 9:00 AM - 9:55 AM and 9:05 AM - 10:15 AM | Rafaela, Acevedo-Field | TH-M-W-F |
+  [SECTION #22] - 4:00 PM - 4:55 PM and 9:05 AM - 10:15 AM | Gregg, Brekke | W-M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #77] - [CO-250] - Western Civ II: 
-  [SECTION #1] - 8:00 AM - 8:40 AM and 10:25 AM - 11:35 AM | Gary, Whisenand | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | Bendi, Schrambach | Dayna, Jones | Meredith, Tegrotenhuis Shimizu | Brooke, Watts | April, McGonigal | Mark, Baker | T-M-W-F |
-  [SECTION #2] - 1:30 PM - 2:10 PM and 10:25 AM - 11:35 AM | Forrest, Baird | Kathleen, Storm | Leonard, Oakland | Mark, Baker | T-M-W-F |
-  [SECTION #3] - 8:40 AM - 9:20 AM and 10:25 AM - 11:35 AM | Gary, Whisenand | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | Mark, Baker | T-M-W-F |
-  [SECTION #4] - 8:00 AM - 8:40 AM and 10:25 AM - 11:35 AM | Bendi, Schrambach | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | Mark, Baker | T-M-W-F |
-  [SECTION #5] - 12:50 PM - 1:30 PM and 10:25 AM - 11:35 AM | Forrest, Baird | Kathleen, Storm | Leonard, Oakland | Mark, Baker | T-M-W-F |
-  [SECTION #6] - 12:50 PM - 1:30 PM and 10:25 AM - 11:35 AM | Brooke, Watts | Kathleen, Storm | Forrest, Baird | Mark, Baker | T-M-W-F |
-  [SECTION #7] - 2:20 PM - 3:00 PM and 10:25 AM - 11:35 AM | Leonard, Oakland | Kathleen, Storm | Forrest, Baird | Mark, Baker | T-M-W-F |
-  [SECTION #8] - 9:30 AM - 10:10 AM and 10:25 AM - 11:35 AM | Dayna, Jones | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | Mark, Baker | T-M-W-F |
-  [SECTION #9] - 10:10 AM - 10:50 AM and 10:25 AM - 11:35 AM | Meredith, Tegrotenhuis Shimizu | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | Mark, Baker | T-M-W-F |
-  [SECTION #10] - 9:30 AM - 10:10 AM and 10:25 AM - 11:35 AM | Meredith, Tegrotenhuis Shimizu | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | Mark, Baker | T-M-W-F |
-  [SECTION #11] - 8:40 AM - 9:20 AM and 10:25 AM - 11:35 AM | Bendi, Schrambach | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | Mark, Baker | T-M-W-F |
-  [SECTION #12] - 10:10 AM - 10:50 AM and 10:25 AM - 11:35 AM | Dayna, Jones | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | Mark, Baker | T-M-W-F |
-  [SECTION #13] - 1:30 PM - 2:10 PM and 10:25 AM - 11:35 AM | Brooke, Watts | Kathleen, Storm | Forrest, Baird | Mark, Baker | T-M-W-F |
-  [SECTION #14] - 3:50 PM - 4:30 PM and 10:25 AM - 11:35 AM | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | Mark, Baker | T-M-W-F |
-  [SECTION #15] - 4:30 PM - 5:10 PM and 10:25 AM - 11:35 AM | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | Mark, Baker | T-M-W-F |
-  [SECTION #16] - 3:00 PM - 3:40 PM and 10:25 AM - 11:35 AM | Leonard, Oakland | Kathleen, Storm | Forrest, Baird | Mark, Baker | T-M-W-F |
+[FALL COURSE #108] - [CO-150H] - Western Civ. I: (Honors): 
+  [SECTION #1] - 3:10 PM - 4:05 PM and 9:05 AM - 10:15 AM | Arlin, Migliazzo | Keith, Beebe | Nicole, Boymook | W-M-W-F |
+  [SECTION #2] - 4:10 PM - 5:05 PM and 9:05 AM - 10:15 AM | Arlin, Migliazzo | Keith, Beebe | Nicole, Boymook | W-M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #78] - [CO-350] - Western Civ III:SportHlthCare: 
-  [SECTION #1] - 12:50 PM - 1:45 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Elizabeth, Abbey | Kameshwaran, Sankaran | W-T-TH-T-TH |
+[FALL COURSE #109] - [CO-250] - Western Civ II: 
+  [SECTION #1] - 9:30 AM - 10:10 AM and 10:25 AM - 11:35 AM | Christopher, Dahlvig | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | Brooke, Watts | Meredith, Tegrotenhuis Shimizu | Andrew, Pyrc | Kyle, Lantz | T-M-W-F |
+  [SECTION #2] - 12:50 PM - 1:30 PM and 10:25 AM - 11:35 AM | Forrest, Baird | Kathleen, Storm | Leonard, Oakland | T-M-W-F |
+  [SECTION #3] - 1:30 PM - 2:10 PM and 10:25 AM - 11:35 AM | Forrest, Baird | Kathleen, Storm | Leonard, Oakland | T-M-W-F |
+  [SECTION #4] - 3:00 PM - 3:40 PM and 10:25 AM - 11:35 AM | Meredith, Tegrotenhuis Shimizu | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | T-M-W-F |
+  [SECTION #5] - 12:50 PM - 1:30 PM and 10:25 AM - 11:35 AM | Brooke, Watts | Kathleen, Storm | Forrest, Baird | T-M-W-F |
+  [SECTION #6] - 10:10 AM - 10:50 AM and 10:25 AM - 11:35 AM | Christopher, Dahlvig | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | T-M-W-F |
+  [SECTION #7] - 2:20 PM - 3:00 PM and 10:25 AM - 11:35 AM | Meredith, Tegrotenhuis Shimizu | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | April, McGonigal | T-M-W-F |
+  [SECTION #8] - 9:30 AM - 10:10 AM and 10:25 AM - 11:35 AM | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | T-M-W-F |
+  [SECTION #9] - 1:30 PM - 2:10 PM and 10:25 AM - 11:35 AM | Brooke, Watts | Kathleen, Storm | Forrest, Baird | T-M-W-F |
+  [SECTION #10] - 3:50 PM - 4:30 PM and 10:25 AM - 11:35 AM | Andrew, Pyrc | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | T-M-W-F |
+  [SECTION #11] - 10:10 AM - 10:50 AM and 10:25 AM - 11:35 AM | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | T-M-W-F |
+  [SECTION #12] - 4:30 PM - 5:10 PM and 10:25 AM - 11:35 AM | Andrew, Pyrc | Kathleen, Storm | Leonard, Oakland | Forrest, Baird | T-M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #79] - [CO-350] - Western Civ III:Ment Hlth Soc: 
-  [SECTION #1] - 12:45 PM - 1:45 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Noelle, Wiersma | Kameshwaran, Sankaran | W-T-TH-T-TH |
+[FALL COURSE #110] - [CO-250H] - Western Civ II: (Honors) Film: 
+  [SECTION #1] - 4:00 PM - 6:00 PM and 10:25 AM - 11:35 AM | Leonard, Oakland | T-M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #80] - [CO-350] - Western Civ III:CapitalWealth: 
-  [SECTION #1] - 1:55 PM - 2:50 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Robert, Hinnenkamp | Kameshwaran, Sankaran | W-T-TH-T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #81] - [CO-350] - Western Civ III: NASA & Space: 
-  [SECTION #1] - 11:45 AM - 12:40 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Kameshwaran, Sankaran | W-T-TH-T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #82] - [CO-350] - Western Civ III: Immigration: 
+[FALL COURSE #111] - [CO-350] - Western Civ III: Immigration: 
   [SECTION #1] - 11:45 AM - 12:40 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Keith, Wyma | Kameshwaran, Sankaran | W-T-TH-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #83] - [CO-350] - Western Civ III:USPoilMidEast: 
-  [SECTION #1] - 3:15 PM - 4:10 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Raja, Tanas | Kameshwaran, Sankaran | W-T-TH-T-TH |
+[FALL COURSE #112] - [CO-350] - Western Civ III: NASA & Space: 
+  [SECTION #1] - 1:55 PM - 2:50 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Kameshwaran, Sankaran | W-T-TH-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #84] - [CO-350] - Western Civ III:Col Rivr Dams: 
-  [SECTION #1] - 12:50 PM - 1:45 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Craig, Tsuchida | Kameshwaran, Sankaran | W-T-TH-T-TH |
+[FALL COURSE #113] - [CO-350] - Western Civ III:Lang/Society: 
+  [SECTION #1] - 1:55 PM - 2:50 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Gregg, Brekke | Kameshwaran, Sankaran | W-T-TH-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #85] - [CO-350] - Western Civ III: Cryptography: 
-  [SECTION #1] - 9:05 AM - 10:00 AM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Donna, Pierce | Kameshwaran, Sankaran | W-T-TH-T-TH |
+[FALL COURSE #114] - [CO-350] - Western Civ III:Health Policy: 
+  [SECTION #1] - 12:50 PM - 1:45 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Elizabeth, Abbey | Kameshwaran, Sankaran | W-T-TH-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #86] - [CO-350] - Western Civ III:Gen Mod Crops: 
-  [SECTION #1] - 11:45 AM - 12:40 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Lee Anne, Chaney | Kameshwaran, Sankaran | W-T-TH-T-TH |
+[FALL COURSE #115] - [CO-350] - Western Civ III: MentalHealth: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Elizabeth, Campbell | Kameshwaran, Sankaran | W-T-TH-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #87] - [CS-110] - Intro to Computer Info Systems: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Mark, Baker | TH |
+[FALL COURSE #116] - [CO-350] - Western Civ III:Tech & Privac: 
+  [SECTION #1] - 12:50 PM - 1:45 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Donna, Pierce | Kameshwaran, Sankaran | W-T-TH-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #88] - [CS-125] - Business Info Systems: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Judy, Dehle | T-TH |
-  [SECTION #2] - 12:50 PM - 2:10 PM | Michelle, Moore-Mitchell | T-TH |
-  [SECTION #3] - 6:30 PM - 9:30 PM | Mary, Lewis | T |
+[FALL COURSE #117] - [CO-350] - Western Civ III:BiblLaw/Legis: 
+  [SECTION #1] - 12:50 PM - 1:45 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | William, Kynes | Kameshwaran, Sankaran | W-T-TH-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #89] - [CS-171] - Computer Science I: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Kent, Jones | M-W-F |
-  [SECTION #2] - 10:25 AM - 11:20 AM | Peter, Tucker | M-W-F |
-  [SECTION #3] - 10:25 AM - 11:20 AM | Mark, Ellis | M-W-F |
+[FALL COURSE #118] - [CO-350] - Western Civ III: Water: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Kerry, Breno | Kameshwaran, Sankaran | W-T-TH-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #90] - [CS-172] - Computer Science II: 
-  [SECTION #1] - 12:50 PM - 2:10 PM | Susan, Mabry | T-TH |
+[FALL COURSE #119] - [CO-350] - Western Civ III: Capitalism: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | David, Sloan | Kameshwaran, Sankaran | W-T-TH-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #91] - [CS-273] - Data Structures: 
-  [SECTION #1] - 11:45 AM - 12:40 PM and 11:45 AM - 12:40 PM | Edward, Walker | M-W-F-F |
+[FALL COURSE #120] - [CO-350] - Western Civ III:US Pol Lat Am: 
+  [SECTION #1] - 11:45 AM - 12:40 PM and 12:50 PM - 2:10 PM 12:50 PM - 2:10 PM | Rafaela, Acevedo-Field | Kameshwaran, Sankaran | W-T-TH-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #92] - [CS-278] - Comp Organiztn & Assemblr Prog: 
+[FALL COURSE #121] - [CS-125] - Business Info Systems: 
+  [SECTION #1] - 6:30 PM - 7:50 PM | Mark, Ellis | T-TH |
+  [SECTION #2] - 12:50 PM - 2:10 PM | Kent, Jones | T-TH |
+  [SECTION #3] - 9:30 AM - 10:50 AM | Judy, Dehle | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #122] - [CS-171] - Computer Science I: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Peter, Tucker | M-W-F |
+  [SECTION #2] - 1:55 PM - 2:50 PM | Kent, Jones | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #123] - [CS-172] - Computer Science II: 
   [SECTION #1] - 12:50 PM - 2:10 PM | Edward, Walker | T-TH |
+  [SECTION #2] - 9:30 AM - 10:50 AM | Edward, Walker | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #93] - [CS-313] - Networks: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Edward, Walker | M-W-F |
+[FALL COURSE #124] - [CS-273] - Data Structures: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Edward, Walker | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #94] - [CS-359] - CS Cultural Program Prep: 
-  [SECTION #1] - 4:00 PM - 4:55 PM | Susan, Mabry | TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #95] - [CS-370] - Programming Languages: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Susan, Mabry | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #96] - [CS-373] - Digital Logic Design: 
-  [SECTION #1] - 2:20 PM - 3:40 PM | Kent, Jones | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #97] - [CS-374W] - Database Management: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Peter, Tucker | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #98] - [CS-396] - Mobile Application Development: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Peter, Tucker | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #99] - [CS-473] - Adv Algorithm Design & Analy: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Kent, Jones | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #100] - [CS-499W] - Research Methods: 
+[FALL COURSE #125] - [CS-274] - Ethic, Soc & Leg Issues in CS: 
   [SECTION #1] - 2:20 PM - 3:40 PM | Susan, Mabry | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #101] - [EC-210] - Principles of Microeconomics: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Vange, Ocasio Hochheimer | M-W-F |
-  [SECTION #2] - 1:55 PM - 2:50 PM | Vange, Ocasio Hochheimer | M-W-F |
+[FALL COURSE #126] - [CS-294] - Career and Vocation Seminar: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Edward, Walker | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #102] - [EC-211] - Prin of Macroeconomics: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Karla, Morgan | M-W-F |
-  [SECTION #2] - 12:50 PM - 1:45 PM | Karla, Morgan | M-W-F |
+[FALL COURSE #127] - [CS-314] - Microsoft Networks: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Terry, Norton | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #103] - [EC-320] - Intermed Microeconomic Analy: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | Karla, Morgan | M-W-F |
+[FALL COURSE #128] - [CS-396] - Mobile Application Development: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Peter, Tucker | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #104] - [EC-416] - International Trade & Finance: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Vange, Ocasio Hochheimer | M-W-F |
+[FALL COURSE #129] - [CS-401] - Computer Architecture: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Kent, Jones | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #105] - [EDU-201] - Educational Psychology: 
+[FALL COURSE #130] - [CS-457] - Artificial Intelligence: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Susan, Mabry | T |
+-------------------------------------------------------------------------------------
+[FALL COURSE #131] - [CS-472] - Software Engineering: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Peter, Tucker | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #132] - [CS-475W] - Operating Systems: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Susan, Mabry | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #133] - [EC-210] - Principles of Microeconomics: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Eugene, Bempong Nyantakyi | M-W-F |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Eric, Sartell | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #134] - [EC-211] - Prin of Macroeconomics: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Vange, Ocasio Hochheimer | T-TH |
+  [SECTION #2] - 12:50 PM - 2:10 PM | Vange, Ocasio Hochheimer | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #135] - [EC-321] - Intermed Macroeconomic Analy: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Vange, Ocasio Hochheimer | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #136] - [EC-402] - Econometrics: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Eugene, Bempong Nyantakyi | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #137] - [EC-425] - Economic Development: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Eugene, Bempong Nyantakyi | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #138] - [EDU-201] - Educational Psychology: 
   [SECTION #1] - 9:30 AM - 10:50 AM | James, Uhlenkott | Patsy, Marshall | T-TH |
-  [SECTION #2] - 12:50 PM - 2:10 PM | Angela, Henning | Patsy, Marshall | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #106] - [EDU-202] - Exploring Teaching: 
-  [SECTION #1] - 12:50 PM - 2:20 PM | Linda, Buff | Patsy, Marshall | M-W-F |
-  [SECTION #2] - 8:30 AM - 10:00 AM | Linda, Buff | Patsy, Marshall | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #107] - [EDU-320] - Excptnl Learners & Inclusion: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Dana, Stevens Kogler | T-TH |
-  [SECTION #2] - 6:30 PM - 9:30 PM | Kimberly, Villalpando | TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #108] - [EDU-321] - Intrvtn for Behavior/Motvation: 
-  [SECTION #1] - 4:00 PM - 5:30 PM | Betty, Williams | T-TH |
-  [SECTION #2] - 9:30 AM - 10:50 AM | Betty, Williams | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #109] - [EDU-322] - Assessment and IEP Planning: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Michelle, Gwinn | T |
--------------------------------------------------------------------------------------
-[FALL COURSE #110] - [EDU-340] - K-8:General/Lang Art Methods: 
+[FALL COURSE #139] - [EDU-201H] - Honors Educational Psychology: 
   [SECTION #1] - 12:50 PM - 2:10 PM | James, Uhlenkott | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #111] - [EDU-341] - Math: Elementary Methods: 
-  [SECTION #1] - 2:30 PM - 3:30 PM | Kimberly, Villalpando | T-TH |
+[FALL COURSE #140] - [EDU-202] - Exploring Teaching: 
+  [SECTION #1] - 8:30 AM - 10:00 AM | Linda, Buff | Patsy, Marshall | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #112] - [EDU-342] - Elem Curriculum Field Exper: 
-  [SECTION #1] - 12:50 PM - 3:40 PM | James, Uhlenkott | Patsy, Marshall | M-W-F |
+[FALL COURSE #141] - [EDU-320] - Excptnl Learners & Inclusion: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Megan, Cozza | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #113] - [EDU-343] - Science: K-8 Methd & Assessmen: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Jami, Ostby-Marsh | W |
+[FALL COURSE #142] - [EDU-321] - Intrvtn for Behavior/Motvation: 
+  [SECTION #1] - 4:00 PM - 5:30 PM | Betty, Williams | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #114] - [EDU-344] - Children's Literature & Soc St: 
+[FALL COURSE #143] - [EDU-323] - Interv for Acad Learning Prob: 
+  [SECTION #1] - 4:00 PM - 5:30 PM |  Staff | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #144] - [EDU-326] - Cultural Competence & Society: 
+  [SECTION #1] - 6:00 PM - 9:00 PM | Roberta, Wilburn | T |
+-------------------------------------------------------------------------------------
+[FALL COURSE #145] - [EDU-329] - Adolesc Psyc for Mid/High Schl: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Flint, Simonsen | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #146] - [EDU-340] - K-8:General/Lang Art Methods: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Ann, Teberg | Patsy, Marshall | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #147] - [EDU-341] - Math: Elementary Methods: 
+  [SECTION #1] - 2:30 PM - 3:30 PM |  Staff | Patsy, Marshall | Kaye, Kamp | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #148] - [EDU-342] - Elem Curriculum Field Exper: 
+  [SECTION #1] - 12:50 PM - 3:40 PM | Ann, Teberg | Patsy, Marshall | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #149] - [EDU-343] - Science: K-8 Methd & Assessmen: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Jami, Ostby-Marsh | M |
+-------------------------------------------------------------------------------------
+[FALL COURSE #150] - [EDU-344] - Children's Literature & Soc St: 
   [SECTION #1] - 6:30 PM - 9:30 PM | Janelle, Stolp | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #115] - [EDU-350] - Meth of Teaching: Mid/Hi Sch: 
-  [SECTION #1] - 12:50 PM - 2:10 PM | Linda, Buff | Patsy, Marshall | T-TH |
+[FALL COURSE #151] - [EDU-350] - Meth of Teaching: Mid/Hi Sch: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Dennis, Sterner | Patsy, Marshall | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #116] - [EDU-361] - Second-Language Acquisition: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Jessica, Vigil | TH |
+[FALL COURSE #152] - [EDU-361] - Second-Language Acquisition: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Natasha, Gerasimchuk | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #117] - [EDU-362] - ELL Methodology: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Vinton, Eberly | W |
+[FALL COURSE #153] - [EDU-363] - ELL Methods in Lang Art/Read: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Anne, Wilcox | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #118] - [EDU-363] - ELL Methods in Lang Art/Read: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Anne, Wilcox | T |
+[FALL COURSE #154] - [EDU-401W] - Democracy, Leadrshp & Schoolng: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | James, Uhlenkott | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #119] - [EDU-366] - Teaching Eng Lang Learners: 
-  [SECTION #1] - 4:00 PM - 6:00 PM | Anne, Wilcox | Amy, Ayers | TH |
-  [SECTION #2] - 6:30 PM - 8:30 PM | Anne, Wilcox | Amy, Ayers | TH |
+[FALL COURSE #155] - [EDU-424] - Early Interv for Spec Educ.: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Michelle, McKenzie | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #120] - [EDU-367] - Intro to Intercultural Educ: 
-  [SECTION #1] - 6:30 PM - 8:30 PM | Anne, Wilcox | TH |
-  [SECTION #2] - 4:00 PM - 6:00 PM | Anne, Wilcox | TH |
+[FALL COURSE #156] - [EDU-430] - Int. for Autism Spectrum Dis.: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Flint, Simonsen | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #121] - [EDU-401W] - Democracy, Leadrshp & Schoolng: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Randall, Michaelis | W |
-  [SECTION #2] - 1:55 PM - 3:15 PM | James, Uhlenkott | M-W |
+[FALL COURSE #157] - [EDU-434] - Early Speech, Lang & Literacy: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Betty, Williams | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #122] - [EDU-426] - Intervntn Comm, Sensory, Phys: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Dana, Stevens Kogler | M |
+[FALL COURSE #158] - [EDU-440] - Methods for Teaching Reading: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Lisa, Laurier | Patsy, Marshall | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #123] - [EDU-436] - Interv Through Pos. Behav. Sup: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Dana, Stevens Kogler | T |
+[FALL COURSE #159] - [EDU-441] - Diagnosis/Interventn Rdg Diff: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Lisa, Laurier | Patsy, Marshall | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #124] - [EDU-440] - Methods for Teaching Reading: 
-  [SECTION #1] - 8:00 AM - 9:20 AM | Lisa, Laurier | T-TH |
+[FALL COURSE #160] - [EDU-458] - Content Area Read & Writ: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Ann, Teberg | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #125] - [EDU-441] - Diagnosis/Interventn Rdg Diff: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Lisa, Laurier | T-TH |
+[FALL COURSE #161] - [EDU-461] - Assess, Manage, Differ Elem: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Jann, Leppien | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #126] - [EDU-444] - Literacy Center Field Exprnc: 
-  [SECTION #1] - 4:00 PM - 6:00 PM | Lisa, Laurier | M-W |
+[FALL COURSE #162] - [EL-110] - Writing I: Peace & Justice: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Charles, Andrews | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #127] - [EDU-458] - Content Area Read & Writ: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Lisa, Laurier | T |
--------------------------------------------------------------------------------------
-[FALL COURSE #128] - [EIS-106] - Oral Comm in Academic Discrse: 
-  [SECTION #1] - 12:00 PM - 1:50 PM | Gregg, Brekke | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #129] - [EIS-107] - Reading in Academic Discourse: 
-  [SECTION #1] - 10:20 AM - 11:30 AM | Gregg, Brekke | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #130] - [EIS-108] - Writing in Academic Discourse: 
-  [SECTION #1] - 11:35 AM - 12:45 PM | Gregg, Brekke | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #131] - [EL-110] - Writing I: Word & Image: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Marguerite, Wolcott | M-W-F |
-  [SECTION #2] - 11:45 AM - 12:40 PM | Marguerite, Wolcott | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #132] - [EL-110] - Writing I: Faith & Nation: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Charles, Andrews | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #133] - [EL-110] - Writing I: Nature& Environment: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Sarah, Dilworth | T-TH |
-  [SECTION #2] - 12:50 PM - 2:10 PM | Sarah, Dilworth | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #134] - [EL-110] - Writing I: Tech & Culture: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Alfred, Johnson | M-W-F |
-  [SECTION #2] - 1:55 PM - 2:50 PM | Alfred, Johnson | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #135] - [EL-110] - Writing I: Trauma in Literatur: 
-  [SECTION #1] - 12:50 PM - 2:10 PM | Chad, May | T-TH |
-  [SECTION #2] - 2:20 PM - 3:40 PM | Chad, May | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #136] - [EL-110] - Writing I:Space Place Identit: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Michelle, Smith | M-W-F |
-  [SECTION #2] - 12:50 PM - 1:45 PM | Michelle, Smith | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #137] - [EL-110] - Writing I: Cultural Identity: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Jack, Downs | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #138] - [EL-110] - Writing I: Journeys/Identities: 
+[FALL COURSE #163] - [EL-110] - Writing I: Project Runway: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Nicole, Sheets | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #139] - [EL-110] - Writing I: Humor & Culture: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Angela, Allen | M-W-F |
-  [SECTION #2] - 11:45 AM - 12:40 PM | Angela, Allen | M-W-F |
-  [SECTION #3] - 8:00 AM - 8:55 AM | Angela, Allen | M-W-F |
+[FALL COURSE #164] - [EL-110] - Writing I: Travel: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | LuElla, D'Amico | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #140] - [EL-125] - Honors Reading Literature: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Charles, Andrews | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #141] - [EL-126] - Women Writers: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Laurie, Lamon | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #142] - [EL-127] - African American Women Writers: 
-  [SECTION #1] - 3:50 PM - 5:10 PM | Amowi, Phillips | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #143] - [EL-205] - American Lit Before 1865: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Earl, Bobb | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #144] - [EL-207] - British Literature Before 1800: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Doug, Sugano | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #145] - [EL-210] - Writing II: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Marguerite, Wolcott | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #146] - [EL-245] - Creative Writing: 
+[FALL COURSE #165] - [EL-110] - Writing I: Pop Culture: 
   [SECTION #1] - 9:30 AM - 10:50 AM | Thomas, Caraway | T-TH |
-  [SECTION #2] - 1:55 PM - 2:50 PM | Nicole, Sheets | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #147] - [EL-247] - Shakespeare: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Pamela, Parker | T-TH |
-  [SECTION #2] - 9:30 AM - 10:50 AM | Pamela, Parker | T-TH |
+[FALL COURSE #166] - [EL-110] - Writing I: Sustainable Living: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Marguerite, Wolcott | M-W-F |
+  [SECTION #2] - 9:05 AM - 10:00 AM | Marguerite, Wolcott | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #148] - [EL-251] - Modern Global Literature: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Laura, Bloxham | M-W-F |
+[FALL COURSE #167] - [EL-110] - Writing I:Cowboys & Stereotyp: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Angela, Allen | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #149] - [EL-267] - Intro to Critical Strategies: 
-  [SECTION #1] - 12:50 PM - 2:10 PM | Pamela, Parker | Charles, Andrews | T-TH |
+[FALL COURSE #168] - [EL-110] - Writing I: Scandals & Lies: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Angela, Gonzalez | M-W-F |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Angela, Gonzalez | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #150] - [EL-304] - Fiction Writing: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Earl, Bobb | M-W-F |
+[FALL COURSE #169] - [EL-110] - Writing I: Social Media: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Jessica, Williams | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #151] - [EL-307W] - Women in American Fiction: 
-  [SECTION #1] - 6:00 PM - 9:00 PM | Laura, Bloxham | T |
+[FALL COURSE #170] - [EL-110] - Writing I:Writ AboutPubApolog: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Angela, Gonzalez | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #152] - [EL-317] - Whitman/Dickinson Seminar: 
-  [SECTION #1] - 3:15 PM - 4:40 PM | Laurie, Lamon | Earl, Bobb | W-F |
+[FALL COURSE #171] - [EL-110H] - Honors Writing I:Human Rights: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | John, Pell | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #153] - [EL-345] - Poetry Writing: 
-  [SECTION #1] - 2:20 PM - 3:40 PM | Thomas, Caraway | T-TH |
+[FALL COURSE #172] - [EL-124] - African American Literature: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Alfred, Johnson | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #154] - [EL-346W] - Essay Writing: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Jack, Downs | M-W-F |
+[FALL COURSE #173] - [EL-126] - Women Writers: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Earl, Bobb | T-TH |
+  [SECTION #2] - 9:30 AM - 10:50 AM | Marguerite, Wolcott | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #155] - [EL-347W] - Creative Nonfiction Writing: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Nicole, Sheets | M-W-F |
+[FALL COURSE #174] - [EL-128] - Multicultural American Lit: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Marguerite, Wolcott | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #156] - [EL-348] - Literary Editing & Design: 
-  [SECTION #1] - 3:15 PM - 4:40 PM | Thomas, Caraway | W-F |
+[FALL COURSE #175] - [EL-131] - Native American Literature: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | LuElla, D'Amico | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #157] - [EL-351] - Doc/Avant Garde Film: 
-  [SECTION #1] - 1:55 PM - 2:50 PM and 6:30 PM - 9:30 PM | Leonard, Oakland | M-W-F-M |
+[FALL COURSE #176] - [EL-202] - Classic American Films: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Leonard, Oakland | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #158] - [EL-371W] - British Renaissance: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Doug, Sugano | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #159] - [EL-388] - Struc & Dev of the Eng Lang: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Erin, Davis | TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #160] - [EL-420] - Writing Center: Theory & Prac: 
-  [SECTION #1] - 6:00 PM - 9:00 PM | Jack, Downs | W |
--------------------------------------------------------------------------------------
-[FALL COURSE #161] - [EL-430] - Holocaust Literature: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Laura, Bloxham | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #162] - [EL-449W] - Postmodern Lit & Culture: 
+[FALL COURSE #177] - [EL-206] - American Literature After 1865: 
   [SECTION #1] - 9:05 AM - 10:00 AM | Alfred, Johnson | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #163] - [EL-460] - Irish Literature: 
+[FALL COURSE #178] - [EL-208] - British Literature Since 1800: 
   [SECTION #1] - 10:25 AM - 11:20 AM | Charles, Andrews | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #164] - [EL-498] - Senior Portfolio: 
-  [SECTION #1] - 11:45 AM - 12:40 PM and 11:45 AM - 12:40 PM 11:45 AM - 12:40 PM | Doug, Sugano | TH-TH-T-TH |
+[FALL COURSE #179] - [EL-210] - Writing II: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Jessica, Williams | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #165] - [EN-110] - Engineering Orientation: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Markus, Ong | T |
+[FALL COURSE #180] - [EL-233] - The Epic: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Leonard, Oakland | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #166] - [EN-211] - Statics: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Andrew, Law | John, Larkin | M-W-F |
+[FALL COURSE #181] - [EL-245] - Creative Writing: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Laurie, Lamon | M-W-F |
+  [SECTION #2] - 3:15 PM - 4:40 PM | Laurie, Lamon | W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #167] - [EN-351] - Mechanics: Dynamics: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Kameshwaran, Sankaran | M-W-F |
+[FALL COURSE #182] - [EL-250] - Introduction to Film Studies: 
+  [SECTION #1] - 12:50 PM - 1:45 PM and 6:30 PM - 9:30 PM | Alfred, Johnson | M-W-F-T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #168] - [EN-485] - Engineering Design Project: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Markus, Ong | Kameshwaran, Sankaran | M-W-F |
+[FALL COURSE #183] - [EL-251] - Modern Global Literature: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Laura, Bloxham | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #169] - [FR-101] - Elementary French: 
-  [SECTION #1] - 10:25 AM - 11:35 AM | Leslie, Norman | M-W-F |
-  [SECTION #2] - 9:05 AM - 10:15 AM | Leslie, Norman | M-W-F |
-  [SECTION #3] - 1:55 PM - 3:05 PM | Leslie, Norman | M-W-F |
+[FALL COURSE #184] - [EL-267] - Intro to Critical Strategies: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | John, Pell | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #170] - [FR-201] - Intermediate French: 
+[FALL COURSE #185] - [EL-304] - Fiction Writing: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Thomas, Caraway | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #186] - [EL-310] - Northwest Writers: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Earl, Bobb | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #187] - [EL-345] - Poetry Writing: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Laurie, Lamon | W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #188] - [EL-347W] - Creative Nonfiction Writing: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Nicole, Sheets | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #189] - [EL-358] - Composition Theory: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | John, Pell | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #190] - [EL-387] - Teaching Writ/Adolescent Lit: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Lisa, Laurier | W |
+-------------------------------------------------------------------------------------
+[FALL COURSE #191] - [EL-388] - Struc & Dev of the Eng Lang: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Erin, Davis | W |
+-------------------------------------------------------------------------------------
+[FALL COURSE #192] - [EL-396] - 19th Century Amer Womn Writers: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | LuElla, D'Amico | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #193] - [EL-401W] - Moby Dick: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Earl, Bobb | M |
+-------------------------------------------------------------------------------------
+[FALL COURSE #194] - [EL-444] - Advanced Writing Workshop: 
+  [SECTION #1] - 3:15 PM - 4:40 PM | Thomas, Caraway | W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #195] - [EL-447] - Shakespeare Seminar: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Doug, Sugano | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #196] - [EL-460] - Irish Literature: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Charles, Andrews | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #197] - [EL-465W] - English Novel: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Pamela, Parker | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #198] - [EN-171] - Engineering Graphics & CAD: 
+  [SECTION #1] - 6:00 PM - 9:00 PM |  NA | M-W |
+-------------------------------------------------------------------------------------
+[FALL COURSE #199] - [EN-211] - Statics: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Andrew, Law | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #200] - [EN-356] - Mathematical Methods I: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Kameshwaran, Sankaran | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #201] - [FR-102] - Elementary French II: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Frederic, Dugenet | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:35 AM | Frederic, Dugenet | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #202] - [FR-111] - Intensive Elementary French: 
+  [SECTION #1] - 10:25 AM - 11:35 AM | Bendi, Schrambach | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #203] - [FR-202] - Intermediate French II: 
   [SECTION #1] - 1:55 PM - 3:05 PM | Jennifer, Brown | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #171] - [FR-201] - Intermediate French I: 
-  [SECTION #1] - 1:55 PM - 3:05 PM | Jennifer, Brown | M-W-F |
+[FALL COURSE #204] - [FR-302W] - French Writing and Stylistics: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Bendi, Schrambach | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #172] - [FR-301] - French Language Practice: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Jennifer, Brown | M-W-F |
-  [SECTION #2] - 12:50 PM - 1:45 PM | Jennifer, Brown | M-W-F |
+[FALL COURSE #205] - [FR-415] - Business French: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Bendi, Schrambach | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #173] - [FR-409] - Survey of French Lit I: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Bendi, Schrambach | M-W-F |
+[FALL COURSE #206] - [FW-132] - Fitness Programs: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Heather, Bowman | M-W-F |
+  [SECTION #2] - 12:50 PM - 1:45 PM | Heather, Bowman | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #174] - [FW-132] - Fitness Programs: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | Jason, Tobeck | M-W-F |
-  [SECTION #2] - 10:25 AM - 11:20 AM | Cristal, Brown | M-W-F |
-  [SECTION #3] - 10:25 AM - 11:20 AM | Cristal, Brown | M-W-F |
-  [SECTION #4] - 11:45 AM - 12:40 PM | Cristal, Brown | M-W-F |
+[FALL COURSE #207] - [FW-134] - Jogging: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | David, Pomante | M-W-F |
+  [SECTION #2] - 8:00 AM - 8:55 AM | Clinton, Perry | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #175] - [FW-134] - Jogging: 
-  [SECTION #1] - 7:00 AM - 7:55 AM | Toby, Schwarz | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #176] - [FW-141] - Water Aerobics: 
+[FALL COURSE #208] - [FW-141] - Water Aerobics: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Patty, Murphy | M-W-F |
+  [SECTION #2] - 8:00 AM - 8:55 AM | Patty, Murphy | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #177] - [FW-149] - Swimming for Fitness: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | Gary, Kessie | M-W-F |
+[FALL COURSE #209] - [FW-149] - Swimming for Fitness: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Gary, Kessie | M-W-F |
+  [SECTION #2] - 8:00 AM - 8:55 AM | Gary, Kessie | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #178] - [FW-156] - Aquatic Training for Sports: 
+[FALL COURSE #210] - [FW-156] - Aquatic Training for Sports: 
   [SECTION #1] - 7:30 AM - 9:00 AM | Whitney, Kessie | T-TH |
-  [SECTION #2] - 7:30 AM - 9:00 AM | Patty, Murphy | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #179] - [FW-166] - Aerobics: 
+[FALL COURSE #211] - [FW-166] - Aerobics: 
   [SECTION #1] - 3:00 PM - 3:55 PM | Tammi, Boyer | M-W-F |
   [SECTION #2] - 3:00 PM - 3:55 PM | Tammi, Boyer | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #180] - [FW-219] - Ice Skating for Fitness: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Daman, Hagerott | T-TH |
+[FALL COURSE #212] - [FW-219] - Ice Skating for Fitness: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Jael, Hagerott | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #181] - [GE-125] - First Year Seminar: 
-  [SECTION #1] - 8:25 AM - 9:20 AM | Linda, Buff | TH |
-  [SECTION #2] - 2:20 PM - 3:15 PM | Donna, Pierce | T |
-  [SECTION #3] - 8:25 AM - 9:20 AM | Deanna, Ojennus | T |
-  [SECTION #4] - 11:45 AM - 12:40 PM | Brian, Bergquist | TH |
-  [SECTION #5] - 11:45 AM - 12:40 PM | Kathryn, Lee | T |
-  [SECTION #6] - 11:45 AM - 12:40 PM | Alan, Mikkelson | T |
-  [SECTION #7] - 11:45 AM - 12:40 PM | Lisa, Laurier | T |
-  [SECTION #8] - 2:20 PM - 3:15 PM | Edward, Walker | TH |
-  [SECTION #9] - 11:45 AM - 12:40 PM | William, Silvers | T |
-  [SECTION #10] - 11:45 AM - 12:40 PM | Michael, Sardinia | TH |
-  [SECTION #11] - 2:20 PM - 3:15 PM | Melissa, Rogers | T |
-  [SECTION #12] - 2:20 PM - 3:15 PM | James, Edwards | T |
-  [SECTION #13] - 2:20 PM - 3:15 PM | Robert, Hinnenkamp | T |
-  [SECTION #14] - 2:20 PM - 3:15 PM | Charles, Andrews | TH |
-  [SECTION #15] - 2:20 PM - 3:15 PM | Nicole, Sheets | TH |
-  [SECTION #16] - 11:45 AM - 12:40 PM | Corliss, Slack | T |
-  [SECTION #17] - 8:25 AM - 9:20 AM | Benjamin, Brody | TH |
-  [SECTION #18] - 2:20 PM - 3:15 PM | Craig, Tsuchida | TH |
-  [SECTION #19] - 11:45 AM - 12:40 PM | Toby, Schwarz | T |
-  [SECTION #20] - 2:20 PM - 3:15 PM | Ryan, Peterson | T |
-  [SECTION #21] - 2:20 PM - 3:15 PM | Jennifer, Brown | T |
-  [SECTION #22] - 8:25 AM - 9:20 AM | Robert, Buckham | TH |
-  [SECTION #23] - 2:20 PM - 3:15 PM | Kameshwaran, Sankaran | TH |
-  [SECTION #24] - 2:20 PM - 3:15 PM | Meredith, Tegrotenhuis Shimizu | T |
-  [SECTION #25] - 2:20 PM - 3:15 PM | Michael, Rempe | TH |
-  [SECTION #26] - 2:20 PM - 3:15 PM | Travis, Howell | TH |
-  [SECTION #27] - 2:20 PM - 3:15 PM | James, Uhlenkott | T |
-  [SECTION #28] - 8:25 AM - 9:20 AM | Lee Anne, Chaney | T |
-  [SECTION #29] - 2:20 PM - 3:15 PM | Elizabeth, Abbey | T |
-  [SECTION #30] - 11:45 AM - 12:40 PM | Jennifer, Holsinger | W |
-  [SECTION #31] - 2:20 PM - 3:15 PM | Alfred, Johnson | TH |
-  [SECTION #32] - 8:25 AM - 9:20 AM | Jonathan, Moo | TH |
-  [SECTION #33] - 8:00 AM - 8:55 AM | Joshue, Orozco | W |
-  [SECTION #34] - 8:25 AM - 9:20 AM | Markus, Ong | T |
-  [SECTION #35] - 11:45 AM - 12:40 PM | Gordon, Jackson | T |
-  [SECTION #36] - 11:45 AM - 12:40 PM | Michael, Ingram | W |
+[FALL COURSE #213] - [GE-325] - Transfer Seminar: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Nicole, Boymook | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #182] - [GE-325] - Transfer Seminar: 
-  [SECTION #1] - 11:45 AM - 12:40 PM and 11:45 AM - 12:40 PM | Martha, Gady | TH-TH |
-  [SECTION #2] - 11:45 AM - 12:40 PM | Randall, Michaelis | T |
-  [SECTION #3] - 2:20 PM - 3:15 PM and 2:20 PM - 3:15 PM | Nathan, Moyer | TH-TH |
-  [SECTION #4] - 1:55 PM - 2:50 PM | Brooke, Kiener | Diana, Trotter | M |
-  [SECTION #5] - 8:25 AM - 9:20 AM | Kirk, Westre | TH |
+[FALL COURSE #214] - [GE-330] - Community Leadership Training: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Nicole, Boymook | Richard, Mandeville | Jolyn, Dahlvig | Matthew, Baker | T |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Kristiana, Holmes | Linda, Torretta | Richard, Mandeville | T |
+  [SECTION #3] - 11:45 AM - 12:40 PM | Esther, Louie | Richard, Mandeville | T |
+  [SECTION #4] - 11:45 AM - 12:40 PM | Dayna, Jones | Richard, Mandeville | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #183] - [GE-330] - Community Leadership Training: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Dayna, Jones | Kathleen, Storm | T |
-  [SECTION #2] - 11:45 AM - 12:40 PM | Nicole, Boymook | Kathleen, Storm | Richard, Mandeville | T |
-  [SECTION #3] - 11:45 AM - 12:40 PM | Kristiana, Holmes | Susan, Lynn | Kathleen, Storm | T |
-  [SECTION #4] - 11:45 AM - 12:40 PM | Esther, Louie | Kathleen, Storm | T |
+[FALL COURSE #215] - [GR-102] - Elementary German II: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Ingrid, LaVoie | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:35 AM | Ingrid, LaVoie | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #184] - [GE-330] - Act 6 Capstone: 
-  [SECTION #1] - 3:15 PM - 5:00 PM | Esther, Louie | Kathleen, Storm | M |
+[FALL COURSE #216] - [GR-202] - Intermediate German II: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Ingrid, LaVoie | M-W-TH-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #185] - [GE-330] - Act 6 Freshman: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Esther, Louie | Kathleen, Storm | TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #186] - [GL-139] - Environmental Geology: 
-  [SECTION #1] - 9:30 AM - 10:50 AM and 12:50 PM - 2:45 PM | Charles, Hillman | T-TH-T |
--------------------------------------------------------------------------------------
-[FALL COURSE #187] - [GR-101] - Elementary German I: 
-  [SECTION #1] - 10:25 AM - 11:35 AM | Ingrid, LaVoie | M-W-F |
-  [SECTION #2] - 9:05 AM - 10:15 AM | Ingrid, LaVoie | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #188] - [HI-101] - The Mediterranean World: 
-  [SECTION #1] - 8:00 AM - 9:20 AM | Jennifer, Binczewski | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #189] - [HI-181] - The Atlantic World: 
-  [SECTION #1] - 12:50 PM - 2:10 PM | Rafaela, Acevedo-Field | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #190] - [HI-182] - The US in a Global Context: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Dale, Soden | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #191] - [HI-209] - History of Vietnam War: 
-  [SECTION #1] - 2:20 PM - 3:40 PM | Dale, Soden | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #192] - [HI-210] - Becoming a Historian: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Arlin, Migliazzo | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #193] - [HI-282] - Intro Public History: 
-  [SECTION #1] - 6:30 PM - 9:30 PM and 8:30 PM - 9:30 PM | Janet, Hauck | W-W |
--------------------------------------------------------------------------------------
-[FALL COURSE #194] - [HI-309] - History of Vietnam War: 
-  [SECTION #1] - 2:20 PM - 3:40 PM | Dale, Soden | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #195] - [HI-312] - South Africa Program Prep: 
-  [SECTION #1] - 6:30 PM - 7:30 PM | Lawrence, Burnley | TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #196] - [HI-315] - Medieval Europe: 
+[FALL COURSE #217] - [HI-101] - The Mediterranean World: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Corliss, Slack | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #197] - [HI-325] - History of Latin America: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Rafaela, Acevedo-Field | M-W-F |
+[FALL COURSE #218] - [HI-102] - The Pacific World: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Anthony, Clark | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #198] - [HI-366] - Modern Russia & Soviet Union: 
-  [SECTION #1] - 10:25 AM - 11:20 AM and 10:25 AM - 11:20 AM | Arlin, Migliazzo | M-W-F-F |
+[FALL COURSE #219] - [HI-181] - The Atlantic World: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Rafaela, Acevedo-Field | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #199] - [HI-384W] - Pacific Northwest History: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Dale, Soden | T-TH |
+[FALL COURSE #220] - [HI-209] - History of Vietnam War: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Dale, Soden | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #200] - [HI-498W] - Senior Seminar in History: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | Corliss, Slack | M-W-F |
+[FALL COURSE #221] - [HI-210] - Becoming a Historian: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Arlin, Migliazzo | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #201] - [HS-220] - Anatomy and Physiology I: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | William, Silvers | M-W-F |
+[FALL COURSE #222] - [HI-212] - American Popular Culture: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Dale, Soden | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #202] - [HS-315] - Nutrition: 
-  [SECTION #1] - 8:00 AM - 9:20 AM and 8:00 AM - 9:20 AM | Elizabeth, Abbey | T-TH-TH |
+[FALL COURSE #223] - [HI-241] - Africn Amer Hist Since 1865: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Lawrence, Burnley | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #203] - [HS-320] - Structural & Mechanical Kin: 
-  [SECTION #1] - 10:25 AM - 11:35 AM and 10:25 AM - 11:35 AM | Daman, Hagerott | M-W-F-F |
+[FALL COURSE #224] - [HI-300W] - Christianity in Asia: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Anthony, Clark | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #204] - [HS-326] - Exercise Physiology: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | William, Silvers | M-W-F |
-  [SECTION #2] - 10:25 AM - 11:20 AM | William, Silvers | M-W-F |
+[FALL COURSE #225] - [HI-309] - History of Vietnam War: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Dale, Soden | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #205] - [HS-361] - Community Health: 
-  [SECTION #1] - 12:50 PM - 2:10 PM and 12:50 PM - 2:10 PM | Michael, Ediger | T-TH-TH |
+[FALL COURSE #226] - [HI-345] - Cultural Histry of China/Japan: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Anthony, Clark | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #206] - [HS-362] - Personal Health: 
+[FALL COURSE #227] - [HI-354] - Colonialism and Globalization: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Corliss, Slack | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #228] - [HI-426] - Slavery in Latin America: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Rafaela, Acevedo-Field | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #229] - [HI-496] - Women in Early Modern Europe: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Jennifer, Binczewski | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #230] - [HS-221] - Anatomy and Physiology II: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Justin, Ulbright | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #231] - [HS-315] - Nutrition: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Elizabeth, Abbey | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #232] - [HS-320] - Structural & Mechanical Kin: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Daman, Hagerott | M-W-F |
+  [SECTION #2] - 9:05 AM - 10:15 AM | Daman, Hagerott | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #233] - [HS-361] - Community Health: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Robin, Pickering | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #234] - [HS-362] - Personal Health: 
   [SECTION #1] - 9:30 AM - 10:50 AM | Elizabeth, Abbey | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #207] - [HS-364] - Evaluating HS Literature: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Daman, Hagerott | W |
+[FALL COURSE #235] - [HS-365W] - Evidence Based Health Science: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | William, Silvers | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:20 AM | William, Silvers | M-W-F |
+  [SECTION #3] - 11:45 AM - 12:40 PM | William, Silvers | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #208] - [HS-433] - Prin Conditioning & Nutrition: 
-  [SECTION #1] - 9:05 AM - 10:15 AM | Daman, Hagerott | M-W-F |
+[FALL COURSE #236] - [HS-410] - Chronic Disease Epidemiology: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Robin, Pickering | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #209] - [HS-498] - Senior Seminar: 
-  [SECTION #1] - 8:00 AM - 9:20 AM | Michael, Ediger | T-TH |
+[FALL COURSE #237] - [HS-420] - Health Promotion and Education: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Robin, Pickering | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #210] - [HU-201] - International Films: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Ryan, Peterson | T |
+[FALL COURSE #238] - [HS-433] - Prin Conditioning & Nutrition: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Daman, Hagerott | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #211] - [IDS-110] - Intro to US Cultural Studies: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Doug, Sugano | Dale, Soden | T |
+[FALL COURSE #239] - [HS-498] - Senior Seminar: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Michael, Ediger | T-TH |
+  [SECTION #2] - 2:20 PM - 3:40 PM | Michael, Ediger | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #212] - [IDS-232] - Native American Film: 
-  [SECTION #1] - 10:25 AM - 12:35 PM | Barry, Moses | M |
+[FALL COURSE #240] - [IDS-115] - Preparing for a STEM Career: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Peter, Tucker | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #213] - [IDS-233] - African American Film: 
-  [SECTION #1] - 5:30 PM - 8:30 PM | James, Wilburn | T |
+[FALL COURSE #241] - [IDS-151] - Seminar for Health Professions: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Karen, Stevens | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #214] - [IDS-310] - US Cultrl Stdy: Comnty Resrch: 
-  [SECTION #1] - 3:50 PM - 5:50 PM | Rhosetta, Rhodes | T |
+[FALL COURSE #242] - [IDS-196] - Interdisciplinary Intro Stats: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Noel, Wescombe | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #215] - [IDS-351] - Prep Sem: Health Professions: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Karen, Stevens | F |
+[FALL COURSE #243] - [IDS-230] - Asian American Film: 
+  [SECTION #1] - 3:50 PM - 5:20 PM | Esther, Louie | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #216] - [JA-101] - Elementary Japanese I: 
-  [SECTION #1] - 10:25 AM - 11:35 AM | Yuko, Taniguchi | M-W-F |
+[FALL COURSE #244] - [IDS-231] - US Latino/a Film: 
+  [SECTION #1] - 3:15 PM - 6:15 PM | Joseph, Vigil | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #217] - [JA-201] - Intermediate Japanese I: 
-  [SECTION #1] - 9:05 AM - 10:15 AM | Yuko, Taniguchi | M-W-F |
-  [SECTION #2] - 9:05 AM - 10:15 AM | Yuko, Taniguchi | M-W-F |
+[FALL COURSE #245] - [IDS-296H] - Honors Domestic US Colonialsm: 
+  [SECTION #1] - 3:00 PM - 4:20 PM | Doug, Sugano | Barry, Moses | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #218] - [JMC-125] - Writing for Mass Media: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | James, McPherson | M-W-F |
-  [SECTION #2] - 12:50 PM - 2:10 PM | Sarah, Bain | T-TH |
-  [SECTION #3] - 9:05 AM - 10:00 AM | Sandy, Hosking | M-W-F |
+[FALL COURSE #246] - [JA-102] - Elementary Japanese II: 
+  [SECTION #1] - 10:25 AM - 11:35 AM | Harumi, Norasakkunkit | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #219] - [JMC-209] - Introduction to Comm Research: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Joy, York | M-W-F |
+[FALL COURSE #247] - [JMC-125] - Writing for Mass Media: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Gordon, Jackson | M-W-F |
+  [SECTION #2] - 12:50 PM - 1:45 PM | Erica, Salkin | M-W-F |
+  [SECTION #3] - 8:00 AM - 9:20 AM | Sarah, Bain | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #220] - [JMC-212] - Theories Human Communication: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Ronald, Pyle | M-W-F |
-  [SECTION #2] - 1:55 PM - 2:50 PM | Ronald, Pyle | M-W-F |
+[FALL COURSE #248] - [JMC-209] - Introduction to Comm Research: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Joy, York | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #221] - [JMC-231] - Photojournalism: 
+[FALL COURSE #249] - [JMC-212] - Theories Human Communication: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Ronald, Pyle | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #250] - [JMC-231] - Photojournalism: 
   [SECTION #1] - 6:30 PM - 9:30 PM | Kirk, Hirota | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #222] - [JMC-244] - Publicity & Public Relations: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Sarah, Bain | T |
--------------------------------------------------------------------------------------
-[FALL COURSE #223] - [JMC-245] - Applied Journalism: Newspaper: 
+[FALL COURSE #251] - [JMC-245] - Applied Journalism: Newspaper: 
   [SECTION #1] - 5:40 PM - 6:20 PM | James, McPherson | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #224] - [JMC-246] - Applied Journalism: Radio: 
-  [SECTION #1] - 5:00 PM - 5:40 PM | Gordon, Jackson | Isamu, Jordan | T |
+[FALL COURSE #252] - [JMC-246] - Applied Journalism: Radio: 
+  [SECTION #1] - 5:00 PM - 5:40 PM | Robert, Schloss | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #225] - [JMC-247] - Applied Journalism: Yearbook: 
+[FALL COURSE #253] - [JMC-247] - Applied Journalism: Yearbook: 
   [SECTION #1] - 5:00 PM - 5:40 PM | Tad, Wisenor | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #226] - [JMC-336] - Intro to Television Broadcast: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Dawn, Bayman | M |
--------------------------------------------------------------------------------------
-[FALL COURSE #227] - [JMC-343] - Editing, Layout and Design: 
-  [SECTION #1] - 1:55 PM - 3:05 PM | James, McPherson | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #228] - [JMC-347] - Mass Media History: 
+[FALL COURSE #254] - [JMC-315] - Media Criticism: 
   [SECTION #1] - 9:05 AM - 10:00 AM | James, McPherson | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #229] - [JMC-402] - Mass Media Law: 
+[FALL COURSE #255] - [JMC-335] - Interactive Journalism: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Erica, Salkin | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #256] - [JMC-343] - Editing, Layout and Design: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | James, McPherson | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #257] - [JMC-347] - Mass Media History: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | James, McPherson | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #258] - [JMC-362W] - Article and Feature Writing: 
   [SECTION #1] - 9:30 AM - 10:50 AM | Gordon, Jackson | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #230] - [JMC-445] - Editorial Practicum: Newspaper: 
-  [SECTION #1] - 5:40 PM - 6:20 PM | James, McPherson | M |
+[FALL COURSE #259] - [JMC-493] - Communication Ethics: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Gordon, Jackson | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #231] - [JMC-446] - Broadcast Mgmt Pract: Radio: 
-  [SECTION #1] - 5:00 PM - 5:40 PM | Gordon, Jackson | Isamu, Jordan | T |
+[FALL COURSE #260] - [KIN-351] - Curriculum/Methods Sec Phys Ed: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Kirk, Westre | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #232] - [JMC-447] - Editorial Practicum: Yearbook: 
-  [SECTION #1] - 5:00 PM - 5:40 PM | Tad, Wisenor | T |
+[FALL COURSE #261] - [KIN-430] - Sports and Society: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Kirk, Westre | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #233] - [KIN-322] - Phil & Psyc Aspects Coaching: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Warren, Friedrichs | T-TH |
+[FALL COURSE #262] - [KIN-430W] - Sports and Society: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Kirk, Westre | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #234] - [KIN-322W] - Phil & Psyc Aspects Coaching: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Warren, Friedrichs | T-TH |
+[FALL COURSE #263] - [KIN-465] - Motor Devel/Control/Learning: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Daniel, Ramsay | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #235] - [KIN-344] - Health/Fitness Curric Elem: 
-  [SECTION #1] - 6:30 PM - 9:00 PM | Jay, Tully | M |
+[FALL COURSE #264] - [KIN-498] - Senior Seminar: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Steven, Schadt | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #236] - [KIN-345] - Elem PE & Health Ed:Cur&Meth: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Travis, Howell | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #237] - [KIN-400] - Tests and Measurements: 
-  [SECTION #1] - 8:00 AM - 9:20 AM | Travis, Howell | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #238] - [KIN-420] - Admin/Legal Health/Fitness/PE: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | Travis, Howell | M-W |
--------------------------------------------------------------------------------------
-[FALL COURSE #239] - [LAT-101] - Elementary Latin I: 
-  [SECTION #1] - 6:30 PM - 8:15 PM | Paul, Ojennus | M-W |
--------------------------------------------------------------------------------------
-[FALL COURSE #240] - [LS-250] - Prin of Service & Leadership: 
+[FALL COURSE #265] - [LS-250] - Prin of Service & Leadership: 
   [SECTION #1] - 9:30 AM - 10:50 AM | John, Burns | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #241] - [LS-350] - Transforming Leadership: 
+[FALL COURSE #266] - [LS-350] - Transforming Leadership: 
   [SECTION #1] - 12:50 PM - 2:10 PM | John, Burns | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #242] - [MA-107] - Basic Concepts in Modern Math: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Kristin, Lehman | M-W-F |
-  [SECTION #2] - 1:55 PM - 2:50 PM | Kristin, Lehman | M-W-F |
+[FALL COURSE #267] - [LS-401] - Leadership Seminar: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | John, Burns | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #243] - [MA-108] - Finite Math for Social Science: 
-  [SECTION #1] - 10:25 AM - 11:35 AM | Marcia, Hopkins-Marker | M-W-F |
-  [SECTION #2] - 9:05 AM - 10:15 AM | Michelle, Moore-Mitchell | M-W-F |
-  [SECTION #3] - 11:45 AM - 12:40 PM | Marcia, Hopkins-Marker | M-T-W-F |
+[FALL COURSE #268] - [MA-107] - Basic Concepts in Modern Math: 
+  [SECTION #1] - 9:05 AM - 10:15 AM |  Staff | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #244] - [MA-150] - Pre-Calculus: 
-  [SECTION #1] - 9:05 AM - 10:15 AM | Richard, Bishop | M-W-F |
-  [SECTION #2] - 1:55 PM - 3:05 PM | Sandra, Scott | M-W-F |
+[FALL COURSE #269] - [MA-108] - Finite Math for Social Science: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Marcia, Hopkins-Marker | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #245] - [MA-171] - Calculus I: 
-  [SECTION #1] - 9:05 AM - 10:15 AM | Anne, Trefry | M-W-F |
-  [SECTION #2] - 9:05 AM - 10:15 AM | Marcia, Hopkins-Marker | M-W-F |
-  [SECTION #3] - 1:55 PM - 3:05 PM | Michael, Rempe | M-W-F |
-  [SECTION #4] - 11:45 AM - 12:40 PM | Donna, Pierce | M-W-TH-F |
-  [SECTION #5] - 10:25 AM - 11:35 AM | Seshu, Rao | M-W-F |
+[FALL COURSE #270] - [MA-150] - Pre-Calculus: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Robert, DeLorto | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #246] - [MA-172] - Calculus II: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | Martha, Gady | M-W-TH-F |
-  [SECTION #2] - 11:45 AM - 12:40 PM and 11:45 AM - 12:40 PM | Nathan, Moyer | M-W-TH-F-TH |
-  [SECTION #3] - 8:00 AM - 8:55 AM | Nathan, Moyer | M-W-TH-F |
+[FALL COURSE #271] - [MA-158] - Calculus for Social Sciences: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Marcia, Hopkins-Marker | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:35 AM | Marcia, Hopkins-Marker | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #247] - [MA-221] - Math for Elem School Teacher I: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Martha, Gady | M-W-F |
+[FALL COURSE #272] - [MA-171] - Calculus I: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Robert, DeLorto | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:35 AM | Anne, Trefry | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #248] - [MA-222] - Math Elem School Teachers II: 
+[FALL COURSE #273] - [MA-172] - Calculus II: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Lyle, Cochran | M-T-W-F |
+  [SECTION #2] - 8:00 AM - 8:55 AM | Anne, Trefry | M-T-W-F |
+  [SECTION #3] - 11:45 AM - 12:40 PM | Donna, Pierce | M-W-TH-F |
+  [SECTION #4] - 8:00 AM - 8:55 AM | Lyle, Cochran | M-T-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #274] - [MA-221] - Math for Elem School Teacher I: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Martha, Gady | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #275] - [MA-222] - Math Elem School Teachers II: 
   [SECTION #1] - 10:25 AM - 11:20 AM | Martha, Gady | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #249] - [MA-256] - Elem Probability & Statistics: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Richard, Bishop | M-W-F |
-  [SECTION #2] - 8:00 AM - 8:55 AM | Walter, Seidel | M-W-F |
+[FALL COURSE #276] - [MA-256] - Elem Probability & Statistics: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Timothy, Martin | TH |
+  [SECTION #2] - 10:25 AM - 11:20 AM | Richard, Bishop | M-W-F |
+  [SECTION #3] - 9:05 AM - 10:00 AM | Richard, Bishop | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #250] - [MA-273] - Calculus III: 
+[FALL COURSE #277] - [MA-273] - Calculus III: 
   [SECTION #1] - 8:00 AM - 8:55 AM | Lyle, Cochran | M-T-W-F |
-  [SECTION #2] - 11:45 AM - 12:40 PM | Lyle, Cochran | M-T-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #251] - [MA-278] - Discrete Mathematics: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Anne, Trefry | M-W-F |
+[FALL COURSE #278] - [MA-278] - Discrete Mathematics: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Nathan, Moyer | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #252] - [MA-281] - Differential Equations: 
+[FALL COURSE #279] - [MA-281] - Differential Equations: 
   [SECTION #1] - 9:05 AM - 10:00 AM | Michael, Rempe | M-W-F |
+  [SECTION #2] - 8:00 AM - 8:55 AM | Michael, Rempe | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #253] - [MA-330] - Linear Algebra: 
+[FALL COURSE #280] - [MA-294] - Career and Vocation Seminar: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Nathan, Moyer | TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #281] - [MA-330] - Linear Algebra: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Lyle, Cochran | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #282] - [MA-350] - Numerical Analysis: 
   [SECTION #1] - 10:25 AM - 11:20 AM | Michael, Rempe | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #254] - [MA-357] - Mathematical Statistics I: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Lyle, Cochran | M-W-F |
+[FALL COURSE #283] - [MA-358W] - Mathematical Statistics II: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Walter, Seidel | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #255] - [MA-410] - Algebraic Structures: 
+[FALL COURSE #284] - [MA-365] - Modern Geometry: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Martha, Gady | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #285] - [MA-430W] - Graph Theory & Combinatorics: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Nathan, Moyer | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #256] - [MI-101] - Foundations of Officership: 
-  [SECTION #1] - 8:00 AM - 10:50 AM |  NA | W |
-  [SECTION #2] - 1:10 PM - 4:00 PM |  NA | W |
+[FALL COURSE #286] - [MI-102] - Intro to Tactical Leadership: 
+  [SECTION #1] - 1:00 PM - 4:00 PM |  NA | W |
+  [SECTION #2] - 8:00 AM - 11:00 AM |  NA | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #257] - [MI-101L] - Leadership Lab: 
-  [SECTION #1] - 3:30 PM - 6:00 PM |  NA | TH |
+[FALL COURSE #287] - [MI-102L] - Leadership Lab: 
+  [SECTION #1] - 3:30 PM - 6:30 PM |  NA | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #258] - [MI-103] - Military Physical-Fitness: 
+[FALL COURSE #288] - [MI-104] - Military Physical-Fitness: 
   [SECTION #1] - 6:00 AM - 7:00 AM |  NA | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #259] - [MI-201] - Individual Leader Studies: 
-  [SECTION #1] - 8:00 AM - 9:15 AM |  NA | T-TH |
+[FALL COURSE #289] - [MI-202] - Found of Tactical Leadership: 
+  [SECTION #1] - 3:10 PM - 6:00 PM |  NA | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #260] - [MI-201L] - Leadership Lab: 
-  [SECTION #1] - 3:30 PM - 6:00 PM |  NA | TH |
+[FALL COURSE #290] - [MI-202L] - Leadership Lab: 
+  [SECTION #1] - 3:30 PM - 6:30 PM |  NA | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #261] - [MI-203] - Military Physical-Fitness: 
+[FALL COURSE #291] - [MI-204] - Military Physical-Fitness: 
   [SECTION #1] - 6:00 AM - 7:00 AM |  NA | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #262] - [MI-300] - Ranger Challenge: 
-  [SECTION #1] - 4:00 PM - 6:00 PM |  NA | M-W-F |
+[FALL COURSE #292] - [MU-112] - Music Theory II: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Thomas, Shook | M-W-F |
+  [SECTION #2] - 12:50 PM - 1:45 PM | Thomas, Shook | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #263] - [MI-301] - Leadership & Prob Solving: 
-  [SECTION #1] - 10:50 AM - 12:05 PM |  NA | T-TH |
-  [SECTION #2] - 9:25 AM - 10:40 AM |  NA | T-TH |
+[FALL COURSE #293] - [MU-113] - Ear Training II: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Brent, Edstrom | T-TH |
+  [SECTION #2] - 9:30 AM - 10:25 AM | Brent, Edstrom | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #264] - [MI-301L] - Leadership Lab: 
-  [SECTION #1] - 3:30 PM - 5:30 PM |  NA | TH |
+[FALL COURSE #294] - [MU-139] - Beginning Class Piano: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Ivana, Cojbasic | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #265] - [MI-303] - Mil Phys Fitness Prog: 
-  [SECTION #1] - 6:00 AM - 7:00 AM |  NA | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #266] - [MI-401] - Leadership & Management: 
-  [SECTION #1] - 6:00 PM - 9:00 PM |  NA | T |
--------------------------------------------------------------------------------------
-[FALL COURSE #267] - [MI-401L] - Leadership Lab: 
-  [SECTION #1] - 3:30 PM - 6:00 PM |  NA | TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #268] - [MI-403] - Mil Phys Fitness Prog: 
-  [SECTION #1] - 6:00 AM - 7:00 AM |  NA | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #269] - [MU-103] - Listening to Music: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Benjamin, Brody | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #270] - [MU-110] - Music Theory I: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Brent, Edstrom | M-W-F |
-  [SECTION #2] - 12:50 PM - 1:45 PM | Brent, Edstrom | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #271] - [MU-111] - Ear Training I: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Thomas, Shook | T-TH |
-  [SECTION #2] - 9:30 AM - 10:25 AM | Thomas, Shook | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #272] - [MU-139] - Beginning Class Piano: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | David, Brewster | M-W |
--------------------------------------------------------------------------------------
-[FALL COURSE #273] - [MU-140] - Beginning Class Guitar: 
+[FALL COURSE #295] - [MU-140] - Beginning Class Guitar: 
   [SECTION #1] - 3:10 PM - 4:05 PM | Paul, Grove | T |
   [SECTION #2] - 4:10 PM - 5:05 PM | Paul, Grove | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #274] - [MU-141] - Class Piano I: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | David, Brewster | M-W |
+[FALL COURSE #296] - [MU-141] - Class Piano I: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Ivana, Cojbasic | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #275] - [MU-142] - Class Voice: 
+[FALL COURSE #297] - [MU-142] - Class Voice: 
   [SECTION #1] - 11:45 AM - 12:40 PM | Ann, Fennessy | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #276] - [MU-167] - Concert Band: 
+[FALL COURSE #298] - [MU-167] - Concert Band: 
   [SECTION #1] - 6:30 PM - 9:00 PM | Kyla, Fague | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #277] - [MU-170] - Chamber Ensemble: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Paul, Raymond | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #278] - [MU-171] - Whitworth Choir: 
+[FALL COURSE #299] - [MU-171] - Whitworth Choir: 
   [SECTION #1] - 11:45 AM - 12:40 PM and 11:45 AM - 12:40 PM | Marc, Hafso | M-T-W-TH-F-M-T-W-TH-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #279] - [MU-172] - Women's Choir: 
+[FALL COURSE #300] - [MU-172] - Women's Choir: 
   [SECTION #1] - 4:00 PM - 5:30 PM and 4:00 PM - 5:30 PM | Deborah, Hansen | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #280] - [MU-173] - Wind Symphony: 
+[FALL COURSE #301] - [MU-173] - Wind Symphony: 
   [SECTION #1] - 4:00 PM - 5:30 PM | Richard, Strauch | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #281] - [MU-174] - Jazz Ensemble II: 
+[FALL COURSE #302] - [MU-174] - Jazz Ensemble II: 
   [SECTION #1] - 6:30 PM - 8:00 PM | Christopher, Parkin | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #282] - [MU-174] - Jazz Ensemble I: 
+[FALL COURSE #303] - [MU-174] - Jazz Ensemble I: 
   [SECTION #1] - 3:30 PM - 4:45 PM and 6:30 PM - 8:00 PM | Daniel, Keberle | T-TH-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #283] - [MU-175] - Chamber Singers: 
-  [SECTION #1] - 4:40 PM - 6:00 PM | Marc, Hafso | T-TH |
+[FALL COURSE #304] - [MU-175] - Chamber Singers: 
+  [SECTION #1] - 4:40 PM - 6:00 PM and 4:40 PM - 6:00 PM | Marc, Hafso | T-TH-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #284] - [MU-177] - Men's Chorus: 
+[FALL COURSE #305] - [MU-177] - Men's Chorus: 
   [SECTION #1] - 4:40 PM - 6:00 PM | Scott, Miller | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #285] - [MU-178] - Whitworth Orchestra: 
-  [SECTION #1] - 5:00 PM - 6:15 PM | Philip, Baldwin | T-TH |
-  [SECTION #2] - 4:00 PM - 5:30 PM and 5:00 PM - 6:15 PM | Philip, Baldwin | M-T-TH |
+[FALL COURSE #306] - [MU-178] - Whitworth Orchestra: 
+  [SECTION #1] - 4:00 PM - 5:30 PM and 5:00 PM - 6:15 PM |  Staff | M-T-TH |
+  [SECTION #2] - 5:00 PM - 6:15 PM |  Staff | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #286] - [MU-210] - Music Theory III: 
+[FALL COURSE #307] - [MU-206] - Jazz in America: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Thomas, Shook | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #308] - [MU-212] - Music Theory IV: 
   [SECTION #1] - 1:55 PM - 2:50 PM | Brent, Edstrom | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #287] - [MU-211] - Ear Training III: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Daniel, Keberle | T-TH |
+[FALL COURSE #309] - [MU-213] - Ear Training IV: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Brent, Edstrom | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #288] - [MU-225] - General Conducting: 
-  [SECTION #1] - 9:30 AM - 10:25 AM | Kyla, Fague | T-TH |
-  [SECTION #2] - 12:50 PM - 1:45 PM | Deborah, Hansen | M-W |
+[FALL COURSE #310] - [MU-225] - General Conducting: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Deborah, Hansen | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #289] - [MU-241] - Class Piano II: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Judith, Schoepflin | T-TH |
-  [SECTION #2] - 12:50 PM - 1:45 PM | David, Brewster | M-W |
+[FALL COURSE #311] - [MU-241] - Class Piano II: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Judith, Schoepflin | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #290] - [MU-249] - Jazz Combo: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Daniel, Keberle | TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #291] - [MU-267] - Concert Band: 
+[FALL COURSE #312] - [MU-267] - Concert Band: 
   [SECTION #1] - 6:30 PM - 9:00 PM | Kyla, Fague | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #292] - [MU-271] - Whitworth Choir: 
+[FALL COURSE #313] - [MU-271] - Whitworth Choir: 
   [SECTION #1] - 11:45 AM - 12:40 PM and 11:45 AM - 12:40 PM | Marc, Hafso | M-T-W-TH-F-M-T-W-TH-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #293] - [MU-272] - Women's Choir: 
+[FALL COURSE #314] - [MU-272] - Women's Choir: 
   [SECTION #1] - 4:00 PM - 5:30 PM and 4:00 PM - 5:30 PM | Deborah, Hansen | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #294] - [MU-273] - Wind Symphony: 
+[FALL COURSE #315] - [MU-273] - Wind Symphony: 
   [SECTION #1] - 4:00 PM - 5:30 PM | Richard, Strauch | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #295] - [MU-274] - Jazz Ensemble II: 
-  [SECTION #1] - 6:30 PM - 8:00 PM | Christopher, Parkin | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #296] - [MU-274] - Jazz Ensemble I: 
+[FALL COURSE #316] - [MU-274] - Jazz Ensemble I: 
   [SECTION #1] - 3:30 PM - 4:45 PM and 6:30 PM - 8:00 PM | Daniel, Keberle | T-TH-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #297] - [MU-275] - Chamber Singers: 
-  [SECTION #1] - 4:40 PM - 6:00 PM | Marc, Hafso | T-TH |
+[FALL COURSE #317] - [MU-274] - Jazz Ensemble II: 
+  [SECTION #1] - 6:30 PM - 8:00 PM | Christopher, Parkin | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #298] - [MU-277] - Men's Chorus: 
+[FALL COURSE #318] - [MU-275] - Chamber Singers: 
+  [SECTION #1] - 4:40 PM - 6:00 PM and 4:40 PM - 6:00 PM | Marc, Hafso | T-TH-T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #319] - [MU-277] - Men's Chorus: 
   [SECTION #1] - 4:40 PM - 6:00 PM | Scott, Miller | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #299] - [MU-278] - Whitworth Orchestra: 
-  [SECTION #1] - 4:00 PM - 5:30 PM and 5:00 PM - 6:15 PM | Philip, Baldwin | M-T-TH |
-  [SECTION #2] - 5:00 PM - 6:15 PM | Philip, Baldwin | T-TH |
+[FALL COURSE #320] - [MU-278] - Whitworth Orchestra: 
+  [SECTION #1] - 4:00 PM - 5:30 PM and 5:00 PM - 6:15 PM |  Staff | M-T-TH |
+  [SECTION #2] - 5:00 PM - 6:15 PM |  Staff | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #300] - [MU-302W] - Music History II: 
+[FALL COURSE #321] - [MU-301] - Music History I: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Benjamin, Brody | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #322] - [MU-303] - Music History III: 
   [SECTION #1] - 9:05 AM - 10:15 AM | Richard, Strauch | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #301] - [MU-306] - History and Theol of Worship: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | Benjamin, Brody | M-W-F |
+[FALL COURSE #323] - [MU-334] - Brass Techniques: 
+  [SECTION #1] - 6:30 PM - 8:30 PM |  Staff | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #302] - [MU-333] - Woodwind Techniques: 
-  [SECTION #1] - 7:00 PM - 9:00 PM | Delores, Hungerford | T |
--------------------------------------------------------------------------------------
-[FALL COURSE #303] - [MU-337] - Piano Literature: 
-  [SECTION #1] - 8:25 AM - 9:20 AM | Judith, Schoepflin | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #304] - [MU-344] - Elem Music: Music and Movement: 
+[FALL COURSE #324] - [MU-344] - Elem Music: Music and Movement: 
   [SECTION #1] - 6:30 PM - 9:00 PM | Karen, Baldwin Kuntz | M |
-  [SECTION #2] - 6:30 PM - 9:00 PM | Karen, Baldwin Kuntz | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #305] - [MU-349] - Jazz Combo: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Daniel, Keberle | TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #306] - [MU-367] - Concert Band: 
+[FALL COURSE #325] - [MU-367] - Concert Band: 
   [SECTION #1] - 6:30 PM - 9:00 PM | Kyla, Fague | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #307] - [MU-370] - Chamber Ensemble: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Paul, Raymond | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #308] - [MU-371] - Whitworth Choir: 
+[FALL COURSE #326] - [MU-371] - Whitworth Choir: 
   [SECTION #1] - 11:45 AM - 12:40 PM and 11:45 AM - 12:40 PM | Marc, Hafso | M-T-W-TH-F-M-T-W-TH-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #309] - [MU-372] - Women's Choir: 
+[FALL COURSE #327] - [MU-372] - Women's Choir: 
   [SECTION #1] - 4:00 PM - 5:30 PM and 4:00 PM - 5:30 PM | Deborah, Hansen | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #310] - [MU-373] - Wind Symphony: 
+[FALL COURSE #328] - [MU-373] - Wind Symphony: 
   [SECTION #1] - 4:00 PM - 5:30 PM | Richard, Strauch | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #311] - [MU-374] - Jazz Ensemble II: 
+[FALL COURSE #329] - [MU-374] - Jazz Ensemble II: 
   [SECTION #1] - 6:30 PM - 8:00 PM | Christopher, Parkin | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #312] - [MU-374] - Jazz Ensemble I: 
+[FALL COURSE #330] - [MU-374] - Jazz Ensemble I: 
   [SECTION #1] - 3:30 PM - 4:45 PM and 6:30 PM - 8:00 PM | Daniel, Keberle | T-TH-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #313] - [MU-375] - Chamber Singers: 
-  [SECTION #1] - 4:40 PM - 6:00 PM | Marc, Hafso | T-TH |
+[FALL COURSE #331] - [MU-375] - Chamber Singers: 
+  [SECTION #1] - 4:40 PM - 6:00 PM and 4:40 PM - 6:00 PM | Marc, Hafso | T-TH-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #314] - [MU-377] - Men's Chorus: 
+[FALL COURSE #332] - [MU-377] - Men's Chorus: 
   [SECTION #1] - 4:40 PM - 6:00 PM | Scott, Miller | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #315] - [MU-378] - Whitworth Orchestra: 
-  [SECTION #1] - 5:00 PM - 6:15 PM | Philip, Baldwin | T-TH |
-  [SECTION #2] - 4:00 PM - 5:30 PM and 5:00 PM - 6:15 PM | Philip, Baldwin | M-T-TH |
+[FALL COURSE #333] - [MU-378] - Whitworth Orchestra: 
+  [SECTION #1] - 4:00 PM - 5:30 PM and 5:00 PM - 6:15 PM |  Staff | M-T-TH |
+  [SECTION #2] - 5:00 PM - 6:15 PM |  Staff | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #316] - [MU-416] - Wind Literature: 
-  [SECTION #1] - 8:25 AM - 9:20 AM | Melvin, Clayton | T-TH |
+[FALL COURSE #334] - [MU-427] - Advanced Conducting: 
+  [SECTION #1] - 2:20 PM - 3:15 PM | Marc, Hafso | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #317] - [MU-439] - Vocal Pedagogy: 
-  [SECTION #1] - 9:30 AM - 10:25 AM | Scott, Miller | T-TH |
+[FALL COURSE #335] - [MU-432] - Instrumental and Choral Arrang: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | Bryan, Bogue | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #318] - [MU-443] - Choral Techniques & Materials: 
-  [SECTION #1] - 1:55 PM - 3:15 PM | Charles, Zimmerman | M-W |
+[FALL COURSE #336] - [MU-438] - Song Literature: 
+  [SECTION #1] - 9:30 AM - 10:25 AM | Amy, Porter | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #319] - [MU-449] - Jazz Combo: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Daniel, Keberle | TH |
+[FALL COURSE #337] - [MU-440] - Music Methods in the Elem Sch: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | Karen, Baldwin Kuntz | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #320] - [MU-467] - Concert Band: 
+[FALL COURSE #338] - [MU-449] - Jazz Combo: 
+  [SECTION #1] - 2:15 PM - 3:15 PM | Daniel, Keberle | T |
+-------------------------------------------------------------------------------------
+[FALL COURSE #339] - [MU-467] - Concert Band: 
   [SECTION #1] - 6:30 PM - 9:00 PM | Kyla, Fague | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #321] - [MU-470] - Chamber Ensemble: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Paul, Raymond | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #322] - [MU-471] - Whitworth Choir: 
+[FALL COURSE #340] - [MU-471] - Whitworth Choir: 
   [SECTION #1] - 11:45 AM - 12:40 PM and 11:45 AM - 12:40 PM | Marc, Hafso | M-T-W-TH-F-M-T-W-TH-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #323] - [MU-472] - Women's Choir: 
+[FALL COURSE #341] - [MU-472] - Women's Choir: 
   [SECTION #1] - 4:00 PM - 5:30 PM and 4:00 PM - 5:30 PM | Deborah, Hansen | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #324] - [MU-473] - Wind Symphony: 
+[FALL COURSE #342] - [MU-473] - Wind Symphony: 
   [SECTION #1] - 4:00 PM - 5:30 PM | Richard, Strauch | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #325] - [MU-474] - Jazz Ensemble I: 
+[FALL COURSE #343] - [MU-474] - Jazz Ensemble I: 
   [SECTION #1] - 3:30 PM - 4:45 PM and 6:30 PM - 8:00 PM | Daniel, Keberle | T-TH-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #326] - [MU-475] - Chamber Singers: 
-  [SECTION #1] - 4:40 PM - 6:00 PM | Marc, Hafso | T-TH |
+[FALL COURSE #344] - [MU-474] - Jazz Ensemble II: 
+  [SECTION #1] - 6:30 PM - 8:00 PM | Christopher, Parkin | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #327] - [MU-477] - Men's Chorus: 
-  [SECTION #1] - 4:40 PM - 6:00 PM | Scott, Miller | T-TH |
+[FALL COURSE #345] - [MU-475] - Chamber Singers: 
+  [SECTION #1] - 4:40 PM - 6:00 PM and 4:40 PM - 6:00 PM | Marc, Hafso | T-TH-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #328] - [MU-478] - Whitworth Orchestra: 
-  [SECTION #1] - 4:00 PM - 5:30 PM and 5:00 PM - 6:15 PM | Philip, Baldwin | M-T-TH |
-  [SECTION #2] - 5:00 PM - 6:15 PM | Philip, Baldwin | T-TH |
+[FALL COURSE #346] - [MU-478] - Whitworth Orchestra: 
+  [SECTION #1] - 5:00 PM - 6:15 PM |  Staff | T-TH |
+  [SECTION #2] - 4:00 PM - 5:30 PM and 5:00 PM - 6:15 PM |  Staff | M-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #329] - [NS-101] - Earth and Sky: 
-  [SECTION #1] - 8:00 AM - 9:20 AM | Robert, Hager | T-TH |
+[FALL COURSE #347] - [NS-101] - Earth and Sky: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Robert, Hager | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #330] - [PE-120] - Pilates: 
+[FALL COURSE #348] - [PE-120] - Pilates: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Tammi, Boyer | M-W-F |
   [SECTION #2] - 12:50 PM - 1:45 PM | Tammi, Boyer | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #331] - [PE-121] - Yoga: 
+[FALL COURSE #349] - [PE-121] - Yoga: 
   [SECTION #1] - 1:55 PM - 2:50 PM | Tammi, Boyer | M-W-F |
   [SECTION #2] - 1:55 PM - 2:50 PM | Tammi, Boyer | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #332] - [PE-122] - Tennis: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Jo, Wagstaff | M-W-F |
-  [SECTION #2] - 12:50 PM - 1:45 PM | Jo, Wagstaff | M-W-F |
+[FALL COURSE #350] - [PE-122] - Tennis: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Michael, Shanks | T-TH |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Jo, Wagstaff | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #333] - [PE-124] - Weight Training: 
-  [SECTION #1] - 6:00 AM - 7:30 AM and 1:00 PM - 2:20 PM | John, Tully | T-TH |
-  [SECTION #2] - 11:45 AM - 12:40 PM | Jason, Tobeck | M-W-F |
-  [SECTION #3] - 11:45 AM - 12:40 PM | Jason, Tobeck | M-W-F |
+[FALL COURSE #351] - [PE-124] - Weight Training: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | David, Pomante | M-W-F |
+  [SECTION #2] - 9:30 AM - 10:50 AM | David, Pomante | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #334] - [PE-125] - Golf: 
+[FALL COURSE #352] - [PE-125] - Golf: 
   [SECTION #1] - 12:50 PM - 2:10 PM | Warren, Friedrichs | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #335] - [PE-128] - Sports Conditioning: 
-  [SECTION #1] - 3:15 PM - 4:10 PM | Michael, Shanks | M-W-F |
-  [SECTION #2] - 4:00 PM - 4:55 PM | Travis, Howell | T-TH |
-  [SECTION #3] - 6:00 AM - 7:30 AM and 3:45 PM - 5:00 PM | Heather, Bowman | M-F-T-TH |
-  [SECTION #4] - 4:00 PM - 5:00 PM | Daniel, Ramsay | T-TH |
-  [SECTION #5] - 2:20 PM - 3:40 PM and 6:00 AM - 7:20 AM | Damion, Jablonski | T-TH-M-F |
+[FALL COURSE #353] - [PE-128] - Sports Conditioning: 
+  [SECTION #1] - 3:30 PM - 4:30 PM | Morgan, Cathey | M-W-F |
+  [SECTION #2] - 3:15 PM - 4:45 PM | Steven, Schadt | M-T-TH-F |
+  [SECTION #3] - 6:15 AM - 7:35 AM | Jason, Tobeck | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #336] - [PE-129] - Badminton: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Damion, Jablonski | M-W-F |
+[FALL COURSE #354] - [PE-129] - Badminton: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Damion, Jablonski | T-TH |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Damion, Jablonski | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #337] - [PE-130] - Soccer: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Bryan, Olson | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #338] - [PE-133] - Beginning Volleyball: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Cristal, Brown | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #339] - [PE-137] - Modern Dance: 
-  [SECTION #1] - 8:00 AM - 9:20 AM | Pamela, Erickson | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #340] - [PE-138] - Karate: 
+[FALL COURSE #355] - [PE-138] - Karate: 
   [SECTION #1] - 7:30 PM - 8:25 PM | Matthew, Thomas | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #341] - [PE-143] - Ballet I: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Pamela, Erickson | T-TH |
+[FALL COURSE #356] - [PE-154] - International Ballroom Dance: 
+  [SECTION #1] - 5:45 PM - 7:15 PM | Mary, Edwards | M-W |
+  [SECTION #2] - 5:45 PM - 7:15 PM | Mary, Edwards | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #342] - [PE-152] - Swing and Lindy Hop: 
-  [SECTION #1] - 6:30 PM - 8:00 PM | Mary, Edwards | T-TH |
-  [SECTION #2] - 6:30 PM - 8:00 PM | Mary, Edwards | T-TH |
-  [SECTION #3] - 4:05 PM - 5:00 PM | Mary, Edwards | M-W-F |
-  [SECTION #4] - 4:05 PM - 5:00 PM | Mary, Edwards | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #343] - [PE-153] - American Ballroom Dance: 
-  [SECTION #1] - 4:05 PM - 5:00 PM | Mary, Edwards | M-W-F |
-  [SECTION #2] - 6:30 PM - 8:00 PM | Mary, Edwards | T-TH |
-  [SECTION #3] - 4:05 PM - 5:00 PM | Mary, Edwards | M-W-F |
-  [SECTION #4] - 6:30 PM - 8:00 PM | Mary, Edwards | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #344] - [PE-164] - Pickleball: 
+[FALL COURSE #357] - [PE-164] - Pickleball: 
   [SECTION #1] - 8:00 AM - 9:20 AM | Jason, Tobeck | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #345] - [PE-178] - Karate II: 
-  [SECTION #1] - 8:30 PM - 9:25 PM | Matthew, Thomas | M-W |
+[FALL COURSE #358] - [PE-221] - Yoga II: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Tammi, Boyer | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #346] - [PE-183] - Jazz Dance I: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Karla, Parbon | M-W-F |
-  [SECTION #2] - 11:45 AM - 12:40 PM | Karla, Parbon | M-W-F |
+[FALL COURSE #359] - [PE-233] - Intermediate Volleyball: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Jonathan, Bosh | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #347] - [PH-110] - Intro to Philosophy: 
+[FALL COURSE #360] - [PH-110] - Intro to Philosophy: 
   [SECTION #1] - 8:00 AM - 9:20 AM | Joshue, Orozco | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #348] - [PH-201] - Logic: 
+[FALL COURSE #361] - [PH-199H] - Philosophy in the Real World: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Joshue, Orozco | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #362] - [PH-201] - Logic: 
   [SECTION #1] - 9:05 AM - 10:00 AM | Forrest, Baird | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #349] - [PH-221] - Ethics: 
+[FALL COURSE #363] - [PH-221] - Ethics: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Keith, Wyma | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #350] - [PH-261] - C.S. Lewis: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Forrest, Baird | T |
+[FALL COURSE #364] - [PH-256] - Asian Philosophy: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | David, Wang | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #351] - [PH-307] - Hist of Contemporary Phil: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Keith, Wyma | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #352] - [PH-320] - Philosophy of Religion: 
-  [SECTION #1] - 12:50 PM - 2:10 PM and 12:50 PM - 2:10 PM | Joshue, Orozco | T-TH-T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #353] - [PH-340W] - Epistemology: 
+[FALL COURSE #365] - [PH-320] - Philosophy of Religion: 
   [SECTION #1] - 9:30 AM - 10:50 AM | Joshue, Orozco | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #354] - [PH-396] - Ethics Bowl: 
-  [SECTION #1] - 3:45 PM - 5:15 PM | Keith, Wyma | Michael, Ingram | W-TH |
+[FALL COURSE #366] - [PH-421] - Philosophy of Science: 
+  [SECTION #1] - 2:20 PM - 3:50 PM | Nathan, King | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #355] - [PH-498] - Senior Capstone: 
-  [SECTION #1] - 2:20 PM - 3:40 PM | Nathan, King | TH |
+[FALL COURSE #367] - [PO-102] - American National Politics: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Kathryn, Lee | M-W-F |
+  [SECTION #2] - 2:20 PM - 3:40 PM | Anthony, Rodin | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #356] - [PO-102] - American National Politics: 
-  [SECTION #1] - 9:05 AM - 10:00 AM and 9:05 AM - 10:00 AM | Kathryn, Lee | M-W-F-F |
-  [SECTION #2] - 8:00 AM - 8:55 AM and 8:00 AM - 8:55 AM | Kathryn, Lee | M-W-F-F |
+[FALL COURSE #368] - [PO-151] - International Relations: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Patrick, Van Inwegen | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #357] - [PO-151] - International Relations: 
+[FALL COURSE #369] - [PO-209] - History of Vietnam War: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Dale, Soden | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #370] - [PO-223] - Law and Society: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Kathryn, Lee | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #371] - [PO-293] - Great Decisions: 
+  [SECTION #1] - 7:30 PM - 9:30 PM | Patrick, Van Inwegen | TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #372] - [PO-297] - Nonviolnt Defnse & Conflct Res: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Patrick, Van Inwegen | M-W-F |
-  [SECTION #2] - 2:20 PM - 3:40 PM | Megan, Hershey | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #358] - [PO-209] - History of Vietnam War: 
+[FALL COURSE #373] - [PO-309] - History of Vietnam War: 
   [SECTION #1] - 2:20 PM - 3:40 PM | Dale, Soden | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #359] - [PO-240W] - Comparative Politics: 
-  [SECTION #1] - 1:55 PM - 3:05 PM | Megan, Hershey | M-W-F |
+[FALL COURSE #374] - [PO-316] - Ireland Preparation: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Patrick, Van Inwegen | F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #360] - [PO-309] - History of Vietnam War: 
-  [SECTION #1] - 2:20 PM - 3:40 PM | Dale, Soden | T-TH |
+[FALL COURSE #375] - [PO-353] - Internationl Political Economy: 
+  [SECTION #1] - 8:00 AM - 8:55 AM | Anthony, Rodin | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #361] - [PO-310] - Research Methods in Polit Sci: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Megan, Hershey | M-W-F |
+[FALL COURSE #376] - [PO-364W] - American Constitutional Law: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Julia, Stronks | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #362] - [PO-331] - The American Presidency: 
+[FALL COURSE #377] - [PO-396] - Justice and Difference: 
   [SECTION #1] - 9:30 AM - 10:50 AM | Kathryn, Lee | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #363] - [PO-334] - Gender, Politics and Law: 
-  [SECTION #1] - 8:00 AM - 9:20 AM | Julia, Stronks | T-TH |
-  [SECTION #2] - 8:00 AM - 9:20 AM | Julia, Stronks | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #364] - [PO-340] - Contemporary Africa: 
-  [SECTION #1] - 12:50 PM - 2:10 PM | Megan, Hershey | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #365] - [PO-364W] - American Constitutional Law: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Julia, Stronks | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #366] - [PO-366] - Modern Russia & Soviet Union: 
-  [SECTION #1] - 10:25 AM - 11:20 AM and 10:25 AM - 11:20 AM | Arlin, Migliazzo | M-W-F-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #367] - [PO-445] - Revolution in History: 
+[FALL COURSE #378] - [PO-445] - Revolution in History: 
   [SECTION #1] - 2:20 PM - 3:40 PM | Patrick, Van Inwegen | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #368] - [PO-498W] - Senior Seminar: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Patrick, Van Inwegen | T-TH |
+[FALL COURSE #379] - [PO-498W] - Senior Seminar: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Anthony, Rodin | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #369] - [PS-151] - General Physics I: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Andrew, Law | Markus, Ong | M-W-F |
-  [SECTION #2] - 10:25 AM - 11:20 AM | Markus, Ong | M-W-F |
-  [SECTION #3] - 8:00 AM - 8:55 AM | Markus, Ong | M-W-F |
+[FALL COURSE #380] - [PS-123] - Origins: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | John, Larkin | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #370] - [PS-151L] - General Physics I Lab: 
-  [SECTION #1] - 3:00 PM - 5:50 PM | Russell, Mau | John, Larkin | TH |
-  [SECTION #2] - 8:00 AM - 10:50 AM | John, Larkin | TH |
-  [SECTION #3] - 11:45 AM - 2:35 PM | Russell, Mau | John, Larkin | TH |
-  [SECTION #4] - 6:15 PM - 9:05 PM | Russell, Mau | John, Larkin | TH |
-  [SECTION #5] - 3:00 PM - 5:50 PM | Andrew, Law | John, Larkin | T |
-  [SECTION #6] - 8:00 AM - 10:50 AM | Andrew, Law | John, Larkin | T |
-  [SECTION #7] - 11:45 AM - 2:35 PM | Andrew, Law | John, Larkin | T |
+[FALL COURSE #381] - [PS-153] - General Physics II: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Markus, Ong | M-W-F |
+  [SECTION #2] - 8:00 AM - 8:55 AM | Andrew, Law | M-W-F |
+  [SECTION #3] - 1:55 PM - 2:50 PM | Markus, Ong | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #371] - [PS-251W] - General Physics III: 
-  [SECTION #1] - 8:00 AM - 8:55 AM and 6:30 PM - 9:30 PM | John, Larkin | M-W-F-T |
-  [SECTION #2] - 8:00 AM - 8:55 AM and 8:00 AM - 10:50 AM | John, Larkin | M-W-F-T |
+[FALL COURSE #382] - [PS-153L] - General Physics II Lab: 
+  [SECTION #1] - 8:00 AM - 10:50 AM | Andrew, Law | T |
+  [SECTION #2] - 6:00 PM - 9:00 PM |  NA | TH |
+  [SECTION #3] - 2:45 PM - 5:35 PM | Markus, Ong | T |
+  [SECTION #4] - 2:45 PM - 5:35 PM | Markus, Ong | TH |
+  [SECTION #5] - 11:45 AM - 2:35 PM | Andrew, Law | T |
+  [SECTION #6] - 8:00 AM - 10:50 AM | Andrew, Law | TH |
+  [SECTION #7] - 6:00 PM - 9:00 PM |  NA | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #372] - [PS-351] - Mechanics: Dynamics: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Kameshwaran, Sankaran | M-W-F |
+[FALL COURSE #383] - [PS-200] - Physics Outreach: 
+  [SECTION #1] - 12:50 PM - 2:50 PM | John, Larkin | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #373] - [PS-455] - Quantum Mechanics: 
-  [SECTION #1] - 10:25 AM - 11:20 AM and 6:30 PM - 9:30 PM | Richard, Stevens | M-W-F-W |
+[FALL COURSE #384] - [PS-353] - Advanced Dynamics: 
+  [SECTION #1] - 9:05 AM - 10:00 AM and 8:00 AM - 10:50 AM | Kameshwaran, Sankaran | M-W-F-T |
+  [SECTION #2] - 9:05 AM - 10:00 AM and 11:45 AM - 2:35 PM | Kameshwaran, Sankaran | M-W-F-T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #374] - [PY-101] - Intro to Psychology: 
-  [SECTION #1] - 12:50 PM - 2:10 PM | Tresa, Schmautz | T-TH |
-  [SECTION #2] - 9:30 AM - 10:50 AM | Elizabeth, Campbell | T-TH |
-  [SECTION #3] - 9:30 AM - 10:50 AM | Tresa, Schmautz | T-TH |
-  [SECTION #4] - 12:50 PM - 2:10 PM | Melissa, Rogers | T-TH |
+[FALL COURSE #385] - [PS-371] - Optics: 
+  [SECTION #1] - 1:55 PM - 2:50 PM and 6:00 PM - 9:00 PM | Richard, Stevens | M-W-F-T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #375] - [PY-210] - Developmental Psychology: 
-  [SECTION #1] - 3:50 PM - 5:10 PM | Elizabeth, Campbell | T-TH |
+[FALL COURSE #386] - [PS-373] - Electronics: 
+  [SECTION #1] - 12:50 PM - 1:45 PM and 2:45 PM - 5:35 PM | Richard, Stevens | M-W-T-TH |
+  [SECTION #2] - 12:50 PM - 1:45 PM and 6:30 PM - 9:30 PM | Richard, Stevens | M-W-F-M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #376] - [PY-236] - Biological Psychology: 
+[FALL COURSE #387] - [PY-101] - Intro to Psychology: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Cara, Bellwood | M-W-F |
+  [SECTION #2] - 9:30 AM - 10:50 AM | Adrian, Teo | T-TH |
+  [SECTION #3] - 10:25 AM - 11:20 AM | Melissa, Rogers | M-W-F |
+  [SECTION #4] - 12:50 PM - 2:10 PM | Patricia, Bruininks | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #388] - [PY-210] - Developmental Psychology: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Noel, Wescombe | M-W-F |
-  [SECTION #2] - 9:05 AM - 10:00 AM | Noel, Wescombe | M-W-F |
+  [SECTION #2] - 9:05 AM - 10:00 AM | Cara, Bellwood | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #377] - [PY-241] - Social Psychology: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Patricia, Bruininks | M-W-F |
+[FALL COURSE #389] - [PY-225] - Cognitive Psychology: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Melissa, Rogers | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #378] - [PY-302] - Philosophical Issues Stdy Psyc: 
-  [SECTION #1] - 10:25 AM - 11:35 AM | Adrian, Teo | M-W-F |
+[FALL COURSE #390] - [PY-227] - Personality & Individual Diffr: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Joelle, Czirr | T-TH |
+  [SECTION #2] - 9:30 AM - 10:50 AM | Elizabeth, Campbell | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #379] - [PY-330] - Psych of Poverty& Social Class: 
-  [SECTION #1] - 6:00 PM - 9:00 PM | Patricia, Bruininks | W |
+[FALL COURSE #391] - [PY-236] - Biological Psychology: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Cara, Bellwood | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #380] - [PY-331] - Pvrty/Altruism /Hope Tanz Prep: 
-  [SECTION #1] - 12:00 PM - 2:00 PM | Patricia, Bruininks | TH |
+[FALL COURSE #392] - [PY-241] - Social Psychology: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Patricia, Bruininks | T-TH |
+  [SECTION #2] - 12:50 PM - 2:10 PM | Mark, Baird | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #381] - [PY-351] - Research Methods & Stats I: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Melissa, Rogers | M-W-F |
+[FALL COURSE #393] - [PY-301] - Research in Psychology: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Noel, Wescombe | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #382] - [PY-352] - Research Methods & Stats II: 
+[FALL COURSE #394] - [PY-345] - Forensic Psychology: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Melissa, Rogers | W |
+-------------------------------------------------------------------------------------
+[FALL COURSE #395] - [PY-350] - Psychology & Christian Faith: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Adrian, Teo | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #396] - [PY-352] - Research Methods & Stats II: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Adrian, Teo | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #383] - [PY-358] - Psychopathology: 
-  [SECTION #1] - 6:00 PM - 9:00 PM | Noelle, Wiersma | M |
+[FALL COURSE #397] - [PY-353] - Psychological Assessment: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Mark, Baird | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #384] - [PY-359] - Theories of Counseling: 
-  [SECTION #1] - 12:50 PM - 2:10 PM | Elizabeth, Campbell | T-TH |
+[FALL COURSE #398] - [PY-358] - Psychopathology: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Joelle, Czirr | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #385] - [PY-401W] - Senior Thesis: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Adrian, Teo | T-TH |
-  [SECTION #2] - 9:30 AM - 10:50 AM | Melissa, Rogers | T-TH |
-  [SECTION #3] - 9:30 AM - 10:50 AM | Noel, Wescombe | T-TH |
+[FALL COURSE #399] - [PY-359] - Theories of Counseling: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Joelle, Czirr | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #386] - [SN-101] - Elementary Spanish I: 
-  [SECTION #1] - 9:05 AM - 10:15 AM | Maria, Gonzalez | M-W-F |
-  [SECTION #2] - 10:25 AM - 11:35 AM | Maria, Gonzalez | M-W-F |
-  [SECTION #3] - 10:25 AM - 11:35 AM | Carmen, Felice | M-W-F |
+[FALL COURSE #400] - [PY-402W] - Senior Practicum: 
+  [SECTION #1] - 1:55 PM - 3:05 PM | Elizabeth, Campbell | W |
+-------------------------------------------------------------------------------------
+[FALL COURSE #401] - [SN-102] - Elementary Spanish II: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Donna, Sampson | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:35 AM | Carmen, Felice | M-W-F |
+  [SECTION #3] - 10:25 AM - 11:35 AM | Donna, Sampson | M-W-F |
   [SECTION #4] - 1:55 PM - 3:05 PM | Carmen, Felice | M-W-F |
-  [SECTION #5] - 9:05 AM - 10:15 AM | Carmen, Felice | M-W-F |
+  [SECTION #5] - 9:05 AM - 10:15 AM | Abigail, Carretero-Hernandez | M-W-F |
   [SECTION #6] - 1:55 PM - 3:05 PM | Donna, Sampson | M-W-F |
-  [SECTION #7] - 9:05 AM - 10:15 AM | Donna, Sampson | M-W-F |
-  [SECTION #8] - 10:25 AM - 11:35 AM | Donna, Sampson | M-W-F |
+  [SECTION #7] - 9:05 AM - 10:15 AM | Carmen, Felice | M-W-F |
+  [SECTION #8] - 3:15 PM - 4:25 PM | Abigail, Carretero-Hernandez | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #387] - [SN-111] - Intensive Elementary Spanish: 
-  [SECTION #1] - 10:25 AM - 11:35 AM | Joseph, Fulton | M-W-F |
-  [SECTION #2] - 9:05 AM - 10:15 AM | Joseph, Fulton | M-W-F |
-  [SECTION #3] - 1:55 PM - 3:05 PM | Jose, Rojas | M-W-F |
-  [SECTION #4] - 1:55 PM - 3:05 PM | Joseph, Fulton | M-W-F |
+[FALL COURSE #402] - [SN-111] - Intensive Elementary Spanish: 
+  [SECTION #1] - 10:25 AM - 11:35 AM | Abigail, Carretero-Hernandez | M-W-F |
+  [SECTION #2] - 9:05 AM - 10:15 AM | Katherine, Karr-Cornejo | M-W-F |
+  [SECTION #3] - 1:55 PM - 3:05 PM | Abigail, Carretero-Hernandez | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #388] - [SN-201] - Intermediate Spanish I: 
-  [SECTION #1] - 10:25 AM - 11:35 AM | Ryan, Peterson | M-W-F |
-  [SECTION #2] - 10:25 AM - 11:35 AM | Jose, Rojas | M-W-F |
-  [SECTION #3] - 9:05 AM - 10:15 AM | Jose, Rojas | M-W-F |
-  [SECTION #4] - 1:55 PM - 3:05 PM | Ryan, Peterson | M-W-F |
+[FALL COURSE #403] - [SN-202] - Intermediate Spanish II: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Kim, Hernandez | M-W-F |
+  [SECTION #2] - 1:55 PM - 3:05 PM | Jose, Rojas | M-W-F |
+  [SECTION #3] - 10:25 AM - 11:35 AM | Jose, Rojas | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #389] - [SN-301] - Adv Spanish Grammar Thru Lit: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Angeles, Aller | M-W-F |
-  [SECTION #2] - 10:25 AM - 11:20 AM | Kim, Hernandez | M-W-F |
-  [SECTION #3] - 8:00 AM - 8:55 AM | Kim, Hernandez | M-W-F |
+[FALL COURSE #404] - [SN-302] - Adv Span Gram & Comp Thru Lit: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Angeles, Aller | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:20 AM | Angeles, Aller | M-W-F |
+  [SECTION #3] - 8:00 AM - 8:55 AM | Jose, Rojas | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #390] - [SN-406W] - Latin American Short Story I: 
+[FALL COURSE #405] - [SN-407W] - Latin American Short Story II: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Angeles, Aller | M-W-F |
-  [SECTION #2] - 12:50 PM - 1:45 PM | Angeles, Aller | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #391] - [SN-420] - Spanish Culture & Civilization: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Angeles, Aller | M-W-F |
+[FALL COURSE #406] - [SN-412] - Performance in Hispanic World: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Katherine, Karr-Cornejo | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #392] - [SN-435] - Spanish for Christian Ministry: 
+[FALL COURSE #407] - [SN-435] - Spanish for Christian Ministry: 
   [SECTION #1] - 11:45 AM - 12:40 PM | Kim, Hernandez | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #393] - [SO-120] - Intro to Sociology: 
-  [SECTION #1] - 10:25 AM - 11:20 AM and 10:25 AM - 11:20 AM | Raja, Tanas | M-W-F-F |
-  [SECTION #2] - 1:55 PM - 2:50 PM and 1:55 PM - 2:50 PM | Jason, Wollschleger | M-W-F-F |
-  [SECTION #3] - 9:05 AM - 10:00 AM | Jennifer, Holsinger | M-W-F |
-  [SECTION #4] - 10:25 AM - 11:20 AM | Robert, Clark | M-W-F |
+[FALL COURSE #408] - [SO-120] - Intro to Sociology: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Mark, Killian | M-W-F |
+  [SECTION #2] - 10:25 AM - 11:20 AM | Stacy, Keogh | M-W-F |
+  [SECTION #3] - 12:50 PM - 2:10 PM | Raja, Tanas | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #394] - [SO-220] - Race and Ethnicity: 
-  [SECTION #1] - 12:50 PM - 2:10 PM | Jennifer, Holsinger | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #395] - [SO-271] - Introduction to Social Welfare: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Carol, Fullmer | M |
--------------------------------------------------------------------------------------
-[FALL COURSE #396] - [SO-311] - Families and Society: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Karen, Vache | W |
--------------------------------------------------------------------------------------
-[FALL COURSE #397] - [SO-312] - South Africa Program Prep: 
-  [SECTION #1] - 6:30 PM - 7:30 PM | Jennifer, Holsinger | TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #398] - [SO-320W] - Soc Tradition: Theories: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Robert, Clark | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #399] - [SO-337] - Social Research: 
+[FALL COURSE #409] - [SO-230] - Sociology of Education: 
   [SECTION #1] - 9:05 AM - 10:00 AM | Jason, Wollschleger | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #400] - [SO-338] - Statistical Analysis in Soc: 
+[FALL COURSE #410] - [SO-252] - Sociology of Gender: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Stacy, Keogh | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #411] - [SO-272H] - Honors Soc of Rel: Rel Ecology: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Jason, Wollschleger | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #412] - [SO-305] - Soc Stratifctn: Power & Wealth: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Mark, Killian | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #413] - [SO-338] - Statistical Analysis in Soc: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Raja, Tanas | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #401] - [SO-343] - Sociology of Religion: 
-  [SECTION #1] - 2:20 PM - 3:40 PM and 2:20 PM - 3:40 PM | Jason, Wollschleger | T-TH-TH |
+[FALL COURSE #414] - [SO-365] - Cities and Urban Life: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Mark, Killian | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #402] - [SO-365] - Cities and Urban Life: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Jennifer, Holsinger | T-TH |
+[FALL COURSE #415] - [SO-368] - Helping Process/Soc Services: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Christine, Clark | W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #403] - [SO-386] - Readings in Criminal Justice: 
+[FALL COURSE #416] - [SO-370] - Delinquency & Juvenile Justice: 
+  [SECTION #1] - 2:20 PM - 5:20 PM | Charles, Davis | TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #417] - [SO-386] - Readings in Criminal Justice: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Robert, Clark | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #418] - [SO-425] - Making Change: Intervent Strat: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Jason, Wollschleger | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #419] - [SO-475] - Sociology Practicum: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Carol, Fullmer | T |
+-------------------------------------------------------------------------------------
+[FALL COURSE #420] - [SO-478] - Contemp Soc: Perspectv & Pract: 
   [SECTION #1] - 2:20 PM - 3:40 PM | Robert, Clark | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #404] - [SP-113] - Interpersonal Communication: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Alan, Mikkelson | M-W-F |
-  [SECTION #2] - 10:25 AM - 11:20 AM | Joseph, Vigil | M-W-F |
-  [SECTION #3] - 2:20 PM - 3:40 PM | Ronald, Pyle | T-TH |
-  [SECTION #4] - 1:55 PM - 2:50 PM | Alan, Mikkelson | M-W-F |
+[FALL COURSE #421] - [SP-113] - Interpersonal Communication: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Ronald, Pyle | M-W-F |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Alan, Mikkelson | M-W-F |
+  [SECTION #3] - 10:25 AM - 11:20 AM | Alan, Mikkelson | M-W-F |
+  [SECTION #4] - 9:30 AM - 10:50 AM | CyBelle, Barthelmess | T-TH |
   [SECTION #5] - 9:30 AM - 10:50 AM | Joy, York | T-TH |
-  [SECTION #6] - 8:00 AM - 9:20 AM | Joy, York | T-TH |
+  [SECTION #6] - 12:50 PM - 2:10 PM | CyBelle, Barthelmess | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #405] - [SP-209] - Intro to Comm Research: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Joy, York | M-W-F |
+[FALL COURSE #422] - [SP-209] - Intro to Comm Research: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Joy, York | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #406] - [SP-210] - Intro to Public Speaking: 
-  [SECTION #1] - 12:50 PM - 2:10 PM | Jaime, Hollis | T-TH |
-  [SECTION #2] - 6:30 PM - 9:30 PM | Kevin, Benson | M |
-  [SECTION #3] - 9:30 AM - 10:50 AM | Joseph, Vigil | T-TH |
-  [SECTION #4] - 9:30 AM - 10:50 AM and 9:30 AM - 10:50 AM | Jaime, Hollis | T-TH-TH |
+[FALL COURSE #423] - [SP-210] - Intro to Public Speaking: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Joseph, Vigil | T-TH |
+  [SECTION #2] - 11:45 AM - 12:40 PM | Joy, York | M-W-F |
+  [SECTION #3] - 2:20 PM - 3:40 PM | Joseph, Vigil | T-TH |
+  [SECTION #4] - 6:30 PM - 9:30 PM | Giovanni, Caputo | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #407] - [SP-212] - Theories Human Communication: 
+[FALL COURSE #424] - [SP-212] - Theories Human Communication: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Ronald, Pyle | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #425] - [SP-245] - Applied Speech: Forensics: 
+  [SECTION #1] - 3:50 PM - 5:30 PM | Michael, Ingram | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #426] - [SP-323] - Organizational Communication: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Joseph, Vigil | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #427] - [SP-347W] - History & Theory of Rhetoric: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Ronald, Pyle | M-W-F |
-  [SECTION #2] - 1:55 PM - 2:50 PM | Ronald, Pyle | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #408] - [SP-223] - Small Group Communication: 
-  [SECTION #1] - 1:55 PM - 3:05 PM | Joseph, Vigil | M-W-F |
+[FALL COURSE #428] - [SP-362] - Argumentation and Debate: 
+  [SECTION #1] - 12:50 PM - 2:50 PM | Michael, Ingram | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #409] - [SP-245] - Applied Speech: Forensics: 
-  [SECTION #1] - 4:00 PM - 5:30 PM | Michael, Ingram | W-TH |
+[FALL COURSE #429] - [SP-402] - Freedom & Respnblty of Speech: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Erica, Salkin | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #410] - [SP-312] - South Africa Program Prep: 
-  [SECTION #1] - 6:30 PM - 7:30 PM | Ronald, Pyle | TH |
+[FALL COURSE #430] - [SP-445] - Applied Speech: Forensics: 
+  [SECTION #1] - 3:50 PM - 5:30 PM | Michael, Ingram | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #411] - [SP-313] - Advanced Interpersonal Comm: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Alan, Mikkelson | M-W-F |
+[FALL COURSE #431] - [SW-102] - Elementary Swahili II: 
+  [SECTION #1] - 9:05 AM - 10:15 AM | Steven, Egland | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #412] - [SP-493] - Communication Ethics: 
-  [SECTION #1] - 2:20 PM - 3:40 PM | Gordon, Jackson | T-TH |
+[FALL COURSE #432] - [TA-236] - Hip Hop: 
+  [SECTION #1] - 11:45 AM - 12:40 PM | Karla, Parbon | Diana, Trotter | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #413] - [SW-196] - Elementary Swahili I: 
-  [SECTION #1] - 10:25 AM - 11:35 AM | Steven, Egland | Bendi, Schrambach | M-W-F |
-  [SECTION #2] - 9:05 AM - 10:15 AM | Steven, Egland | Bendi, Schrambach | M-W-F |
+[FALL COURSE #433] - [TA-270] - Stage Makeup & Costume Constr.: 
+  [SECTION #1] - 3:15 PM - 5:15 PM | Aaron, Dyszelski | Diana, Trotter | M-W |
 -------------------------------------------------------------------------------------
-[FALL COURSE #414] - [TA-137] - Modern Dance: 
-  [SECTION #1] - 8:00 AM - 9:20 AM | Pamela, Erickson | T-TH |
+[FALL COURSE #434] - [TA-273] - Acting I: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Brooke, Kiener | Diana, Trotter | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #415] - [TA-143] - Ballet I: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Pamela, Erickson | T-TH |
+[FALL COURSE #435] - [TA-275] - Stagecraft I: 
+  [SECTION #1] - 8:00 AM - 8:55 AM and 2:20 PM - 3:40 PM | Jennifer, Boehmer | Diana, Trotter | M-T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #416] - [TA-183] - Jazz Dance I: 
-  [SECTION #1] - 10:25 AM - 11:20 AM | Karla, Parbon | M-W-F |
-  [SECTION #2] - 11:45 AM - 12:40 PM | Karla, Parbon | M-W-F |
+[FALL COURSE #436] - [TA-276] - Improvisational Acting: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Kevin, Benson | Diana, Trotter | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #417] - [TA-273] - Acting I: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Brooke, Kiener | T-TH |
+[FALL COURSE #437] - [TA-279] - Voice for the Performer: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Diana, Trotter | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #418] - [TA-275] - Technical Theatre I: 
-  [SECTION #1] - 8:00 AM - 8:55 AM and 2:20 PM - 3:45 PM | Jennifer, Read | M-T-TH |
+[FALL COURSE #438] - [TA-337] - Modern Dance II: 
+  [SECTION #1] - 8:00 AM - 9:20 AM | Pamela, Erickson | Diana, Trotter | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #419] - [TA-276] - Improvisational Acting: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Kevin, Benson | W |
+[FALL COURSE #439] - [TA-344] - Theatre Across the Curriculum: 
+  [SECTION #1] - 4:00 PM - 6:00 PM | Miranda, Hein | Diana, Trotter | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #420] - [TA-296] - Fundamentals Theatrical Design: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Aaron, Dyszelski | M-W-F |
+[FALL COURSE #440] - [TA-373] - Character Study: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Brooke, Kiener | Diana, Trotter | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #421] - [TA-342] - Principles of Dance Conditioni: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Karla, Parbon | M-W-F |
+[FALL COURSE #441] - [TA-375] - Stagecraft II: 
+  [SECTION #1] - 3:50 PM - 5:10 PM | Aaron, Dyszelski | Diana, Trotter | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #422] - [TA-344] - Theatre Across the Curriculum: 
-  [SECTION #1] - 4:00 PM - 6:00 PM | Miranda, Hein | W |
+[FALL COURSE #442] - [TA-379] - Adv Voice for the Performer: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Diana, Trotter | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #423] - [TA-361] - Fundamentals of Directing: 
-  [SECTION #1] - 9:20 AM - 10:15 AM | Brooke, Kiener | M-W-F |
+[FALL COURSE #443] - [TA-381] - Dance History & Choreography: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Pamela, Erickson | Diana, Trotter | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #424] - [TA-476W] - History of Theatre I: 
+[FALL COURSE #444] - [TA-383] - Jazz Dance II: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Miranda, Hein | Diana, Trotter | M-W |
+-------------------------------------------------------------------------------------
+[FALL COURSE #445] - [TA-477W] - History of Theatre II: 
   [SECTION #1] - 10:25 AM - 11:20 AM | Diana, Trotter | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #425] - [TH-130] - Intro to the Bible: 
-  [SECTION #1] - 2:20 PM - 3:40 PM and 2:20 PM - 3:40 PM | Karen, Finch | T-TH-T-TH |
-  [SECTION #2] - 10:25 AM - 11:20 AM | Karin, Heller | M-W-F |
+[FALL COURSE #446] - [TA-483] - Jazz III: 
+  [SECTION #1] - 10:25 AM - 11:35 AM | Karla, Parbon | Diana, Trotter | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #426] - [TH-135] - A Biblical Introduction to God: 
+[FALL COURSE #447] - [TH-131H] - Encountering Covenantal God: 
+  [SECTION #1] - 3:15 PM - 4:35 PM | Karin, Heller | W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #448] - [TH-135] - A Biblical Introduction to God: 
+  [SECTION #1] - 3:50 PM - 5:10 PM | Jeremy, Wynne | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #449] - [TH-141] - Great Themes in Paul's Letters: 
   [SECTION #1] - 12:50 PM - 2:10 PM | Jeremy, Wynne | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #427] - [TH-141] - Great Themes in Paul's Letters: 
-  [SECTION #1] - 2:20 PM - 3:40 PM | Jeremy, Wynne | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #428] - [TH-172] - Foundations for Christian Lead: 
-  [SECTION #1] - 6:30 PM - 9:00 PM | Kent, McDonald | Terry, McGonigal | TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #429] - [TH-196] - Prep for Reformation Tour: 
-  [SECTION #1] - 6:30 PM - 8:30 PM | James, Edwards | Adam, Neder | T |
--------------------------------------------------------------------------------------
-[FALL COURSE #430] - [TH-212] - Redemption of Creation: 
-  [SECTION #1] - 9:30 AM - 10:50 AM | Jonathan, Moo | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #431] - [TH-221] - Ethics: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Keith, Wyma | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #432] - [TH-230] - Messiah: 
-  [SECTION #1] - 12:50 PM - 2:10 PM | Scott, Starbuck | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #433] - [TH-241] - New Testament: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Roger, Mohrlang | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #434] - [TH-243] - Jesus and the Kingdom of God: 
-  [SECTION #1] - 1:55 PM - 3:05 PM and 1:55 PM - 3:05 PM | Keith, Beebe | M-W-F-M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #435] - [TH-256] - Biblical Theme of Shalom: 
-  [SECTION #1] - 12:50 PM - 2:10 PM | Terry, McGonigal | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #436] - [TH-260] - Romans: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | James, Edwards | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #437] - [TH-281] - Gospel of Luke: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | James, Edwards | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #438] - [TH-306] - History and Theol of Worship: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | Benjamin, Brody | M-W-F |
--------------------------------------------------------------------------------------
-[FALL COURSE #439] - [TH-307] - Seminar on Early Christianity: 
+[FALL COURSE #450] - [TH-154] - Intro to the Christian Faith: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Gerald, Sittser | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #440] - [TH-310] - New Testament Greek I: 
-  [SECTION #1] - 8:00 AM - 8:55 AM | Jonathan, Moo | M-T-W-F |
+[FALL COURSE #451] - [TH-173] - Found for Christn Leaders II: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | Kent, McDonald | Terry, McGonigal | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #441] - [TH-313W] - History of Christianity I: 
+[FALL COURSE #452] - [TH-196] - The Bible for Doubters: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Karen, Finch | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #453] - [TH-213] - The Book of Revelation: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Jonathan, Moo | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #454] - [TH-221] - Ethics: 
+  [SECTION #1] - 12:50 PM - 1:45 PM | Keith, Wyma | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #455] - [TH-241] - New Testament: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Roger, Mohrlang | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #456] - [TH-265] - The Book of Genesis: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | James, Edwards | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #457] - [TH-281] - Gospel of Luke: 
+  [SECTION #1] - 1:55 PM - 2:50 PM | Karin, Heller | M-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #458] - [TH-311] - New Testament Greek II: 
+  [SECTION #1] - 8:00 AM - 8:50 AM | Jonathan, Moo | M-T-W-F |
+-------------------------------------------------------------------------------------
+[FALL COURSE #459] - [TH-314W] - Hist Chrstnty II:World Chrstn: 
   [SECTION #1] - 9:05 AM - 10:00 AM | Gerald, Sittser | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #442] - [TH-318] - Greek Reading: 
-  [SECTION #1] - 2:20 PM - 3:40 PM and 11:45 AM - 12:40 PM | Jonathan, Moo | T-TH |
+[FALL COURSE #460] - [TH-315W] - Hist Chrstnty II:Chrstn Renew: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Keith, Beebe | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #443] - [TH-331] - Old Testament: 
-  [SECTION #1] - 9:05 AM - 10:00 AM | Roger, Mohrlang | M-W-F |
+[FALL COURSE #461] - [TH-322] - Arguing with Calvin: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | Karen, Finch | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #444] - [TH-339] - Evangelism and Discipleship: 
-  [SECTION #1] - 1:55 PM - 2:50 PM | Kent, McDonald | M-W-F |
+[FALL COURSE #462] - [TH-324] - Missional Church: 
+  [SECTION #1] - 6:30 PM - 9:30 PM | Robert, Fairbanks | T |
 -------------------------------------------------------------------------------------
-[FALL COURSE #445] - [TH-343] - Hebrew Reading & Exegesis I: 
-  [SECTION #1] - 2:20 PM - 3:40 PM | Scott, Starbuck | T-TH |
+[FALL COURSE #463] - [TH-331] - Old Testament: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | William, Kynes | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #446] - [TH-356] - Biblical Theme of Shalom: 
-  [SECTION #1] - 12:50 PM - 2:10 PM | Terry, McGonigal | T-TH |
+[FALL COURSE #464] - [TH-334] - Youth Ministry: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Kent, McDonald | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #447] - [TH-361] - Christian Theology: 
+[FALL COURSE #465] - [TH-335] - Theology of Ministry: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | Gerald, Sittser | TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #466] - [TH-344] - Hebrew Reading & Exegesis II: 
+  [SECTION #1] - 2:20 PM - 3:40 PM | William, Kynes | T-TH |
+-------------------------------------------------------------------------------------
+[FALL COURSE #467] - [TH-361] - Christian Theology: 
   [SECTION #1] - 12:50 PM - 1:45 PM | Adam, Neder | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #448] - [TH-362] - Man & Woman in Image of God: 
+[FALL COURSE #468] - [TH-362] - Man & Woman in Image of God: 
   [SECTION #1] - 12:50 PM - 2:10 PM | Karin, Heller | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #449] - [TH-370] - World Religions: 
+[FALL COURSE #469] - [TH-370] - World Religions: 
   [SECTION #1] - 1:55 PM - 2:50 PM | Adam, Neder | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #450] - [TH-371] - Great Christian Thinkers: 
-  [SECTION #1] - 6:00 PM - 9:00 PM | Adam, Neder | TH |
+[FALL COURSE #470] - [TH-382] - Campus Ministry: 
+  [SECTION #1] - 6:30 PM - 7:30 PM | Melinda, Smith | M |
 -------------------------------------------------------------------------------------
-[FALL COURSE #451] - [TH-375] - Soul Care Through Life Stages: 
-  [SECTION #1] - 3:50 PM - 5:10 PM | Melinda, Smith | T-TH |
--------------------------------------------------------------------------------------
-[FALL COURSE #452] - [TH-382] - Campus Ministry: 
-  [SECTION #1] - 6:00 PM - 7:00 PM | Melinda, Smith | M |
--------------------------------------------------------------------------------------
-[FALL COURSE #453] - [TH-393] - Christian Spirituality: 
+[FALL COURSE #471] - [TH-393] - Christian Spirituality: 
   [SECTION #1] - 2:20 PM - 3:40 PM | Karin, Heller | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #454] - [TH-435] - Internship in Ministry: 
-  [SECTION #1] - 6:30 PM - 9:30 PM | Dorothy, Mohrlang | TH |
+[FALL COURSE #472] - [TH-435] - Internship in Ministry: 
+  [SECTION #1] - 6:30 PM - 8:30 PM | Dorothy, Mohrlang | TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #455] - [TH-499] - Senior Seminar: 
-  [SECTION #1] - 5:15 PM - 6:00 PM | Gerald, Sittser | T |
+[FALL COURSE #473] - [TH-449] - Paul's Letters: 
+  [SECTION #1] - 9:05 AM - 10:00 AM | Roger, Mohrlang | M-W-F |
 -------------------------------------------------------------------------------------
-[FALL COURSE #456] - [WGS-126] - Women Writers: 
-  [SECTION #1] - 11:45 AM - 12:40 PM | Laurie, Lamon | M-W-F |
+[FALL COURSE #474] - [WGS-126] - Women Writers: 
+  [SECTION #1] - 9:30 AM - 10:50 AM | Marguerite, Wolcott | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #457] - [WGS-127] - African American Women Writers: 
-  [SECTION #1] - 3:50 PM - 5:10 PM | Amowi, Phillips | T-TH |
+[FALL COURSE #475] - [WGS-201] - Intro Women's/Gender Studies: 
+  [SECTION #1] - 12:50 PM - 2:10 PM | Nichole, Bogarosh | T-TH |
 -------------------------------------------------------------------------------------
-[FALL COURSE #458] - [WGS-201] - Intro Women's/Gender Studies: 
-  [SECTION #1] - 12:50 PM - 1:45 PM | Katey, Roden | T-TH |
+[FALL COURSE #476] - [WGS-296H] - Women's Artists' Books: 
+  [SECTION #1] - 10:25 AM - 11:20 AM | Amanda, Clark | M-W-F |
 -------------------------------------------------------------------------------------

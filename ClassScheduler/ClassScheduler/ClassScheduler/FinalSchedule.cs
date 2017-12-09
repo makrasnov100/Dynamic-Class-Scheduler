@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using iTextSharp;
+using iTextSharp.text.pdf;
+using System.Drawing.Printing;
 
 namespace ClassScheduler
 {
@@ -16,7 +20,7 @@ namespace ClassScheduler
         private PictureBox pictureBox;
         private Bitmap fullbmp;
 
-        private int index;
+        PrintDocument doc = new PrintDocument();
 
         public FinalSchedule()
         {
@@ -59,6 +63,7 @@ namespace ClassScheduler
                 using (var bmp = new Bitmap(pnl.Width, pnl.Height))
                 {
                     pnl.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+                    this.fullbmp = bmp;
                     bmp.Save(path);
                     MessageBox.Show("File save to " + path + " successful!");
                 }
@@ -116,6 +121,24 @@ namespace ClassScheduler
                     return fridayLayoutPanel;
             }
             return null;
+        }
+        
+        //from Microsoft Documentation on the PrintDialog class
+        private void saveAsPdfButton_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+            doc.PrintPage += new PrintPageEventHandler(document_PrintPage);
+            printDialog.Document = doc;
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                doc.Print();
+            }
+        }
+
+        private void document_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(fullbmp, 0, 0);
         }
     }
 }
