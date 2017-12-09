@@ -305,3 +305,4 @@ __pycache__/
 OpenCover/
 ClassScheduler/ClassScheduler/ClassScheduler/obj/Debug/ClassScheduler.csproj.GenerateResource.Cache
 ClassScheduler/ClassScheduler/.vs/ClassScheduler/v15/.suo
+ClassScheduler/ClassScheduler/ClassScheduler/bin/Debug/AllSectionTimes.txt
