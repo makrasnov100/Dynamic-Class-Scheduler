@@ -45,6 +45,7 @@
             this.displayLbl = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
             this.printButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.schedulePictureBox)).BeginInit();
             this.schedulePanel.SuspendLayout();
             this.dayLayoutPanel.SuspendLayout();
@@ -281,7 +282,7 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(836, 69);
+            this.saveBtn.Location = new System.Drawing.Point(836, 144);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(110, 43);
             this.saveBtn.TabIndex = 7;
@@ -291,7 +292,7 @@
             // 
             // printButton
             // 
-            this.printButton.Location = new System.Drawing.Point(837, 118);
+            this.printButton.Location = new System.Drawing.Point(837, 193);
             this.printButton.Name = "printButton";
             this.printButton.Size = new System.Drawing.Size(110, 43);
             this.printButton.TabIndex = 8;
@@ -299,12 +300,26 @@
             this.printButton.UseVisualStyleBackColor = true;
             this.printButton.Click += new System.EventHandler(this.saveAsPdfButton_Click);
             // 
+            // backButton
+            // 
+            this.backButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.backButton.Location = new System.Drawing.Point(834, 68);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(179, 70);
+            this.backButton.TabIndex = 9;
+            this.backButton.Text = "Back to Optimization";
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // FinalSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1046, 836);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.printButton);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.schedulePanel);
@@ -352,5 +367,6 @@
         private System.Windows.Forms.TableLayoutPanel thursdayLayoutPanel;
         private System.Windows.Forms.Label thursdayLbl;
         private System.Windows.Forms.Button printButton;
+        private System.Windows.Forms.Button backButton;
     }
 }

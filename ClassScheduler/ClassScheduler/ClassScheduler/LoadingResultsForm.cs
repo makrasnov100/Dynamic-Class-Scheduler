@@ -46,7 +46,7 @@ namespace ClassScheduler
 
         private CourseSelectionForm RefToCourseSelectForm;
         private OptimizationSettingsForm OptimizeSettingsForm;
-        private FinalSchedule finalSchedule = new FinalSchedule();
+        private FinalSchedule finalSchedule;
 
         private bool firstDraw = true;
         private bool isOptimized = false;
@@ -68,6 +68,7 @@ namespace ClassScheduler
 
             this.selectedCourses = selectedCourses;
             this.resultSchedules = resultSchedules;
+            finalSchedule = new FinalSchedule(this);
             InitializeComponent();
         }
 
@@ -495,26 +496,6 @@ namespace ClassScheduler
             return isOptimized;
         }
 
-        //Add the schedule to the FinalSchedule form
-        private void drawSchedule()
-        {
-            foreach (var day in graphedSchedules[curScheduleIndex].getAllDays())
-            {
-                addDayScheduleToFinalForm(day);
-            }
-                
-        }
-
-        //Adds the schedule for each day
-        private void addDayScheduleToFinalForm(ScheduleDay day)
-        {
-            //day.getDayTimes();
-            for (int i = 0; i < day.getDayTimes().Count(); i++)
-            {
-
-            }
-        }
-
         private void setFinalScheduleToPanels()
         {
             int numDays = resultSchedules[curScheduleIndex].getAllDays().Count();
@@ -554,7 +535,6 @@ namespace ClassScheduler
         //Method to convert time from minutes to 12-hour clock
         private string convertMinutes(int startTime, int endTime) {
             string finalString;
-            bool zeroStartMin = false, zeroEndMin = false;
             int startHour = startTime, endHour = endTime, startMin, endMin;
 
             if (startHour >= 780)
@@ -582,6 +562,23 @@ namespace ClassScheduler
             endHour.ToString() + ":" + endMin.ToString().PadLeft(2, '0');
 
             return finalString;
+        }
+
+        /* Remove the labels in the tableLayoutPanels Monday - Friday
+            This method will be used when the user clicks the button to 
+            go back from the FinalSchedule form to Optimization form
+            ** A little issue... Method is now modified to keep the day 
+            ** of the week labels. 
+        */
+        public void clearDayLabels()
+        {
+            for (int day = 0; day < resultSchedules[curScheduleIndex].getAllDays().Count(); day++)
+            {
+                for (int label = 1; label < (finalSchedule.getSpecificPanel(day).RowCount); label++)
+                {
+                    finalSchedule.getSpecificPanel(day).Controls.Remove(finalSchedule.getSpecificPanel(day).GetControlFromPosition(0, label));
+                }
+            }
         }
 
         //Add welcome label to FinalScheduleForm
@@ -613,7 +610,6 @@ namespace ClassScheduler
             addLabelsToFinalScheduleForm();
             setFinalScheduleToPanels();
             finalSchedule.ShowDialog();
-            Close();
         }
     }
 }

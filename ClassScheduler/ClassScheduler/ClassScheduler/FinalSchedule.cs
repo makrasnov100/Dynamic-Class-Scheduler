@@ -19,18 +19,14 @@ namespace ClassScheduler
         private Panel panel;
         private PictureBox pictureBox;
         private Bitmap fullbmp;
+        LoadingResultsForm loadingResultsForm;
 
         PrintDocument doc = new PrintDocument();
 
-        public FinalSchedule()
+        public FinalSchedule(LoadingResultsForm loadingResultsForm)
         {
+            this.loadingResultsForm = loadingResultsForm;
             InitializeComponent();
-        }
-
-        public FinalSchedule(Panel panel, PictureBox pictureBox)
-        {
-            this.panel = panel;
-            this.pictureBox = pictureBox;
         }
 
         public void setPictureBox(PictureBox pictureBox)
@@ -145,6 +141,14 @@ namespace ClassScheduler
                 e.Graphics.DrawImage(bmp, 0, 0);
                 bmp.Dispose();
             }
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            //clear the monday through friday labels
+            loadingResultsForm.clearDayLabels();
+            this.Hide();
+            loadingResultsForm.Show();
         }
     }
 }
