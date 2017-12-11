@@ -17,11 +17,12 @@ namespace ClassScheduler
         private Bitmap fullBmp;
         private Rectangle timeSlotRect;
         private Rectangle dayLabelRect;
-        private int picBoxExtend = 300;
+        private int picBoxExtend = 600;
         private float verticalScale = 1.0f; //larger = bigger slots
         private float rectWidth = 50;
         private int dayXPadding = 150;
-        private Font dayLabelFont = new Font("Times New Roman", 12f, FontStyle.Italic);
+        private Font dayLabelFont = new Font("Times New Roman", 13f, FontStyle.Italic);
+        private Font courseLabelFont = new Font("Times New Roman", 12f, FontStyle.Regular);
         private Font timeLabelFont = new Font("Microsoft Sans Serif", 7.5f, FontStyle.Regular);
         private Font warningLabelFont = new Font("Times New Roman", 25f, FontStyle.Italic);
         private Font overlapWarningFont = new Font("Microsoft Sans Serif", 15f, FontStyle.Regular);
@@ -64,7 +65,7 @@ namespace ClassScheduler
             //Graphics
             sCenterFormat.LineAlignment = StringAlignment.Center;
             sCenterFormat.Alignment = StringAlignment.Center;
-            lastYPos = topSeperator + 3; // provides gap for first timeslot
+            //lastYPos = topSeperator + 3; // provides gap for first timeslot
 
             this.selectedCourses = selectedCourses;
             this.resultSchedules = resultSchedules;
@@ -145,6 +146,8 @@ namespace ClassScheduler
 
             GraphAllDays();
 
+            WriteFullCourseNames();
+
             SectionGraphBox.Image = fullBmp;
         }
 
@@ -188,6 +191,38 @@ namespace ClassScheduler
                 foreach (var day in graphedSchedules[curScheduleIndex].getAllDays())
                     GraphDay(day);
 
+        }
+
+        //[FUNCTION - WriteFullCourseNames]
+        //Writes all course names of sections at the bottom
+        private void WriteFullCourseNames()
+        {
+            Rectangle courseNameWriteArea = new Rectangle(-1, (int)topSeperator + (int)(900f/verticalScale), fullBmp.Width + 1, fullBmp.Height - (int)topSeperator - (int)(900f / verticalScale));
+            g.FillRectangle(whiteBrush, courseNameWriteArea);
+            g.DrawRectangle(blackPen, courseNameWriteArea);
+
+            int yPosTrack = (int)topSeperator + (int)(900f / verticalScale) + 14;
+            int statusCircleXPos =(int)(fullBmp.Width * .05f);
+            int labelXPos = (int)(fullBmp.Width * .05f) + 10;
+
+            g.DrawString(GetFormattedCourse(0), courseLabelFont, blackBrush, labelXPos, yPosTrack);
+        }
+
+        //[FUNCTION - GetFormattedCourseList]
+        //Returns a string representation off a course from the graphed sections
+        private string GetFormattedCourse(int secIndex)
+        {
+            string resultCourse = "";
+            string fullCourseName = graphedSchedules[curScheduleIndex].getAllSections()[secIndex].getCourseName();
+            string abrvCourseName = graphedSchedules[curScheduleIndex].getAllSections()[secIndex].getID();
+
+            int whiteCountFirst = 13 - (abrvCourseName.Length + 2);
+            //Suggested at: https://stackoverflow.com/questions/532892/can-i-multiply-a-string-in-c
+            string whiteFirst = new string(' ', whiteCountFirst);
+
+            resultCourse = "[" + abrvCourseName + "]" + whiteFirst + "-   " + fullCourseName;
+
+            return resultCourse;
         }
 
         //[FUNCTION - DrawTimeTableGrid]
