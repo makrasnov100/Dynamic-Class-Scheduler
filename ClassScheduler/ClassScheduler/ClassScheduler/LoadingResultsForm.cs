@@ -68,12 +68,14 @@ namespace ClassScheduler
 
             this.selectedCourses = selectedCourses;
             this.resultSchedules = resultSchedules;
-            finalSchedule = new FinalSchedule(this);
+
             InitializeComponent();
+
+            finalSchedule = new FinalSchedule(this);
         }
 
         //[FUNCTION - LoadingResultsForm_Load]
-        //Runs on load of wwin form
+        //Runs on load of win form
         private void LoadingResultsForm_Load(object sender, EventArgs e)
         {
             UpdateShownSchedule();

@@ -140,3 +140,5 @@ C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassSchedul
 D:\Current Projects\CS-172 Final\GitFiles\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.FinalSchedule.resources
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\itextsharp.dll
 C:\Users\Yuriy\Source\Repos\Dynamic-Class-Scheduler2\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\itextsharp.xml
+D:\Current Projects\CS-172 Final\GitFiles\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\itextsharp.dll
+D:\Current Projects\CS-172 Final\GitFiles\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\itextsharp.xml
