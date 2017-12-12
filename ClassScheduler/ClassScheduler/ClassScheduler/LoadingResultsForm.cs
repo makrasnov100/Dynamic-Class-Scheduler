@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +24,7 @@ namespace ClassScheduler
         private float rectWidth = 50;
         private int dayXPadding = 150;
         private Font dayLabelFont = new Font("Times New Roman", 13f, FontStyle.Italic);
-        private Font courseLabelFont = new Font("Times New Roman", 12f, FontStyle.Regular);
+        private Font courseLabelFont = new Font("Courier New", 16f, FontStyle.Regular);
         private Font timeLabelFont = new Font("Microsoft Sans Serif", 7.5f, FontStyle.Regular);
         private Font warningLabelFont = new Font("Times New Roman", 25f, FontStyle.Italic);
         private Font overlapWarningFont = new Font("Microsoft Sans Serif", 15f, FontStyle.Regular);
@@ -201,11 +203,56 @@ namespace ClassScheduler
             g.FillRectangle(whiteBrush, courseNameWriteArea);
             g.DrawRectangle(blackPen, courseNameWriteArea);
 
-            int yPosTrack = (int)topSeperator + (int)(900f / verticalScale) + 14;
-            int statusCircleXPos =(int)(fullBmp.Width * .05f);
-            int labelXPos = (int)(fullBmp.Width * .05f) + 10;
+            int yPosTrack = (int)topSeperator + (int)(900f / verticalScale) + 24;
+            int statusCircleXPos =(int)(fullBmp.Width * .07f);
+            int labelXPos = (int)(fullBmp.Width * .07f) + 20;
 
-            g.DrawString(GetFormattedCourse(0), courseLabelFont, blackBrush, labelXPos, yPosTrack);
+            int secCounter = 0;
+            foreach (var section in graphedSchedules[curScheduleIndex].getAllSections())
+            {
+                Rectangle statusEllipseBounds = new Rectangle(statusCircleXPos, yPosTrack + 6, 16, 16);
+                g.FillEllipse(GetCourseLabelStatusBrush(section.getID()), statusEllipseBounds);
+                g.DrawEllipse(blackPen, statusEllipseBounds);
+                g.DrawString(GetFormattedCourse(secCounter), courseLabelFont, blackBrush, labelXPos, yPosTrack);
+                yPosTrack += 28;
+                secCounter++;
+            }
+        }
+
+        //[FUNCTION - GetCourseLabelStatusBrush]
+        //Returns a string representation off a course from the graphed sections
+        private Brush GetCourseLabelStatusBrush(string secID)
+        {
+            bool isOptimized = false;
+            bool isOverlap = false;
+
+            foreach (var day in graphedSchedules[curScheduleIndex].getAllDays())
+            {
+                foreach (var timeSlot in day.getDayTimes())
+                {
+                    if (graphedSchedules[curScheduleIndex].getAllSections()[timeSlot.getSectionID()].getID() == secID)
+                    {
+                        if (timeSlot.getOverlapState())
+                        {
+                            isOverlap = true;
+                            break; // Remove if going to add multiple status labels (also 'else if' > 'if')
+                        }
+                        else if (timeSlot.getOptimizedState())
+                        {
+                            isOptimized = true;
+                        }
+                    }
+                }
+                if (isOverlap) // Remove if going to add multiple status labels
+                    break;
+            }
+
+            if (isOverlap)
+                return redBrush;
+            else if (isOptimized)
+                return darkOrangeBrush;
+            else
+                return greenBrush;
         }
 
         //[FUNCTION - GetFormattedCourseList]
@@ -216,7 +263,7 @@ namespace ClassScheduler
             string fullCourseName = graphedSchedules[curScheduleIndex].getAllSections()[secIndex].getCourseName();
             string abrvCourseName = graphedSchedules[curScheduleIndex].getAllSections()[secIndex].getID();
 
-            int whiteCountFirst = 13 - (abrvCourseName.Length + 2);
+            int whiteCountFirst = 14 - (abrvCourseName.Length + 2);
             //Suggested at: https://stackoverflow.com/questions/532892/can-i-multiply-a-string-in-c
             string whiteFirst = new string(' ', whiteCountFirst);
 
@@ -429,7 +476,22 @@ namespace ClassScheduler
                     NextScheduleButton.Enabled = false;
                 }
             }
-           
+
+        }
+
+        //[FUNCTION - SaveAsImageBtn_Click]
+        //Closes schedule select form and goes back course select form after buttton "Reselect Courses" click
+        private void SaveAsImageBtn_Click(object sender, EventArgs e)
+        {
+            //Directory grabbing technique suggested here:
+            //https://www.youtube.com/watch?v=EUZSENsy3lc
+            SaveFileDialog saveImageDialog = new SaveFileDialog();
+            saveImageDialog.Filter = "Jpeg(*.jpg)|*.jpg";
+
+            if (saveImageDialog.ShowDialog() == DialogResult.OK)
+            {
+                fullBmp.Save(saveImageDialog.FileName);
+            }
         }
 
         //[FUNCTION - CourseReselectionButton_Click]
@@ -569,7 +631,8 @@ namespace ClassScheduler
             }
         }
 
-        //Method to convert time from minutes to 12-hour clock
+        //[FUNCTION - convertMinutes]
+        //Converts minutes from midnight to 12-hour clock
         private string convertMinutes(int startTime, int endTime) {
             string finalString;
             int startHour = startTime, endHour = endTime, startMin, endMin;

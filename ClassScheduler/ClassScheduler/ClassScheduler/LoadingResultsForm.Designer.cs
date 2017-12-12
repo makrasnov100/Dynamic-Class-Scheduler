@@ -44,6 +44,7 @@
             this.EffecFitLabel = new System.Windows.Forms.Label();
             this.OverlapFitLabel = new System.Windows.Forms.Label();
             this.LayoutPanel = new System.Windows.Forms.Panel();
+            this.SaveAsImageBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SectionGraphBox)).BeginInit();
             this.ExampleSchedulePanel.SuspendLayout();
             this.LayoutPanel.SuspendLayout();
@@ -203,7 +204,7 @@
             this.ScheduleAmountLabel.AutoSize = true;
             this.ScheduleAmountLabel.Font = new System.Drawing.Font("Sitka Heading", 12F, System.Drawing.FontStyle.Italic);
             this.ScheduleAmountLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ScheduleAmountLabel.Location = new System.Drawing.Point(1235, 34);
+            this.ScheduleAmountLabel.Location = new System.Drawing.Point(1045, 43);
             this.ScheduleAmountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ScheduleAmountLabel.Name = "ScheduleAmountLabel";
             this.ScheduleAmountLabel.Size = new System.Drawing.Size(163, 35);
@@ -260,6 +261,21 @@
             this.LayoutPanel.Size = new System.Drawing.Size(1690, 764);
             this.LayoutPanel.TabIndex = 31;
             // 
+            // SaveAsImageBtn
+            // 
+            this.SaveAsImageBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveAsImageBtn.BackColor = System.Drawing.Color.Black;
+            this.SaveAsImageBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.SaveAsImageBtn.ForeColor = System.Drawing.Color.White;
+            this.SaveAsImageBtn.Location = new System.Drawing.Point(1265, 26);
+            this.SaveAsImageBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SaveAsImageBtn.Name = "SaveAsImageBtn";
+            this.SaveAsImageBtn.Size = new System.Drawing.Size(224, 62);
+            this.SaveAsImageBtn.TabIndex = 32;
+            this.SaveAsImageBtn.Text = "Save As Image";
+            this.SaveAsImageBtn.UseVisualStyleBackColor = false;
+            this.SaveAsImageBtn.Click += new System.EventHandler(this.SaveAsImageBtn_Click);
+            // 
             // LoadingResultsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -267,6 +283,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1758, 944);
+            this.Controls.Add(this.SaveAsImageBtn);
             this.Controls.Add(this.OverlapFitLabel);
             this.Controls.Add(this.EffecFitLabel);
             this.Controls.Add(this.ScheduleAmountLabel);
@@ -283,7 +300,7 @@
             this.Controls.Add(this.LayoutPanel);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximumSize = new System.Drawing.Size(1780, 2160);
-            this.MinimumSize = new System.Drawing.Size(1250, 900);
+            this.MinimumSize = new System.Drawing.Size(1300, 900);
             this.Name = "LoadingResultsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Schedule Layout Select";
@@ -317,5 +334,6 @@
         private System.Windows.Forms.Label EffecFitLabel;
         private System.Windows.Forms.Label OverlapFitLabel;
         private System.Windows.Forms.Panel LayoutPanel;
+        private System.Windows.Forms.Button SaveAsImageBtn;
     }
 }
