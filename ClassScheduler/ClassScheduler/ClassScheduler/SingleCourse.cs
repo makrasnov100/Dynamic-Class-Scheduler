@@ -15,6 +15,7 @@ namespace ClassScheduler
     /// </summary>
     /// Author: Kostiantyn Makrasnov (variables)
     /// Author: Yuri Fedas (accessor/mutator functions & constructors)
+    
     [Serializable]
     public class SingleCourse
     {

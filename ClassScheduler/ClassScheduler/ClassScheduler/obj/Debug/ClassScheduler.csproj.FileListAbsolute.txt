@@ -146,3 +146,4 @@ D:\Current Projects\CS-172 Final\GitFiles\Dynamic-Class-Scheduler\ClassScheduler
 D:\Current Projects\CS-172 Final\GitFiles\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\bin\Debug\ClassScheduler.application
 D:\Current Projects\CS-172 Final\GitFiles\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.exe.manifest
 D:\Current Projects\CS-172 Final\GitFiles\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.application
+D:\Current Projects\CS-172 Final\GitFiles\Dynamic-Class-Scheduler\ClassScheduler\ClassScheduler\ClassScheduler\obj\Debug\ClassScheduler.csproj.CoreCompileInputs.cache
