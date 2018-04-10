@@ -168,7 +168,7 @@ namespace ClassScheduler
             ProcessCourseData();
             RemoveIrevSections();
             SortCourses();
-            WriteDebugFile();
+            // WriteDebugFile();
         }
 
         //[FUNCTION - checkImputCompletion)
